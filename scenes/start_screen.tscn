@@ -1,0 +1,75 @@
+[gd_scene load_steps=7 format=3 uid="uid://cnbw4wukplemd"]
+
+[ext_resource type="Texture2D" uid="uid://cji875map3qku" path="res://assets/icons/Flag_of_Ecuador.svg" id="1_bo1fb"]
+[ext_resource type="Texture2D" uid="uid://dlfaloiq1u1u0" path="res://assets/icons/intro_screen.jpeg" id="1_vu24p"]
+[ext_resource type="Texture2D" uid="uid://dugcwhcrlutw5" path="res://assets/icons/user.png" id="2_gh2b7"]
+[ext_resource type="Script" path="res://scripts/main_menu/PlayButton.gd" id="2_v5h8f"]
+[ext_resource type="Texture2D" uid="uid://by8848y3tsnfs" path="res://assets/icons/round-square.png" id="4_c2eip"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qrv1d"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -55.0
+offset_top = 4.0
+offset_right = 1241.0
+offset_bottom = 652.0
+texture = ExtResource("1_vu24p")
+
+[node name="PlayButton" type="Button" parent="."]
+material = SubResource("ShaderMaterial_qrv1d")
+layout_mode = 0
+offset_left = 451.0
+offset_top = 236.0
+offset_right = 714.0
+offset_bottom = 446.0
+theme_override_font_sizes/font_size = 128
+text = "▶"
+script = ExtResource("2_v5h8f")
+
+[node name="ReportButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 595.0
+offset_right = 112.0
+offset_bottom = 633.0
+text = "Reportes"
+
+[node name="LanguageButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1067.0
+offset_top = 589.0
+offset_right = 1141.0
+offset_bottom = 638.0
+texture_normal = ExtResource("1_bo1fb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1076.0
+offset_top = 16.0
+offset_right = 1122.0
+offset_bottom = 62.0
+texture = ExtResource("4_c2eip")
+expand_mode = 1
+
+[node name="TextureButton" type="TextureButton" parent="TextureRect"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 42.0
+offset_bottom = 42.0
+texture_normal = ExtResource("2_gh2b7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="PlayButton" to="PlayButton" method="_on_pressed"]

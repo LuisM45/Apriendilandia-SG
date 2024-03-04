@@ -1,0 +1,91 @@
+[gd_scene load_steps=13 format=3 uid="uid://22bmup5fqubq"]
+
+[ext_resource type="Texture2D" uid="uid://cexn3gimmnq6f" path="res://sources/Background.jpg" id="1_k3g0s"]
+[ext_resource type="Script" path="res://scripts/stage.gd" id="1_mkesl"]
+[ext_resource type="Texture2D" uid="uid://cnitoe3mx1khx" path="res://sources/items.png" id="1_s1vfd"]
+[ext_resource type="Texture2D" uid="uid://b0srmjn0qash8" path="res://sources/1_white.png" id="3_3hwm1"]
+[ext_resource type="Texture2D" uid="uid://dxui6byuhi0eu" path="res://sources/1.png" id="4_mqs7t"]
+[ext_resource type="Script" path="res://scripts/drag_and_drop/DraggableGroup.gd" id="5_d4fw8"]
+[ext_resource type="Texture2D" uid="uid://sabsxwey7u6f" path="res://sources/2.png" id="5_td3an"]
+[ext_resource type="Texture2D" uid="uid://f7uvn5yoelu7" path="res://sources/3.png" id="6_6pajy"]
+[ext_resource type="Script" path="res://scripts/drag_and_drop/Draggable.gd" id="7_6v5dd"]
+[ext_resource type="Texture2D" uid="uid://bfa68p5of8err" path="res://sources/2_white.png" id="7_paf7u"]
+[ext_resource type="Texture2D" uid="uid://dji3gmyd4uola" path="res://sources/3_white.png" id="9_oa74c"]
+[ext_resource type="Script" path="res://scripts/drag_and_drop/DropHolder.gd" id="11_x5hcu"]
+
+[node name="Bosque" type="Node2D"]
+position = Vector2(17, 455)
+script = ExtResource("1_mkesl")
+next_scene = "res://scenes/main_menu.tscn"
+world_completion = 2
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = -33.0
+offset_top = -462.0
+offset_right = 1130.0
+offset_bottom = 206.0
+texture = ExtResource("1_k3g0s")
+
+[node name="Itemsbackground" type="TextureRect" parent="."]
+offset_left = 950.0
+offset_top = -472.0
+offset_right = 1136.0
+offset_bottom = 253.0
+texture = ExtResource("1_s1vfd")
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource("5_d4fw8")
+
+[node name="arbol1" type="TextureRect" parent="Node"]
+offset_left = 1021.0
+offset_top = 442.0
+offset_right = 1098.0
+offset_bottom = 624.0
+texture = ExtResource("4_mqs7t")
+script = ExtResource("7_6v5dd")
+content_type = "1"
+
+[node name="arbol2" type="TextureRect" parent="Node"]
+offset_left = 1015.0
+offset_top = 242.0
+offset_right = 1099.0
+offset_bottom = 424.0
+texture = ExtResource("5_td3an")
+script = ExtResource("7_6v5dd")
+content_type = "2"
+
+[node name="arbol3" type="TextureRect" parent="Node"]
+offset_left = 989.0
+offset_top = 21.0
+offset_right = 1120.0
+offset_bottom = 203.0
+texture = ExtResource("6_6pajy")
+script = ExtResource("7_6v5dd")
+content_type = "3"
+
+[node name="arbol_white2" type="TextureRect" parent="Node"]
+offset_left = 102.0
+offset_top = 221.0
+offset_right = 186.0
+offset_bottom = 403.0
+texture = ExtResource("7_paf7u")
+script = ExtResource("11_x5hcu")
+content_type = "2"
+
+[node name="arbol_white1" type="TextureRect" parent="Node"]
+offset_left = 495.0
+offset_top = 224.0
+offset_right = 572.0
+offset_bottom = 406.0
+texture = ExtResource("3_3hwm1")
+script = ExtResource("11_x5hcu")
+content_type = "1"
+
+[node name="arbol_white3" type="TextureRect" parent="Node"]
+offset_left = 271.0
+offset_top = 214.0
+offset_right = 402.0
+offset_bottom = 396.0
+texture = ExtResource("9_oa74c")
+script = ExtResource("11_x5hcu")
+content_type = "3"

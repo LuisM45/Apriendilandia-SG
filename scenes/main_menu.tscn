@@ -1,0 +1,92 @@
+[gd_scene load_steps=5 format=3 uid="uid://cynqaahscuo2p"]
+
+[ext_resource type="Script" path="res://scripts/main_menu/main.gd" id="1_i4jsu"]
+[ext_resource type="Texture2D" uid="uid://pvfnyikg57pg" path="res://assets/backgrounds/main/FI085m4w.jpeg" id="2_uy0nq"]
+[ext_resource type="Script" path="res://scripts/main_menu/side_panel.gd" id="3_ry3gu"]
+[ext_resource type="Texture2D" uid="uid://b3e47vxcemrpd" path="res://assets/icons/medal.png" id="4_6qf2q"]
+
+[node name="IslandTopView" type="Node2D"]
+script = ExtResource("1_i4jsu")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -38.0
+offset_top = 6.0
+offset_right = 1291.0
+offset_bottom = 653.0
+texture = ExtResource("2_uy0nq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("3_ry3gu")
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer"]
+offset_right = 344.0
+offset_bottom = 648.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/PanelContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/PanelContainer/Panel"]
+layout_mode = 0
+offset_left = 252.0
+offset_top = 588.0
+offset_right = 311.0
+offset_bottom = 627.0
+text = "Album"
+
+[node name="Button2" type="Button" parent="CanvasLayer/PanelContainer/Panel"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 586.0
+offset_right = 135.0
+offset_bottom = 617.0
+text = "Reliquiario
+"
+
+[node name="ButtonCity" type="Button" parent="CanvasLayer"]
+offset_left = 797.0
+offset_top = 266.0
+offset_right = 898.0
+offset_bottom = 321.0
+text = "Ciudad"
+
+[node name="ButtonBeach" type="Button" parent="CanvasLayer"]
+offset_left = 550.0
+offset_top = 438.0
+offset_right = 632.0
+offset_bottom = 489.0
+text = "Playa"
+
+[node name="ButtonForest" type="Button" parent="CanvasLayer"]
+offset_left = 491.0
+offset_top = 241.0
+offset_right = 573.0
+offset_bottom = 292.0
+text = "Bosque"
+
+[node name="MedalBeach" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(164, 317)
+scale = Vector2(0.23, 0.23)
+texture = ExtResource("4_6qf2q")
+
+[node name="MedalCity" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(251, 272)
+scale = Vector2(0.23, 0.23)
+texture = ExtResource("4_6qf2q")
+
+[node name="MedalAll" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(168, 192)
+scale = Vector2(0.36145, 0.36145)
+texture = ExtResource("4_6qf2q")
+
+[node name="MedalForest" type="Sprite2D" parent="CanvasLayer"]
+visible = false
+position = Vector2(82, 266)
+scale = Vector2(0.23, 0.23)
+texture = ExtResource("4_6qf2q")
+
+[connection signal="pressed" from="CanvasLayer/ButtonCity" to="." method="_on_button_city_pressed"]
+[connection signal="pressed" from="CanvasLayer/ButtonBeach" to="." method="_on_button_beach_pressed"]
+[connection signal="pressed" from="CanvasLayer/ButtonForest" to="." method="_on_button_forest_pressed"]
