@@ -1,5 +1,6 @@
 extends Control
 
+signal resume()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,6 +16,7 @@ func _process(delta):
 	
 func _on_resume():
 	queue_free()
+	resume.emit()
 
 
 func _on_tts_toggle():

@@ -23,7 +23,7 @@ size = Vector2(130, 126)
 [node name="MatchFlowers" type="Node2D"]
 script = ExtResource("1_ikla8")
 images = Array[Texture2D]([ExtResource("2_8p5qv"), ExtResource("3_qgpnf"), ExtResource("4_2hc5x")])
-next_scene = "res://scenes/main_menu.tscn"
+next_scene = "res://scenes/match_forest.tscn"
 
 [node name="MatchPairs" type="Node" parent="."]
 
