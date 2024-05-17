@@ -52,7 +52,7 @@ func _on_source_removed(source:Source):
 func try_solve():
 	var delta_color = current_color-target_color
 	var current_delta = (abs(delta_color.r)+abs(delta_color.g)+abs(delta_color.b))/3
-	print(current_delta)
+	print(current_color,"=>",target_color)
 	if current_delta<=acceptable_delta:
 		locked = true
 		solved.emit()

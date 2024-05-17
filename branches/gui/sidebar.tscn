@@ -1,15 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://c061ri6pfa1ck"]
+[gd_scene load_steps=6 format=3 uid="uid://c061ri6pfa1ck"]
 
 [ext_resource type="Shader" path="res://branches/gui/sidebar.gdshader" id="1_xeat2"]
 [ext_resource type="Script" path="res://scripts/gui/Sidebar.gd" id="2_thul7"]
+[ext_resource type="Shader" path="res://branches/gui/sidebar_bg.gdshader" id="3_0g5yc"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_huhex"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_82vam"]
 shader = ExtResource("1_xeat2")
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rtycy"]
+shader = ExtResource("3_0g5yc")
+
 [node name="Sidebar" type="HBoxContainer"]
+top_level = true
+visibility_layer = 3
 z_index = 99
+z_as_relative = false
 texture_filter = 2
-material = SubResource("ShaderMaterial_huhex")
+material = SubResource("ShaderMaterial_82vam")
 layout_direction = 2
 anchors_preset = -1
 anchor_right = 1.0
@@ -20,30 +27,45 @@ size_flags_vertical = 3
 alignment = 1
 script = ExtResource("2_thul7")
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+[node name="Panel" type="Panel" parent="."]
+material = SubResource("ShaderMaterial_rtycy")
 layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel"]
+layout_mode = 2
+offset_left = 4.0
+offset_right = 63.0
+offset_bottom = 31.0
 size_flags_horizontal = 2
 
-[node name="PauseBtn" type="Button" parent="HBoxContainer2"]
+[node name="PauseBtn" type="Button" parent="Panel/HBoxContainer2"]
 layout_mode = 2
 text = "PAUSE"
 
-[node name="InstructionLbl" type="Label" parent="."]
+[node name="InstructionLbl" type="Label" parent="Panel"]
 layout_mode = 2
+offset_left = 524.0
+offset_top = 4.0
+offset_right = 631.0
+offset_bottom = 27.0
 text = "INSTRUCTION"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
 layout_mode = 2
+offset_left = 1072.0
+offset_right = 1152.0
+offset_bottom = 31.0
 size_flags_horizontal = 10
 
-[node name="HintBtn" type="Button" parent="HBoxContainer"]
+[node name="HintBtn" type="Button" parent="Panel/HBoxContainer"]
 layout_mode = 2
 text = "(hint)"
 
-[node name="HelpBtn" type="Button" parent="HBoxContainer"]
+[node name="HelpBtn" type="Button" parent="Panel/HBoxContainer"]
 layout_mode = 2
 text = "(?)"
 
-[connection signal="pressed" from="HBoxContainer2/PauseBtn" to="." method="_on_pause"]
-[connection signal="pressed" from="HBoxContainer/HintBtn" to="." method="_on_hint"]
-[connection signal="pressed" from="HBoxContainer/HelpBtn" to="." method="_on_help"]
+[connection signal="pressed" from="Panel/HBoxContainer2/PauseBtn" to="." method="_on_pause"]
+[connection signal="pressed" from="Panel/HBoxContainer/HintBtn" to="." method="_on_hint"]
+[connection signal="pressed" from="Panel/HBoxContainer/HelpBtn" to="." method="_on_help"]

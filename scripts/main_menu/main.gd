@@ -12,7 +12,7 @@ func _process(delta):
 
 
 func _on_button_city_pressed():
-	get_tree().change_scene_to_file("res://scenes/match_numbers.tscn")
+	get_tree().change_scene_to_file("res://scenes/maze.tscn")
 	pass # Replace with function body.
 
 
@@ -22,5 +22,5 @@ func _on_button_beach_pressed():
 
 
 func _on_button_forest_pressed():
-	get_tree().change_scene_to_file("res://scenes/maze.tscn")
+	get_tree().change_scene_to_file("res://scenes/mixing_potions.tscn")
 	pass # Replace with function body.
