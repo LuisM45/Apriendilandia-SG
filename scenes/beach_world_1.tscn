@@ -1,79 +1,27 @@
-[gd_scene load_steps=8 format=3 uid="uid://bash3nx32x2n7"]
+[gd_scene load_steps=5 format=3 uid="uid://bash3nx32x2n7"]
 
-[ext_resource type="Script" path="res://scripts/stage.gd" id="1_o5525"]
+[ext_resource type="Script" path="res://scripts/game/stage.gd" id="1_jqdfx"]
 [ext_resource type="Texture2D" uid="uid://c384w3blj84wa" path="res://assets/backgrounds/beach/stage1.jpeg" id="1_qooi1"]
-[ext_resource type="Texture2D" uid="uid://bkcjsd4hlqwus" path="res://assets/sand-font/O.png" id="2_3ibao"]
 [ext_resource type="Script" path="res://scripts/CorruptedWord.gd" id="2_7wf4r"]
-[ext_resource type="Script" path="res://scripts/Character.gd" id="3_k5q7t"]
-[ext_resource type="Texture2D" uid="uid://ct6skyrgn2b0u" path="res://assets/sand-font/M.png" id="3_tox8u"]
-[ext_resource type="Texture2D" uid="uid://ctbl5dbmaiqbs" path="res://assets/sand-font/N.png" id="4_1hlca"]
+[ext_resource type="AudioStream" uid="uid://b17tffl287xom" path="res://resources/success.ogg" id="4_xm360"]
 
 [node name="BeachWorld1" type="Node2D"]
-script = ExtResource("1_o5525")
-next_scene = "res://scenes/beach_world_2.tscn"
+script = ExtResource("1_jqdfx")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(585, 315.5)
 scale = Vector2(2.29688, 1.41602)
 texture = ExtResource("1_qooi1")
 
-[node name="Node" type="Node" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
 script = ExtResource("2_7wf4r")
-word = "MONO"
-contaminated_word = "MOONO"
+word = "BANANA"
+rounds = 3
 
-[node name="MistakeChar" type="TextureRect" parent="Node"]
-offset_left = 449.0
-offset_top = 424.0
-offset_right = 607.0
-offset_bottom = 572.0
-texture = ExtResource("2_3ibao")
-expand_mode = 1
-script = ExtResource("3_k5q7t")
-character = "O"
-
-[node name="CharM" type="TextureRect" parent="Node"]
-offset_left = 61.0
-offset_top = 397.0
-offset_right = 186.0
-offset_bottom = 532.0
-texture = ExtResource("3_tox8u")
-expand_mode = 1
-script = ExtResource("3_k5q7t")
-character = "M"
-
-[node name="CharO2" type="TextureRect" parent="Node"]
-offset_left = 879.0
-offset_top = 419.0
-offset_right = 1028.0
-offset_bottom = 558.0
-texture = ExtResource("2_3ibao")
-expand_mode = 1
-script = ExtResource("3_k5q7t")
-character = "O"
-
-[node name="CharO1" type="TextureRect" parent="Node"]
-offset_left = 252.0
-offset_top = 325.0
-offset_right = 404.0
-offset_bottom = 467.0
-texture = ExtResource("2_3ibao")
-expand_mode = 1
-script = ExtResource("3_k5q7t")
-character = "O"
-
-[node name="CharN" type="TextureRect" parent="Node"]
-offset_left = 672.0
-offset_top = 342.0
-offset_right = 836.0
-offset_bottom = 498.0
-texture = ExtResource("4_1hlca")
-expand_mode = 1
-script = ExtResource("3_k5q7t")
-character = "N"
-
-[connection signal="gui_input" from="Node/MistakeChar" to="Node/MistakeChar" method="_on_gui_input"]
-[connection signal="gui_input" from="Node/CharM" to="Node/CharM" method="_on_gui_input"]
-[connection signal="gui_input" from="Node/CharO2" to="Node/CharO2" method="_on_gui_input"]
-[connection signal="gui_input" from="Node/CharO1" to="Node/CharO1" method="_on_gui_input"]
-[connection signal="gui_input" from="Node/CharN" to="Node/CharN" method="_on_gui_input"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control"]
+stream = ExtResource("4_xm360")

@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://dcvs00wblsp62"]
+
+[ext_resource type="FontFile" uid="uid://bddytej0onsmt" path="res://assets/sand-font/Kaph-Regular.ttf" id="1_mamhp"]
+
+[resource]
+font = ExtResource("1_mamhp")
+font_size = 80
+font_color = Color(0.388235, 0.313726, 0.054902, 1)

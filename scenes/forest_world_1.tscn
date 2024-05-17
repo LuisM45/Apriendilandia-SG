@@ -1,28 +1,35 @@
 [gd_scene load_steps=14 format=3 uid="uid://c7rlhj4630x43"]
 
-[ext_resource type="Script" path="res://scripts/stage.gd" id="1_04lwk"]
-[ext_resource type="Texture2D" uid="uid://xg88by67d4x2" path="res://sources/Background2.jpg" id="1_yekyn"]
-[ext_resource type="Texture2D" uid="uid://cnitoe3mx1khx" path="res://sources/items.png" id="2_oox3s"]
-[ext_resource type="Texture2D" uid="uid://bai0aqu0yhnvp" path="res://sources/Flores/1.png" id="3_bmqdd"]
+[ext_resource type="Script" path="res://scripts/game/stage.gd" id="1_07qac"]
+[ext_resource type="Texture2D" uid="uid://xg88by67d4x2" path="res://assets/old_1/Background2.jpg" id="1_yekyn"]
+[ext_resource type="Texture2D" uid="uid://cnitoe3mx1khx" path="res://assets/old_1/items.png" id="2_oox3s"]
+[ext_resource type="Texture2D" uid="uid://bai0aqu0yhnvp" path="res://assets/old_1/Flores/1.png" id="3_bmqdd"]
 [ext_resource type="Script" path="res://scripts/drag_and_drop/DraggableGroup.gd" id="3_j5vf7"]
-[ext_resource type="Texture2D" uid="uid://cjfw6ki0hvepk" path="res://sources/Flores/2.png" id="5_4ju7j"]
-[ext_resource type="Texture2D" uid="uid://daxa005p86ojh" path="res://sources/Flores/3.png" id="6_afcxp"]
+[ext_resource type="Texture2D" uid="uid://cjfw6ki0hvepk" path="res://assets/old_1/Flores/2.png" id="5_4ju7j"]
+[ext_resource type="Texture2D" uid="uid://daxa005p86ojh" path="res://assets/old_1/Flores/3.png" id="6_afcxp"]
 [ext_resource type="Script" path="res://scripts/drag_and_drop/Draggable.gd" id="6_xxgyx"]
-[ext_resource type="Texture2D" uid="uid://b4bam320oydeu" path="res://sources/Flores/2_white.png" id="7_10fid"]
-[ext_resource type="Texture2D" uid="uid://b4g80kjmql23f" path="res://sources/Flores/1_white.png" id="8_t72p3"]
-[ext_resource type="Texture2D" uid="uid://r5waotuk4qo6" path="res://sources/Flores/3_white.png" id="9_iskjb"]
+[ext_resource type="Texture2D" uid="uid://b4bam320oydeu" path="res://assets/old_1/Flores/2_white.png" id="7_10fid"]
+[ext_resource type="Texture2D" uid="uid://b4g80kjmql23f" path="res://assets/old_1/Flores/1_white.png" id="8_t72p3"]
+[ext_resource type="Texture2D" uid="uid://r5waotuk4qo6" path="res://assets/old_1/Flores/3_white.png" id="9_iskjb"]
 [ext_resource type="Script" path="res://scripts/drag_and_drop/DropHolder.gd" id="10_7cwi7"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q66wq"]
 
-[node name="Jardin" type="Node2D"]
-script = ExtResource("1_04lwk")
-next_scene = "res://scenes/forest_world_2.tscn"
+[node name="Jardin" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_07qac")
 
-[node name="Node" type="Node" parent="."]
+[node name="Node" type="Control" parent="."]
+anchors_preset = 0
 script = ExtResource("3_j5vf7")
 
 [node name="Background" type="TextureRect" parent="Node"]
+layout_mode = 0
 offset_left = 3.0
 offset_top = 5.0
 offset_right = 1166.0
@@ -30,6 +37,7 @@ offset_bottom = 673.0
 texture = ExtResource("1_yekyn")
 
 [node name="Itemsbackground" type="TextureRect" parent="Node"]
+layout_mode = 0
 offset_left = 986.0
 offset_top = -5.0
 offset_right = 1172.0
@@ -37,6 +45,7 @@ offset_bottom = 720.0
 texture = ExtResource("2_oox3s")
 
 [node name="flor1" type="TextureRect" parent="Node"]
+layout_mode = 0
 offset_left = 1007.0
 offset_top = 478.0
 offset_right = 1140.0
@@ -47,6 +56,7 @@ script = ExtResource("6_xxgyx")
 content_type = "1"
 
 [node name="flor2" type="TextureRect" parent="Node"]
+layout_mode = 0
 offset_left = 1014.0
 offset_top = 275.0
 offset_right = 1144.0
@@ -57,6 +67,7 @@ script = ExtResource("6_xxgyx")
 content_type = "2"
 
 [node name="flor3" type="TextureRect" parent="Node"]
+layout_mode = 0
 offset_left = 1008.0
 offset_top = 33.0
 offset_right = 1139.0
@@ -67,6 +78,7 @@ script = ExtResource("6_xxgyx")
 content_type = "3"
 
 [node name="flor_white2" type="TextureRect" parent="Node"]
+layout_mode = 0
 offset_left = 75.0
 offset_top = 200.0
 offset_right = 266.0
@@ -76,6 +88,7 @@ script = ExtResource("10_7cwi7")
 content_type = "2"
 
 [node name="flor_white1" type="TextureRect" parent="Node"]
+layout_mode = 0
 offset_left = 714.0
 offset_top = 228.0
 offset_right = 907.0
@@ -85,6 +98,7 @@ script = ExtResource("10_7cwi7")
 content_type = "1"
 
 [node name="Button" type="Button" parent="Node"]
+layout_mode = 0
 offset_left = 858.0
 offset_top = 18.0
 offset_right = 987.0
@@ -92,6 +106,7 @@ offset_bottom = 53.0
 text = "RESET"
 
 [node name="flor_white3" type="TextureRect" parent="Node"]
+layout_mode = 0
 offset_left = 430.0
 offset_top = 189.0
 offset_right = 598.0
@@ -108,5 +123,3 @@ offset_right = 200.0
 offset_bottom = 364.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_q66wq")
-
-[connection signal="pressed" from="Node/Button" to="." method="_on_button_pressed"]

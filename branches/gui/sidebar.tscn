@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://c061ri6pfa1ck"]
+
+[ext_resource type="Shader" path="res://branches/gui/sidebar.gdshader" id="1_xeat2"]
+[ext_resource type="Script" path="res://scripts/gui/Sidebar.gd" id="2_thul7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_huhex"]
+shader = ExtResource("1_xeat2")
+
+[node name="Sidebar" type="HBoxContainer"]
+z_index = 99
+texture_filter = 2
+material = SubResource("ShaderMaterial_huhex")
+layout_direction = 2
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.048
+offset_bottom = -0.104
+grow_horizontal = 2
+size_flags_vertical = 3
+alignment = 1
+script = ExtResource("2_thul7")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="PauseBtn" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+text = "PAUSE"
+
+[node name="InstructionLbl" type="Label" parent="."]
+layout_mode = 2
+text = "INSTRUCTION"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="HintBtn" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "(hint)"
+
+[node name="HelpBtn" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "(?)"
+
+[connection signal="pressed" from="HBoxContainer2/PauseBtn" to="." method="_on_pause"]
+[connection signal="pressed" from="HBoxContainer/HintBtn" to="." method="_on_hint"]
+[connection signal="pressed" from="HBoxContainer/HelpBtn" to="." method="_on_help"]

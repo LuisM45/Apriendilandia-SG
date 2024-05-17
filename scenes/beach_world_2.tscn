@@ -1,29 +1,20 @@
-[gd_scene load_steps=11 format=3 uid="uid://ceeucnmu4qe64"]
+[gd_scene load_steps=7 format=3 uid="uid://ceeucnmu4qe64"]
 
-[ext_resource type="Script" path="res://scripts/stage.gd" id="1_lg3tt"]
+[ext_resource type="Script" path="res://scripts/game/stage.gd" id="1_pjtkr"]
 [ext_resource type="FontFile" uid="uid://bddytej0onsmt" path="res://assets/sand-font/Kaph-Regular.ttf" id="1_rgy27"]
 [ext_resource type="Script" path="res://scripts/WordImage.gd" id="2_na7gy"]
-[ext_resource type="Script" path="res://scripts/NamedSprite.gd" id="3_phe56"]
 [ext_resource type="Texture2D" uid="uid://dmnt3p310g21x" path="res://assets/backgrounds/beach/stage2.jpeg" id="3_vtgow"]
-[ext_resource type="Texture2D" uid="uid://crj3vxaittr76" path="res://assets/animals/llama.png" id="4_uj6r7"]
-[ext_resource type="Texture2D" uid="uid://du32xvedmivx2" path="res://assets/animals/sheep.png" id="4_uuna0"]
-[ext_resource type="Texture2D" uid="uid://brwa561ggq3j" path="res://assets/animals/cow.png" id="5_y6xhy"]
+[ext_resource type="AudioStream" uid="uid://b17tffl287xom" path="res://resources/success.ogg" id="8_hwgob"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_55bh5"]
 font = ExtResource("1_rgy27")
 font_size = 120
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8mhsg"]
-size = Vector2(166.752, 114.3)
-
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_lg3tt")
-next_scene = "res://scenes/main_menu.tscn"
-world_completion = 1
+script = ExtResource("1_pjtkr")
 
 [node name="Node" type="Node" parent="."]
 script = ExtResource("2_na7gy")
-word = "cow"
 
 [node name="Label" type="Label" parent="Node"]
 offset_left = 227.0
@@ -34,56 +25,10 @@ text = "vaca"
 label_settings = SubResource("LabelSettings_55bh5")
 uppercase = true
 
-[node name="Sheep" type="Area2D" parent="Node"]
-position = Vector2(0.00024414, 6.10352e-05)
-script = ExtResource("3_phe56")
-sprite_name = "sheep"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Sheep"]
-position = Vector2(970, 538)
-scale = Vector2(1.27734, 1.27734)
-shape = SubResource("RectangleShape2D_8mhsg")
-
-[node name="Sprite" type="Sprite2D" parent="Node/Sheep/CollisionShape2D"]
-position = Vector2(8.61166, 0)
-scale = Vector2(0.414942, 0.414942)
-texture = ExtResource("4_uuna0")
-
-[node name="Cow" type="Area2D" parent="Node"]
-position = Vector2(0.00024414, 6.10352e-05)
-script = ExtResource("3_phe56")
-sprite_name = "cow"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Cow"]
-position = Vector2(971, 125)
-scale = Vector2(1.27734, 1.27734)
-shape = SubResource("RectangleShape2D_8mhsg")
-
-[node name="Sprite" type="Sprite2D" parent="Node/Cow/CollisionShape2D"]
-position = Vector2(-4.30597, 7.04594)
-scale = Vector2(0.414942, 0.414942)
-texture = ExtResource("5_y6xhy")
-
-[node name="Llama" type="Area2D" parent="Node"]
-position = Vector2(0.00012207, 3.05176e-05)
-script = ExtResource("3_phe56")
-sprite_name = "llama"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Llama"]
-position = Vector2(966, 334)
-scale = Vector2(1.27734, 1.27734)
-shape = SubResource("RectangleShape2D_8mhsg")
-
-[node name="Sprite" type="Sprite2D" parent="Node/Llama/CollisionShape2D"]
-position = Vector2(8.61166, 0)
-scale = Vector2(0.414942, 0.414942)
-texture = ExtResource("4_uj6r7")
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node"]
+stream = ExtResource("8_hwgob")
 
 [node name="Stage3" type="Sprite2D" parent="."]
 position = Vector2(575, 325)
 scale = Vector2(1.27734, 1.27734)
 texture = ExtResource("3_vtgow")
-
-[connection signal="input_event" from="Node/Sheep" to="Node/Sheep" method="_on_input_event"]
-[connection signal="input_event" from="Node/Cow" to="Node/Cow" method="_on_input_event"]
-[connection signal="input_event" from="Node/Llama" to="Node/Llama" method="_on_input_event"]
