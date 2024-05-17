@@ -1,0 +1,175 @@
+[gd_scene load_steps=13 format=3 uid="uid://c5bhd8hs1wtbg"]
+
+[ext_resource type="Script" path="res://scenes/test/benefitiary.gd" id="1_8g2pt"]
+[ext_resource type="Script" path="res://scripts/game/mixin/source.gd" id="2_ipgms"]
+[ext_resource type="Texture2D" uid="uid://bqcbmib0iik4p" path="res://assets/mixin_game/bottle.png" id="3_e63vg"]
+[ext_resource type="Texture2D" uid="uid://bjuhhtekx85wb" path="res://assets/mixin_game/juice.png" id="4_7dvyr"]
+[ext_resource type="Script" path="res://scripts/game/mixin/cauldron.gd" id="4_n8sab"]
+[ext_resource type="Texture2D" uid="uid://bffqtr800bjx" path="res://assets/mixin_game/tipped_bottle.png" id="5_8lngm"]
+[ext_resource type="Texture2D" uid="uid://bmdwxslbwcstp" path="res://assets/mixin_game/tipped_juice.png" id="6_eu7jp"]
+[ext_resource type="Texture2D" uid="uid://oqq5le3f5fvr" path="res://assets/mixin_game/cauldron.png" id="8_r3ry6"]
+[ext_resource type="Texture2D" uid="uid://dl3qja7443xdp" path="res://assets/mixin_game/cauldron_mask.png" id="9_hwm0q"]
+[ext_resource type="Texture2D" uid="uid://rifls5el05eu" path="res://assets/mixin_game/cauldron_sideways.png" id="10_jhvmp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jgm71"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8s0r6"]
+size = Vector2(130, 126)
+
+[node name="Workspace" type="Node2D"]
+script = ExtResource("1_8g2pt")
+
+[node name="Sources" type="Node" parent="."]
+
+[node name="source_2" type="CharacterBody2D" parent="Sources"]
+z_index = 1
+position = Vector2(187, 527)
+input_pickable = true
+script = ExtResource("2_ipgms")
+current_color = Color(0, 0, 1, 1)
+container_texture = ExtResource("3_e63vg")
+color_mask = ExtResource("4_7dvyr")
+lifted_container_texture = ExtResource("5_8lngm")
+lifted_color_mask = ExtResource("6_eu7jp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_2"]
+shape = SubResource("RectangleShape2D_jgm71")
+
+[node name="source_1" type="CharacterBody2D" parent="Sources"]
+z_index = 1
+position = Vector2(187, 248)
+input_pickable = true
+script = ExtResource("2_ipgms")
+current_color = Color(1, 0, 0, 1)
+container_texture = ExtResource("3_e63vg")
+color_mask = ExtResource("4_7dvyr")
+lifted_container_texture = ExtResource("5_8lngm")
+lifted_color_mask = ExtResource("6_eu7jp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_1"]
+shape = SubResource("RectangleShape2D_jgm71")
+
+[node name="source_6" type="CharacterBody2D" parent="Sources"]
+z_index = 1
+position = Vector2(187, 388)
+input_pickable = true
+script = ExtResource("2_ipgms")
+current_color = Color(0, 1, 1, 1)
+container_texture = ExtResource("3_e63vg")
+color_mask = ExtResource("4_7dvyr")
+lifted_container_texture = ExtResource("5_8lngm")
+lifted_color_mask = ExtResource("6_eu7jp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_6"]
+shape = SubResource("RectangleShape2D_jgm71")
+
+[node name="source_7" type="CharacterBody2D" parent="Sources"]
+z_index = 1
+position = Vector2(187, 98)
+input_pickable = true
+script = ExtResource("2_ipgms")
+current_color = Color(1, 1, 1, 1)
+container_texture = ExtResource("3_e63vg")
+color_mask = ExtResource("4_7dvyr")
+lifted_container_texture = ExtResource("5_8lngm")
+lifted_color_mask = ExtResource("6_eu7jp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_7"]
+shape = SubResource("RectangleShape2D_jgm71")
+
+[node name="source_3" type="CharacterBody2D" parent="Sources"]
+z_index = 1
+position = Vector2(1000, 266)
+input_pickable = true
+script = ExtResource("2_ipgms")
+current_color = Color(0, 1, 0, 1)
+container_texture = ExtResource("3_e63vg")
+color_mask = ExtResource("4_7dvyr")
+lifted_container_texture = ExtResource("5_8lngm")
+lifted_color_mask = ExtResource("6_eu7jp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_3"]
+shape = SubResource("RectangleShape2D_jgm71")
+
+[node name="source_4" type="CharacterBody2D" parent="Sources"]
+z_index = 1
+position = Vector2(1000, 400)
+input_pickable = true
+script = ExtResource("2_ipgms")
+current_color = Color(1, 1, 0, 1)
+container_texture = ExtResource("3_e63vg")
+color_mask = ExtResource("4_7dvyr")
+lifted_container_texture = ExtResource("5_8lngm")
+lifted_color_mask = ExtResource("6_eu7jp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_4"]
+shape = SubResource("RectangleShape2D_jgm71")
+
+[node name="source_5" type="CharacterBody2D" parent="Sources"]
+z_index = 1
+position = Vector2(1000, 535)
+input_pickable = true
+script = ExtResource("2_ipgms")
+current_color = Color(1, 0, 1, 1)
+container_texture = ExtResource("3_e63vg")
+color_mask = ExtResource("4_7dvyr")
+lifted_container_texture = ExtResource("5_8lngm")
+lifted_color_mask = ExtResource("6_eu7jp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_5"]
+shape = SubResource("RectangleShape2D_jgm71")
+
+[node name="source_8" type="CharacterBody2D" parent="Sources"]
+z_index = 1
+position = Vector2(1000, 130)
+input_pickable = true
+script = ExtResource("2_ipgms")
+container_texture = ExtResource("3_e63vg")
+color_mask = ExtResource("4_7dvyr")
+lifted_container_texture = ExtResource("5_8lngm")
+lifted_color_mask = ExtResource("6_eu7jp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_8"]
+shape = SubResource("RectangleShape2D_jgm71")
+
+[node name="Cauldrons" type="Node" parent="."]
+
+[node name="cauldron_2" type="Area2D" parent="Cauldrons"]
+position = Vector2(693, 314)
+script = ExtResource("4_n8sab")
+current_color = Color(0.254902, 0.223529, 0.223529, 1)
+target_color = Color(1, 1, 1, 1)
+container_texture = ExtResource("8_r3ry6")
+color_mask = ExtResource("9_hwm0q")
+
+[node name="CauldronSideways" type="Sprite2D" parent="Cauldrons/cauldron_2"]
+texture_filter = 1
+position = Vector2(-4, 129)
+scale = Vector2(4.18966, 4.18966)
+texture = ExtResource("10_jhvmp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cauldrons/cauldron_2"]
+shape = SubResource("RectangleShape2D_8s0r6")
+
+[node name="cauldron_1" type="Area2D" parent="Cauldrons"]
+position = Vector2(508, 314)
+script = ExtResource("4_n8sab")
+container_texture = ExtResource("8_r3ry6")
+color_mask = ExtResource("9_hwm0q")
+
+[node name="CauldronSideways" type="Sprite2D" parent="Cauldrons/cauldron_1"]
+texture_filter = 1
+position = Vector2(-4, 129)
+scale = Vector2(4.18966, 4.18966)
+texture = ExtResource("10_jhvmp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cauldrons/cauldron_1"]
+shape = SubResource("RectangleShape2D_8s0r6")
+
+[connection signal="body_exited" from="Cauldrons/cauldron_2" to="Cauldrons/cauldron_2" method="_on_source_removed"]
+[connection signal="object_dropped_over" from="Cauldrons/cauldron_2" to="Cauldrons/cauldron_2" method="_on_source_removed"]
+[connection signal="object_lifted_over" from="Cauldrons/cauldron_2" to="Cauldrons/cauldron_2" method="_on_source_over"]
+[connection signal="body_exited" from="Cauldrons/cauldron_1" to="Cauldrons/cauldron_1" method="_on_source_removed"]
+[connection signal="object_dropped_over" from="Cauldrons/cauldron_1" to="Cauldrons/cauldron_1" method="_on_source_removed"]
+[connection signal="object_lifted_over" from="Cauldrons/cauldron_1" to="Cauldrons/cauldron_1" method="_on_source_over"]

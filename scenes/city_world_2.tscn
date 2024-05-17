@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://ci5xdkytyrfaw"]
 
 [ext_resource type="Texture2D" uid="uid://de51576gdpd0x" path="res://imgsBG/bgCiudadFluvial.jpg" id="1_bc0tk"]
-[ext_resource type="Script" path="res://scripts/stage.gd" id="1_j4pwp"]
+[ext_resource type="Script" path="res://scripts/game/stage.gd" id="1_dvtoi"]
 [ext_resource type="Texture2D" uid="uid://6tglq4xma7bt" path="res://imgsBG/itemsbg.jpg" id="2_hd4r5"]
 [ext_resource type="Texture2D" uid="uid://cnu2gannp4wjd" path="res://imgsItems/num3.png" id="3_vqram"]
 [ext_resource type="Texture2D" uid="uid://f37ay2pti4qs" path="res://imgsItems/num3bgwhite.png" id="5_06k75"]
@@ -14,9 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cbu6hbxk0t62q" path="res://imgsItems/num1bgwhite.png" id="10_y20oy"]
 
 [node name="Fluvial" type="Node2D"]
-script = ExtResource("1_j4pwp")
-next_scene = "res://scenes/main_menu.tscn"
-world_completion = 3
+script = ExtResource("1_dvtoi")
 
 [node name="Background" type="TextureRect" parent="."]
 offset_right = 980.0

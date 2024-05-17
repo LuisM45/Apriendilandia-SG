@@ -1,6 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://ci5xdkytyrfaw"]
+[gd_scene load_steps=15 format=3 uid="uid://ci5xdkytyrfaw"]
 
-[ext_resource type="Script" path="res://scripts/stage.gd" id="1_km73n"]
+[ext_resource type="Script" path="res://scripts/game/stage.gd" id="1_6iehw"]
 [ext_resource type="Texture2D" uid="uid://c1ni08wdyw2so" path="res://imgsBG/bgVenecia.jpg" id="2_73x02"]
 [ext_resource type="Texture2D" uid="uid://6tglq4xma7bt" path="res://imgsBG/itemsbg.jpg" id="3_jj6t5"]
 [ext_resource type="Texture2D" uid="uid://hh304supw3f6" path="res://imgsItems/num0.png" id="4_wptxa"]
@@ -12,10 +12,11 @@
 [ext_resource type="Script" path="res://scripts/drag_and_drop/DropHolder.gd" id="9_meaa4"]
 [ext_resource type="Texture2D" uid="uid://8o8y7gb0x6xb" path="res://imgsItems/num8.png" id="9_vfx8v"]
 [ext_resource type="Texture2D" uid="uid://61j3x80iqr5f" path="res://imgsItems/numwhite8.png" id="10_kunvo"]
+[ext_resource type="Script" path="res://scripts/gui/RootGui.gd" id="13_rof7l"]
+[ext_resource type="PackedScene" uid="uid://c061ri6pfa1ck" path="res://branches/gui/sidebar.tscn" id="14_wjjk4"]
 
 [node name="Fluvial2" type="Node2D"]
-script = ExtResource("1_km73n")
-next_scene = "res://scenes/city_world_2.tscn"
+script = ExtResource("1_6iehw")
 
 [node name="Background" type="TextureRect" parent="."]
 offset_right = 980.0
@@ -29,10 +30,15 @@ offset_right = 1152.0
 offset_bottom = 650.0
 texture = ExtResource("3_jj6t5")
 
-[node name="Node" type="Node" parent="."]
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 script = ExtResource("5_nyq5h")
 
-[node name="num0" type="TextureRect" parent="Node"]
+[node name="num0" type="TextureRect" parent="Control"]
+layout_mode = 0
 offset_left = 986.0
 offset_top = 81.0
 offset_right = 1085.0
@@ -42,7 +48,8 @@ expand_mode = 1
 script = ExtResource("5_rlxqw")
 content_type = "0"
 
-[node name="num0White" type="TextureRect" parent="Node"]
+[node name="num0White" type="TextureRect" parent="Control"]
+layout_mode = 0
 offset_left = 115.0
 offset_top = 345.0
 offset_right = 214.0
@@ -52,7 +59,8 @@ expand_mode = 1
 script = ExtResource("9_meaa4")
 content_type = "0"
 
-[node name="num4" type="TextureRect" parent="Node"]
+[node name="num4" type="TextureRect" parent="Control"]
+layout_mode = 0
 offset_left = 990.0
 offset_top = 294.0
 offset_right = 1089.0
@@ -62,7 +70,8 @@ expand_mode = 1
 script = ExtResource("5_rlxqw")
 content_type = "4"
 
-[node name="num4White" type="TextureRect" parent="Node"]
+[node name="num4White" type="TextureRect" parent="Control"]
+layout_mode = 0
 offset_left = 450.0
 offset_top = 61.0
 offset_right = 549.0
@@ -72,7 +81,8 @@ expand_mode = 1
 script = ExtResource("9_meaa4")
 content_type = "4"
 
-[node name="num8" type="TextureRect" parent="Node"]
+[node name="num8" type="TextureRect" parent="Control"]
+layout_mode = 0
 offset_left = 996.0
 offset_top = 477.0
 offset_right = 1095.0
@@ -82,7 +92,8 @@ expand_mode = 1
 script = ExtResource("5_rlxqw")
 content_type = "8"
 
-[node name="num8White" type="TextureRect" parent="Node"]
+[node name="num8White" type="TextureRect" parent="Control"]
+layout_mode = 0
 offset_left = 631.0
 offset_top = 408.0
 offset_right = 730.0
@@ -91,3 +102,17 @@ texture = ExtResource("10_kunvo")
 expand_mode = 1
 script = ExtResource("9_meaa4")
 content_type = "8"
+
+[node name="Container" type="Container" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("13_rof7l")
+
+[node name="Sidebar" parent="Container" instance=ExtResource("14_wjjk4")]
+layout_mode = 2
+size_flags_vertical = 1

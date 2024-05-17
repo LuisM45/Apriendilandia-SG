@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cuccqp6bfou4k"]
+
+[ext_resource type="Script" path="res://scripts/NamedSprite.gd" id="1_538qk"]
+[ext_resource type="Texture2D" uid="uid://du32xvedmivx2" path="res://assets/animals/sheep.png" id="2_xvh0x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8mhsg"]
+size = Vector2(166.752, 114.3)
+
+[node name="Sheep" type="Area2D"]
+position = Vector2(0.00024414, 6.10352e-05)
+script = ExtResource("1_538qk")
+sprite_name = "sheep"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.27734, 1.27734)
+shape = SubResource("RectangleShape2D_8mhsg")
+
+[node name="Sprite" type="Sprite2D" parent="CollisionShape2D"]
+scale = Vector2(0.414942, 0.414942)
+texture = ExtResource("2_xvh0x")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

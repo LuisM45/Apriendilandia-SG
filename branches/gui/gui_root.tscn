@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvvtuls8rcodl"]
+
+[ext_resource type="Script" path="res://scripts/gui/RootGui.gd" id="1_hly65"]
+[ext_resource type="PackedScene" uid="uid://c061ri6pfa1ck" path="res://branches/gui/sidebar.tscn" id="1_i332e"]
+
+[node name="GuiRoot" type="VBoxContainer"]
+top_level = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hly65")
+
+[node name="Sidebar" parent="." instance=ExtResource("1_i332e")]
+layout_mode = 2
+size_flags_vertical = 1

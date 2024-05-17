@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://22bmup5fqubq"]
 
 [ext_resource type="Texture2D" uid="uid://cexn3gimmnq6f" path="res://sources/Background.jpg" id="1_k3g0s"]
-[ext_resource type="Script" path="res://scripts/stage.gd" id="1_mkesl"]
+[ext_resource type="Script" path="res://scripts/game/stage.gd" id="1_qbfe6"]
 [ext_resource type="Texture2D" uid="uid://cnitoe3mx1khx" path="res://sources/items.png" id="1_s1vfd"]
 [ext_resource type="Texture2D" uid="uid://b0srmjn0qash8" path="res://sources/1_white.png" id="3_3hwm1"]
 [ext_resource type="Texture2D" uid="uid://dxui6byuhi0eu" path="res://sources/1.png" id="4_mqs7t"]
@@ -15,9 +15,7 @@
 
 [node name="Bosque" type="Node2D"]
 position = Vector2(17, 455)
-script = ExtResource("1_mkesl")
-next_scene = "res://scenes/main_menu.tscn"
-world_completion = 2
+script = ExtResource("1_qbfe6")
 
 [node name="Background" type="TextureRect" parent="."]
 offset_left = -33.0
