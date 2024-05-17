@@ -17,7 +17,6 @@ func new_objetive():
 	maze.generate()
 	var new_player_height = maze.adjusted_tile_size*0.6
 	var new_player_scale = new_player_height/(player.collision_shape.shape.radius*2)
-	print(new_player_scale)
 	player.scale = Vector2(new_player_scale,new_player_scale)
 	pass
 	
@@ -37,7 +36,7 @@ func _on_correct_attempt():
 	rounds -= 1
 	if rounds <= 0:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-		super.win()
+		win.emit("")
 	reset_player()
 	new_objetive()
 
@@ -51,4 +50,4 @@ func toggleMouse():
 
 func _on_win_area_body_entered(body):
 	if body == player:
-		_on_correct_attempt()
+		attempt.emit(true)
