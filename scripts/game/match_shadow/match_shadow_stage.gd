@@ -13,8 +13,8 @@ func _ready():
 	images.shuffle()
 	remaining = minimal_count
 	for pair in pairs:
-		pair.correct_match.connect(func x(b):_on_correct_attempt())
-		pair.incorrect_match.connect(func x(b):_on_failed_attempt())
+		pair.correct_match.connect(func x(b):attempt.emit(true))
+		pair.incorrect_match.connect(func x(b):attempt.emit(false))
 		
 	
 	var positions =[]
@@ -35,15 +35,14 @@ func _on_correct_attempt():
 	super._on_correct_attempt()
 	remaining-=1
 	if remaining <= 0:
-		super.win()
+		win.emit("")
 	
 func _on_failed_attempt():
 	super._on_failed_attempt()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	super._ready()
-
+	super._process(delta)
 
 
 func _on_original_body_input_event(viewport, event, shape_idx):

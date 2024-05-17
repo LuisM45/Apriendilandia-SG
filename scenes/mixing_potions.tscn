@@ -20,7 +20,6 @@ size = Vector2(130, 126)
 [node name="MixingPotions" type="Node2D"]
 script = ExtResource("1_03kll")
 next_scene = "res://scenes/match_flowers.tscn"
-difficulty = 5.0
 
 [node name="Sources" type="Node" parent="."]
 

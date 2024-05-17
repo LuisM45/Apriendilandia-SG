@@ -33,7 +33,7 @@ func _ready():
 func _process(delta):
 	super._process(delta)
 	if locked: return
-	if _pour_source():
+	if _pour_source(delta):
 		try_solve()
 	mask_sprite.modulate = current_color
 
@@ -52,15 +52,15 @@ func _on_source_removed(source:Source):
 func try_solve():
 	var delta_color = current_color-target_color
 	var current_delta = (abs(delta_color.r)+abs(delta_color.g)+abs(delta_color.b))/3
-	print(current_color,"=>",target_color)
 	if current_delta<=acceptable_delta:
 		locked = true
 		solved.emit()
 
-func _pour_source():
+func _pour_source(delta):
+	var framerate_multiplier = 0.00003/delta # VSync off makes pouring go brrrrrr
 	if current_source and current_source.can_pour():
-		current_color = ( weighted_color() + current_source.weighted_color() ) / (current_weight+current_source.weight)
-		current_weight = min(max_weight,current_weight+current_source.weight)
+		current_color = ( weighted_color() + current_source.weighted_color()*framerate_multiplier ) / (current_weight+current_source.weight*framerate_multiplier)
+		current_weight = min(max_weight,current_weight+current_source.weight*framerate_multiplier)
 		return true
 	return false
 	

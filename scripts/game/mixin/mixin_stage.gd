@@ -21,4 +21,5 @@ func _process(delta):
 
 func _on_solved():
 	remaining -= 1
-	if remaining<=0: win()
+	attempt.emit(true)
+	if remaining<=0: win.emit("")

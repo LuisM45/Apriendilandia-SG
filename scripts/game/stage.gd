@@ -5,9 +5,9 @@ const Sidebar = preload("res://branches/gui/sidebar.tscn")
 	
 @export_file("*.tscn") var next_scene: String
 
-@export var success_sound: AudioStream
-@export var win_sound: AudioStream
-@export var bg_music: AudioStream
+@export var success_sound: AudioStream = load("res://assets/sfx/90s-game-ui-7-185100.mp3")
+@export var win_sound: AudioStream = load("res://assets/sfx/game-bonus-144751.mp3")
+@export var bg_music: AudioStream = load("res://assets/bgm/game-music-loop-3-144252.mp3")
 
 @export var world: int
 @export var stage: int
@@ -16,9 +16,12 @@ const Sidebar = preload("res://branches/gui/sidebar.tscn")
 
 signal pause()
 signal resume()
-signal attempt(type:int)
-signal swin()
+signal attempt(was_succesful:bool)
+signal win(extra:String)
 
+
+var sfx_node: AudioStreamPlayer2D
+var bgm_node: AudioStreamPlayer2D
 var attempts = 0
 var mistakes = 0
 var hits = 0
@@ -28,6 +31,7 @@ var playdate = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_ready_sound()
+	_ready_signals()
 	playdate = Globals.unix_system_time()
 	var gui_node = Sidebar.instantiate()
 	add_child(gui_node)
@@ -39,22 +43,39 @@ func _ready():
 func _process(delta):
 	pass
 
+func _ready_signals():
+	Globals.volume_changed.connect(_set_sound_volume)
+	attempt.connect(_on_attempt)
+	attempt.connect(func(x):if x: _play_success_sound())
+	win.connect(_on_win)
+	win.connect(_play_win_sound)
+
 func _ready_sound():
-	var sfx_node = AudioStreamPlayer2D.new()
-	var bgm_node = AudioStreamPlayer2D.new()
-	bgm_node.stream = bg_music
+	sfx_node = AudioStreamPlayer2D.new()
+	bgm_node = AudioStreamPlayer2D.new()
+	add_child(sfx_node)
+	add_child(bgm_node)
+	bgm_node.finished.connect(bgm_node.play) # Prolly problematic, must revise it later
+	_set_sound_volume()
+	_play_bg_music()
+
+func _set_sound_volume():
+	bgm_node.volume_db = Globals.music_volume_db()
+	sfx_node.volume_db = Globals.sfx_volume_db()
 
 func _play_success_sound():
-	pass
+	sfx_node.stream = success_sound
+	sfx_node.play()
 
 func _play_win_sound():
-	pass
+	sfx_node.stream = win_sound
+	sfx_node.play()
 
 func _play_bg_music():
-	pass
+	bgm_node.stream = bg_music
+	bgm_node.play()
 
-func win(extra = ""):
-	swin.emit()
+func _on_win(extra = ""):
 	var playtime = Globals.unix_system_time() - playdate
 	Database.insert_metric(
 		playdate, # playdate
@@ -79,17 +100,14 @@ func _on_resume():
 	resume.emit()
 	pass
 	
-func _on_attempt():
-	attempt.emit(0)
-	attempts += 1
+func _on_attempt(was_succesful: bool):
+	if was_succesful: _on_correct_attempt()
+	else: _on_failed_attempt()
 
 func _on_failed_attempt():
-	attempt.emit(-1)
-	attempts += 1
 	mistakes += 1
 	
 func _on_correct_attempt():
-	attempt.emit(1)
 	attempts += 1
 	hits += 1
 
