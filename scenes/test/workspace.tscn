@@ -1,8 +1,55 @@
-[gd_scene load_steps=2 format=3 uid="uid://c5bhd8hs1wtbg"]
+[gd_scene load_steps=5 format=3 uid="uid://c5bhd8hs1wtbg"]
 
-[ext_resource type="Script" path="res://scenes/test/test_stage.gd" id="1_d6adm"]
+[ext_resource type="Script" path="res://scripts/game/object_tracking/obj_tracking_stage.gd" id="1_g7j2k"]
+[ext_resource type="Script" path="res://scripts/game/object_tracking/cup.gd" id="2_ysmv0"]
+[ext_resource type="Texture2D" uid="uid://dmxunr1ehdfbw" path="res://assets/cup_game/79362-200.png" id="3_xh7ib"]
+[ext_resource type="Script" path="res://scripts/game/object_tracking/die.gd" id="4_dasqw"]
 
 [node name="Workspace" type="Node2D"]
-script = ExtResource("1_d6adm")
+position = Vector2(754, 146)
+script = ExtResource("1_g7j2k")
+difficulty = 10.0
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="Cups" type="Node" parent="."]
+
+[node name="Cup2" type="CharacterBody2D" parent="Cups"]
+modulate = Color(0, 0.698039, 0.188235, 1)
+position = Vector2(917, 325)
+script = ExtResource("2_ysmv0")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cups/Cup2"]
+texture = ExtResource("3_xh7ib")
+
+[node name="Cup1" type="CharacterBody2D" parent="Cups"]
+modulate = Color(0.745098, 0, 0.411765, 1)
+position = Vector2(582, 443)
+script = ExtResource("2_ysmv0")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cups/Cup1"]
+texture = ExtResource("3_xh7ib")
+
+[node name="Cup3" type="CharacterBody2D" parent="Cups"]
+position = Vector2(267, 249)
+script = ExtResource("2_ysmv0")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cups/Cup3"]
+texture = ExtResource("3_xh7ib")
+
+[node name="Cup4" type="CharacterBody2D" parent="Cups"]
+modulate = Color(1, 1, 0.188235, 1)
+position = Vector2(754, 146)
+script = ExtResource("2_ysmv0")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cups/Cup4"]
+texture = ExtResource("3_xh7ib")
+
+[node name="Cup5" type="CharacterBody2D" parent="Cups"]
+modulate = Color(0.219608, 0.270588, 1, 1)
+position = Vector2(473, 129)
+script = ExtResource("2_ysmv0")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cups/Cup5"]
+texture = ExtResource("3_xh7ib")
+
+[node name="Die" type="Area2D" parent="."]
+script = ExtResource("4_dasqw")

@@ -3,10 +3,10 @@ const SpritePair = preload("res://scripts/game/match_shadow/sprite_pair.gd")
 @onready var pairs = ($MatchPairs.get_children()) as Array[SpritePair]
 @export var images: Array[Texture2D]
 
-
 var remaining = 0
 func _ready():
 	super._ready()
+	guide_scene = "res://scenes/guides/match_shadow_guide.tscn"
 	var minimal_count = min(pairs.size(), images.size())
 	var overflow_count = pairs.size()-minimal_count
 	

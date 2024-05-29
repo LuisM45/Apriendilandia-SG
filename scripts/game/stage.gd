@@ -1,9 +1,10 @@
 extends Node
 const Task = preload("res://scripts/game/task.gd")
 const Sidebar = preload("res://branches/gui/sidebar.tscn")
-	
+@onready var GuideScene = load(guide_scene)
 	
 @export_file("*.tscn") var next_scene: String
+@export_file("*.tscn") var guide_scene: String
 
 @export var success_sound: AudioStream = load("res://assets/sfx/90s-game-ui-7-185100.mp3")
 @export var win_sound: AudioStream = load("res://assets/sfx/game-bonus-144751.mp3")
@@ -37,6 +38,7 @@ func _ready():
 	add_child(gui_node)
 	gui_node.msg = instruction
 	gui_node.pause.connect(_on_pause)
+	gui_node.help.connect(_on_help)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -99,7 +101,13 @@ func _on_pause():
 func _on_resume():
 	resume.emit()
 	pass
+
+func _on_help():
+	var scene = load(guide_scene).instantiate()
+	add_child(scene)
+	pass
 	
+
 func _on_attempt(was_succesful: bool):
 	if was_succesful: _on_correct_attempt()
 	else: _on_failed_attempt()

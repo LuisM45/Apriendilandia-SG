@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TexureInfo" load_steps=3 format=3 uid="uid://vb8e4jlddgg1"]
+
+[ext_resource type="Texture2D" uid="uid://cbo1y2t6ytxma" path="res://icon.svg" id="1_hqxy3"]
+[ext_resource type="Script" path="res://scripts/game/painting/texture_info.gd" id="2_f4f7t"]
+
+[resource]
+script = ExtResource("2_f4f7t")
+base_texture = ExtResource("1_hqxy3")
+main_color = Color(0.278447, 0.549096, 0.748898, 1)

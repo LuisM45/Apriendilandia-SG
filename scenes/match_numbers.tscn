@@ -27,6 +27,7 @@ size = Vector2(130, 126)
 script = ExtResource("1_0g7i0")
 images = Array[Texture2D]([ExtResource("2_y4o3i"), ExtResource("3_1dyyi"), ExtResource("4_8dmnd"), ExtResource("5_m7fja"), ExtResource("6_76qbj"), ExtResource("7_dvnkr")])
 next_scene = "res://scenes/main_menu.tscn"
+guide_scene = "res://scenes/test/onboarding_test.tscn"
 
 [node name="MatchPairs" type="Node" parent="."]
 
