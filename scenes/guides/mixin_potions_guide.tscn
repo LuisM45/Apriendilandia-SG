@@ -1,0 +1,239 @@
+[gd_scene load_steps=14 format=3 uid="uid://uogdeul13ldf"]
+
+[ext_resource type="Script" path="res://scripts/guide/mixin_potions_guide.gd" id="1_sf7mj"]
+[ext_resource type="Texture2D" uid="uid://bjuhhtekx85wb" path="res://assets/mixin_game/juice.png" id="4_a4gbd"]
+[ext_resource type="Texture2D" uid="uid://bqcbmib0iik4p" path="res://assets/mixin_game/bottle.png" id="5_tox26"]
+[ext_resource type="Texture2D" uid="uid://c6b6jpysoispq" path="res://assets/guides/Icons8_flat_cursor.svg" id="6_ibhg6"]
+[ext_resource type="Texture2D" uid="uid://bmdwxslbwcstp" path="res://assets/mixin_game/tipped_juice.png" id="7_gu8ke"]
+[ext_resource type="Texture2D" uid="uid://bffqtr800bjx" path="res://assets/mixin_game/tipped_bottle.png" id="8_fgi7j"]
+[ext_resource type="AudioStream" uid="uid://6u8q2dmn7vs4" path="res://assets/guides/mouse-click-153941-cli.ogg" id="9_7qk8l"]
+[ext_resource type="Texture2D" uid="uid://dl3qja7443xdp" path="res://assets/mixin_game/cauldron_mask.png" id="9_jj20j"]
+[ext_resource type="Texture2D" uid="uid://oqq5le3f5fvr" path="res://assets/mixin_game/cauldron.png" id="10_b2tcq"]
+[ext_resource type="AudioStream" uid="uid://cwgu7lbbm0cah" path="res://assets/guides/mouse-click-153941-ck.ogg" id="10_tfa6v"]
+
+[sub_resource type="Animation" id="Animation_fgnre"]
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:mouse_content")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [NodePath("")]
+}
+
+[sub_resource type="Animation" id="Animation_nt58u"]
+resource_name = "main"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:bottle_1_states")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 2.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:bottle_2_states")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(4.4, 5.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:mouse_content")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 2.7, 4.4, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [NodePath("StickyNodes/Bottle_1"), NodePath(""), NodePath("StickyNodes/Bottle_2"), NodePath("")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MouseObj:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5, 1, 2.4, 2.7, 4.1, 4.4, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(422, 313), Vector2(255.333, 195.667), Vector2(910, 329), Vector2(910, 329), Vector2(253, 441), Vector2(253, 441), Vector2(909, 329)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("StickyNodes/Bottle_1:position")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2.7),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(257, 190)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("StickyNodes/Bottle_2:position")
+tracks/5/interp = 0
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(5.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(255, 443)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("StickyNodes/Cauldron_1/Color:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(2.7, 5.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Color(0.929641, 0.929641, 0, 1), Color(0, 0.435264, 0, 1)]
+}
+tracks/7/type = "audio"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AudioStreamPlayer2D")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("9_7qk8l")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_tfa6v")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("9_7qk8l")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_tfa6v")
+}],
+"times": PackedFloat32Array(0.9, 2.6, 4.2, 5.4)
+}
+tracks/7/use_blend = true
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("MouseObj:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(1, 2.7, 4.4, 5.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(4, 4), Vector2(5, 5), Vector2(4, 4), Vector2(5, 5)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_a60ir"]
+_data = {
+"RESET": SubResource("Animation_fgnre"),
+"main": SubResource("Animation_nt58u")
+}
+
+[node name="PaintingPotionsGuide" type="Node2D"]
+script = ExtResource("1_sf7mj")
+bottle_2_states = 1
+lifted_texture = ExtResource("8_fgi7j")
+lifted_color = ExtResource("7_gu8ke")
+grounded_texture = ExtResource("5_tox26")
+grounded_color = ExtResource("4_a4gbd")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1153.0
+offset_bottom = 647.0
+color = Color(0, 0, 0, 0.627451)
+
+[node name="StickyNodes" type="Node2D" parent="."]
+
+[node name="Cauldron_1" type="Node2D" parent="StickyNodes"]
+texture_filter = 1
+position = Vector2(911, 326)
+scale = Vector2(6, 6)
+
+[node name="Color" type="Sprite2D" parent="StickyNodes/Cauldron_1"]
+texture = ExtResource("9_jj20j")
+
+[node name="Container" type="Sprite2D" parent="StickyNodes/Cauldron_1"]
+texture = ExtResource("10_b2tcq")
+
+[node name="Cauldron_2" type="Node2D" parent="StickyNodes"]
+texture_filter = 1
+position = Vector2(915, 150)
+scale = Vector2(6, 6)
+
+[node name="Color" type="Sprite2D" parent="StickyNodes/Cauldron_2"]
+modulate = Color(0, 0.498039, 0, 1)
+texture = ExtResource("9_jj20j")
+
+[node name="Container" type="Sprite2D" parent="StickyNodes/Cauldron_2"]
+texture = ExtResource("10_b2tcq")
+
+[node name="Bottle_1" type="CharacterBody2D" parent="StickyNodes"]
+texture_filter = 1
+position = Vector2(257, 190)
+scale = Vector2(6, 6)
+
+[node name="Color" type="Sprite2D" parent="StickyNodes/Bottle_1"]
+modulate = Color(1, 1, 0, 1)
+texture = ExtResource("4_a4gbd")
+
+[node name="Container" type="Sprite2D" parent="StickyNodes/Bottle_1"]
+texture = ExtResource("5_tox26")
+
+[node name="Bottle_2" type="CharacterBody2D" parent="StickyNodes"]
+texture_filter = 1
+position = Vector2(255, 443)
+scale = Vector2(6, 6)
+
+[node name="Color" type="Sprite2D" parent="StickyNodes/Bottle_2"]
+modulate = Color(0, 0, 1, 1)
+texture = ExtResource("4_a4gbd")
+
+[node name="Container" type="Sprite2D" parent="StickyNodes/Bottle_2"]
+texture = ExtResource("5_tox26")
+
+[node name="MouseObj" type="Node2D" parent="."]
+position = Vector2(253, 441)
+scale = Vector2(4, 4)
+
+[node name="CursorSprite" type="Sprite2D" parent="MouseObj"]
+texture_filter = 1
+position = Vector2(6, 12.2)
+scale = Vector2(1, 1)
+texture = ExtResource("6_ibhg6")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_a60ir")
+}

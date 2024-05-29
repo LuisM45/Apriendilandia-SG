@@ -1,0 +1,155 @@
+[gd_scene load_steps=18 format=3 uid="uid://bmltmk22fho40"]
+
+[ext_resource type="Script" path="res://scripts/guide/maze_guide_animation.gd" id="1_mmyuk"]
+[ext_resource type="TileSet" uid="uid://brp5a646gwvjt" path="res://resources/maze_tileset.tres" id="2_mqhcq"]
+[ext_resource type="SpriteFrames" uid="uid://djuhlj0wumjmb" path="res://resources/sprite_frames_king_human.tres" id="3_gi406"]
+[ext_resource type="Texture2D" uid="uid://cieqev8t6he84" path="res://assets/Kings and Pigs/Sprites/12-Live and Coins/Big Diamond Idle (18x14).png" id="4_qr82b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfmnj"]
+atlas = ExtResource("4_qr82b")
+region = Rect2(5, 2, 12, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cawaf"]
+atlas = ExtResource("4_qr82b")
+region = Rect2(23, 2, 12, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwhf5"]
+atlas = ExtResource("4_qr82b")
+region = Rect2(41, 2, 12, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wuqsh"]
+atlas = ExtResource("4_qr82b")
+region = Rect2(59, 2, 12, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubevg"]
+atlas = ExtResource("4_qr82b")
+region = Rect2(77, 2, 12, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vdabi"]
+atlas = ExtResource("4_qr82b")
+region = Rect2(95, 2, 12, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pebx6"]
+atlas = ExtResource("4_qr82b")
+region = Rect2(113, 2, 12, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqjm8"]
+atlas = ExtResource("4_qr82b")
+region = Rect2(131, 2, 12, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0towv"]
+atlas = ExtResource("4_qr82b")
+region = Rect2(149, 2, 12, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlf3i"]
+atlas = ExtResource("4_qr82b")
+region = Rect2(167, 2, 12, 10)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q4dyp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dfmnj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cawaf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vwhf5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wuqsh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ubevg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vdabi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pebx6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqjm8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0towv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xlf3i")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_8fmob"]
+resource_name = "main"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.4, 1.5, 2, 3.2, 4.7, 5.1, 5.7, 6.4, 7.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(123, 246), Vector2(347, 248), Vector2(355, 105), Vector2(645, 108), Vector2(634, 542), Vector2(777, 539), Vector2(785, 395), Vector2(1013, 394), Vector2(1040, 245)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n8mpl"]
+_data = {
+"main": SubResource("Animation_8fmob")
+}
+
+[node name="MazeGuide" type="Node2D"]
+z_index = 98
+z_as_relative = false
+script = ExtResource("1_mmyuk")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1153.0
+offset_bottom = 647.0
+color = Color(0, 0, 0, 0.627451)
+
+[node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
+position = Vector2(32, 0)
+scale = Vector2(2.25, 2.25)
+tile_set = ExtResource("2_mqhcq")
+format = 2
+layer_0/tile_data = PackedInt32Array(11, 1114112, 4, 10, 131072, 5, 9, 131072, 5, 8, 131072, 5, 7, 131072, 5, 6, 131072, 5, 5, 131072, 5, 4, 131072, 5, 3, 1048576, 4, 65539, 327680, 2, 131075, 327680, 3, 262147, 1048576, 4, 327683, 327680, 2, 393219, 327680, 2, 458755, 327680, 2, 262148, 131072, 5, 524291, 1048576, 5, 524292, 131072, 5, 524293, 917504, 5, 524294, 131072, 5, 524295, 131072, 5, 524296, 131072, 5, 524297, 131072, 5, 524298, 131072, 5, 524299, 1114112, 5, 393221, 1048576, 4, 393222, 131072, 5, 393223, 1114112, 5, 393225, 327680, 3, 393227, 327680, 1, 262149, 1114112, 5, 262151, 327680, 1, 262153, 1048576, 4, 262154, 131072, 5, 262155, 1114112, 5, 131077, 1048576, 4, 131078, 131072, 5, 131079, 196608, 5, 131081, 65536, 5, 131082, 131072, 5, 131083, 917504, 4, 196613, 327680, 2, 458757, 327680, 2, 327687, 327680, 2, 327689, 327680, 2, 65547, 327680, 2, 458763, 327680, 2, 196619, 327680, 2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(354.652, 111.229)
+scale = Vector2(2.17857, 2.17857)
+sprite_frames = ExtResource("3_gi406")
+animation = &"idle"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1042, 246)
+scale = Vector2(5.8, 5.8)
+sprite_frames = SubResource("SpriteFrames_q4dyp")
+animation = &"idle"
+speed_scale = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_n8mpl")
+}

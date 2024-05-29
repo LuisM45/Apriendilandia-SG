@@ -1,9 +1,11 @@
 extends Control
 
 var msg:String : get = _get_msg, set=_set_msg
-@onready var instructionLbl = $Panel/InstructionLbl
 
+@onready var instructionLbl = $VBoxContainer/Panel/InstructionLbl
 signal pause()
+signal help()
+signal hint()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,10 +22,10 @@ func _on_pause():
 	pause.emit()
 	
 func _on_help():
-	get_parent()._on_help()
+	help.emit()
 	
 func _on_hint():
-	get_parent()._on_hint()
+	hint.emit()
 
 func _set_msg(val):
 	instructionLbl.text = val

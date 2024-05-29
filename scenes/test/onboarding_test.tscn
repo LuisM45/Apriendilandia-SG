@@ -1,0 +1,135 @@
+[gd_scene load_steps=9 format=3 uid="uid://b5f2tdab12ppe"]
+
+[ext_resource type="Texture2D" uid="uid://crj3vxaittr76" path="res://assets/animals/llama.png" id="1_uo4b6"]
+[ext_resource type="Script" path="res://scripts/guide/guide_animation.gd" id="1_vfjg3"]
+[ext_resource type="Texture2D" uid="uid://c6b6jpysoispq" path="res://assets/guides/Icons8_flat_cursor.svg" id="2_c6meh"]
+[ext_resource type="AudioStream" uid="uid://6u8q2dmn7vs4" path="res://assets/guides/mouse-click-153941-cli.ogg" id="4_388y5"]
+[ext_resource type="AudioStream" uid="uid://cwgu7lbbm0cah" path="res://assets/guides/mouse-click-153941-ck.ogg" id="5_semm0"]
+
+[sub_resource type="Animation" id="Animation_od8sf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MouseObj:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5, 5)]
+}
+
+[sub_resource type="Animation" id="Animation_gbu7t"]
+resource_name = "drag_drop_match_shadow"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OriginalObj:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(215, 315), Vector2(895, 315)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ShadowObj:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MouseObj:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(240, 410), Vector2(920, 410)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MouseObj:scale")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.1, 0.7, 3.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2(5, 5), Vector2(4, 4), Vector2(5, 5)]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer2D")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_388y5")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5_semm0")
+}],
+"times": PackedFloat32Array(0.7, 3.3)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_24xgh"]
+_data = {
+"RESET": SubResource("Animation_od8sf"),
+"drag_drop_match_shadow": SubResource("Animation_gbu7t")
+}
+
+[node name="OnboardingTest" type="Node2D"]
+z_index = 98
+z_as_relative = false
+script = ExtResource("1_vfjg3")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1153.0
+offset_bottom = 647.0
+color = Color(0, 0, 0, 0.627451)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="ShadowObj" type="Sprite2D" parent="."]
+modulate = Color(0.0823529, 0.0823529, 0.0823529, 1)
+position = Vector2(895, 315)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_uo4b6")
+
+[node name="OriginalObj" type="Sprite2D" parent="."]
+position = Vector2(215, 315)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_uo4b6")
+
+[node name="MouseObj" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(240, 410)
+scale = Vector2(5, 5)
+texture = ExtResource("2_c6meh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_24xgh")
+}
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_finished"]

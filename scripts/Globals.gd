@@ -2,7 +2,7 @@ extends Node
 
 signal volume_changed()
 
-var music_volume = 0 : set = _set_music_volume
+var music_volume = 50 : set = _set_music_volume
 var sfx_volume = 80 : set = _set_sfx_volume
 var tts_volume = 80 : set = _set_tts_volume
 
@@ -31,16 +31,16 @@ func tts_volume_db():
 	return _parse_volume_to_db(tts_volume)
 
 func _parse_volume_to_db(volume):
-	return 0.4*volume-35
+	return 0.3*volume-20
 
 func _set_music_volume(volume):
-	volume_changed.emit()
 	music_volume = volume
+	volume_changed.emit()
 
 func _set_sfx_volume(volume):
-	volume_changed.emit()
 	sfx_volume = volume
+	volume_changed.emit()
 
 func _set_tts_volume(volume):
-	volume_changed.emit()
 	tts_volume = volume
+	volume_changed.emit()
