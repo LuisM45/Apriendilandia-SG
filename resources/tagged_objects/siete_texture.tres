@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://cnkh8l5n67yip"]
+
+[ext_resource type="Texture2D" uid="uid://dsldssb5op661" path="res://assets/raster_font/kaph/7.png" id="1_hf48m"]
+[ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="2_tpnwi"]
+
+[resource]
+script = ExtResource("2_tpnwi")
+content = ExtResource("1_hf48m")
+tags = {
+"alt_text": "siete"
+}

@@ -13,6 +13,9 @@ var is_tts_enabled = true
 var achievements = {}
 var user_data = {}
 
+var voices = DisplayServer.tts_get_voices_for_language("es")
+var voice_id = voices[0]
+
 var pause_scene = preload("res://branches/gui/pause_menu.tscn")
 
 

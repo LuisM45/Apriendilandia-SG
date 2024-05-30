@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Task" load_steps=2 format=3 uid="uid://dg1q3ke2fk8kw"]
+
+[ext_resource type="Script" path="res://resources/template/task.gd" id="1_aq351"]
+
+[resource]
+script = ExtResource("1_aq351")
+inner_name = "maze_task"
+name = "Llega al diamante"
+description = "Navega por el laberinto y encuentra tu camino hacia el diamante"
+instructions = ""
+guide_scene = "res://scenes/guides/maze_guide.tscn"

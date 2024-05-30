@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://7f1u6w7wi5j6"]
+
+[ext_resource type="Texture2D" uid="uid://dqgufj3w4p5ht" path="res://assets/flora/cedron.png" id="1_cf1gi"]
+[ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="2_kmap2"]
+
+[resource]
+script = ExtResource("2_kmap2")
+content = ExtResource("1_cf1gi")
+tags = {
+"alt_text": "cedron"
+}

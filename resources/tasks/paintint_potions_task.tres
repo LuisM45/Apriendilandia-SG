@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Task" load_steps=2 format=3 uid="uid://gk7wqqu5tb6a"]
+
+[ext_resource type="Script" path="res://resources/template/task.gd" id="1_kkxjm"]
+
+[resource]
+script = ExtResource("1_kkxjm")
+inner_name = "paint_object_task"
+name = "Pinta el objeto del color correcto"
+description = "Arrastra las bottellas con pintura hacia el objeto para darle color. Pinta el objeto con el color que le pertenece."
+instructions = ""
+guide_scene = "res://scenes/guides/painting_potions_guid.tscn"

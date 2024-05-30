@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://doxbsb3vibmf3"]
+
+[ext_resource type="Texture2D" uid="uid://cm226fiw7bi46" path="res://assets/flora/chocho.png" id="1_wuhxn"]
+[ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="2_dghkx"]
+
+[resource]
+script = ExtResource("2_dghkx")
+content = ExtResource("1_wuhxn")
+tags = {
+"alt_text": "chocho"
+}

@@ -52,9 +52,11 @@ void vertex() {
 
 void fragment() {
 	vec3 originalHsv = rgb2hsv(texture(TEXTURE,UV).rgb);
-	float hue = originalHsv.r+MODULATE.r;
-	float saturation = clamp(originalHsv.g+(MODULATE.g*2.-1.),0.,1.);
-	float value = clamp(originalHsv.b+(MODULATE.b*2.-1.),0.,1.);
+	float hue = originalHsv.r+(MODULATE.r*2.-1.);
+	float saturation = originalHsv.g+(MODULATE.g*2.-1.);
+	float value = originalHsv.b+(MODULATE.b*2.-1.);
+	saturation = clamp(saturation,0.,1.);
+	value = clamp(value,0.,1.);
 	vec3 shiftedRgb = hsv2rgb(vec3(hue,saturation,value));
 	COLOR = vec4(shiftedRgb,texture(TEXTURE,UV).a);
 	// Called for every pixel the material is visible on.

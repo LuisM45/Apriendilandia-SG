@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://ctw41lqkdjfe0"]
+
+[ext_resource type="Texture2D" uid="uid://blrt13xoin3wf" path="res://assets/animals/lobo_de_paramo.png" id="1_5xwoa"]
+[ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="1_kwbkh"]
+
+[resource]
+script = ExtResource("1_kwbkh")
+content = ExtResource("1_5xwoa")
+tags = {
+"alt_text": "lobo de paramo"
+}

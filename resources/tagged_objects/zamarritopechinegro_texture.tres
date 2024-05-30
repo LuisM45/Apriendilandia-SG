@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://blkxvkaplj4g0"]
+
+[ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="1_0dlc8"]
+[ext_resource type="Texture2D" uid="uid://41dmkryl84fl" path="res://assets/animals/zamarrito_pechinegro.png" id="1_h7q00"]
+
+[resource]
+script = ExtResource("1_0dlc8")
+content = ExtResource("1_h7q00")
+tags = {
+"alt_text": "zamarrito pechinegro"
+}

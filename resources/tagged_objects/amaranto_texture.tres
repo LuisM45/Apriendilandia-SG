@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://cqjilekm06clk"]
+
+[ext_resource type="Texture2D" uid="uid://cx1jlrr16230b" path="res://assets/flora/amaranto.png" id="1_bpb0x"]
+[ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="2_uf2q7"]
+
+[resource]
+script = ExtResource("2_uf2q7")
+content = ExtResource("1_bpb0x")
+tags = {
+"alt_text": "amaranto"
+}

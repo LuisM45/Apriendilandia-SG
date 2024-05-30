@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://cnhp18gkt8fie"]
+
+[ext_resource type="Texture2D" uid="uid://i3pt1a7xotxc" path="res://assets/backgrounds/basilica/basilica.jpg" id="1_0hc0k"]
+[ext_resource type="Script" path="res://resources/template/collection.gd" id="1_mcav5"]
+
+[resource]
+script = ExtResource("1_mcav5")
+items = Array[Texture2D]([ExtResource("1_0hc0k")])

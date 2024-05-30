@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://2m6x3cx1j87o"]
+
+[ext_resource type="Texture2D" uid="uid://b7k4kfrmosfsc" path="res://assets/animals/tejon_americano.png" id="1_wskxp"]
+[ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="1_xh6ul"]
+
+[resource]
+script = ExtResource("1_xh6ul")
+content = ExtResource("1_wskxp")
+tags = {
+"alt_text": "tejón americano"
+}

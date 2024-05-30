@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Task" load_steps=2 format=3 uid="uid://erlw13qxdsaa"]
+
+[ext_resource type="Script" path="res://resources/template/task.gd" id="1_inhld"]
+
+[resource]
+script = ExtResource("1_inhld")
+inner_name = "match_shadow_task"
+name = "Empareja las siluetas con su objeto"
+description = "Arrastra el objeto a la sombra correspondiente para ganar"
+instructions = ""
+guide_scene = "res://scenes/guides/match_shadow_guide.tscn"

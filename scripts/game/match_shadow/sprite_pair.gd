@@ -1,5 +1,8 @@
 extends Node
-@export var base_sprite: Texture2D : set = _set_sprite
+
+const TaggedResource = preload("res://resources/template/tagged_resource.gd")
+
+var base_sprite: TaggedResource : set = _set_sprite
 @onready var original_body = get_node("original_body")
 @onready var shadow_body = get_node("shadow_body")
 
@@ -12,13 +15,15 @@ func _ready():
 func _process(delta):
 	pass
 
-func _set_sprite(new_val:Texture2D):
+func _set_sprite(new_val:TaggedResource):
 	base_sprite = new_val
-	original_body.sprite.set_texture(new_val)
-	shadow_body.sprite.set_texture(new_val)
+	var content = null
+	if new_val != null: content = new_val.content
+	original_body.sprite.set_texture(content)
+	shadow_body.sprite.set_texture(content)
 	if base_sprite == null: return
 	
-	var size_magnitude = new_val.get_size().length()
+	var size_magnitude = new_val.content.get_size().length()
 	
 	original_body.sprite.scale /= size_magnitude/200
 	shadow_body.sprite.scale /= size_magnitude/200
@@ -27,6 +32,7 @@ func _attempt_complete(body):
 	if original_body == body:
 		original_body.position = shadow_body.position
 		original_body.is_enabled = false
+		DisplayServer.tts_speak(base_sprite.tags["alt_text"],Globals.voice_id,Globals.tts_volume)
 		correct_match.emit(body)
 	else:
 		incorrect_match.emit(body)

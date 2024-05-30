@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://ekgh1qabhvdp"]
+
+[ext_resource type="Texture2D" uid="uid://cuoh0afg3vg7f" path="res://assets/animals/muslinegro.png" id="1_o7vr5"]
+[ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="2_uumwm"]
+
+[resource]
+script = ExtResource("2_uumwm")
+content = ExtResource("1_o7vr5")
+tags = {
+"alt_text": "muslinegro"
+}

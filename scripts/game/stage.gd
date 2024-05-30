@@ -1,10 +1,7 @@
 extends Node
-const Task = preload("res://scripts/game/task.gd")
 const Sidebar = preload("res://branches/gui/sidebar.tscn")
-@onready var GuideScene = load(guide_scene)
-	
+const Task = preload("res://resources/template/task.gd")
 @export_file("*.tscn") var next_scene: String
-@export_file("*.tscn") var guide_scene: String
 
 @export var success_sound: AudioStream = load("res://assets/sfx/90s-game-ui-7-185100.mp3")
 @export var win_sound: AudioStream = load("res://assets/sfx/game-bonus-144751.mp3")
@@ -13,7 +10,7 @@ const Sidebar = preload("res://branches/gui/sidebar.tscn")
 @export var world: int
 @export var stage: int
 @export var difficulty: float = 5: set = _set_difficulty
-@export var instruction: String
+@export var task: Task
 
 signal pause()
 signal resume()
@@ -35,10 +32,10 @@ func _ready():
 	_ready_signals()
 	playdate = Globals.unix_system_time()
 	var gui_node = Sidebar.instantiate()
-	add_child(gui_node)
-	gui_node.msg = instruction
 	gui_node.pause.connect(_on_pause)
 	gui_node.help.connect(_on_help)
+	add_child(gui_node)
+	gui_node.task = task
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -90,7 +87,13 @@ func _on_win(extra = ""):
 		extra , # extra
 	)
 	if next_scene:
-		get_tree().change_scene_to_file(next_scene)
+		var timer = Timer.new()
+		add_child(timer)
+		timer.timeout.connect(func ():get_tree().change_scene_to_file(next_scene))
+		timer.wait_time = 3.0
+		timer.one_shot = true
+		timer.start()
+		
 	pass
 
 func _on_pause():
@@ -103,8 +106,8 @@ func _on_resume():
 	pass
 
 func _on_help():
-	var scene = load(guide_scene).instantiate()
-	add_child(scene)
+	#var scene = load(guide_scene).instantiate()
+	#add_child(scene)
 	pass
 	
 

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://r1cgmk2gg4c3"]
+
+[ext_resource type="Texture2D" uid="uid://dvkc0m05infy3" path="res://assets/animals/Puma.png" id="1_nplax"]
+[ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="2_flveo"]
+
+[resource]
+script = ExtResource("2_flveo")
+content = ExtResource("1_nplax")
+tags = {
+"alt_text": "puma"
+}

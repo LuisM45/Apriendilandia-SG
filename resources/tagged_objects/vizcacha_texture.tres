@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://bpdv86ojopy3t"]
+
+[ext_resource type="Texture2D" uid="uid://booiju4e2qcdo" path="res://assets/animals/vizcacha.png" id="1_nojtl"]
+[ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="1_rdufd"]
+
+[resource]
+script = ExtResource("1_rdufd")
+content = ExtResource("1_nojtl")
+tags = {
+"alt_text": "vizcacha"
+}

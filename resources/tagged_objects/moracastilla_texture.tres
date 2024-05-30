@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://wacs4kwcll6o"]
+
+[ext_resource type="Texture2D" uid="uid://duta4gnffkcgc" path="res://assets/flora/mora_de_castilla.png" id="1_odaap"]
+[ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="2_ub0ph"]
+
+[resource]
+script = ExtResource("2_ub0ph")
+content = ExtResource("1_odaap")
+tags = {
+"alt_text": "mora de castilla"
+}
