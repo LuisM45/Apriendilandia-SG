@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://cf8n782k0oenj"]
+
+[ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="1_3qgsc"]
+[ext_resource type="Texture2D" uid="uid://7gjp6ap5s313" path="res://assets/animals/pecari_de_collar.png" id="1_6pwpm"]
+
+[resource]
+script = ExtResource("1_3qgsc")
+content = ExtResource("1_6pwpm")
+tags = {
+"alt_text": "pecári de collar"
+}

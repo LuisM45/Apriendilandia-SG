@@ -7,7 +7,7 @@ func _ready():
 	get_node("SfxSld").value = Globals.sfx_volume
 	get_node("MusicSld").value = Globals.music_volume
 	get_node("TtsSld").value = Globals.tts_volume
-	position = get_viewport().size/2
+	position = get_viewport_rect().size/2
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -17,7 +17,6 @@ func _process(delta):
 func _on_resume():
 	queue_free()
 	resume.emit()
-
 
 func _on_tts_toggle():
 	Globals.is_tts_enabled = not Globals.is_tts_enabled

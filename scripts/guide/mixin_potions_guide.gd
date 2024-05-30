@@ -59,3 +59,5 @@ func _mouse_sticky():
 	if _mouse_content == null: return
 	_mouse_content.position = $MouseObj.position
 	#print(mouse_content.position,$MouseObj.position)
+
+

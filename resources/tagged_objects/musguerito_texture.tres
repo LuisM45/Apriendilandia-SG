@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://c3l7ecs3ch6l5"]
+
+[ext_resource type="Texture2D" uid="uid://gkvwnhfbaoml" path="res://assets/animals/musguerito.png" id="1_55nyj"]
+[ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="1_bg7k0"]
+
+[resource]
+script = ExtResource("1_bg7k0")
+content = ExtResource("1_55nyj")
+tags = {
+"alt_text": "musguerito"
+}

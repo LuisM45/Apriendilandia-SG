@@ -1,15 +1,95 @@
-[gd_scene load_steps=14 format=3 uid="uid://de0vn02y1aipo"]
+[gd_scene load_steps=36 format=3 uid="uid://de0vn02y1aipo"]
 
-[ext_resource type="Script" path="res://scripts/game/match_shadow/match_shadow_stage.gd" id="1_e2ob4"]
-[ext_resource type="Texture2D" uid="uid://57cwq3dgfn47" path="res://assets/old_1/1.png" id="2_s3pxw"]
-[ext_resource type="Texture2D" uid="uid://cj2otrveifee5" path="res://assets/old_1/2.png" id="3_3qk6j"]
-[ext_resource type="Texture2D" uid="uid://cgbs0y4f7gssj" path="res://assets/old_1/3.png" id="4_lapll"]
+[ext_resource type="Texture2D" uid="uid://c62gtmxykj67y" path="res://assets/backgrounds/mitad_del_mundo/mitad-del-mundo-monument.jpg" id="2_ccckx"]
+[ext_resource type="Texture2D" uid="uid://bvakvrde4f4yd" path="res://assets/backgrounds/mitad_del_mundo/mitad-del-mundo.jpg" id="3_paj2d"]
+[ext_resource type="Texture2D" uid="uid://cjr65g2cbi5xf" path="res://assets/backgrounds/templo_del_sol/5-museo-templo.jpg" id="4_tbil4"]
+[ext_resource type="Texture2D" uid="uid://j3x53u44llju" path="res://assets/backgrounds/templo_del_sol/ceremonias-museo-templo_1.jpg" id="5_e1jxc"]
+[ext_resource type="Resource" uid="uid://erlw13qxdsaa" path="res://resources/tasks/match_shadow_task.tres" id="5_nmsr8"]
 [ext_resource type="Script" path="res://scripts/game/match_shadow/sprite_pair.gd" id="5_ujd3w"]
 [ext_resource type="Script" path="res://scripts/game/match_shadow/light_sprite.gd" id="6_g8n43"]
+[ext_resource type="Texture2D" uid="uid://cjp0e7fxgcf75" path="res://assets/backgrounds/templo_del_sol/ceremonias-museo-templo_5.jpg" id="6_wwu4x"]
 [ext_resource type="Texture2D" uid="uid://cbo1y2t6ytxma" path="res://icon.svg" id="7_ehttw"]
+[ext_resource type="Texture2D" uid="uid://dy1pifbq2sre6" path="res://assets/backgrounds/templo_del_sol/museo-templo-del-sol_2.jpg" id="7_ii324"]
+[ext_resource type="Texture2D" uid="uid://doqyebh2aukv7" path="res://assets/backgrounds/templo_del_sol/museo-templo-del-sol_3.jpg" id="8_mjsxp"]
 [ext_resource type="Script" path="res://scripts/game/match_shadow/shadow_sprite.gd" id="8_ruioe"]
 [ext_resource type="Shader" path="res://scenes/test/match_shadow.gdshader" id="9_afe5r"]
-[ext_resource type="Texture2D" uid="uid://06dcydqafp77" path="res://assets/old_1/Background.jpg" id="10_mgy3d"]
+[ext_resource type="Texture2D" uid="uid://coaybd70t3bcu" path="res://assets/backgrounds/teleferi_qo/basilica.jpg" id="9_tf7q2"]
+[ext_resource type="Texture2D" uid="uid://d1lnph2366q6m" path="res://assets/backgrounds/teleferi_qo/20180125-105156-largejpg.jpg" id="10_bqc24"]
+[ext_resource type="Resource" uid="uid://cvatf1gf16jj0" path="res://resources/tagged_objects/capuchinofrentiblanco_texture.tres" id="11_vqw12"]
+[ext_resource type="Texture2D" uid="uid://bhn0yxg7xba08" path="res://assets/backgrounds/teleferi_qo/img-20180108-144906-largejpg.jpg" id="11_yspql"]
+[ext_resource type="Resource" uid="uid://scafyo1hg20y" path="res://resources/tagged_objects/capibara_texture.tres" id="12_dyqed"]
+[ext_resource type="Resource" uid="uid://ceirkqp448au4" path="res://resources/tagged_objects/comadrejaandina_texture.tres" id="13_josf6"]
+[ext_resource type="Resource" uid="uid://d0mehdvy4ho7d" path="res://resources/tagged_objects/conejoandino_texture.tres" id="14_dpv4g"]
+[ext_resource type="Resource" uid="uid://ctw41lqkdjfe0" path="res://resources/tagged_objects/loboparamo_texture.tres" id="15_sy2s6"]
+[ext_resource type="Resource" uid="uid://c3l7ecs3ch6l5" path="res://resources/tagged_objects/musguerito_texture.tres" id="16_mb2og"]
+[ext_resource type="Resource" uid="uid://ekgh1qabhvdp" path="res://resources/tagged_objects/muslinegro_texure.tres" id="17_srsx2"]
+[ext_resource type="Resource" uid="uid://cf8n782k0oenj" path="res://resources/tagged_objects/pecaricollar_texture.tres" id="18_pwehd"]
+[ext_resource type="Resource" uid="uid://cgwcj57352q7k" path="res://resources/tagged_objects/pijuimotado_texure.tres" id="19_i1ok8"]
+[ext_resource type="Resource" uid="uid://r1cgmk2gg4c3" path="res://resources/tagged_objects/puma_texture.tres" id="20_jbrt2"]
+[ext_resource type="Resource" uid="uid://2m6x3cx1j87o" path="res://resources/tagged_objects/tejonamericano_texture.tres" id="21_b05sw"]
+[ext_resource type="Resource" uid="uid://d0oax4qltmh4a" path="res://resources/tagged_objects/venadoparamo_texture.tres" id="22_812vx"]
+[ext_resource type="Resource" uid="uid://bpdv86ojopy3t" path="res://resources/tagged_objects/vizcacha_texture.tres" id="23_dja0h"]
+[ext_resource type="Resource" uid="uid://4qpblsmmox5r" path="res://resources/tagged_objects/condor_texture.tres" id="24_a54cn"]
+[ext_resource type="Resource" uid="uid://blkxvkaplj4g0" path="res://resources/tagged_objects/zamarritopechinegro_texture.tres" id="25_dwd2w"]
+
+[sub_resource type="GDScript" id="GDScript_bldjt"]
+script/source = "extends \"res://scripts/game/stage.gd\"
+const SpritePair = preload(\"res://scripts/game/match_shadow/sprite_pair.gd\")
+const TaggedResource = preload(\"res://resources/template/tagged_resource.gd\")
+@onready var pairs = ($MatchPairs.get_children()) as Array[SpritePair]
+@onready var background_sprite:TextureRect = $Background
+@export var possible_backgrounds: Array[Texture2D]
+@export var possible_objects: Array[TaggedResource]
+
+var remaining = 0
+func _ready():
+	super._ready()
+	var minimal_count = min(pairs.size(), possible_objects.size())
+	var overflow_count = pairs.size()-minimal_count
+	background_sprite.texture = possible_backgrounds.pick_random()
+	
+	possible_objects.shuffle()
+	remaining = minimal_count
+	for pair in pairs:
+		pair.correct_match.connect(func x(b):attempt.emit(true))
+		pair.incorrect_match.connect(func x(b):attempt.emit(false))
+		
+	
+	var positions = []
+	for i in range(minimal_count):
+		positions.append(pairs[i].shadow_body.position)
+	positions.shuffle()
+	
+	for i in range(minimal_count):
+		var scale = possible_objects[i].content.get_size()
+		pairs[i].base_sprite = possible_objects[i]
+		pairs[i].shadow_body.position = positions[i]
+		
+	for i in range(overflow_count):
+		pairs[i].base_sprite = null
+	pass # Replace with function body.
+
+func resize_background():
+	#background_sprite.position = get_viewport_rect().size
+	pass
+
+func _on_correct_attempt():
+	super._on_correct_attempt()
+	remaining-=1
+	if remaining <= 0:
+		win.emit(\"\")
+	
+func _on_failed_attempt():
+	super._on_failed_attempt()
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	super._process(delta)
+
+
+func _on_original_body_input_event(viewport, event, shape_idx):
+	pass # Replace with function body.
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_12ov7"]
 size = Vector2(128, 128)
@@ -21,9 +101,11 @@ shader = ExtResource("9_afe5r")
 size = Vector2(130, 126)
 
 [node name="MatchForest" type="Node2D"]
-script = ExtResource("1_e2ob4")
-images = Array[Texture2D]([ExtResource("2_s3pxw"), ExtResource("3_3qk6j"), ExtResource("4_lapll")])
+script = SubResource("GDScript_bldjt")
+possible_backgrounds = Array[Texture2D]([ExtResource("2_ccckx"), ExtResource("3_paj2d"), ExtResource("4_tbil4"), ExtResource("5_e1jxc"), ExtResource("6_wwu4x"), ExtResource("7_ii324"), ExtResource("8_mjsxp"), ExtResource("9_tf7q2"), ExtResource("10_bqc24"), ExtResource("11_yspql")])
+possible_objects = Array[Resource("res://resources/template/tagged_resource.gd")]([ExtResource("11_vqw12"), ExtResource("12_dyqed"), ExtResource("13_josf6"), ExtResource("14_dpv4g"), ExtResource("15_sy2s6"), ExtResource("16_mb2og"), ExtResource("17_srsx2"), ExtResource("18_pwehd"), ExtResource("19_i1ok8"), ExtResource("20_jbrt2"), ExtResource("21_b05sw"), ExtResource("22_812vx"), ExtResource("23_dja0h"), ExtResource("24_a54cn"), ExtResource("25_dwd2w")])
 next_scene = "res://scenes/main_menu.tscn"
+task = ExtResource("5_nmsr8")
 
 [node name="MatchPairs" type="Node" parent="."]
 
@@ -105,10 +187,13 @@ texture = ExtResource("7_ehttw")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MatchPairs/Pair/shadow_body"]
 shape = SubResource("RectangleShape2D_i441w")
 
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(576, 324)
-scale = Vector2(1.88903, 1.88903)
-texture = ExtResource("10_mgy3d")
+[node name="Background" type="TextureRect" parent="."]
+offset_top = -504.0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("9_tf7q2")
+expand_mode = 4
+stretch_mode = 6
 
 [connection signal="input_event" from="MatchPairs/Pair3/original_body" to="MatchPairs/Pair3/original_body" method="_on_rigid_body_2d_input_event"]
 [connection signal="mouse_entered" from="MatchPairs/Pair3/original_body" to="MatchPairs/Pair3/original_body" method="_on_mouse_entered"]

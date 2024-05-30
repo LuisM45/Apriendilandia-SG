@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://b824dnn1akwdw"]
+
+[ext_resource type="Texture2D" uid="uid://deu2k1xl41y8h" path="res://assets/flora/papaya.png" id="1_ml6aq"]
+[ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="2_lpfut"]
+
+[resource]
+script = ExtResource("2_lpfut")
+content = ExtResource("1_ml6aq")
+tags = {
+"alt_text": "papaya"
+}

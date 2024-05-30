@@ -1,5 +1,8 @@
 extends  "res://scripts/game/stage.gd"
 
+const Achievement = preload("res://resources/template/achievement.gd")
+
+@export var achievement: Achievement
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://cgwcj57352q7k"]
+
+[ext_resource type="Texture2D" uid="uid://drbcxoojn0k1d" path="res://assets/animals/pijui_motado.png" id="1_3bjh8"]
+[ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="2_sl2mf"]
+
+[resource]
+script = ExtResource("2_sl2mf")
+content = ExtResource("1_3bjh8")
+tags = {
+"alt_text": "pijui motado"
+}

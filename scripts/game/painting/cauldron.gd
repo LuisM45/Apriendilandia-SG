@@ -4,7 +4,7 @@ const TextureInfo = preload("res://scripts/game/painting/texture_info.gd")
 const CauldronShader = preload("res://resources/unpainted_texture.gdshader")
 signal solved()
 
-@export var current_color = Color(100,100,100)
+@export var current_color = Color.from_hsv(0,0,0.8)
 @export var texture_info: TextureInfo = load("res://resources/texture_info_default.tres") : set = _set_texture_info
 
 var sprite: Sprite2D
@@ -24,7 +24,7 @@ func _ready():
 	var _material = ShaderMaterial.new()
 	_material.shader = preload("res://resources/unpainted_texture.gdshader")
 	sprite.material = 	_material
-	sprite.modulate = current_color
+	
 
 func _process(delta):
 	super._process(delta)
@@ -44,6 +44,8 @@ func repaint():
 	var hue_shift = (current_color.h-texture_info.main_color.h+1)/2
 	var saturation_shift = (current_color.s-texture_info.main_color.s+1)/2
 	var value_shift = (current_color.v-texture_info.main_color.v+1)/2
+	print(current_color)
+	print(Color(hue_shift,saturation_shift,value_shift))
 	sprite.modulate = Color(hue_shift,saturation_shift,value_shift)
 
 func try_solve():
@@ -78,6 +80,5 @@ func _set_sprites():
 func _set_texture_info(new):
 	texture_info = new
 	sprite.texture = new.base_texture
-	current_color = new.main_color # Debug only
 	target_sprite.texture = new.base_texture
 	rescale_sprites()

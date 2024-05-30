@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://ceirkqp448au4"]
+
+[ext_resource type="Texture2D" uid="uid://b51wqam86uq6a" path="res://assets/animals/comadreja_andina.png" id="1_dy0gr"]
+[ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="2_abf2j"]
+
+[resource]
+script = ExtResource("2_abf2j")
+content = ExtResource("1_dy0gr")
+tags = {}

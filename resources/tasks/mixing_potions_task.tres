@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Task" load_steps=2 format=3 uid="uid://bmkpu7u6450pa"]
+
+[ext_resource type="Script" path="res://resources/template/task.gd" id="1_8i204"]
+
+[resource]
+script = ExtResource("1_8i204")
+inner_name = "mix_potion_task"
+name = "Combina colores para crear el color mostrado"
+description = "Arrastra poco a poco los colores en el caldero para crear colores nuevos. Crea el color mostrado encima del caldero."
+instructions = ""
+guide_scene = "res://scenes/guides/mixin_potions_guide.tscn"

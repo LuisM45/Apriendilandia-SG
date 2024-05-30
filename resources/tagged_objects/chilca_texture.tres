@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://d1pt3mvhgpfcn"]
+
+[ext_resource type="Texture2D" uid="uid://djbarj4vc2tlw" path="res://assets/flora/chilca.png" id="1_els14"]
+[ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="2_0c765"]
+
+[resource]
+script = ExtResource("2_0c765")
+content = ExtResource("1_els14")
+tags = {
+"alt_text": "chilca"
+}

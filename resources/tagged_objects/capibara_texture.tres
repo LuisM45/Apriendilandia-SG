@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://scafyo1hg20y"]
+
+[ext_resource type="Texture2D" uid="uid://dkvwxv5c0qans" path="res://assets/animals/capybara.png" id="1_lwly6"]
+[ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="2_tpsmq"]
+
+[resource]
+script = ExtResource("2_tpsmq")
+content = ExtResource("1_lwly6")
+tags = {
+"alt_text": "capibara"
+}

@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://b0clrcxwsi1aa"]
+[gd_scene load_steps=14 format=3 uid="uid://b0clrcxwsi1aa"]
 
 [ext_resource type="Script" path="res://scripts/game/maze/maze_stage.gd" id="1_4awjx"]
+[ext_resource type="Resource" uid="uid://dg1q3ke2fk8kw" path="res://resources/tasks/maze_task.tres" id="2_8st5q"]
 [ext_resource type="TileSet" uid="uid://brp5a646gwvjt" path="res://resources/maze_tileset.tres" id="2_74ccc"]
 [ext_resource type="Script" path="res://scripts/game/player/mouse_control.gd" id="3_nq0qa"]
 [ext_resource type="Script" path="res://scripts/game/maze/maze_controller.gd" id="3_s75qp"]
@@ -536,7 +537,7 @@ size = Vector2(20, 670)
 script = ExtResource("1_4awjx")
 next_scene = "res://scenes/match_numbers.tscn"
 difficulty = 7.0
-instruction = "Dont die"
+task = ExtResource("2_8st5q")
 
 [node name="MazeStructure" type="TileMap" parent="."]
 z_index = 1

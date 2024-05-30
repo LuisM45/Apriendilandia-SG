@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://bk6cc3tstexit"]
+[gd_scene load_steps=14 format=3 uid="uid://bk6cc3tstexit"]
 
 [ext_resource type="Script" path="res://scripts/game/mixin/mixin_stage.gd" id="1_03kll"]
+[ext_resource type="Resource" uid="uid://bmkpu7u6450pa" path="res://resources/tasks/mixing_potions_task.tres" id="2_ga1w2"]
 [ext_resource type="Script" path="res://scripts/game/mixin/source.gd" id="2_mdh0c"]
 [ext_resource type="Texture2D" uid="uid://bqcbmib0iik4p" path="res://assets/mixin_game/bottle.png" id="3_2ot0k"]
 [ext_resource type="Texture2D" uid="uid://bjuhhtekx85wb" path="res://assets/mixin_game/juice.png" id="4_3ix5i"]
@@ -20,6 +21,7 @@ size = Vector2(130, 126)
 [node name="MixingPotions" type="Node2D"]
 script = ExtResource("1_03kll")
 next_scene = "res://scenes/match_flowers.tscn"
+task = ExtResource("2_ga1w2")
 
 [node name="Sources" type="Node" parent="."]
 

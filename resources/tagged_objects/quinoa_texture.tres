@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://d13fr83psrqgl"]
+
+[ext_resource type="Texture2D" uid="uid://tw27nf1rgjff" path="res://assets/flora/quinoa.png" id="1_fq12v"]
+[ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="2_qdi7d"]
+
+[resource]
+script = ExtResource("2_qdi7d")
+content = ExtResource("1_fq12v")
+tags = {
+"alt_text": "quinoa"
+}

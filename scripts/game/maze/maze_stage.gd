@@ -9,7 +9,6 @@ var isMouseCaptured = true
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	super._ready()
-	guide_scene = "res://scenes/guides/maze_guide.tscn"
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	new_objetive()
 

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://cvatf1gf16jj0"]
+
+[ext_resource type="Texture2D" uid="uid://dk5g3lddpm7w7" path="res://assets/animals/capuchino_frentiblanco.png" id="1_8fgwq"]
+[ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="2_h8jhe"]
+
+[resource]
+script = ExtResource("2_h8jhe")
+content = ExtResource("1_8fgwq")
+tags = {
+"alt_text": "mono capuchino frentiblanco"
+}
