@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SourceSpriteSet" load_steps=6 format=3 uid="uid://8sasl8rss531"]
+
+[ext_resource type="Script" path="res://resources/template/source_sprite_set.gd" id="1_1c5jt"]
+[ext_resource type="Texture2D" uid="uid://bjuhhtekx85wb" path="res://assets/mixin_game/juice.png" id="1_jyj8g"]
+[ext_resource type="Texture2D" uid="uid://bqcbmib0iik4p" path="res://assets/mixin_game/bottle.png" id="2_5p1oe"]
+[ext_resource type="Texture2D" uid="uid://bmdwxslbwcstp" path="res://assets/mixin_game/tipped_juice.png" id="3_jv2cu"]
+[ext_resource type="Texture2D" uid="uid://bffqtr800bjx" path="res://assets/mixin_game/tipped_bottle.png" id="4_vcfpg"]
+
+[resource]
+script = ExtResource("1_1c5jt")
+base_texture = ExtResource("2_5p1oe")
+base_color_mask = ExtResource("1_jyj8g")
+lifted_texture = ExtResource("4_vcfpg")
+lifted_color_mask = ExtResource("3_jv2cu")

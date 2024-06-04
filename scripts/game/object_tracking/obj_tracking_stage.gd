@@ -79,5 +79,5 @@ func _on_cup_chosen(cup:Cup):
 		
 func _load_customization_config(config_dictionary:Dictionary):
 	super. _load_customization_config(config_dictionary)
-	var cup_texture = config_dictionary["cup_texture"]
-	var die_texture = config_dictionary["die_texture"]
+	var cup_texture = config_dictionary.get("cup_texture")
+	var die_texture = config_dictionary.get("die_texture")

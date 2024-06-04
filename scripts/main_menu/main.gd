@@ -7,6 +7,7 @@ const PauseMenu = preload("res://branches/gui/pause_menu.tscn")
 func _ready():
 	Globals.volume_changed.connect(func ():audio_player.volume_db = Globals.music_volume_db())
 	audio_player.finished.connect(audio_player.play)
+	audio_player.volume_db = Globals.music_volume_db()
 	audio_player.play()
 	pass # Replace with function body.
 
