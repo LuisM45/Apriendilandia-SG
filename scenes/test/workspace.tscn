@@ -1,55 +1,68 @@
-[gd_scene load_steps=5 format=3 uid="uid://c5bhd8hs1wtbg"]
+[gd_scene load_steps=16 format=3 uid="uid://c5bhd8hs1wtbg"]
 
-[ext_resource type="Script" path="res://scripts/game/object_tracking/obj_tracking_stage.gd" id="1_g7j2k"]
-[ext_resource type="Script" path="res://scripts/game/object_tracking/cup.gd" id="2_ysmv0"]
-[ext_resource type="Texture2D" uid="uid://dmxunr1ehdfbw" path="res://assets/cup_game/79362-200.png" id="3_xh7ib"]
-[ext_resource type="Script" path="res://scripts/game/object_tracking/die.gd" id="4_dasqw"]
+[ext_resource type="Script" path="res://scripts/game/card_matching/card_matching_stage.gd" id="1_1mj7i"]
+[ext_resource type="PackedScene" uid="uid://ci4xbhnaotaih" path="res://branches/game/card.tscn" id="2_3mdo7"]
+[ext_resource type="Resource" uid="uid://cqjilekm06clk" path="res://resources/tagged_objects/amaranto_texture.tres" id="2_lccod"]
+[ext_resource type="Resource" uid="uid://scafyo1hg20y" path="res://resources/tagged_objects/capibara_texture.tres" id="3_q4gde"]
+[ext_resource type="Resource" uid="uid://cvatf1gf16jj0" path="res://resources/tagged_objects/capuchinofrentiblanco_texture.tres" id="4_smn3w"]
+[ext_resource type="Resource" uid="uid://4qpblsmmox5r" path="res://resources/tagged_objects/condor_texture.tres" id="5_w815x"]
+[ext_resource type="Resource" uid="uid://7ei7p16ln5ie" path="res://resources/tagged_objects/cinco_texture.tres" id="6_002as"]
+[ext_resource type="Resource" uid="uid://bvntgl2m6a7rl" path="res://resources/tagged_objects/nueve_texture.tres" id="7_ya51c"]
+[ext_resource type="Resource" uid="uid://ekgh1qabhvdp" path="res://resources/tagged_objects/muslinegro_texure.tres" id="8_w6ys7"]
+[ext_resource type="Resource" uid="uid://ctw41lqkdjfe0" path="res://resources/tagged_objects/loboparamo_texture.tres" id="9_vsic7"]
+[ext_resource type="Resource" uid="uid://d0mehdvy4ho7d" path="res://resources/tagged_objects/conejoandino_texture.tres" id="10_fv3ni"]
+[ext_resource type="Resource" uid="uid://b824dnn1akwdw" path="res://resources/tagged_objects/papaya_texture.tres" id="11_s7jiw"]
+[ext_resource type="Resource" uid="uid://cf8n782k0oenj" path="res://resources/tagged_objects/pecaricollar_texture.tres" id="12_eo8cw"]
+[ext_resource type="Script" path="res://resources/template/task.gd" id="13_y8q7g"]
+
+[sub_resource type="Resource" id="Resource_vgfsk"]
+script = ExtResource("13_y8q7g")
+inner_name = "match_cards"
+name = "Empareja las cartas identicas"
+description = "Busca entre las cartas boca abajo cuales son similares. Selecciona las dos a la vez para hacerlas desaparecer. Haz desaparecer todas para ganar"
+instructions = ""
+guide_scene = ""
 
 [node name="Workspace" type="Node2D"]
-position = Vector2(754, 146)
-script = ExtResource("1_g7j2k")
-difficulty = 10.0
+position = Vector2(375, 173)
+script = ExtResource("1_1mj7i")
+texture_options = Array[Resource("res://resources/template/tagged_resource.gd")]([ExtResource("2_lccod"), ExtResource("3_q4gde"), ExtResource("4_smn3w"), ExtResource("5_w815x"), ExtResource("6_002as"), ExtResource("7_ya51c"), ExtResource("8_w6ys7"), ExtResource("9_vsic7"), ExtResource("10_fv3ni"), ExtResource("11_s7jiw"), ExtResource("12_eo8cw")])
+task = SubResource("Resource_vgfsk")
 
-[node name="Cups" type="Node" parent="."]
+[node name="Cards" type="Node" parent="."]
 
-[node name="Cup2" type="CharacterBody2D" parent="Cups"]
-modulate = Color(0, 0.698039, 0.188235, 1)
-position = Vector2(917, 325)
-script = ExtResource("2_ysmv0")
+[node name="Card" parent="Cards" instance=ExtResource("2_3mdo7")]
+position = Vector2(375, 173)
 
-[node name="Sprite2D" type="Sprite2D" parent="Cups/Cup2"]
-texture = ExtResource("3_xh7ib")
+[node name="Card2" parent="Cards" instance=ExtResource("2_3mdo7")]
+position = Vector2(472, 176)
 
-[node name="Cup1" type="CharacterBody2D" parent="Cups"]
-modulate = Color(0.745098, 0, 0.411765, 1)
-position = Vector2(582, 443)
-script = ExtResource("2_ysmv0")
+[node name="Card3" parent="Cards" instance=ExtResource("2_3mdo7")]
+position = Vector2(568, 176)
 
-[node name="Sprite2D" type="Sprite2D" parent="Cups/Cup1"]
-texture = ExtResource("3_xh7ib")
+[node name="Card4" parent="Cards" instance=ExtResource("2_3mdo7")]
+position = Vector2(376, 304)
 
-[node name="Cup3" type="CharacterBody2D" parent="Cups"]
-position = Vector2(267, 249)
-script = ExtResource("2_ysmv0")
+[node name="Card5" parent="Cards" instance=ExtResource("2_3mdo7")]
+position = Vector2(472, 304)
 
-[node name="Sprite2D" type="Sprite2D" parent="Cups/Cup3"]
-texture = ExtResource("3_xh7ib")
+[node name="Card6" parent="Cards" instance=ExtResource("2_3mdo7")]
+position = Vector2(568, 304)
 
-[node name="Cup4" type="CharacterBody2D" parent="Cups"]
-modulate = Color(1, 1, 0.188235, 1)
-position = Vector2(754, 146)
-script = ExtResource("2_ysmv0")
+[node name="Card7" parent="Cards" instance=ExtResource("2_3mdo7")]
+position = Vector2(376, 432)
 
-[node name="Sprite2D" type="Sprite2D" parent="Cups/Cup4"]
-texture = ExtResource("3_xh7ib")
+[node name="Card8" parent="Cards" instance=ExtResource("2_3mdo7")]
+position = Vector2(472, 432)
 
-[node name="Cup5" type="CharacterBody2D" parent="Cups"]
-modulate = Color(0.219608, 0.270588, 1, 1)
-position = Vector2(473, 129)
-script = ExtResource("2_ysmv0")
+[node name="Card9" parent="Cards" instance=ExtResource("2_3mdo7")]
+position = Vector2(568, 432)
 
-[node name="Sprite2D" type="Sprite2D" parent="Cups/Cup5"]
-texture = ExtResource("3_xh7ib")
+[node name="Card10" parent="Cards" instance=ExtResource("2_3mdo7")]
+position = Vector2(376, 552)
 
-[node name="Die" type="Area2D" parent="."]
-script = ExtResource("4_dasqw")
+[node name="Card11" parent="Cards" instance=ExtResource("2_3mdo7")]
+position = Vector2(472, 552)
+
+[node name="Card12" parent="Cards" instance=ExtResource("2_3mdo7")]
+position = Vector2(568, 552)

@@ -12,6 +12,7 @@ var is_tts_enabled = true
 
 var achievements = {}
 var user_data = {}
+var customization_config = {}
 
 var voices = DisplayServer.tts_get_voices_for_language("es")
 var voice_id = voices[0]
@@ -47,3 +48,4 @@ func _set_sfx_volume(volume):
 func _set_tts_volume(volume):
 	tts_volume = volume
 	volume_changed.emit()
+	

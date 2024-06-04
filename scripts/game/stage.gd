@@ -28,6 +28,7 @@ var playdate = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	_load_customization_config(Globals.customization_config)
 	_ready_sound()
 	_ready_signals()
 	playdate = Globals.unix_system_time()
@@ -124,3 +125,6 @@ func _on_correct_attempt():
 
 func _set_difficulty(val):
 	difficulty = val
+
+func _load_customization_config(config_dictionary:Dictionary):
+	pass

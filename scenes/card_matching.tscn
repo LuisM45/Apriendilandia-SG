@@ -1,0 +1,68 @@
+[gd_scene load_steps=16 format=3 uid="uid://dvpw3pa6vtgrb"]
+
+[ext_resource type="Script" path="res://scripts/game/card_matching/card_matching_stage.gd" id="1_s7k4o"]
+[ext_resource type="Resource" uid="uid://cqjilekm06clk" path="res://resources/tagged_objects/amaranto_texture.tres" id="2_mo6np"]
+[ext_resource type="Resource" uid="uid://scafyo1hg20y" path="res://resources/tagged_objects/capibara_texture.tres" id="3_pdp3w"]
+[ext_resource type="Resource" uid="uid://cvatf1gf16jj0" path="res://resources/tagged_objects/capuchinofrentiblanco_texture.tres" id="4_ff07b"]
+[ext_resource type="Resource" uid="uid://4qpblsmmox5r" path="res://resources/tagged_objects/condor_texture.tres" id="5_d3pf3"]
+[ext_resource type="Resource" uid="uid://7ei7p16ln5ie" path="res://resources/tagged_objects/cinco_texture.tres" id="6_2xkxf"]
+[ext_resource type="Resource" uid="uid://bvntgl2m6a7rl" path="res://resources/tagged_objects/nueve_texture.tres" id="7_aaw85"]
+[ext_resource type="Resource" uid="uid://ekgh1qabhvdp" path="res://resources/tagged_objects/muslinegro_texure.tres" id="8_rxcas"]
+[ext_resource type="Resource" uid="uid://ctw41lqkdjfe0" path="res://resources/tagged_objects/loboparamo_texture.tres" id="9_vsghi"]
+[ext_resource type="Resource" uid="uid://d0mehdvy4ho7d" path="res://resources/tagged_objects/conejoandino_texture.tres" id="10_s2gx0"]
+[ext_resource type="Resource" uid="uid://b824dnn1akwdw" path="res://resources/tagged_objects/papaya_texture.tres" id="11_brs6g"]
+[ext_resource type="Resource" uid="uid://cf8n782k0oenj" path="res://resources/tagged_objects/pecaricollar_texture.tres" id="12_4reqa"]
+[ext_resource type="Script" path="res://resources/template/task.gd" id="13_syvlp"]
+[ext_resource type="PackedScene" uid="uid://ci4xbhnaotaih" path="res://branches/game/card.tscn" id="14_n3x30"]
+
+[sub_resource type="Resource" id="Resource_vgfsk"]
+script = ExtResource("13_syvlp")
+inner_name = "match_cards"
+name = "Empareja las cartas identicas"
+description = "Busca entre las cartas boca abajo cuales son similares. Selecciona las dos a la vez para hacerlas desaparecer. Haz desaparecer todas para ganar"
+instructions = ""
+guide_scene = ""
+
+[node name="Workspace" type="Node2D"]
+position = Vector2(375, 173)
+script = ExtResource("1_s7k4o")
+texture_options = Array[Resource("res://resources/template/tagged_resource.gd")]([ExtResource("2_mo6np"), ExtResource("3_pdp3w"), ExtResource("4_ff07b"), ExtResource("5_d3pf3"), ExtResource("6_2xkxf"), ExtResource("7_aaw85"), ExtResource("8_rxcas"), ExtResource("9_vsghi"), ExtResource("10_s2gx0"), ExtResource("11_brs6g"), ExtResource("12_4reqa")])
+task = SubResource("Resource_vgfsk")
+
+[node name="Cards" type="Node" parent="."]
+
+[node name="Card" parent="Cards" instance=ExtResource("14_n3x30")]
+position = Vector2(375, 173)
+
+[node name="Card2" parent="Cards" instance=ExtResource("14_n3x30")]
+position = Vector2(472, 176)
+
+[node name="Card3" parent="Cards" instance=ExtResource("14_n3x30")]
+position = Vector2(568, 176)
+
+[node name="Card4" parent="Cards" instance=ExtResource("14_n3x30")]
+position = Vector2(376, 304)
+
+[node name="Card5" parent="Cards" instance=ExtResource("14_n3x30")]
+position = Vector2(472, 304)
+
+[node name="Card6" parent="Cards" instance=ExtResource("14_n3x30")]
+position = Vector2(568, 304)
+
+[node name="Card7" parent="Cards" instance=ExtResource("14_n3x30")]
+position = Vector2(376, 432)
+
+[node name="Card8" parent="Cards" instance=ExtResource("14_n3x30")]
+position = Vector2(472, 432)
+
+[node name="Card9" parent="Cards" instance=ExtResource("14_n3x30")]
+position = Vector2(568, 432)
+
+[node name="Card10" parent="Cards" instance=ExtResource("14_n3x30")]
+position = Vector2(376, 552)
+
+[node name="Card11" parent="Cards" instance=ExtResource("14_n3x30")]
+position = Vector2(472, 552)
+
+[node name="Card12" parent="Cards" instance=ExtResource("14_n3x30")]
+position = Vector2(568, 552)

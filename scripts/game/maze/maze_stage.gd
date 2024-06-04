@@ -10,6 +10,8 @@ var isMouseCaptured = true
 func _ready():
 	super._ready()
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	var a: AnimatedSprite2D = $WinArea/AnimatedSprite2D
+	a.play("idle")
 	new_objetive()
 
 func new_objetive():
@@ -51,3 +53,10 @@ func toggleMouse():
 func _on_win_area_body_entered(body):
 	if body == player:
 		attempt.emit(true)
+
+func _load_customization_config(config_dictionary:Dictionary):
+	super. _load_customization_config(config_dictionary)
+	var maze_tilemap =  config_dictionary.get("maze:maze_tilemap")
+	var background_texture =  config_dictionary.get("maze:background_texture")
+	var diamond_animated_texture =  config_dictionary.get("maze:diamond_animated_texture")
+	var player_animated_texture =  config_dictionary.get("maze:player_animated_texture")

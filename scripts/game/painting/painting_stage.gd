@@ -28,3 +28,8 @@ func _on_solved():
 	remaining -= 1
 	attempt.emit(true)
 	if remaining<=0: win.emit("")
+
+func _load_customization_config(config_dictionary:Dictionary):
+	super. _load_customization_config(config_dictionary)
+	var potion_texture_set = config_dictionary["painting_potions:potion_texture_set"]
+	var object_texture_set = config_dictionary["painting_potions:object_texture_set"]

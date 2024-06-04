@@ -5,6 +5,7 @@ const TaggedResource = preload("res://resources/template/tagged_resource.gd")
 @onready var background_sprite:TextureRect = $Background
 @export var possible_backgrounds: Array[Texture2D]
 @export var possible_objects: Array[TaggedResource]
+@export var config_context: String = "match_game"
 
 var remaining = 0
 func _ready():
@@ -54,3 +55,7 @@ func _process(delta):
 
 func _on_original_body_input_event(viewport, event, shape_idx):
 	pass # Replace with function body.
+
+func _load_customization_config(config_dictionary:Dictionary):
+	super. _load_customization_config(config_dictionary)
+	var objects_texture_set = config_dictionary[config_context+":objects_texture_set"]
