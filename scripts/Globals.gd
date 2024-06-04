@@ -12,6 +12,7 @@ var is_tts_enabled = true
 
 var achievements = {}
 var user_data = {}
+var backpack_items = []
 var customization_config = {}
 
 var voices = DisplayServer.tts_get_voices_for_language("es")
@@ -19,6 +20,10 @@ var voice_id = voices[0]
 
 var pause_scene = preload("res://branches/gui/pause_menu.tscn")
 
+func _init():
+	load_backpack_items()
+	load_customization()
+	pass
 
 func unix_system_time():
 	var sys_time = Time.get_datetime_dict_from_system(true)
@@ -48,4 +53,28 @@ func _set_sfx_volume(volume):
 func _set_tts_volume(volume):
 	tts_volume = volume
 	volume_changed.emit()
-	
+
+func load_backpack_items():
+	const basepath = "res://resources/backpack_items/"
+	var dir = DirAccess.open(basepath)
+	if !(dir):
+		print("resources/backpack_items does not exists")
+		return
+		
+	dir.list_dir_begin()
+	var file_name = dir.get_next()
+	while file_name != "":
+		if dir.current_is_dir(): continue
+		var item:BackpackItem = load(basepath+file_name)
+		backpack_items.append(item)
+				
+		file_name = dir.get_next()
+
+func load_customization():
+	for item:BackpackItem in backpack_items:
+		if !item.is_default: continue
+
+		for type in item.type_tags:
+			for game in item.game_tags:
+				customization_config[game+":"+type] = item
+	#SQLcode over here should be.

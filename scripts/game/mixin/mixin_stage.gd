@@ -26,4 +26,4 @@ func _on_solved():
 
 func _load_customization_config(config_dictionary:Dictionary):
 	super. _load_customization_config(config_dictionary)
-	var potion_sprite_set = config_dictionary["potion_mixing:potion_sprite_set"]
+	var potion_sprite_set = config_dictionary.get("potion_mixing:potion_sprite_set")

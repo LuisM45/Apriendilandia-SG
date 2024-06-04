@@ -58,4 +58,4 @@ func _on_original_body_input_event(viewport, event, shape_idx):
 
 func _load_customization_config(config_dictionary:Dictionary):
 	super. _load_customization_config(config_dictionary)
-	var objects_texture_set = config_dictionary[config_context+":objects_texture_set"]
+	var objects_texture_set = config_dictionary.get(config_context+":objects_texture_set")

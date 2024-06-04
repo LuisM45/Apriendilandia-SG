@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3 uid="uid://bo31ae4l2jv2g"]
+
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_8tja3"]
+
+[resource]
+script = ExtResource("1_8tja3")
+inner_name = "painting_potion_source_sprite_set_default"
+name = "Color de pociones para pintar por defecto"
+rcontent_path = "res://resources/source_sprite_set_default.tres"
+description = ""
+game_tags = Array[String](["painting_potions"])
+type_tags = Array[String](["potion_texture_set"])
+icon_path = "potion_texture_set"
+is_default = true
