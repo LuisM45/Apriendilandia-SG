@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Task" load_steps=2 format=3 uid="uid://bg2drif8qn2gk"]
+
+[ext_resource type="Script" path="res://resources/template/task.gd" id="1_1fuq6"]
+
+[resource]
+script = ExtResource("1_1fuq6")
+inner_name = "shuffle_cups"
+name = "Sigue la bolita y seleccionala"
+description = "Una bolita se ocultará en uno de los vasos. No pierdas ese vaso de vista, siguelo con tu mirada y seleccionala una vez se detenga para ganar."
+instructions = ""
+guide_scene = ""

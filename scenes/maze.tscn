@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b0clrcxwsi1aa"]
+[gd_scene load_steps=15 format=3 uid="uid://b0clrcxwsi1aa"]
 
 [ext_resource type="Script" path="res://scripts/game/maze/maze_stage.gd" id="1_4awjx"]
 [ext_resource type="Resource" uid="uid://dg1q3ke2fk8kw" path="res://resources/tasks/maze_task.tres" id="2_8st5q"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://scripts/game/maze/maze_controller.gd" id="3_s75qp"]
 [ext_resource type="Texture2D" uid="uid://cfw12fkyw4fdt" path="res://assets/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="4_8ue7t"]
 [ext_resource type="SpriteFrames" uid="uid://djuhlj0wumjmb" path="res://resources/sprite_frames_king_human.tres" id="5_qgtla"]
+[ext_resource type="SpriteFrames" uid="uid://8yfto2fg686i" path="res://resources/diamond_animated_frames.tres" id="8_wbtrj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p402e"]
 texture = ExtResource("4_8ue7t")
@@ -525,7 +526,7 @@ sources/0 = SubResource("TileSetAtlasSource_p402e")
 radius = 10.93
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bgexc"]
-size = Vector2(32, 645)
+size = Vector2(54, 56)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mq5ve"]
 size = Vector2(1178, 10)
@@ -567,10 +568,16 @@ sprite_frames = ExtResource("5_qgtla")
 animation = &"idle"
 
 [node name="WinArea" type="Area2D" parent="."]
+texture_filter = 1
+position = Vector2(1088, 328)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WinArea"]
-position = Vector2(1136, 324.5)
 shape = SubResource("RectangleShape2D_bgexc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="WinArea"]
+scale = Vector2(4.6, 4.6)
+sprite_frames = ExtResource("8_wbtrj")
+animation = &"idle"
 
 [node name="ScreenEdges" type="StaticBody2D" parent="."]
 

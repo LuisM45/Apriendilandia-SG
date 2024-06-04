@@ -1,10 +1,10 @@
-[gd_scene load_steps=24 format=3 uid="uid://b7tj35qh6cr0e"]
+[gd_scene load_steps=23 format=3 uid="uid://b7tj35qh6cr0e"]
 
+[ext_resource type="Script" path="res://scripts/game/match_shadow/match_shadow_stage.gd" id="1_7j26j"]
 [ext_resource type="Texture2D" uid="uid://d1lnph2366q6m" path="res://assets/backgrounds/teleferi_qo/20180125-105156-largejpg.jpg" id="1_55jbt"]
 [ext_resource type="Texture2D" uid="uid://opa0qovmyqmj" path="res://assets/backgrounds/teleferi_qo/photo0jpg.jpg" id="2_maxuh"]
 [ext_resource type="Texture2D" uid="uid://ew4h3w334ir1" path="res://assets/backgrounds/teleferi_qo/photo1jpg.jpg" id="3_kg8bv"]
 [ext_resource type="Texture2D" uid="uid://fea2w80kefpo" path="res://assets/backgrounds/teleferi_qo/photo2jpg.jpg" id="4_v16la"]
-[ext_resource type="Resource" uid="uid://erlw13qxdsaa" path="res://resources/tasks/match_shadow_task.tres" id="5_1p0ck"]
 [ext_resource type="Texture2D" uid="uid://bhn0yxg7xba08" path="res://assets/backgrounds/teleferi_qo/img-20180108-144906-largejpg.jpg" id="5_rtytp"]
 [ext_resource type="Script" path="res://scripts/game/match_shadow/sprite_pair.gd" id="5_xbvkh"]
 [ext_resource type="Resource" uid="uid://cqjilekm06clk" path="res://resources/tagged_objects/amaranto_texture.tres" id="6_t0gdi"]
@@ -20,65 +20,6 @@
 [ext_resource type="Resource" uid="uid://d13fr83psrqgl" path="res://resources/tagged_objects/quinoa_texture.tres" id="12_f76fu"]
 [ext_resource type="Texture2D" uid="uid://coaybd70t3bcu" path="res://assets/backgrounds/teleferi_qo/basilica.jpg" id="19_woaxo"]
 
-[sub_resource type="GDScript" id="GDScript_bldjt"]
-script/source = "extends \"res://scripts/game/stage.gd\"
-const SpritePair = preload(\"res://scripts/game/match_shadow/sprite_pair.gd\")
-const TaggedResource = preload(\"res://resources/template/tagged_resource.gd\")
-@onready var pairs = ($MatchPairs.get_children()) as Array[SpritePair]
-@onready var background_sprite:TextureRect = $Background
-@export var possible_backgrounds: Array[Texture2D]
-@export var possible_objects: Array[TaggedResource]
-
-var remaining = 0
-func _ready():
-	super._ready()
-	var minimal_count = min(pairs.size(), possible_objects.size())
-	var overflow_count = pairs.size()-minimal_count
-	background_sprite.texture = possible_backgrounds.pick_random()
-	
-	possible_objects.shuffle()
-	remaining = minimal_count
-	for pair in pairs:
-		pair.correct_match.connect(func x(b):attempt.emit(true))
-		pair.incorrect_match.connect(func x(b):attempt.emit(false))
-		
-	
-	var positions = []
-	for i in range(minimal_count):
-		positions.append(pairs[i].shadow_body.position)
-	positions.shuffle()
-	
-	for i in range(minimal_count):
-		var scale = possible_objects[i].content.get_size()
-		pairs[i].base_sprite = possible_objects[i]
-		pairs[i].shadow_body.position = positions[i]
-		
-	for i in range(overflow_count):
-		pairs[i].base_sprite = null
-	pass # Replace with function body.
-
-func resize_background():
-	#background_sprite.position = get_viewport_rect().size
-	pass
-
-func _on_correct_attempt():
-	super._on_correct_attempt()
-	remaining-=1
-	if remaining <= 0:
-		win.emit(\"\")
-	
-func _on_failed_attempt():
-	super._on_failed_attempt()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	super._process(delta)
-
-
-func _on_original_body_input_event(viewport, event, shape_idx):
-	pass # Replace with function body.
-"
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mj53u"]
 size = Vector2(128, 128)
 
@@ -89,11 +30,10 @@ shader = ExtResource("9_kpl8k")
 size = Vector2(130, 126)
 
 [node name="MatchFlowers" type="Node2D"]
-script = SubResource("GDScript_bldjt")
+script = ExtResource("1_7j26j")
 possible_backgrounds = Array[Texture2D]([ExtResource("1_55jbt"), ExtResource("2_maxuh"), ExtResource("3_kg8bv"), ExtResource("4_v16la"), ExtResource("5_rtytp")])
 possible_objects = Array[Resource("res://resources/template/tagged_resource.gd")]([ExtResource("6_t0gdi"), ExtResource("7_rg18t"), ExtResource("8_3of8n"), ExtResource("9_epe8k"), ExtResource("10_lnipu"), ExtResource("11_i4182"), ExtResource("12_f76fu")])
 next_scene = "res://scenes/match_forest.tscn"
-task = ExtResource("5_1p0ck")
 
 [node name="MatchPairs" type="Node" parent="."]
 

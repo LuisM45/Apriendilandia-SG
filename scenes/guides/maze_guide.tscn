@@ -1,87 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://bmltmk22fho40"]
+[gd_scene load_steps=7 format=3 uid="uid://bmltmk22fho40"]
 
 [ext_resource type="Script" path="res://scripts/guide/maze_guide_animation.gd" id="1_mmyuk"]
 [ext_resource type="TileSet" uid="uid://brp5a646gwvjt" path="res://resources/maze_tileset.tres" id="2_mqhcq"]
 [ext_resource type="SpriteFrames" uid="uid://djuhlj0wumjmb" path="res://resources/sprite_frames_king_human.tres" id="3_gi406"]
-[ext_resource type="Texture2D" uid="uid://cieqev8t6he84" path="res://assets/Kings and Pigs/Sprites/12-Live and Coins/Big Diamond Idle (18x14).png" id="4_qr82b"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dfmnj"]
-atlas = ExtResource("4_qr82b")
-region = Rect2(5, 2, 12, 10)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cawaf"]
-atlas = ExtResource("4_qr82b")
-region = Rect2(23, 2, 12, 10)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vwhf5"]
-atlas = ExtResource("4_qr82b")
-region = Rect2(41, 2, 12, 10)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wuqsh"]
-atlas = ExtResource("4_qr82b")
-region = Rect2(59, 2, 12, 10)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ubevg"]
-atlas = ExtResource("4_qr82b")
-region = Rect2(77, 2, 12, 10)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vdabi"]
-atlas = ExtResource("4_qr82b")
-region = Rect2(95, 2, 12, 10)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_pebx6"]
-atlas = ExtResource("4_qr82b")
-region = Rect2(113, 2, 12, 10)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xqjm8"]
-atlas = ExtResource("4_qr82b")
-region = Rect2(131, 2, 12, 10)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0towv"]
-atlas = ExtResource("4_qr82b")
-region = Rect2(149, 2, 12, 10)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xlf3i"]
-atlas = ExtResource("4_qr82b")
-region = Rect2(167, 2, 12, 10)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_q4dyp"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dfmnj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cawaf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vwhf5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wuqsh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ubevg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vdabi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_pebx6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xqjm8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0towv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_xlf3i")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}]
+[ext_resource type="SpriteFrames" uid="uid://8yfto2fg686i" path="res://resources/diamond_animated_frames.tres" id="4_hveaj"]
 
 [sub_resource type="Animation" id="Animation_8fmob"]
 resource_name = "main"
@@ -145,7 +67,7 @@ animation = &"idle"
 texture_filter = 1
 position = Vector2(1042, 246)
 scale = Vector2(5.8, 5.8)
-sprite_frames = SubResource("SpriteFrames_q4dyp")
+sprite_frames = ExtResource("4_hveaj")
 animation = &"idle"
 speed_scale = 2.0
 
