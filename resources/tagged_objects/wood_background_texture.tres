@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=2 format=3 uid="uid://u77mvkkgjm8q"]
+
+[ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="1_gym7o"]
+
+[resource]
+script = ExtResource("1_gym7o")
+tags = {}

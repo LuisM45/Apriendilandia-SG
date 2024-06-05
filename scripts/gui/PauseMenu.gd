@@ -36,3 +36,7 @@ func _on_sfx_volume_changed(new_volume):
 
 func _on_music_volume_changed(new_volume):
 	Globals.music_volume = new_volume
+
+
+func _on_home():
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")

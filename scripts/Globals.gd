@@ -23,6 +23,7 @@ var pause_scene = preload("res://branches/gui/pause_menu.tscn")
 func _init():
 	load_backpack_items()
 	load_customization()
+	dev_customization()
 	pass
 
 func unix_system_time():
@@ -73,8 +74,23 @@ func load_backpack_items():
 func load_customization():
 	for item:BackpackItem in backpack_items:
 		if !item.is_default: continue
-
-		for type in item.type_tags:
-			for game in item.game_tags:
-				customization_config[game+":"+type] = item
+		print(item)
+		enable_item(item)
+		
 	#SQLcode over here should be.
+
+func enable_item(item:BackpackItem):
+	for k in item.get_keys():
+		customization_config[k] = item
+
+func get_backpack_item(inner_name:String):
+	return load("res://resources/backpack_items/"+inner_name+".tres")
+
+#func dev_enable_backpack_item(inner_name:String):
+	#var item = get_backpack_item(inner_name)
+	#enable_backpack_item(item)
+
+func dev_customization():
+	enable_item(get_backpack_item("background_texture_alt_stripes"))
+	enable_item(get_backpack_item("background_accent_color_pgreen"))
+	enable_item(get_backpack_item("background_background_color_pblue"))

@@ -37,7 +37,8 @@ func _ready():
 	gui_node.help.connect(_on_help)
 	add_child(gui_node)
 	gui_node.task = task
-
+	if !task.introduction.is_empty():
+		DisplayServer.tts_speak(task.introduction.pick_random(),Globals.voice_id,Globals.tts_volume)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -76,6 +77,7 @@ func _play_bg_music():
 	bgm_node.play()
 
 func _on_win(extra = ""):
+	DisplayServer.tts_speak(task.outroduction.pick_random(),Globals.voice_id,Globals.tts_volume)
 	var playtime = Globals.unix_system_time() - playdate
 	Database.insert_metric(
 		playdate, # playdate

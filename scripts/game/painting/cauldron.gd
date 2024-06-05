@@ -44,8 +44,6 @@ func repaint():
 	var hue_shift = (current_color.h-texture_info.main_color.h+1)/2
 	var saturation_shift = (current_color.s-texture_info.main_color.s+1)/2
 	var value_shift = (current_color.v-texture_info.main_color.v+1)/2
-	print(current_color)
-	print(Color(hue_shift,saturation_shift,value_shift))
 	sprite.modulate = Color(hue_shift,saturation_shift,value_shift)
 
 func try_solve():

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SourceSpriteSet" load_steps=4 format=3 uid="uid://bqshlxqjywnxh"]
+
+[ext_resource type="Script" path="res://resources/template/source_sprite_set.gd" id="1_av2cb"]
+[ext_resource type="Texture2D" uid="uid://bts37akom1xnd" path="res://assets/alchemy_uncolored/ring_color_mask.png" id="1_h3kd8"]
+[ext_resource type="Texture2D" uid="uid://bohr5eu5apulh" path="res://assets/alchemy_uncolored/ring_base.png" id="2_qrdpc"]
+
+[resource]
+script = ExtResource("1_av2cb")
+base_texture = ExtResource("2_qrdpc")
+base_color_mask = ExtResource("1_h3kd8")

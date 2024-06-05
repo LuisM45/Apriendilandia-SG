@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3 uid="uid://d07ugiycftmhp"]
+
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_rpyb5"]
+
+[resource]
+script = ExtResource("1_rpyb5")
+inner_name = "painting_potion_source_sprite_set_cee"
+name = "Botella curva para pintar"
+rcontent_path = "res://resources/potion_sprite_sets/cee_sprite_set.tres"
+description = ""
+game_tags = Array[String](["painting_potions", "potion_mixing"])
+type_tags = Array[String](["potion_texture_set"])
+icon_path = ""
+is_default = false

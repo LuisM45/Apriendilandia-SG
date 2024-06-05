@@ -19,8 +19,10 @@
 script = ExtResource("13_syvlp")
 inner_name = "match_cards"
 name = "Empareja las cartas identicas"
-description = "Busca entre las cartas boca abajo cuales son similares. Selecciona las dos a la vez para hacerlas desaparecer. Haz desaparecer todas para ganar"
+description = ""
+introduction = Array[String]([])
 instructions = ""
+outroduction = Array[String]([])
 guide_scene = ""
 
 [node name="Workspace" type="Node2D"]

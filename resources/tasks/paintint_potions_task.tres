@@ -6,6 +6,8 @@
 script = ExtResource("1_kkxjm")
 inner_name = "paint_object_task"
 name = "Pinta el objeto del color correcto"
-description = "Arrastra las bottellas con pintura hacia el objeto para darle color. Pinta el objeto con el color que le pertenece."
-instructions = ""
+description = ""
+introduction = Array[String]([])
+instructions = "Arrastra las bottellas con pintura hacia el objeto para darle color. Pinta el objeto con el color que le pertenece."
+outroduction = Array[String]([])
 guide_scene = "res://scenes/guides/painting_potions_guid.tscn"

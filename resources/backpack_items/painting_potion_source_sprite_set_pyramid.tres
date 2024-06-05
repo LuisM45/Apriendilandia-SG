@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3 uid="uid://b5xxoyvgmc5yj"]
+
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_coqqu"]
+
+[resource]
+script = ExtResource("1_coqqu")
+inner_name = "painting_potion_source_sprite_set_pyramid"
+name = "Botella química para pintar"
+rcontent_path = "res://resources/potion_sprite_sets/pyramid_sprite_set.tres"
+description = ""
+game_tags = Array[String](["painting_potions", "potion_mixing"])
+type_tags = Array[String](["potion_texture_set"])
+icon_path = ""
+is_default = false

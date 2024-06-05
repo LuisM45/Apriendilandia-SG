@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SourceSpriteSet" load_steps=4 format=3 uid="uid://dmfdl1ooaoofa"]
+
+[ext_resource type="Script" path="res://resources/template/source_sprite_set.gd" id="1_d65c8"]
+[ext_resource type="Texture2D" uid="uid://bp7slx2o0jbmf" path="res://assets/alchemy_uncolored/heart_color_mask.png" id="1_o8yti"]
+[ext_resource type="Texture2D" uid="uid://bjqt0cja05222" path="res://assets/alchemy_uncolored/heart_base.png" id="2_iy52l"]
+
+[resource]
+script = ExtResource("1_d65c8")
+base_texture = ExtResource("2_iy52l")
+base_color_mask = ExtResource("1_o8yti")

@@ -16,13 +16,12 @@ func _ready():
 	container_sprite = append_sprite()
 	mask_sprite = append_sprite()
 	mask_sprite.modulate = current_color
-	connect_sprite_switch()
-	
 
 func _ydaer():
+	connect_sprite_switch()
 	_set_dropped_sprites()
 	rescale_sprites()
-
+	
 func _process(delta):
 	super._process(delta)
 	pass
@@ -46,8 +45,13 @@ func rescale_sprites():
 	container_sprite.scale = Vector2.ONE*scale_multiplier
 
 func connect_sprite_switch():
-	drag_start.connect(_set_lifted_sprites)
-	drag_end.connect(_set_dropped_sprites)
+	if source_sprite_set.lifted_texture:
+		drag_start.connect(_set_lifted_sprites)
+		drag_end.connect(_set_dropped_sprites)
+		return
+	
+	drag_start.connect(_rotate_sprites)
+	drag_end.connect(_unrotate_sprites)
 	
 func _set_lifted_sprites():
 	container_sprite.texture = source_sprite_set.lifted_texture
@@ -56,3 +60,10 @@ func _set_lifted_sprites():
 func _set_dropped_sprites():
 	container_sprite.texture = source_sprite_set.base_texture
 	mask_sprite.texture = source_sprite_set.base_color_mask
+	
+func _rotate_sprites(degrees=45):
+	rotation += degrees
+	
+func _unrotate_sprites(degrees=45):
+	rotation -= degrees
+	

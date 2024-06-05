@@ -1,12 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://bk6cc3tstexit"]
+[gd_scene load_steps=10 format=3 uid="uid://bk6cc3tstexit"]
 
 [ext_resource type="Script" path="res://scripts/game/mixin/mixin_stage.gd" id="1_03kll"]
 [ext_resource type="Resource" uid="uid://bmkpu7u6450pa" path="res://resources/tasks/mixing_potions_task.tres" id="2_ga1w2"]
 [ext_resource type="Script" path="res://scripts/game/mixin/source.gd" id="2_mdh0c"]
-[ext_resource type="Texture2D" uid="uid://bqcbmib0iik4p" path="res://assets/mixin_game/bottle.png" id="3_2ot0k"]
-[ext_resource type="Texture2D" uid="uid://bjuhhtekx85wb" path="res://assets/mixin_game/juice.png" id="4_3ix5i"]
-[ext_resource type="Texture2D" uid="uid://bffqtr800bjx" path="res://assets/mixin_game/tipped_bottle.png" id="5_drfll"]
-[ext_resource type="Texture2D" uid="uid://bmdwxslbwcstp" path="res://assets/mixin_game/tipped_juice.png" id="6_gnw8u"]
 [ext_resource type="Script" path="res://scripts/game/mixin/cauldron.gd" id="7_njyfq"]
 [ext_resource type="Texture2D" uid="uid://oqq5le3f5fvr" path="res://assets/mixin_game/cauldron.png" id="8_2l0vh"]
 [ext_resource type="Texture2D" uid="uid://dl3qja7443xdp" path="res://assets/mixin_game/cauldron_mask.png" id="9_t70k1"]
@@ -31,10 +27,6 @@ position = Vector2(187, 527)
 input_pickable = true
 script = ExtResource("2_mdh0c")
 current_color = Color(0, 0, 1, 1)
-container_texture = ExtResource("3_2ot0k")
-color_mask = ExtResource("4_3ix5i")
-lifted_container_texture = ExtResource("5_drfll")
-lifted_color_mask = ExtResource("6_gnw8u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_2"]
 shape = SubResource("RectangleShape2D_x4urv")
@@ -45,10 +37,6 @@ position = Vector2(187, 248)
 input_pickable = true
 script = ExtResource("2_mdh0c")
 current_color = Color(1, 0, 0, 1)
-container_texture = ExtResource("3_2ot0k")
-color_mask = ExtResource("4_3ix5i")
-lifted_container_texture = ExtResource("5_drfll")
-lifted_color_mask = ExtResource("6_gnw8u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_1"]
 shape = SubResource("RectangleShape2D_x4urv")
@@ -59,10 +47,6 @@ position = Vector2(187, 388)
 input_pickable = true
 script = ExtResource("2_mdh0c")
 current_color = Color(0, 1, 1, 1)
-container_texture = ExtResource("3_2ot0k")
-color_mask = ExtResource("4_3ix5i")
-lifted_container_texture = ExtResource("5_drfll")
-lifted_color_mask = ExtResource("6_gnw8u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_6"]
 shape = SubResource("RectangleShape2D_x4urv")
@@ -73,10 +57,6 @@ position = Vector2(187, 98)
 input_pickable = true
 script = ExtResource("2_mdh0c")
 current_color = Color(1, 1, 1, 1)
-container_texture = ExtResource("3_2ot0k")
-color_mask = ExtResource("4_3ix5i")
-lifted_container_texture = ExtResource("5_drfll")
-lifted_color_mask = ExtResource("6_gnw8u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_7"]
 shape = SubResource("RectangleShape2D_x4urv")
@@ -87,10 +67,6 @@ position = Vector2(1000, 266)
 input_pickable = true
 script = ExtResource("2_mdh0c")
 current_color = Color(0, 1, 0, 1)
-container_texture = ExtResource("3_2ot0k")
-color_mask = ExtResource("4_3ix5i")
-lifted_container_texture = ExtResource("5_drfll")
-lifted_color_mask = ExtResource("6_gnw8u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_3"]
 shape = SubResource("RectangleShape2D_x4urv")
@@ -101,10 +77,6 @@ position = Vector2(1000, 400)
 input_pickable = true
 script = ExtResource("2_mdh0c")
 current_color = Color(1, 1, 0, 1)
-container_texture = ExtResource("3_2ot0k")
-color_mask = ExtResource("4_3ix5i")
-lifted_container_texture = ExtResource("5_drfll")
-lifted_color_mask = ExtResource("6_gnw8u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_4"]
 shape = SubResource("RectangleShape2D_x4urv")
@@ -115,10 +87,6 @@ position = Vector2(1000, 535)
 input_pickable = true
 script = ExtResource("2_mdh0c")
 current_color = Color(1, 0, 1, 1)
-container_texture = ExtResource("3_2ot0k")
-color_mask = ExtResource("4_3ix5i")
-lifted_container_texture = ExtResource("5_drfll")
-lifted_color_mask = ExtResource("6_gnw8u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_5"]
 shape = SubResource("RectangleShape2D_x4urv")
@@ -128,10 +96,6 @@ z_index = 1
 position = Vector2(1000, 130)
 input_pickable = true
 script = ExtResource("2_mdh0c")
-container_texture = ExtResource("3_2ot0k")
-color_mask = ExtResource("4_3ix5i")
-lifted_container_texture = ExtResource("5_drfll")
-lifted_color_mask = ExtResource("6_gnw8u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_8"]
 shape = SubResource("RectangleShape2D_x4urv")

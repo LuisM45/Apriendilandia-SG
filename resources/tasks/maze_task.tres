@@ -6,6 +6,8 @@
 script = ExtResource("1_aq351")
 inner_name = "maze_task"
 name = "Llega al diamante"
-description = "Navega por el laberinto y encuentra tu camino hacia el diamante"
-instructions = ""
+description = ""
+introduction = Array[String]([])
+instructions = "Navega por el laberinto y encuentra tu camino hacia el diamante"
+outroduction = Array[String]([])
 guide_scene = "res://scenes/guides/maze_guide.tscn"

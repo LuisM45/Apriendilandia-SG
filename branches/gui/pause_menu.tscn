@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cknf1h0vct0uw"]
+[gd_scene load_steps=7 format=3 uid="uid://cknf1h0vct0uw"]
 
 [ext_resource type="Shader" path="res://branches/gui/sidebar.gdshader" id="1_f13s3"]
 [ext_resource type="Script" path="res://scripts/gui/PauseMenu.gd" id="2_fidih"]
 [ext_resource type="Shader" path="res://branches/gui/sidebar_bg.gdshader" id="3_bngxv"]
-[ext_resource type="Script" path="res://scripts/button_echo.gd" id="4_y73p2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_huhex"]
 shader = ExtResource("1_f13s3")
@@ -69,8 +68,6 @@ offset_top = -140.0
 offset_right = 241.0
 offset_bottom = -109.0
 text = "Inicio"
-script = ExtResource("4_y73p2")
-msg = "C"
 
 [node name="HelpBtn" type="Button" parent="."]
 layout_mode = 0
@@ -133,7 +130,7 @@ offset_top = -51.0
 offset_right = 221.0
 offset_bottom = -35.0
 
-[connection signal="pressed" from="HomeBtn" to="HomeBtn" method="_on_pressed"]
+[connection signal="pressed" from="HomeBtn" to="." method="_on_home"]
 [connection signal="pressed" from="HelpBtn" to="HelpBtn" method="_on_pressed"]
 [connection signal="pressed" from="TtsBtn" to="." method="_on_tts_toggle"]
 [connection signal="pressed" from="SfxBtn" to="." method="_on_sfx_toggle"]
