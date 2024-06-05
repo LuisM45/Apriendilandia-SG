@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://b7tj35qh6cr0e"]
+[gd_scene load_steps=24 format=3 uid="uid://b7tj35qh6cr0e"]
 
 [ext_resource type="Script" path="res://scripts/game/match_shadow/match_shadow_stage.gd" id="1_7j26j"]
 [ext_resource type="Texture2D" uid="uid://d1lnph2366q6m" path="res://assets/backgrounds/teleferi_qo/20180125-105156-largejpg.jpg" id="1_55jbt"]
@@ -18,6 +18,7 @@
 [ext_resource type="Resource" uid="uid://wacs4kwcll6o" path="res://resources/tagged_objects/moracastilla_texture.tres" id="10_lnipu"]
 [ext_resource type="Resource" uid="uid://b824dnn1akwdw" path="res://resources/tagged_objects/papaya_texture.tres" id="11_i4182"]
 [ext_resource type="Resource" uid="uid://d13fr83psrqgl" path="res://resources/tagged_objects/quinoa_texture.tres" id="12_f76fu"]
+[ext_resource type="Resource" uid="uid://erlw13qxdsaa" path="res://resources/tasks/match_shadow_task.tres" id="14_ih1m5"]
 [ext_resource type="Texture2D" uid="uid://coaybd70t3bcu" path="res://assets/backgrounds/teleferi_qo/basilica.jpg" id="19_woaxo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mj53u"]
@@ -34,6 +35,7 @@ script = ExtResource("1_7j26j")
 possible_backgrounds = Array[Texture2D]([ExtResource("1_55jbt"), ExtResource("2_maxuh"), ExtResource("3_kg8bv"), ExtResource("4_v16la"), ExtResource("5_rtytp")])
 possible_objects = Array[Resource("res://resources/template/tagged_resource.gd")]([ExtResource("6_t0gdi"), ExtResource("7_rg18t"), ExtResource("8_3of8n"), ExtResource("9_epe8k"), ExtResource("10_lnipu"), ExtResource("11_i4182"), ExtResource("12_f76fu")])
 next_scene = "res://scenes/match_forest.tscn"
+task = ExtResource("14_ih1m5")
 
 [node name="MatchPairs" type="Node" parent="."]
 

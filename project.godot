@@ -24,6 +24,7 @@ general/text_to_speech=true
 
 Globals="*res://scripts/Globals.gd"
 Database="*res://scripts/persistance/database.gd"
+Parsers="*res://scripts/Parsers.gd"
 
 [display]
 

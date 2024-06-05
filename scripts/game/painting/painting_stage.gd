@@ -41,6 +41,7 @@ func _on_solved():
 
 func _load_customization_config(config_dictionary:Dictionary):
 	super. _load_customization_config(config_dictionary)
+	print(JSON.stringify(Color.AQUA))
 	potion_texture_set = (config_dictionary\
 		.get("painting_potions:potion_texture_set")\
 		as BackpackItem)\

@@ -6,6 +6,8 @@
 script = ExtResource("1_1fuq6")
 inner_name = "shuffle_cups"
 name = "Sigue la bolita y seleccionala"
-description = "Una bolita se ocultará en uno de los vasos. No pierdas ese vaso de vista, siguelo con tu mirada y seleccionala una vez se detenga para ganar."
-instructions = ""
+description = ""
+introduction = Array[String]([])
+instructions = "Una bolita se ocultará en uno de los vasos. No pierdas ese vaso de vista, siguelo con tu mirada y seleccionala una vez se detenga para ganar."
+outroduction = Array[String]([])
 guide_scene = ""

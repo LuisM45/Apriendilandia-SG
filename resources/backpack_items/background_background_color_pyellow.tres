@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3 uid="uid://dklmqpwp2dnoc"]
+
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_ed6k2"]
+
+[resource]
+script = ExtResource("1_ed6k2")
+inner_name = "background_background_color_pyellow"
+name = "Color de fondo amarillo pastel"
+rcontent_path = "res://resources/colors/pyellow_background.tres"
+description = ""
+game_tags = Array[String](["background"])
+type_tags = Array[String](["background_color"])
+icon_path = ""
+is_default = false

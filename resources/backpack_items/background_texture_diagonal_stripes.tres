@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3 uid="uid://0wiwr5gplb0"]
+
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_gm2a6"]
+
+[resource]
+script = ExtResource("1_gm2a6")
+inner_name = "background_texture_diagonal_stripes"
+name = "Patrón lineas diagonales"
+rcontent_path = "res://assets/backgrounds/patterns/diagonal_stripes.png"
+description = ""
+game_tags = Array[String](["background"])
+type_tags = Array[String](["texture"])
+icon_path = ""
+is_default = false
