@@ -10,5 +10,5 @@ rcontent_path = "res://resources/colors/pblue_accent.tres"
 description = ""
 game_tags = Array[String](["background"])
 type_tags = Array[String](["accent_color"])
-icon_path = ""
+icon_path = "res://assets/colors/pblue_accent.png"
 is_default = true

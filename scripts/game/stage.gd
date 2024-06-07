@@ -1,5 +1,6 @@
 extends Node
 const Sidebar = preload("res://branches/gui/sidebar.tscn")
+const StageBackground = preload("res://branches/gui/stage_generic_background.tscn")
 const Task = preload("res://resources/template/task.gd")
 @export_file("*.tscn") var next_scene: String
 
@@ -36,6 +37,8 @@ func _ready():
 	gui_node.pause.connect(_on_pause)
 	gui_node.help.connect(_on_help)
 	add_child(gui_node)
+	var background = StageBackground.instantiate()
+	add_child(background)
 	gui_node.task = task
 	if !task.introduction.is_empty():
 		DisplayServer.tts_speak(task.introduction.pick_random(),Globals.voice_id,Globals.tts_volume)

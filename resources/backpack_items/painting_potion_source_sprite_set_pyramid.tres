@@ -10,5 +10,5 @@ rcontent_path = "res://resources/potion_sprite_sets/pyramid_sprite_set.tres"
 description = ""
 game_tags = Array[String](["painting_potions", "potion_mixing"])
 type_tags = Array[String](["potion_texture_set"])
-icon_path = ""
+icon_path = "res://assets/alchemy set/all png/Alchemy1_28.png"
 is_default = false

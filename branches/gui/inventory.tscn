@@ -1,0 +1,116 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmfhmaboxk783"]
+
+[ext_resource type="Script" path="res://scripts/gui/inventory_scene.gd" id="1_2fbj6"]
+[ext_resource type="Script" path="res://scripts/gui/ItemInfoPanel.gd" id="2_cm3m2"]
+
+[node name="Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2fbj6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.470588, 0.313726, 0.313726, 1)
+
+[node name="LPanel" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.644
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = -32.0
+offset_bottom = -32.0
+grow_vertical = 2
+
+[node name="ExitButton" type="Button" parent="LPanel"]
+layout_mode = 2
+text = "Salir
+"
+
+[node name="ItemList" type="ItemList" parent="LPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+max_columns = 2
+same_column_width = true
+
+[node name="ItemInfoPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.641493
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 32.0
+offset_right = -32.0
+offset_bottom = -32.0
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("2_cm3m2")
+metadata/_edit_use_anchors_ = true
+
+[node name="ItemTitle" type="Label" parent="ItemInfoPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.118
+offset_left = 32.0
+offset_top = 32.0
+offset_right = -32.0001
+grow_horizontal = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemDescription" type="Label" parent="ItemInfoPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.418
+anchor_right = 1.0
+anchor_bottom = 0.86
+offset_left = 32.0
+offset_top = 0.135986
+offset_right = -32.0
+offset_bottom = -0.280029
+grow_horizontal = 2
+grow_vertical = 2
+autowrap_mode = 3
+
+[node name="IconTexture" type="TextureRect" parent="ItemInfoPanel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.002
+anchor_top = 0.171
+anchor_right = 1.0
+anchor_bottom = 0.358
+offset_left = 0.174061
+offset_top = 0.192001
+offset_right = 1.0
+offset_bottom = 0.0159912
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="EnableButton" type="Button" parent="ItemInfoPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.901
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_right = -32.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Activar"
+
+[connection signal="pressed" from="ItemInfoPanel/EnableButton" to="ItemInfoPanel" method="_on_enable_pressed"]
