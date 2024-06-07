@@ -1,6 +1,7 @@
-extends Node2D
+extends Control
 
 const PauseMenu = preload("res://branches/gui/pause_menu.tscn")
+const Inventory = preload("res://branches/gui/inventory.tscn")
 
 @onready var audio_player:AudioStreamPlayer = $AudioStreamPlayer
 # Called when the node enters the scene tree for the first time.
@@ -34,3 +35,6 @@ func _on_button_forest_pressed():
 func _on_button_config_pressed():
 	add_child(PauseMenu.instantiate())
 	pass # Replace with function body.
+
+func _on_inventory_pressed():
+	add_child(Inventory.instantiate())

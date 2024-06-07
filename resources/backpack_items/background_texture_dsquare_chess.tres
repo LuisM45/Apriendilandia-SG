@@ -10,5 +10,5 @@ rcontent_path = "res://assets/backgrounds/patterns/dsquare_chess.png"
 description = ""
 game_tags = Array[String](["background"])
 type_tags = Array[String](["texture"])
-icon_path = ""
+icon_path = "res://assets/Pixel Adventure 1/Background/Blue.png"
 is_default = false

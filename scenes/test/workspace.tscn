@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c5bhd8hs1wtbg"]
+[gd_scene load_steps=5 format=3 uid="uid://c5bhd8hs1wtbg"]
 
 [ext_resource type="Script" path="res://scripts/game/stage.gd" id="1_e8wn3"]
 [ext_resource type="PackedScene" uid="uid://ci4xbhnaotaih" path="res://branches/game/card.tscn" id="2_3mdo7"]
 [ext_resource type="Resource" uid="uid://dg1q3ke2fk8kw" path="res://resources/tasks/maze_task.tres" id="2_3ri13"]
-[ext_resource type="Script" path="res://scripts/gui/stage_background.gd" id="3_qjika"]
-[ext_resource type="Texture2D" path="res://assets/backgrounds/patterns/alt_stripe.png" id="5_6x6ql"]
+[ext_resource type="PackedScene" uid="uid://73ys0nh4dj14" path="res://branches/gui/stage_generic_background.tscn" id="4_1ejrx"]
 
 [node name="Workspace" type="Node2D"]
 script = ExtResource("1_e8wn3")
@@ -60,36 +59,5 @@ position = Vector2(472, 552)
 visible = false
 position = Vector2(568, 552)
 
-[node name="StageBackground" type="Control" parent="."]
-texture_filter = 1
-layout_mode = 3
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_right = 1080.0
-offset_bottom = 600.0
-grow_vertical = 2
-script = ExtResource("3_qjika")
-metadata/_edit_use_anchors_ = true
-
-[node name="ColorRect" type="ColorRect" parent="StageBackground"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.67451, 0.905882, 1, 1)
-metadata/_edit_use_anchors_ = true
-
-[node name="TextureRect" type="TextureRect" parent="StageBackground"]
-modulate = Color(0.588235, 0.494118, 0.14902, 1)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("5_6x6ql")
-expand_mode = 1
-stretch_mode = 1
-metadata/_edit_use_anchors_ = true
+[node name="StageBackground" parent="." instance=ExtResource("4_1ejrx")]
+visible = false

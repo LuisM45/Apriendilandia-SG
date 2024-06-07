@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://bk6cc3tstexit"]
+[gd_scene load_steps=25 format=3 uid="uid://bk6cc3tstexit"]
 
 [ext_resource type="Script" path="res://scripts/game/mixin/mixin_stage.gd" id="1_03kll"]
 [ext_resource type="Resource" uid="uid://bmkpu7u6450pa" path="res://resources/tasks/mixing_potions_task.tres" id="2_ga1w2"]
 [ext_resource type="Script" path="res://scripts/game/mixin/source.gd" id="2_mdh0c"]
 [ext_resource type="Script" path="res://scripts/game/mixin/cauldron.gd" id="7_njyfq"]
 [ext_resource type="Texture2D" uid="uid://oqq5le3f5fvr" path="res://assets/mixin_game/cauldron.png" id="8_2l0vh"]
+[ext_resource type="Texture2D" uid="uid://bgcto6bnyedki" path="res://assets/Kings and Pigs/Sprites/02-King Pig/Idle (38x28).png" id="8_hwhjt"]
+[ext_resource type="Texture2D" uid="uid://du6k0pm14jdxi" path="res://assets/dialog.png" id="9_e1j1a"]
 [ext_resource type="Texture2D" uid="uid://dl3qja7443xdp" path="res://assets/mixin_game/cauldron_mask.png" id="9_t70k1"]
 [ext_resource type="Texture2D" uid="uid://rifls5el05eu" path="res://assets/mixin_game/cauldron_sideways.png" id="10_6k3fp"]
 
@@ -13,6 +15,98 @@ size = Vector2(128, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_syieg"]
 size = Vector2(130, 126)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jjwj5"]
+atlas = ExtResource("8_hwhjt")
+region = Rect2(11, 6, 18, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aa8dl"]
+atlas = ExtResource("8_hwhjt")
+region = Rect2(49, 6, 18, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pn7v6"]
+atlas = ExtResource("8_hwhjt")
+region = Rect2(87, 6, 18, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_krcpm"]
+atlas = ExtResource("8_hwhjt")
+region = Rect2(125, 6, 18, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6n31a"]
+atlas = ExtResource("8_hwhjt")
+region = Rect2(163, 6, 18, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50r6u"]
+atlas = ExtResource("8_hwhjt")
+region = Rect2(201, 6, 18, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_px32m"]
+atlas = ExtResource("8_hwhjt")
+region = Rect2(239, 6, 18, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rm0k"]
+atlas = ExtResource("8_hwhjt")
+region = Rect2(277, 6, 18, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ysov"]
+atlas = ExtResource("8_hwhjt")
+region = Rect2(315, 6, 18, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2fd0"]
+atlas = ExtResource("8_hwhjt")
+region = Rect2(353, 6, 18, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2kd4i"]
+atlas = ExtResource("8_hwhjt")
+region = Rect2(391, 6, 18, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u3u1e"]
+atlas = ExtResource("8_hwhjt")
+region = Rect2(429, 6, 18, 22)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i8qwl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jjwj5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aa8dl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pn7v6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_krcpm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6n31a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50r6u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_px32m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1rm0k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ysov")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2fd0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2kd4i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u3u1e")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="MixingPotions" type="Node2D"]
 script = ExtResource("1_03kll")
@@ -63,7 +157,7 @@ shape = SubResource("RectangleShape2D_x4urv")
 
 [node name="source_3" type="CharacterBody2D" parent="Sources"]
 z_index = 1
-position = Vector2(1000, 266)
+position = Vector2(335, 255)
 input_pickable = true
 script = ExtResource("2_mdh0c")
 current_color = Color(0, 1, 0, 1)
@@ -73,7 +167,7 @@ shape = SubResource("RectangleShape2D_x4urv")
 
 [node name="source_4" type="CharacterBody2D" parent="Sources"]
 z_index = 1
-position = Vector2(1000, 400)
+position = Vector2(335, 389)
 input_pickable = true
 script = ExtResource("2_mdh0c")
 current_color = Color(1, 1, 0, 1)
@@ -83,7 +177,7 @@ shape = SubResource("RectangleShape2D_x4urv")
 
 [node name="source_5" type="CharacterBody2D" parent="Sources"]
 z_index = 1
-position = Vector2(1000, 535)
+position = Vector2(335, 524)
 input_pickable = true
 script = ExtResource("2_mdh0c")
 current_color = Color(1, 0, 1, 1)
@@ -93,7 +187,7 @@ shape = SubResource("RectangleShape2D_x4urv")
 
 [node name="source_8" type="CharacterBody2D" parent="Sources"]
 z_index = 1
-position = Vector2(1000, 130)
+position = Vector2(335, 119)
 input_pickable = true
 script = ExtResource("2_mdh0c")
 
@@ -102,25 +196,8 @@ shape = SubResource("RectangleShape2D_x4urv")
 
 [node name="Cauldrons" type="Node" parent="."]
 
-[node name="cauldron_2" type="Area2D" parent="Cauldrons"]
-position = Vector2(693, 314)
-script = ExtResource("7_njyfq")
-current_color = Color(0.254902, 0.223529, 0.223529, 1)
-target_color = Color(1, 1, 1, 1)
-container_texture = ExtResource("8_2l0vh")
-color_mask = ExtResource("9_t70k1")
-
-[node name="CauldronSideways" type="Sprite2D" parent="Cauldrons/cauldron_2"]
-texture_filter = 1
-position = Vector2(-4, 129)
-scale = Vector2(4.18966, 4.18966)
-texture = ExtResource("10_6k3fp")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cauldrons/cauldron_2"]
-shape = SubResource("RectangleShape2D_syieg")
-
 [node name="cauldron_1" type="Area2D" parent="Cauldrons"]
-position = Vector2(508, 314)
+position = Vector2(603, 277)
 script = ExtResource("7_njyfq")
 container_texture = ExtResource("8_2l0vh")
 color_mask = ExtResource("9_t70k1")
@@ -134,9 +211,18 @@ texture = ExtResource("10_6k3fp")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cauldrons/cauldron_1"]
 shape = SubResource("RectangleShape2D_syieg")
 
-[connection signal="body_exited" from="Cauldrons/cauldron_2" to="Cauldrons/cauldron_2" method="_on_source_removed"]
-[connection signal="object_dropped_over" from="Cauldrons/cauldron_2" to="Cauldrons/cauldron_2" method="_on_source_removed"]
-[connection signal="object_lifted_over" from="Cauldrons/cauldron_2" to="Cauldrons/cauldron_2" method="_on_source_over"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(996, 361)
+scale = Vector2(6.61111, 6.61111)
+sprite_frames = SubResource("SpriteFrames_i8qwl")
+
+[node name="Dialog" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(825, 206)
+scale = Vector2(4.3913, 4.3913)
+texture = ExtResource("9_e1j1a")
+
 [connection signal="body_exited" from="Cauldrons/cauldron_1" to="Cauldrons/cauldron_1" method="_on_source_removed"]
 [connection signal="object_dropped_over" from="Cauldrons/cauldron_1" to="Cauldrons/cauldron_1" method="_on_source_removed"]
 [connection signal="object_lifted_over" from="Cauldrons/cauldron_1" to="Cauldrons/cauldron_1" method="_on_source_over"]
