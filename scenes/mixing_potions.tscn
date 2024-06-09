@@ -1,17 +1,14 @@
-[gd_scene load_steps=25 format=3 uid="uid://bk6cc3tstexit"]
+[gd_scene load_steps=24 format=3 uid="uid://bk6cc3tstexit"]
 
 [ext_resource type="Script" path="res://scripts/game/mixin/mixin_stage.gd" id="1_03kll"]
 [ext_resource type="Resource" uid="uid://bmkpu7u6450pa" path="res://resources/tasks/mixing_potions_task.tres" id="2_ga1w2"]
-[ext_resource type="Script" path="res://scripts/game/mixin/source.gd" id="2_mdh0c"]
+[ext_resource type="PackedScene" uid="uid://ce23b7ds500wb" path="res://branches/game/source.tscn" id="3_aqei4"]
 [ext_resource type="Script" path="res://scripts/game/mixin/cauldron.gd" id="7_njyfq"]
 [ext_resource type="Texture2D" uid="uid://oqq5le3f5fvr" path="res://assets/mixin_game/cauldron.png" id="8_2l0vh"]
 [ext_resource type="Texture2D" uid="uid://bgcto6bnyedki" path="res://assets/Kings and Pigs/Sprites/02-King Pig/Idle (38x28).png" id="8_hwhjt"]
 [ext_resource type="Texture2D" uid="uid://du6k0pm14jdxi" path="res://assets/dialog.png" id="9_e1j1a"]
 [ext_resource type="Texture2D" uid="uid://dl3qja7443xdp" path="res://assets/mixin_game/cauldron_mask.png" id="9_t70k1"]
 [ext_resource type="Texture2D" uid="uid://rifls5el05eu" path="res://assets/mixin_game/cauldron_sideways.png" id="10_6k3fp"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x4urv"]
-size = Vector2(128, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_syieg"]
 size = Vector2(130, 126)
@@ -115,84 +112,23 @@ task = ExtResource("2_ga1w2")
 
 [node name="Sources" type="Node" parent="."]
 
-[node name="source_2" type="CharacterBody2D" parent="Sources"]
-z_index = 1
-position = Vector2(187, 527)
-input_pickable = true
-script = ExtResource("2_mdh0c")
-current_color = Color(0, 0, 1, 1)
+[node name="source_2" parent="Sources" instance=ExtResource("3_aqei4")]
+position = Vector2(152, 176)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_2"]
-shape = SubResource("RectangleShape2D_x4urv")
+[node name="source_3" parent="Sources" instance=ExtResource("3_aqei4")]
+position = Vector2(152, 336)
 
-[node name="source_1" type="CharacterBody2D" parent="Sources"]
-z_index = 1
-position = Vector2(187, 248)
-input_pickable = true
-script = ExtResource("2_mdh0c")
-current_color = Color(1, 0, 0, 1)
+[node name="source_4" parent="Sources" instance=ExtResource("3_aqei4")]
+position = Vector2(152, 496)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_1"]
-shape = SubResource("RectangleShape2D_x4urv")
+[node name="source_5" parent="Sources" instance=ExtResource("3_aqei4")]
+position = Vector2(304, 176)
 
-[node name="source_6" type="CharacterBody2D" parent="Sources"]
-z_index = 1
-position = Vector2(187, 388)
-input_pickable = true
-script = ExtResource("2_mdh0c")
-current_color = Color(0, 1, 1, 1)
+[node name="source_6" parent="Sources" instance=ExtResource("3_aqei4")]
+position = Vector2(304, 336)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_6"]
-shape = SubResource("RectangleShape2D_x4urv")
-
-[node name="source_7" type="CharacterBody2D" parent="Sources"]
-z_index = 1
-position = Vector2(187, 98)
-input_pickable = true
-script = ExtResource("2_mdh0c")
-current_color = Color(1, 1, 1, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_7"]
-shape = SubResource("RectangleShape2D_x4urv")
-
-[node name="source_3" type="CharacterBody2D" parent="Sources"]
-z_index = 1
-position = Vector2(335, 255)
-input_pickable = true
-script = ExtResource("2_mdh0c")
-current_color = Color(0, 1, 0, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_3"]
-shape = SubResource("RectangleShape2D_x4urv")
-
-[node name="source_4" type="CharacterBody2D" parent="Sources"]
-z_index = 1
-position = Vector2(335, 389)
-input_pickable = true
-script = ExtResource("2_mdh0c")
-current_color = Color(1, 1, 0, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_4"]
-shape = SubResource("RectangleShape2D_x4urv")
-
-[node name="source_5" type="CharacterBody2D" parent="Sources"]
-z_index = 1
-position = Vector2(335, 524)
-input_pickable = true
-script = ExtResource("2_mdh0c")
-current_color = Color(1, 0, 1, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_5"]
-shape = SubResource("RectangleShape2D_x4urv")
-
-[node name="source_8" type="CharacterBody2D" parent="Sources"]
-z_index = 1
-position = Vector2(335, 119)
-input_pickable = true
-script = ExtResource("2_mdh0c")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_8"]
-shape = SubResource("RectangleShape2D_x4urv")
+[node name="source_7" parent="Sources" instance=ExtResource("3_aqei4")]
+position = Vector2(304, 496)
 
 [node name="Cauldrons" type="Node" parent="."]
 

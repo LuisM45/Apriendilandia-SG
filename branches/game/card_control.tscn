@@ -1,0 +1,80 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkvsvjkskwddg"]
+
+[ext_resource type="Script" path="res://scripts/game/card_matching/card.gd" id="1_w1kce"]
+[ext_resource type="Texture2D" uid="uid://bxma60emlaqg4" path="res://assets/card_matching/background.png" id="2_eu73d"]
+[ext_resource type="Texture2D" uid="uid://dp6rcl8kb5aih" path="res://assets/card_matching/tiled_back.png" id="3_hmrvc"]
+[ext_resource type="Texture2D" uid="uid://cuoh0afg3vg7f" path="res://assets/animals/muslinegro.png" id="4_yhik4"]
+
+[node name="Control7" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+script = ExtResource("1_w1kce")
+
+[node name="Background" type="TextureRect" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_eu73d")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Back" type="TextureRect" parent="Background"]
+modulate = Color(1, 0.396078, 1, 1)
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -222.434
+offset_right = 222.434
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+texture = ExtResource("3_hmrvc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Face" type="TextureRect" parent="Background"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+texture = ExtResource("4_yhik4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+flat = true
+
+[connection signal="pressed" from="Background/Button" to="." method="_on_press"]

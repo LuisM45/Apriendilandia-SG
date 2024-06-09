@@ -1,118 +1,67 @@
-[gd_scene load_steps=10 format=3 uid="uid://cbgdiwofevrtm"]
+[gd_scene load_steps=26 format=3 uid="uid://cbgdiwofevrtm"]
 
 [ext_resource type="Script" path="res://scripts/game/painting/painting_stage.gd" id="1_42c17"]
 [ext_resource type="Script" path="res://scripts/game/painting/source.gd" id="1_eakbx"]
-[ext_resource type="Script" path="res://scripts/game/painting/cauldron.gd" id="2_7bv1a"]
-[ext_resource type="Texture2D" uid="uid://ginli4px47bg" path="res://assets/animals/bee.png" id="2_id8h7"]
-[ext_resource type="Script" path="res://scripts/game/painting/texture_info.gd" id="2_jytfh"]
+[ext_resource type="Resource" uid="uid://cqjilekm06clk" path="res://resources/tagged_objects/amaranto_texture.tres" id="2_pdjo4"]
+[ext_resource type="Resource" uid="uid://scafyo1hg20y" path="res://resources/tagged_objects/capibara_texture.tres" id="3_8vc5j"]
 [ext_resource type="Resource" uid="uid://gk7wqqu5tb6a" path="res://resources/tasks/paintint_potions_task.tres" id="4_61ohd"]
-
-[sub_resource type="Resource" id="Resource_06h1o"]
-script = ExtResource("2_jytfh")
-base_texture = ExtResource("2_id8h7")
-main_color = Color(0.886275, 0.764706, 0.207843, 1)
+[ext_resource type="Resource" uid="uid://cvatf1gf16jj0" path="res://resources/tagged_objects/capuchinofrentiblanco_texture.tres" id="4_y1qe8"]
+[ext_resource type="Resource" uid="uid://7f1u6w7wi5j6" path="res://resources/tagged_objects/cedron_texture.tres" id="5_f35vf"]
+[ext_resource type="Resource" uid="uid://d1pt3mvhgpfcn" path="res://resources/tagged_objects/chilca_texture.tres" id="6_34fac"]
+[ext_resource type="PackedScene" uid="uid://ce23b7ds500wb" path="res://branches/game/source.tscn" id="6_hdvuf"]
+[ext_resource type="Resource" uid="uid://ceirkqp448au4" path="res://resources/tagged_objects/comadrejaandina_texture.tres" id="7_5ccj5"]
+[ext_resource type="Resource" uid="uid://4qpblsmmox5r" path="res://resources/tagged_objects/condor_texture.tres" id="8_66a45"]
+[ext_resource type="Resource" uid="uid://d0mehdvy4ho7d" path="res://resources/tagged_objects/conejoandino_texture.tres" id="9_gxcmw"]
+[ext_resource type="Resource" uid="uid://ctw41lqkdjfe0" path="res://resources/tagged_objects/loboparamo_texture.tres" id="10_tf5jg"]
+[ext_resource type="Resource" uid="uid://c3l7ecs3ch6l5" path="res://resources/tagged_objects/musguerito_texture.tres" id="11_ua5vo"]
+[ext_resource type="Resource" uid="uid://ekgh1qabhvdp" path="res://resources/tagged_objects/muslinegro_texure.tres" id="12_6g4qd"]
+[ext_resource type="Resource" uid="uid://cf8n782k0oenj" path="res://resources/tagged_objects/pecaricollar_texture.tres" id="13_pvqpn"]
+[ext_resource type="Resource" uid="uid://cgwcj57352q7k" path="res://resources/tagged_objects/pijuimotado_texure.tres" id="14_7o2dh"]
+[ext_resource type="Resource" uid="uid://r1cgmk2gg4c3" path="res://resources/tagged_objects/puma_texture.tres" id="15_med3i"]
+[ext_resource type="Resource" uid="uid://d13fr83psrqgl" path="res://resources/tagged_objects/quinoa_texture.tres" id="16_5hf7a"]
+[ext_resource type="Resource" uid="uid://2m6x3cx1j87o" path="res://resources/tagged_objects/tejonamericano_texture.tres" id="17_1tof4"]
+[ext_resource type="Resource" uid="uid://d0oax4qltmh4a" path="res://resources/tagged_objects/venadoparamo_texture.tres" id="18_r470v"]
+[ext_resource type="Resource" uid="uid://bpdv86ojopy3t" path="res://resources/tagged_objects/vizcacha_texture.tres" id="19_ac8tm"]
+[ext_resource type="Resource" uid="uid://blkxvkaplj4g0" path="res://resources/tagged_objects/zamarritopechinegro_texture.tres" id="20_ylvva"]
+[ext_resource type="PackedScene" uid="uid://c8vg77xuyiks8" path="res://branches/game/discolored_cauldron.tscn" id="24_2kmox"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08yfa"]
 size = Vector2(128, 128)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5we2f"]
-size = Vector2(130, 126)
-
 [node name="PaintintPotions" type="Node2D"]
 script = ExtResource("1_42c17")
-texture_options = Array[ExtResource("2_jytfh")]([SubResource("Resource_06h1o")])
+texture_options = Array[Resource("res://resources/template/tagged_resource.gd")]([ExtResource("2_pdjo4"), ExtResource("3_8vc5j"), ExtResource("4_y1qe8"), ExtResource("5_f35vf"), ExtResource("6_34fac"), ExtResource("7_5ccj5"), ExtResource("8_66a45"), ExtResource("9_gxcmw"), ExtResource("10_tf5jg"), ExtResource("11_ua5vo"), ExtResource("12_6g4qd"), ExtResource("13_pvqpn"), ExtResource("14_7o2dh"), ExtResource("15_med3i"), ExtResource("16_5hf7a"), ExtResource("17_1tof4"), ExtResource("18_r470v"), ExtResource("19_ac8tm"), ExtResource("20_ylvva")])
 task = ExtResource("4_61ohd")
+
+[node name="source_8" type="CharacterBody2D" parent="."]
+z_index = 1
+position = Vector2(-1, 0)
+input_pickable = true
+script = ExtResource("1_eakbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="source_8"]
+shape = SubResource("RectangleShape2D_08yfa")
 
 [node name="Sources" type="Node" parent="."]
 
-[node name="source_2" type="CharacterBody2D" parent="Sources"]
-z_index = 1
-position = Vector2(187, 527)
-input_pickable = true
-script = ExtResource("1_eakbx")
-current_color = Color(1, 0, 0, 1)
+[node name="source_9" parent="Sources" instance=ExtResource("6_hdvuf")]
+position = Vector2(593, 105)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_2"]
-shape = SubResource("RectangleShape2D_08yfa")
+[node name="source_10" parent="Sources" instance=ExtResource("6_hdvuf")]
+position = Vector2(753, 105)
 
-[node name="source_1" type="CharacterBody2D" parent="Sources"]
-z_index = 1
-position = Vector2(187, 248)
-input_pickable = true
-script = ExtResource("1_eakbx")
-current_color = Color(0, 1, 0, 1)
+[node name="source_11" parent="Sources" instance=ExtResource("6_hdvuf")]
+position = Vector2(441, 105)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_1"]
-shape = SubResource("RectangleShape2D_08yfa")
+[node name="source_12" parent="Sources" instance=ExtResource("6_hdvuf")]
+position = Vector2(449, 537)
 
-[node name="source_6" type="CharacterBody2D" parent="Sources"]
-z_index = 1
-position = Vector2(187, 388)
-input_pickable = true
-script = ExtResource("1_eakbx")
-current_color = Color(0, 0, 1, 1)
+[node name="source_13" parent="Sources" instance=ExtResource("6_hdvuf")]
+position = Vector2(601, 537)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_6"]
-shape = SubResource("RectangleShape2D_08yfa")
+[node name="source_14" parent="Sources" instance=ExtResource("6_hdvuf")]
+position = Vector2(753, 537)
 
-[node name="source_7" type="CharacterBody2D" parent="Sources"]
-z_index = 1
-position = Vector2(187, 98)
-input_pickable = true
-script = ExtResource("1_eakbx")
-current_color = Color(1, 1, 0, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_7"]
-shape = SubResource("RectangleShape2D_08yfa")
-
-[node name="source_3" type="CharacterBody2D" parent="Sources"]
-z_index = 1
-position = Vector2(1000, 266)
-input_pickable = true
-script = ExtResource("1_eakbx")
-current_color = Color(1, 0, 1, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_3"]
-shape = SubResource("RectangleShape2D_08yfa")
-
-[node name="source_4" type="CharacterBody2D" parent="Sources"]
-z_index = 1
-position = Vector2(1000, 400)
-input_pickable = true
-script = ExtResource("1_eakbx")
-current_color = Color(0, 1, 1, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_4"]
-shape = SubResource("RectangleShape2D_08yfa")
-
-[node name="source_5" type="CharacterBody2D" parent="Sources"]
-z_index = 1
-position = Vector2(1000, 535)
-input_pickable = true
-script = ExtResource("1_eakbx")
-current_color = Color(1, 1, 1, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_5"]
-shape = SubResource("RectangleShape2D_08yfa")
-
-[node name="source_8" type="CharacterBody2D" parent="Sources"]
-z_index = 1
-position = Vector2(1000, 130)
-input_pickable = true
-script = ExtResource("1_eakbx")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sources/source_8"]
-shape = SubResource("RectangleShape2D_08yfa")
-
-[node name="Cauldrons" type="Node" parent="."]
-
-[node name="cauldron_1" type="Area2D" parent="Cauldrons"]
-position = Vector2(595, 361)
-script = ExtResource("2_7bv1a")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cauldrons/cauldron_1"]
-shape = SubResource("RectangleShape2D_5we2f")
-
-[connection signal="body_exited" from="Cauldrons/cauldron_1" to="Cauldrons/cauldron_1" method="_on_source_removed"]
-[connection signal="object_dropped_over" from="Cauldrons/cauldron_1" to="Cauldrons/cauldron_1" method="_on_source_removed"]
-[connection signal="object_lifted_over" from="Cauldrons/cauldron_1" to="Cauldrons/cauldron_1" method="_on_source_over"]
+[node name="cauldron_1" parent="." instance=ExtResource("24_2kmox")]
+position = Vector2(592, 321)
+scale = Vector2(2, 2)

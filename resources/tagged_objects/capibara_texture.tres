@@ -7,5 +7,6 @@
 script = ExtResource("2_tpsmq")
 content = ExtResource("1_lwly6")
 tags = {
-"alt_text": "capibara"
+"alt_text": "capibara",
+"main_color": Color(0.290166, 0.231067, 0.234974, 1)
 }

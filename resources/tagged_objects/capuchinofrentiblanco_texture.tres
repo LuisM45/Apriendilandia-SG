@@ -7,5 +7,6 @@
 script = ExtResource("2_h8jhe")
 content = ExtResource("1_8fgwq")
 tags = {
-"alt_text": "mono capuchino frentiblanco"
+"alt_text": "mono capuchino frentiblanco",
+"main_color": Color(0.466529, 0.407904, 0.305806, 1)
 }

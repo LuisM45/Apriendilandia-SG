@@ -18,7 +18,6 @@ func _process(delta):
 	pass
 
 func _on_body_entered(body):
-	object_lifted_over.emit()
 	if body is Draggable:
 		objects_on[body] = [
 			func x(): object_lifted_over.emit(body),

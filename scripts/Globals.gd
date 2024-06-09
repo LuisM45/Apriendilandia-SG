@@ -74,7 +74,6 @@ func load_backpack_items():
 func load_customization():
 	for item:BackpackItem in backpack_items:
 		if !item.is_default: continue
-		print(item)
 		enable_item(item)
 		
 	#SQLcode over here should be.
@@ -94,3 +93,6 @@ func dev_customization():
 	enable_item(get_backpack_item("background_texture_alt_stripes"))
 	enable_item(get_backpack_item("background_accent_color_pgreen"))
 	enable_item(get_backpack_item("background_background_color_pblue"))
+	enable_item(get_backpack_item("cards_back_spiral"))
+	enable_item(get_backpack_item("cards_color_intense_red"))
+	

@@ -80,7 +80,19 @@ func _play_bg_music():
 	bgm_node.play()
 
 func _on_win(extra = ""):
-	DisplayServer.tts_speak(task.outroduction.pick_random(),Globals.voice_id,Globals.tts_volume)
+	if !task.outroduction.is_empty():
+		DisplayServer.tts_speak(task.outroduction.pick_random(),Globals.voice_id,Globals.tts_volume)
+	_play_win_sound()
+	var timer = Timer.new()
+	add_child(timer)
+	
+	timer.wait_time = 3
+	timer.timeout.connect(func():
+		remove_child(timer)
+		_on_win_no_timeout(extra)
+	)
+
+func _on_win_no_timeout(extra = ""):
 	var playtime = Globals.unix_system_time() - playdate
 	Database.insert_metric(
 		playdate, # playdate

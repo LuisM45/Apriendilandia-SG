@@ -1,25 +1,31 @@
 extends "res://scripts/game/base/draggable.gd"
 const mask_shader = preload("res://resources/cauldron_shader.gdshader")
 
-var container_sprite: Sprite2D
-var mask_sprite = Sprite2D
+@onready var base_texture_rect: TextureRect = $Control/BaseTextureRect
+@onready var mask_texture_rect: TextureRect = $Control/MaskTextureRect
 
-@export var current_color = Color(0,0,0)
+@export var current_color = Color(0,0,0): set = _set_current_color
 @export var source_sprite_set:SourceSpriteSet
 
 const weight = 1
 
 func _ready():
+	rebound = true
 	super._ready()
-	container_sprite = append_sprite()
-	mask_sprite = append_sprite()
-	mask_sprite.modulate = current_color
 
+func _set_current_color(color):
+	current_color = color
+	if !is_node_ready():
+		ready.connect(_remodulate_textures)
+		return
+	_remodulate_textures()
+
+func _remodulate_textures():
+	mask_texture_rect.modulate = current_color
 
 func _ydaer():
 	connect_sprite_switch()
 	_set_dropped_sprites()
-	rescale_sprites()
 
 func _process(delta):
 	super._process(delta)
@@ -37,12 +43,6 @@ func append_sprite():
 	add_child(sprite)
 	return sprite
 
-func rescale_sprites():
-	var size = source_sprite_set.base_texture.get_size().length()
-	var scale_multiplier = 100/size
-	mask_sprite.scale = Vector2.ONE*scale_multiplier
-	container_sprite.scale = Vector2.ONE*scale_multiplier
-
 func connect_sprite_switch():
 	if source_sprite_set.lifted_texture:
 		drag_start.connect(_set_lifted_sprites)
@@ -53,12 +53,12 @@ func connect_sprite_switch():
 	drag_end.connect(_unrotate_sprites)
 	
 func _set_lifted_sprites():
-	container_sprite.texture = source_sprite_set.lifted_texture
-	mask_sprite.texture = source_sprite_set.lifted_color_mask
+	base_texture_rect.texture = source_sprite_set.lifted_texture
+	mask_texture_rect.texture = source_sprite_set.lifted_color_mask
 	
 func _set_dropped_sprites():
-	container_sprite.texture = source_sprite_set.base_texture
-	mask_sprite.texture = source_sprite_set.base_color_mask
+	base_texture_rect.texture = source_sprite_set.base_texture
+	mask_texture_rect.texture = source_sprite_set.base_color_mask
 
 func _rotate_sprites(degrees=45):
 	rotation += degrees

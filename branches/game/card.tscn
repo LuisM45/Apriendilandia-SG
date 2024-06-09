@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/game/card_matching/card.gd" id="1_25xp4"]
 [ext_resource type="Texture2D" uid="uid://bxma60emlaqg4" path="res://assets/card_matching/background.png" id="2_qcdrb"]
-[ext_resource type="Texture2D" uid="uid://dp6rcl8kb5aih" path="res://assets/card_matching/back.png" id="3_2fbds"]
+[ext_resource type="Texture2D" uid="uid://dp6rcl8kb5aih" path="res://assets/card_matching/tiled_back.png" id="3_2fbds"]
 [ext_resource type="Texture2D" uid="uid://dqgufj3w4p5ht" path="res://assets/flora/cedron.png" id="4_ncfrh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r6eub"]

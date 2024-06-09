@@ -7,5 +7,6 @@
 script = ExtResource("2_pdbej")
 content = ExtResource("1_3i5n7")
 tags = {
-"alt_text": "venado de páramo"
+"alt_text": "venado de páramo",
+"main_color": Color(0.364431, 0.313619, 0.352697, 1)
 }

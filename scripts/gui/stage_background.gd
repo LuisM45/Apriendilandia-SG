@@ -5,7 +5,6 @@ extends Control
 func _ready():
 	_load_customization_config(Globals.customization_config)
 	size = get_viewport_rect().size
-	print(get_viewport_rect().size)
 	pass # Replace with function body.
 
 

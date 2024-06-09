@@ -6,4 +6,6 @@
 [resource]
 script = ExtResource("2_abf2j")
 content = ExtResource("1_dy0gr")
-tags = {}
+tags = {
+"main_color": Color(0.329259, 0.219333, 0.195895, 1)
+}
