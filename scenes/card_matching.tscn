@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dvpw3pa6vtgrb"]
+[gd_scene load_steps=15 format=3 uid="uid://dvpw3pa6vtgrb"]
 
 [ext_resource type="Script" path="res://scripts/game/card_matching/card_matching_stage.gd" id="1_s7k4o"]
 [ext_resource type="Resource" uid="uid://cqjilekm06clk" path="res://resources/tagged_objects/amaranto_texture.tres" id="2_mo6np"]
@@ -13,58 +13,38 @@
 [ext_resource type="Resource" uid="uid://b824dnn1akwdw" path="res://resources/tagged_objects/papaya_texture.tres" id="11_brs6g"]
 [ext_resource type="Resource" uid="uid://cf8n782k0oenj" path="res://resources/tagged_objects/pecaricollar_texture.tres" id="12_4reqa"]
 [ext_resource type="Script" path="res://resources/template/task.gd" id="13_syvlp"]
-[ext_resource type="PackedScene" uid="uid://ci4xbhnaotaih" path="res://branches/game/card.tscn" id="14_n3x30"]
 
 [sub_resource type="Resource" id="Resource_vgfsk"]
 script = ExtResource("13_syvlp")
 inner_name = "match_cards"
 name = "Empareja las cartas identicas"
 description = ""
-introduction = Array[String]([])
+introduction = Array[String](["Elige entre las cartas para encontrar dos idénticas y emparejarlas"])
 instructions = ""
-outroduction = Array[String]([])
+outroduction = Array[String](["Que buena memoria. Sigue así.", "Muy bien hecho. Cada vez eres más inteligente", "Bien echo. Eres un verdadero campeón"])
 guide_scene = ""
 
-[node name="Workspace" type="Node2D"]
-position = Vector2(375, 173)
+[node name="Workspace" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 script = ExtResource("1_s7k4o")
 texture_options = Array[Resource("res://resources/template/tagged_resource.gd")]([ExtResource("2_mo6np"), ExtResource("3_pdp3w"), ExtResource("4_ff07b"), ExtResource("5_d3pf3"), ExtResource("6_2xkxf"), ExtResource("7_aaw85"), ExtResource("8_rxcas"), ExtResource("9_vsghi"), ExtResource("10_s2gx0"), ExtResource("11_brs6g"), ExtResource("12_4reqa")])
 task = SubResource("Resource_vgfsk")
 
-[node name="Cards" type="Node" parent="."]
-
-[node name="Card" parent="Cards" instance=ExtResource("14_n3x30")]
-position = Vector2(375, 173)
-
-[node name="Card2" parent="Cards" instance=ExtResource("14_n3x30")]
-position = Vector2(472, 176)
-
-[node name="Card3" parent="Cards" instance=ExtResource("14_n3x30")]
-position = Vector2(568, 176)
-
-[node name="Card4" parent="Cards" instance=ExtResource("14_n3x30")]
-position = Vector2(376, 304)
-
-[node name="Card5" parent="Cards" instance=ExtResource("14_n3x30")]
-position = Vector2(472, 304)
-
-[node name="Card6" parent="Cards" instance=ExtResource("14_n3x30")]
-position = Vector2(568, 304)
-
-[node name="Card7" parent="Cards" instance=ExtResource("14_n3x30")]
-position = Vector2(376, 432)
-
-[node name="Card8" parent="Cards" instance=ExtResource("14_n3x30")]
-position = Vector2(472, 432)
-
-[node name="Card9" parent="Cards" instance=ExtResource("14_n3x30")]
-position = Vector2(568, 432)
-
-[node name="Card10" parent="Cards" instance=ExtResource("14_n3x30")]
-position = Vector2(376, 552)
-
-[node name="Card11" parent="Cards" instance=ExtResource("14_n3x30")]
-position = Vector2(472, 552)
-
-[node name="Card12" parent="Cards" instance=ExtResource("14_n3x30")]
-position = Vector2(568, 552)
+[node name="Cards" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = -50.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 2

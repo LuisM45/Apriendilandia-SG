@@ -7,5 +7,6 @@
 script = ExtResource("2_uumwm")
 content = ExtResource("1_o7vr5")
 tags = {
-"alt_text": "muslinegro"
+"alt_text": "muslinegro",
+"main_color": Color(0.862715, 0.725444, 0.00390631, 1)
 }

@@ -7,5 +7,6 @@
 script = ExtResource("1_0dlc8")
 content = ExtResource("1_h7q00")
 tags = {
-"alt_text": "zamarrito pechinegro"
+"alt_text": "zamarrito pechinegro",
+"main_color": Color(0.148989, 0.309712, 0.105516, 1)
 }

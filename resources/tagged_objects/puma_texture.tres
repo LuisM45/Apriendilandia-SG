@@ -7,5 +7,6 @@
 script = ExtResource("2_flveo")
 content = ExtResource("1_nplax")
 tags = {
-"alt_text": "puma"
+"alt_text": "puma",
+"main_color": Color(0.647059, 0.439216, 0.313726, 1)
 }

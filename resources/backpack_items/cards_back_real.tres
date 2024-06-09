@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3 uid="uid://cfqc3matp6es4"]
+
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_5tvuq"]
+
+[resource]
+script = ExtResource("1_5tvuq")
+inner_name = "cards_back_real"
+name = "Patrón para cartas real"
+rcontent_path = "res://assets/card_matching/back_spiral.png"
+description = ""
+game_tags = Array[String](["card_game"])
+type_tags = Array[String](["back_texture"])
+icon_path = "res://assets/card_matching/colored_back_spiral.png"
+is_default = false

@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://c8vg77xuyiks8"]
+
+[ext_resource type="Script" path="res://scripts/game/painting/cauldron.gd" id="1_5l30t"]
+[ext_resource type="Shader" path="res://resources/unpainted_texture.gdshader" id="2_ugvvl"]
+[ext_resource type="Texture2D" uid="uid://cuoh0afg3vg7f" path="res://assets/animals/muslinegro.png" id="3_fnyc8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5we2f"]
+size = Vector2(130, 126)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ifx77"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tt2cw"]
+shader = ExtResource("2_ugvvl")
+
+[node name="cauldron_1" type="Area2D"]
+script = ExtResource("1_5l30t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5we2f")
+
+[node name="Control" type="Control" parent="."]
+material = SubResource("ShaderMaterial_ifx77")
+layout_mode = 3
+anchors_preset = 0
+offset_left = -65.0
+offset_top = -63.0
+offset_right = 65.0
+offset_bottom = 63.0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+modulate = Color(0.498039, 0, 0.498039, 1)
+material = SubResource("ShaderMaterial_tt2cw")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_fnyc8")
+expand_mode = 1
+stretch_mode = 5
+
+[connection signal="body_exited" from="." to="." method="_on_source_removed"]
+[connection signal="object_dropped_over" from="." to="." method="_on_source_removed"]
+[connection signal="object_lifted_over" from="." to="." method="_on_source_over"]

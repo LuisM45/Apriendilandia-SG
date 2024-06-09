@@ -7,5 +7,6 @@
 script = ExtResource("2_aokd0")
 content = ExtResource("1_xsdyg")
 tags = {
-"alt_text": "cóndor"
+"alt_text": "cóndor",
+"main_color": Color(0.176349, 0.207614, 0.219333, 1)
 }

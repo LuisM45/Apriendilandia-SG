@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://ce23b7ds500wb"]
+
+[ext_resource type="Script" path="res://scripts/game/mixin/source.gd" id="1_w5xkb"]
+[ext_resource type="Resource" uid="uid://8sasl8rss531" path="res://resources/potion_sprite_sets/source_sprite_set_default.tres" id="2_8a1yk"]
+[ext_resource type="Texture2D" uid="uid://bqcbmib0iik4p" path="res://assets/mixin_game/bottle.png" id="2_xwrua"]
+[ext_resource type="Texture2D" uid="uid://bjuhhtekx85wb" path="res://assets/mixin_game/juice.png" id="3_fjusw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x4urv"]
+size = Vector2(128, 128)
+
+[node name="source_2" type="CharacterBody2D"]
+z_index = 1
+input_pickable = true
+script = ExtResource("1_w5xkb")
+current_color = Color(0, 0, 1, 1)
+source_sprite_set = ExtResource("2_8a1yk")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+mouse_filter = 2
+
+[node name="BaseTextureRect" type="TextureRect" parent="Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_xwrua")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MaskTextureRect" type="TextureRect" parent="Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_fjusw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_x4urv")
