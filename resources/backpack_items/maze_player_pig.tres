@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3 uid="uid://trng7tu4ltrc"]
+
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_xbr0n"]
+
+[resource]
+script = ExtResource("1_xbr0n")
+inner_name = "maze_player_ping"
+name = "Avatar de cerdo para laberinto"
+rcontent_path = "res://resources/sprite_frames/pig.tres"
+description = ""
+game_tags = Array[String](["maze"])
+type_tags = Array[String](["player_animated_texture"])
+icon_path = "res://assets/alchemy set/all png/Alchemy1_20.png"
+is_default = false

@@ -7,5 +7,7 @@ script = ExtResource("1_8i204")
 inner_name = "mix_potion_task"
 name = "Combina colores para crear el color mostrado"
 description = "Arrastra poco a poco los colores en el caldero para crear colores nuevos. Crea el color mostrado encima del caldero."
+introduction = Array[String](["Añade pintura en el caldero para ayudar al cerdito a conseguir el color que quiere"])
 instructions = ""
+outroduction = Array[String](["Muy bien hecho. El color que hiciste le gusta al cerdito"])
 guide_scene = "res://scenes/guides/mixin_potions_guide.tscn"

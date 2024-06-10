@@ -6,7 +6,7 @@
 script = ExtResource("1_vw6ae")
 inner_name = "cards_back_stripes"
 name = "Patrón para cartas de líneas"
-rcontent_path = "res://assets/card_matching/back_tiled.png"
+rcontent_path = "res://assets/card_matching/back_stripes.png"
 description = ""
 game_tags = Array[String](["card_game"])
 type_tags = Array[String](["back_texture"])

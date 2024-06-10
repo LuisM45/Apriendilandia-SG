@@ -17,20 +17,41 @@ func _ready():
 func _process(delta):
 	pass
 
+func _load_and_prepare_scenes(scene_lists:Array[String]):
+	var _scene_lists = scene_lists.duplicate()
+	var scene = load(_scene_lists.pop_front())
+	Globals.next_scenes = _scene_lists
+	return scene
 
 func _on_button_city_pressed():
-	get_tree().change_scene_to_file("res://scenes/maze.tscn")
-	pass # Replace with function body.
+	get_tree().change_scene_to_packed(
+		_load_and_prepare_scenes([
+			"res://scenes/card_matching.tscn",
+			"res://scenes/match_numbers.tscn",
+			"res://scenes/main_menu.tscn",
+		])
+	)
 
 
 func _on_button_beach_pressed():
-	get_tree().change_scene_to_file("res://scenes/beach_world_1.tscn")
-	pass # Replace with function body.
+	get_tree().change_scene_to_packed(
+		_load_and_prepare_scenes([
+			"res://scenes/match_flowers.tscn",
+			"res://scenes/paintint_potions.tscn",
+			"res://scenes/main_menu.tscn",
+		])
+	)
 
 
 func _on_button_forest_pressed():
-	get_tree().change_scene_to_file("res://scenes/mixing_potions.tscn")
-	pass # Replace with function body.
+	get_tree().change_scene_to_packed(
+		_load_and_prepare_scenes([
+			"res://scenes/match_forest.tscn",
+			"res://scenes/maze.tscn",
+			"res://scenes/mixing_potions.tscn",
+			"res://scenes/main_menu.tscn",
+		])
+	)
 
 func _on_button_config_pressed():
 	add_child(PauseMenu.instantiate())

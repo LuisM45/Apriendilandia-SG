@@ -4,9 +4,9 @@
 
 [resource]
 script = ExtResource("1_eo22u")
-inner_name = "cards_color_intense_blue"
-name = "Color azul para cartas"
-rcontent_path = "res://resources/colors/intense_blue.tres"
+inner_name = "cards_color_intense_red"
+name = "Color rojo para cartas"
+rcontent_path = "res://resources/colors/intense_red.tres"
 description = ""
 game_tags = Array[String](["card_game"])
 type_tags = Array[String](["back_color"])

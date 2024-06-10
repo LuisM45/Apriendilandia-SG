@@ -24,5 +24,6 @@ func set_item(item:BackpackItem):
 	icon_texture.texture = item.get_icon()
 
 func _on_enable_pressed():
+	$AudioStreamPlayer.play()
 	selected_item.enable()
 	

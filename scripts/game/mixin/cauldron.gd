@@ -61,6 +61,22 @@ func try_solve():
 	if current_delta<=acceptable_delta:
 		solve_lock = true
 		solved.emit()
+		
+	if(current_weight>=max_weight):
+		reset_cauldron()	
+
+func reset_cauldron():
+	locked = true
+	var t = Timer.new()
+	t.wait_time = 1
+	t.timeout.connect(func():
+		current_weight = 0
+		current_color = Color.GRAY
+		remove_child(t)
+	)
+	add_child(t)
+	t.start()
+	
 
 func _pour_source():
 	if current_source and current_source.can_pour():
@@ -89,5 +105,5 @@ func _set_sprites():
 	mask_sprite.texture = color_mask
 	target_sprite.texture = container_texture
 	target_mask_sprite.texture = color_mask
-	target_sprite.position += Vector2(0,-200)
-	target_mask_sprite.position += Vector2(0,-200)
+	target_sprite.position += Vector2(200,-90)
+	target_mask_sprite.position += Vector2(200,-90)

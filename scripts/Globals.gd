@@ -10,20 +10,14 @@ var is_music_enabled = true
 var is_sfx_enabled = true
 var is_tts_enabled = true
 
-var achievements = {}
-var user_data = {}
-var backpack_items = []
-var customization_config = {}
+
 
 var voices = DisplayServer.tts_get_voices_for_language("es")
 var voice_id = voices[0]
 
 var pause_scene = preload("res://branches/gui/pause_menu.tscn")
-
+var next_scenes = []
 func _init():
-	load_backpack_items()
-	load_customization()
-	dev_customization()
 	pass
 
 func unix_system_time():
@@ -55,44 +49,5 @@ func _set_tts_volume(volume):
 	tts_volume = volume
 	volume_changed.emit()
 
-func load_backpack_items():
-	const basepath = "res://resources/backpack_items/"
-	var dir = DirAccess.open(basepath)
-	if !(dir):
-		print("resources/backpack_items does not exists")
-		return
-		
-	dir.list_dir_begin()
-	var file_name = dir.get_next()
-	while file_name != "":
-		if dir.current_is_dir(): continue
-		var item:BackpackItem = load(basepath+file_name)
-		backpack_items.append(item)
-				
-		file_name = dir.get_next()
 
-func load_customization():
-	for item:BackpackItem in backpack_items:
-		if !item.is_default: continue
-		enable_item(item)
-		
-	#SQLcode over here should be.
-
-func enable_item(item:BackpackItem):
-	for k in item.get_keys():
-		customization_config[k] = item
-
-func get_backpack_item(inner_name:String):
-	return load("res://resources/backpack_items/"+inner_name+".tres")
-
-#func dev_enable_backpack_item(inner_name:String):
-	#var item = get_backpack_item(inner_name)
-	#enable_backpack_item(item)
-
-func dev_customization():
-	enable_item(get_backpack_item("background_texture_alt_stripes"))
-	enable_item(get_backpack_item("background_accent_color_pgreen"))
-	enable_item(get_backpack_item("background_background_color_pblue"))
-	enable_item(get_backpack_item("cards_back_spiral"))
-	enable_item(get_backpack_item("cards_color_intense_red"))
 	

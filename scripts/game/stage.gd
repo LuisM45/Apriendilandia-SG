@@ -1,8 +1,9 @@
 extends Node
+const UnlockScreen = preload("res://branches/gui/unlock_screen.tscn")
 const Sidebar = preload("res://branches/gui/sidebar.tscn")
 const StageBackground = preload("res://branches/gui/stage_generic_background.tscn")
 const Task = preload("res://resources/template/task.gd")
-@export_file("*.tscn") var next_scene: String
+@export var next_scenes: Array[String] = [] # Wish i knew how to export variables to a packed resouce
 
 @export var success_sound: AudioStream = load("res://assets/sfx/90s-game-ui-7-185100.mp3")
 @export var win_sound: AudioStream = load("res://assets/sfx/game-bonus-144751.mp3")
@@ -29,7 +30,7 @@ var playdate = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	_load_customization_config(Globals.customization_config)
+	_load_customization_config(Inventory.customization_config)
 	_ready_sound()
 	_ready_signals()
 	playdate = Globals.unix_system_time()
@@ -82,9 +83,11 @@ func _play_bg_music():
 func _on_win(extra = ""):
 	if !task.outroduction.is_empty():
 		DisplayServer.tts_speak(task.outroduction.pick_random(),Globals.voice_id,Globals.tts_volume)
+	# Nuevo objeto desbloqueado
 	_play_win_sound()
 	var timer = Timer.new()
 	add_child(timer)
+	if _try_unlock(): return
 	
 	timer.wait_time = 3
 	timer.timeout.connect(func():
@@ -104,13 +107,9 @@ func _on_win_no_timeout(extra = ""):
 		playtime , # playtime
 		extra , # extra
 	)
-	if next_scene:
-		var timer = Timer.new()
-		add_child(timer)
-		timer.timeout.connect(func ():get_tree().change_scene_to_file(next_scene))
-		timer.wait_time = 3.0
-		timer.one_shot = true
-		timer.start()
+	if !Globals.next_scenes.is_empty():
+		var scene = load(Globals.next_scenes.pop_front())
+		get_tree().change_scene_to_packed(scene)
 		
 	pass
 
@@ -145,3 +144,12 @@ func _set_difficulty(val):
 
 func _load_customization_config(config_dictionary:Dictionary):
 	pass
+
+func _try_unlock():
+	var ulock_screen = UnlockScreen.instantiate()
+	ulock_screen.backpack_item = Inventory.pull_random_item()
+	ulock_screen.ok_pressed.connect(_on_win_no_timeout)
+	if ulock_screen.backpack_item == null: return false
+	
+	add_child(ulock_screen)
+	return true

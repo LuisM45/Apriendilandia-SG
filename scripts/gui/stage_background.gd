@@ -3,7 +3,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	_load_customization_config(Globals.customization_config)
+	_load_customization_config(Inventory.customization_config)
 	size = get_viewport_rect().size
 	pass # Replace with function body.
 

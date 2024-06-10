@@ -107,7 +107,6 @@ animations = [{
 
 [node name="MixingPotions" type="Node2D"]
 script = ExtResource("1_03kll")
-next_scene = "res://scenes/match_flowers.tscn"
 task = ExtResource("2_ga1w2")
 
 [node name="Sources" type="Node" parent="."]
