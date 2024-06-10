@@ -40,4 +40,4 @@ func get_keys():
 	return keys
 
 func enable():
-	Globals.enable_item(self)
+	Inventory.enable_item(self)

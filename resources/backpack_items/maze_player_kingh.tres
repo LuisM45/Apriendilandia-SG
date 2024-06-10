@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3 uid="uid://bn23g6vt6bggs"]
+
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_jppiu"]
+
+[resource]
+script = ExtResource("1_jppiu")
+inner_name = "painting_potion_source_sprite_set_thin"
+name = "Avatar de rey para laberinto"
+rcontent_path = "res://resources/sprite_frames/king_human.tres"
+description = ""
+game_tags = Array[String](["maze"])
+type_tags = Array[String](["player_animated_texture"])
+icon_path = "res://assets/alchemy set/all png/Alchemy1_20.png"
+is_default = false

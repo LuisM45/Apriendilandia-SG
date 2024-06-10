@@ -25,6 +25,7 @@ func _ready():
 	super._ready()
 	COLOR_OPTIONS.shuffle()
 	remaining = cauldrons.size()
+	$AnimatedSprite2D.play()
 	
 	for pc in range(_bottles_count()):
 		colors_in_stock.append(COLOR_OPTIONS[pc])

@@ -6,12 +6,16 @@ extends "res://scripts/game/stage.gd"
 
 const time_baseline = 20
 var isMouseCaptured = true
+
+@export var player_sprite_frames: SpriteFrames
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	super._ready()
 	
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	var a: AnimatedSprite2D = $WinArea/AnimatedSprite2D
+	player.sprite.sprite_frames = player_sprite_frames
+	player.sprite.play("idle")
 	a.play("idle")
 	new_objetive()
 
@@ -19,8 +23,7 @@ func new_objetive():
 	maze.difficulty = difficulty
 	maze.generate()
 	var new_player_height = maze.adjusted_tile_size*0.6
-	var new_player_scale = new_player_height/(player.collision_shape.shape.radius*2)
-	player.scale = Vector2(new_player_scale,new_player_scale)
+	player.desired_size = Vector2(new_player_height,new_player_height)
 	pass
 	
 func reset_player():
@@ -60,4 +63,6 @@ func _load_customization_config(config_dictionary:Dictionary):
 	var maze_tilemap =  config_dictionary.get("maze:maze_tilemap")
 	var background_texture =  config_dictionary.get("maze:background_texture")
 	var diamond_animated_texture =  config_dictionary.get("maze:diamond_animated_texture")
-	var player_animated_texture =  config_dictionary.get("maze:player_animated_texture")
+	player_sprite_frames =  config_dictionary\
+		.get("maze:player_animated_texture")\
+		.get_rcontent()

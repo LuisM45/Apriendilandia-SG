@@ -37,7 +37,6 @@ size = Vector2(130, 126)
 script = ExtResource("1_6pp6y")
 possible_backgrounds = Array[Texture2D]([ExtResource("2_rvck7"), ExtResource("3_gqppt"), ExtResource("4_ienwj"), ExtResource("5_xdwua"), ExtResource("6_50v7g")])
 possible_objects = Array[Resource("res://resources/template/tagged_resource.gd")]([ExtResource("7_cgr4w"), ExtResource("8_q2n4p"), ExtResource("9_xdt8c"), ExtResource("10_ettkt"), ExtResource("11_dnoey"), ExtResource("12_xffj8"), ExtResource("13_tuy5u"), ExtResource("14_uoewt"), ExtResource("15_hm6d1"), ExtResource("16_wmxhm")])
-next_scene = "res://scenes/main_menu.tscn"
 task = ExtResource("17_kcrxi")
 
 [node name="MatchPairs" type="Node" parent="."]
@@ -121,6 +120,7 @@ texture = ExtResource("10_nu21u")
 shape = SubResource("RectangleShape2D_0puli")
 
 [node name="Background" type="TextureRect" parent="."]
+visible = false
 offset_top = -504.0
 offset_right = 1152.0
 offset_bottom = 648.0

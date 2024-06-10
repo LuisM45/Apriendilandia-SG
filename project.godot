@@ -26,6 +26,7 @@ Globals="*res://scripts/Globals.gd"
 Database="*res://scripts/persistance/database.gd"
 Parsers="*res://scripts/Parsers.gd"
 ColorLib="*res://scripts/ColorLib.gd"
+Inventory="*res://scripts/Inventory.gd"
 
 [display]
 
