@@ -75,7 +75,7 @@ func set_enabled_item(attribute:String,item_name:String,username:="default"):
 func _select_achievement(_name:String,username:="default"):
 	return metrics_db.select_rows(
 		ACHIEVEMENT_TBL,
-		"_name='{0}' AND username='{1}'".format([_name,username]),
+		"name='{0}' AND username='{1}'".format([_name,username]),
 		["value"]
 	)
 
@@ -123,7 +123,7 @@ func create_achievements_table():
 		name STRING NOT NULL,
 		username STRING NOT NULL,
 		value INTEGER NOT NULL,
-		PRIMARY KEY (_name,username)
+		PRIMARY KEY (name,username)
 	);".format([ACHIEVEMENT_TBL])
 	return metrics_db.query(q)
 

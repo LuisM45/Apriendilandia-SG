@@ -3,7 +3,6 @@ extends "res://scripts/game/stage.gd"
 const Cauldron = preload("res://scripts/game/painting/cauldron.gd")
 const Source = preload("res://scripts/game/mixin/source.gd")
 const PictureInfo = preload("res://scripts/game/painting/texture_info.gd")
-const SourceSpriteSet = preload("res://resources/template/source_sprite_set.gd")
 @onready var cauldron:Cauldron = $cauldron_1
 @onready var potions = $Sources.get_children() as Array[Source]
 @export var texture_options : Array[TaggedResource] = []
