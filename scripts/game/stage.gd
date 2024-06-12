@@ -2,7 +2,6 @@ extends Node
 const UnlockScreen = preload("res://branches/gui/unlock_screen.tscn")
 const Sidebar = preload("res://branches/gui/sidebar.tscn")
 const StageBackground = preload("res://branches/gui/stage_generic_background.tscn")
-const Task = preload("res://resources/template/task.gd")
 @export var next_scenes: Array[String] = [] # Wish i knew how to export variables to a packed resouce
 
 @export var success_sound: AudioStream = load("res://assets/sfx/90s-game-ui-7-185100.mp3")
@@ -44,8 +43,7 @@ func _ready():
 	if !task.introduction.is_empty():
 		DisplayServer.tts_speak(task.introduction.pick_random(),Globals.voice_id,Globals.tts_volume)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 func _ready_signals():
@@ -53,7 +51,7 @@ func _ready_signals():
 	attempt.connect(_on_attempt)
 	attempt.connect(func(x):if x: _play_success_sound())
 	win.connect(_on_win)
-	win.connect(_play_win_sound)
+	win.connect(func(_e):_play_win_sound())
 
 func _ready_sound():
 	sfx_node = AudioStreamPlayer2D.new()
@@ -142,7 +140,7 @@ func _on_correct_attempt():
 func _set_difficulty(val):
 	difficulty = val
 
-func _load_customization_config(config_dictionary:Dictionary):
+func _load_customization_config(_config_dictionary:Dictionary):
 	pass
 
 func _try_unlock():

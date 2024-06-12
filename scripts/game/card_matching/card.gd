@@ -18,7 +18,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 
 
@@ -45,7 +45,7 @@ func _set_resource(new_resource):
 	if !is_node_ready():
 		ready.connect(_update_child_textures)
 		return
-	_update_child_textures
+	_update_child_textures()
 
 func _update_child_textures():
 	face.texture = resource.content

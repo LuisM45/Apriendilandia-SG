@@ -4,11 +4,11 @@
 
 [resource]
 script = ExtResource("1_yib67")
-inner_name = "maze_player_kingh"
+inner_name = "maze_player_kingp"
 name = "Avatar de rey cerdo para laberinto"
 rcontent_path = "res://resources/sprite_frames/king_human.tres"
 description = ""
 game_tags = Array[String](["maze"])
 type_tags = Array[String](["player_animated_texture"])
-icon_path = "res://assets/alchemy set/all png/Alchemy1_20.png"
-is_default = true
+icon_path = "res://assets/Kings and Pigs/Sprites/02-King Pig/idle_0.png"
+is_default = false

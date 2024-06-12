@@ -18,7 +18,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if is_drag:
 		position = get_global_mouse_position()
 		is_drag = not Input.is_action_just_released("object_enable")
@@ -32,7 +32,7 @@ func _on_mouse_exited():
 func _on_mouse_entered():
 	is_mouse_on = true
 
-func _on_input_event(viewport, event, shape_idx):
+func _on_input_event(_viewport, _event, _shape_idx):
 	if Input.is_action_just_pressed("object_enable") and is_mouse_on:
 		is_drag = true
 

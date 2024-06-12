@@ -1,7 +1,5 @@
 extends Node
 
-const TaggedResource = preload("res://resources/template/tagged_resource.gd")
-
 var base_sprite: TaggedResource : set = _set_sprite
 @onready var original_body = get_node("original_body")
 @onready var shadow_body = get_node("shadow_body")
@@ -12,7 +10,7 @@ signal incorrect_match(body)
 func _ready():
 	pass # Replace with function body.
 
-func _process(delta):
+func _process(_delta):
 	pass
 
 func _set_sprite(new_val:TaggedResource):

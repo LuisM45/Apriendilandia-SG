@@ -2,7 +2,6 @@ extends "res://scripts/game/stage.gd"
 
 const Card = preload("res://scripts/game/card_matching/card.gd")
 const CardBranch = preload("res://branches/game/card_control.tscn")
-const TaggedResource = preload("res://resources/template/tagged_resource.gd")
 const peek_timeout = 1
 
 @export var texture_options: Array[TaggedResource]
@@ -41,7 +40,7 @@ func _prepare_card_collection():
 		cards.append(card)
 		card.chosen.connect(_on_card_chosen)
 	texture_options.shuffle()
-	for i in range(cards.size()/2):
+	for i in range(int(cards.size()/2)):
 		cards[i*2].resource = texture_options[i]
 		cards[i*2+1].resource = texture_options[i]
 	cards.shuffle()
@@ -102,8 +101,6 @@ func compare_cards(card1:Card,card2:Card):
 
 func _load_customization_config(config_dictionary:Dictionary):
 	super. _load_customization_config(config_dictionary)
-	var card_background_texture = config_dictionary.get("card_game:card_background_texture")
-	var card_face_texture_set = config_dictionary.get("card_game:card_face_texture_set")
 	
 	card_backface_texture = config_dictionary\
 	.get("card_game:back_texture")\
@@ -119,8 +116,8 @@ func recommended_columns():
 	var card_dimensions = card_backface_texture.get_size()
 	var root_node = self
 	var vp_aspect_ratio = (root_node as Control).get_viewport_rect().size.aspect()
-	var card_count = cards.size()
-	var rows = sqrt(card_count*vp_aspect_ratio*card_dimensions.y/card_dimensions.x)
+	var _card_count = cards.size()
+	var rows = sqrt(_card_count*vp_aspect_ratio*card_dimensions.y/card_dimensions.x)
 	
 	return ceil(rows)
 
