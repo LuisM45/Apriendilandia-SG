@@ -1,11 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bkvsvjkskwddg"]
+[gd_scene load_steps=4 format=3 uid="uid://bkvsvjkskwddg"]
 
 [ext_resource type="Script" path="res://scripts/game/card_matching/card.gd" id="1_w1kce"]
 [ext_resource type="Texture2D" uid="uid://bxma60emlaqg4" path="res://assets/card_matching/background.png" id="2_eu73d"]
-[ext_resource type="Texture2D" uid="uid://dp6rcl8kb5aih" path="res://assets/card_matching/tiled_back.png" id="3_hmrvc"]
-[ext_resource type="Texture2D" uid="uid://cuoh0afg3vg7f" path="res://assets/animals/muslinegro.png" id="4_yhik4"]
+[ext_resource type="Texture2D" uid="uid://cbo1y2t6ytxma" path="res://icon.svg" id="2_sj7l6"]
 
-[node name="Control7" type="Control"]
+[node name="CardControl" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -46,7 +45,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 2
-texture = ExtResource("3_hmrvc")
+texture = ExtResource("2_sj7l6")
 expand_mode = 1
 stretch_mode = 5
 
@@ -63,7 +62,7 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 2
-texture = ExtResource("4_yhik4")
+texture = ExtResource("2_sj7l6")
 expand_mode = 1
 stretch_mode = 5
 

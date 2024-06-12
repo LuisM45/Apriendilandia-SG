@@ -43,8 +43,7 @@ func _ready():
 		
 func _process(delta):
 	super._process(delta)
-	pass
-
+	
 func _on_solved():
 	remaining -= 1
 	attempt.emit(true)
@@ -61,12 +60,10 @@ func _load_customization_config(config_dictionary:Dictionary):
 func _bottles_count():
 	# A function based on difficulty
 	return 6
-	pass
 
 func _combinations_count():
-	return 2
 	# A function based on difficulty
-	pass
+	return 2
 
 func _get_sample_color():
 	var chosen_colors:Array[Color] = []

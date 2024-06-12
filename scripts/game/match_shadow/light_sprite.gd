@@ -12,7 +12,7 @@ func _ready():
 	# Need rebound/reset_pos function
 	pass # Replace with function body.
 
-func _process(delta):
+func _process(_delta):
 	if not is_enabled: return
 	object_click()
 	object_move()

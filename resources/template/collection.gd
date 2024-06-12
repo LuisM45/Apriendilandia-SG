@@ -1,4 +1,4 @@
 extends Resource
-class_name Collection
+class_name RCollection
 
-@export var items: Array[Texture2D]
+@export var items: Array[Resource]

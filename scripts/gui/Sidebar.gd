@@ -1,7 +1,5 @@
 extends Control
 
-const Task = preload("res://resources/template/task.gd")
-
 var task:Task : get = _get_task, set=_set_task
 
 @onready var instructionLbl = $VBoxContainer/Panel/InstructionLbl
@@ -13,13 +11,7 @@ signal hint()
 func _ready():
 	#size.x =get_viewport().size.x
 	position = Vector2(0,0)
-	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-	
 func _on_pause():
 	pause.emit()
 	

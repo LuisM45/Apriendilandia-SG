@@ -29,8 +29,8 @@ func parse_file(parser:Callable):
 	return parser.call(rcontent_path)
 	
 func get_icon()->Texture2D:
-	var img = Image.load_from_file(icon_path)
-	return ImageTexture.create_from_image(img)
+	
+	return load(icon_path)
 
 func get_keys():
 	var keys = []
@@ -40,4 +40,4 @@ func get_keys():
 	return keys
 
 func enable():
-	Inventory.enable_item(self)
+	Inventory.enable_nsave_item(self)

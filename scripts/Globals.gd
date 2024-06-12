@@ -18,6 +18,8 @@ var voice_id = voices[0]
 var pause_scene = preload("res://branches/gui/pause_menu.tscn")
 var next_scenes = []
 func _init():
+	#var utils = load("res://scripts/utils.gd").new()
+	#utils.export_backpack_items()
 	pass
 
 func unix_system_time():

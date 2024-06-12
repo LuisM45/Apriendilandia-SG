@@ -22,8 +22,8 @@ general/text_to_speech=true
 
 [autoload]
 
-Globals="*res://scripts/Globals.gd"
 Database="*res://scripts/persistance/database.gd"
+Globals="*res://scripts/Globals.gd"
 Parsers="*res://scripts/Parsers.gd"
 ColorLib="*res://scripts/ColorLib.gd"
 Inventory="*res://scripts/Inventory.gd"

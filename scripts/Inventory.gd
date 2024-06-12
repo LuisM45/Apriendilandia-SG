@@ -19,19 +19,10 @@ func pull_random_item():
 	return all_backpack_items[picked_name]
 
 func load_backpack_items():
-	const basepath = "res://resources/backpack_items/"
-	var dir = DirAccess.open(basepath)
-	if !(dir):
-		print("resources/backpack_items does not exists")
-		return
-		
-	dir.list_dir_begin()
-	var file_name = dir.get_next()
-	while file_name != "":
-		if dir.current_is_dir(): continue
-		var item:BackpackItem = load(basepath+file_name)
+	var backpack_col = load("res://resources/collections/collection_backpack_items.tres") as RCollection
+	for item in backpack_col.items:
 		all_backpack_items[item.inner_name] = item
-		file_name = dir.get_next()
+	
 
 func get_user_backpack_items():
 	return Database.item_name_list().map(func(x):
@@ -42,12 +33,24 @@ func load_customization():
 	for item:BackpackItem in all_backpack_items.values():
 		if !item.is_default: continue
 		enable_item(item)
-		
+	
+	Database.ready.connect(func():
+		for item_name in Database.get_enabled_items():
+			var item = all_backpack_items[item_name]
+			enable_item(item)
+	)
+	
 	#SQLcode over here should be.
 
 func enable_item(item:BackpackItem):
 	for k in item.get_keys():
 		customization_config[k] = item
 
-func get_backpack_item(inner_name:String):
-	return load("res://resources/backpack_items/"+inner_name+".tres")
+func enable_nsave_item(item:BackpackItem):
+	for k in item.get_keys():
+		Database.set_enabled_item(k,item.inner_name)
+		customization_config[k] = item
+
+func get_backpack_item(inner_name:String)->BackpackItem:
+	
+	return ResourceLoader.load("res://resources/backpack_items/"+inner_name+".tres","BackpackItem")

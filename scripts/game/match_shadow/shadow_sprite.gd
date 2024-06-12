@@ -6,7 +6,7 @@ var is_mouse_in = false
 signal object_dropped_within(body)
 # Called when the node enters the scene tree for the first time.
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_released("object_enable")\
 		and is_mouse_in\
 		and last_body!=null:

@@ -87,10 +87,10 @@ func _pour_source():
 	return false
 
 func append_sprite():
-	var sprite = Sprite2D.new()
-	sprite.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
-	add_child(sprite)
-	return sprite
+	var _sprite = Sprite2D.new()
+	_sprite.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
+	add_child(_sprite)
+	return _sprite
 	
 func rescale_sprites():
 	var size = container_texture.get_size().length()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://b7tj35qh6cr0e"]
+[gd_scene load_steps=23 format=3 uid="uid://b7tj35qh6cr0e"]
 
 [ext_resource type="Script" path="res://scripts/game/match_shadow/match_shadow_stage.gd" id="1_7j26j"]
 [ext_resource type="Texture2D" uid="uid://d1lnph2366q6m" path="res://assets/backgrounds/teleferi_qo/20180125-105156-largejpg.jpg" id="1_55jbt"]
@@ -19,7 +19,6 @@
 [ext_resource type="Resource" uid="uid://b824dnn1akwdw" path="res://resources/tagged_objects/papaya_texture.tres" id="11_i4182"]
 [ext_resource type="Resource" uid="uid://d13fr83psrqgl" path="res://resources/tagged_objects/quinoa_texture.tres" id="12_f76fu"]
 [ext_resource type="Resource" uid="uid://erlw13qxdsaa" path="res://resources/tasks/match_shadow_task.tres" id="14_ih1m5"]
-[ext_resource type="Texture2D" uid="uid://coaybd70t3bcu" path="res://assets/backgrounds/teleferi_qo/basilica.jpg" id="19_woaxo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mj53u"]
 size = Vector2(128, 128)
@@ -115,15 +114,6 @@ texture = ExtResource("7_govcc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MatchPairs/Pair/shadow_body"]
 shape = SubResource("RectangleShape2D_fxon0")
-
-[node name="Background" type="TextureRect" parent="."]
-visible = false
-offset_top = -504.0
-offset_right = 1152.0
-offset_bottom = 648.0
-texture = ExtResource("19_woaxo")
-expand_mode = 4
-stretch_mode = 6
 
 [connection signal="mouse_entered" from="MatchPairs/Pair3/original_body" to="MatchPairs/Pair3/original_body" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="MatchPairs/Pair3/original_body" to="MatchPairs/Pair3/original_body" method="_on_mouse_exited"]

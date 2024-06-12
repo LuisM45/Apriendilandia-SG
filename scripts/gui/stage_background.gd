@@ -4,13 +4,8 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	_load_customization_config(Inventory.customization_config)
-	size = get_viewport_rect().size
-	pass # Replace with function body.
+	set_deferred("size",get_viewport_rect().size)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
 
 func _load_customization_config(config_dictionary:Dictionary):
 	$ColorRect.color = config_dictionary\

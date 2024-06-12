@@ -2,17 +2,18 @@ extends Node
 
 const ACHIEVEMENT_TBL = "achievement"
 const INVENTORY_TBL = "inventory"
+const CUSTOMIZATION_TBL = "customization"
 
 var metrics_db:SQLite = null
 
-func set_achievement(value:int,name:String,username:="default"):
-	if get_achievement(name,username) == null:
-		return _insert_achievement(value,name,username)
+func set_achievement(value:int,_name:String,username:="default"):
+	if get_achievement(_name,username) == null:
+		return _insert_achievement(value,_name,username)
 	else:
-		return _update_achievement(value,name,username)
+		return _update_achievement(value,_name,username)
 
-func get_achievement(name:String,username:="default"):
-	var row = _select_achievement(name,username)
+func get_achievement(_name:String,username:="default"):
+	var row = _select_achievement(_name,username)
 	if row.is_empty(): return null
 	return row[0].get("value")
 
@@ -35,7 +36,7 @@ func remove_item(item_name:String,username:="default"):
 func has_item(item_name:String,username:="default"):
 	return !metrics_db.select_rows(
 		INVENTORY_TBL,
-		"username='{0}' AND item_name='item_name'".format([username,item_name]),
+		"username='{0}' AND item_name='{item_name}'".format([username,item_name]),
 		["item_name"])\
 		.is_empty()
 	
@@ -46,30 +47,53 @@ func item_name_list(username:="default")->Array:
 		["item_name"])
 	return rows.map(func(x):return x.get("item_name"))
 	
+func get_enabled_items(username:="default"):
+	var rows = metrics_db.select_rows(
+		CUSTOMIZATION_TBL,
+		"username='{0}'".format([username]),
+		["item_name"]
+		)
+	return rows.map(func(x):return x.get("item_name"))
 
-func _select_achievement(name:String,username:="default"):
+func set_enabled_item(attribute:String,item_name:String,username:="default"):
+	var done = metrics_db.insert_row(
+		CUSTOMIZATION_TBL,
+		{
+			"attribute":attribute,
+			"item_name":item_name,
+			"username":username,
+		}
+	)
+	if done: return done
+	done = metrics_db.update_rows(
+		CUSTOMIZATION_TBL,
+		"attribute='{0}' AND item_name='{1}'".format([attribute,item_name]),
+		{"item_name":item_name}
+	)
+	return done
+	
+func _select_achievement(_name:String,username:="default"):
 	return metrics_db.select_rows(
 		ACHIEVEMENT_TBL,
-		"name='{0}' AND username='{1}'".format([name,username]),
+		"_name='{0}' AND username='{1}'".format([_name,username]),
 		["value"]
 	)
 
-func _insert_achievement(value:int,name:String,username:="default"):
+func _insert_achievement(value:int,_name:String,username:="default"):
 	return metrics_db.insert_row(
 		ACHIEVEMENT_TBL,{
-			"name":name,
+			"name":_name,
 			"username":username,
 			"value":value,
 		}
 	)
 
-func _update_achievement(value:int,name:String,username:="default"):
+func _update_achievement(value:int,_name:String,username:="default"):
 	return metrics_db.update_rows(
 		ACHIEVEMENT_TBL,
-		"name='{0}' AND username='{1}'".format([name,username]),
+		"name='{0}' AND username='{1}'".format([_name,username]),
 		{"value":value}
 	)
-	pass
 
 func _ready():
 	metrics_db = SQLite.new()
@@ -77,10 +101,8 @@ func _ready():
 	metrics_db.open_db()
 	create_metrics_table()
 	create_achievements_table()
+	create_customization_table()
 	create_inventory_table()
-
-func _process(delta):
-	pass
 
 func create_metrics_table():
 	var metadata = {
@@ -101,7 +123,7 @@ func create_achievements_table():
 		name STRING NOT NULL,
 		username STRING NOT NULL,
 		value INTEGER NOT NULL,
-		PRIMARY KEY (name,username)
+		PRIMARY KEY (_name,username)
 	);".format([ACHIEVEMENT_TBL])
 	return metrics_db.query(q)
 
@@ -111,6 +133,15 @@ func create_inventory_table():
 		username STRING NOT NULL,
 		PRIMARY KEY (item_name,username)
 	);".format([INVENTORY_TBL])
+	return metrics_db.query(q)
+
+func create_customization_table():
+	var q = " CREATE TABLE {0} (
+		username STRING NOT NULL,
+		attribute STRING NOT NULL,
+		item_name STRING NOT NULL,
+		PRIMARY KEY (attribute,username)
+	);".format([CUSTOMIZATION_TBL])
 	return metrics_db.query(q)
 
 func insert_metric(playdate, world, stage, attempts, corrects, mistakes, playtime, extra):

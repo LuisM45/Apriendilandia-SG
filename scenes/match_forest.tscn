@@ -1,5 +1,6 @@
 [gd_scene load_steps=36 format=3 uid="uid://de0vn02y1aipo"]
 
+[ext_resource type="Script" path="res://scripts/game/match_shadow/match_shadow_stage.gd" id="1_ptd4m"]
 [ext_resource type="Texture2D" uid="uid://c62gtmxykj67y" path="res://assets/backgrounds/mitad_del_mundo/mitad-del-mundo-monument.jpg" id="2_ccckx"]
 [ext_resource type="Texture2D" uid="uid://bvakvrde4f4yd" path="res://assets/backgrounds/mitad_del_mundo/mitad-del-mundo.jpg" id="3_paj2d"]
 [ext_resource type="Texture2D" uid="uid://cjr65g2cbi5xf" path="res://assets/backgrounds/templo_del_sol/5-museo-templo.jpg" id="4_tbil4"]
@@ -32,65 +33,6 @@
 [ext_resource type="Resource" uid="uid://4qpblsmmox5r" path="res://resources/tagged_objects/condor_texture.tres" id="24_a54cn"]
 [ext_resource type="Resource" uid="uid://blkxvkaplj4g0" path="res://resources/tagged_objects/zamarritopechinegro_texture.tres" id="25_dwd2w"]
 
-[sub_resource type="GDScript" id="GDScript_bldjt"]
-script/source = "extends \"res://scripts/game/stage.gd\"
-const SpritePair = preload(\"res://scripts/game/match_shadow/sprite_pair.gd\")
-const TaggedResource = preload(\"res://resources/template/tagged_resource.gd\")
-@onready var pairs = ($MatchPairs.get_children()) as Array[SpritePair]
-@onready var background_sprite:TextureRect = $Background
-@export var possible_backgrounds: Array[Texture2D]
-@export var possible_objects: Array[TaggedResource]
-
-var remaining = 0
-func _ready():
-	super._ready()
-	var minimal_count = min(pairs.size(), possible_objects.size())
-	var overflow_count = pairs.size()-minimal_count
-	background_sprite.texture = possible_backgrounds.pick_random()
-	
-	possible_objects.shuffle()
-	remaining = minimal_count
-	for pair in pairs:
-		pair.correct_match.connect(func x(b):attempt.emit(true))
-		pair.incorrect_match.connect(func x(b):attempt.emit(false))
-		
-	
-	var positions = []
-	for i in range(minimal_count):
-		positions.append(pairs[i].shadow_body.position)
-	positions.shuffle()
-	
-	for i in range(minimal_count):
-		var scale = possible_objects[i].content.get_size()
-		pairs[i].base_sprite = possible_objects[i]
-		pairs[i].shadow_body.position = positions[i]
-		
-	for i in range(overflow_count):
-		pairs[i].base_sprite = null
-	pass # Replace with function body.
-
-func resize_background():
-	#background_sprite.position = get_viewport_rect().size
-	pass
-
-func _on_correct_attempt():
-	super._on_correct_attempt()
-	remaining-=1
-	if remaining <= 0:
-		win.emit(\"\")
-	
-func _on_failed_attempt():
-	super._on_failed_attempt()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	super._process(delta)
-
-
-func _on_original_body_input_event(viewport, event, shape_idx):
-	pass # Replace with function body.
-"
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_12ov7"]
 size = Vector2(128, 128)
 
@@ -101,7 +43,7 @@ shader = ExtResource("9_afe5r")
 size = Vector2(130, 126)
 
 [node name="MatchForest" type="Node2D"]
-script = SubResource("GDScript_bldjt")
+script = ExtResource("1_ptd4m")
 possible_backgrounds = Array[Texture2D]([ExtResource("2_ccckx"), ExtResource("3_paj2d"), ExtResource("4_tbil4"), ExtResource("5_e1jxc"), ExtResource("6_wwu4x"), ExtResource("7_ii324"), ExtResource("8_mjsxp"), ExtResource("9_tf7q2"), ExtResource("10_bqc24"), ExtResource("11_yspql")])
 possible_objects = Array[Resource("res://resources/template/tagged_resource.gd")]([ExtResource("11_vqw12"), ExtResource("12_dyqed"), ExtResource("13_josf6"), ExtResource("14_dpv4g"), ExtResource("15_sy2s6"), ExtResource("16_mb2og"), ExtResource("17_srsx2"), ExtResource("18_pwehd"), ExtResource("19_i1ok8"), ExtResource("20_jbrt2"), ExtResource("21_b05sw"), ExtResource("22_812vx"), ExtResource("23_dja0h"), ExtResource("24_a54cn"), ExtResource("25_dwd2w")])
 task = ExtResource("5_nmsr8")
@@ -185,15 +127,6 @@ texture = ExtResource("7_ehttw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MatchPairs/Pair/shadow_body"]
 shape = SubResource("RectangleShape2D_i441w")
-
-[node name="Background" type="TextureRect" parent="."]
-visible = false
-offset_top = -504.0
-offset_right = 1152.0
-offset_bottom = 648.0
-texture = ExtResource("9_tf7q2")
-expand_mode = 4
-stretch_mode = 6
 
 [connection signal="input_event" from="MatchPairs/Pair3/original_body" to="MatchPairs/Pair3/original_body" method="_on_rigid_body_2d_input_event"]
 [connection signal="mouse_entered" from="MatchPairs/Pair3/original_body" to="MatchPairs/Pair3/original_body" method="_on_mouse_entered"]
