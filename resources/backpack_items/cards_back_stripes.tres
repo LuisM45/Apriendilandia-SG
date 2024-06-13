@@ -10,5 +10,5 @@ rcontent_path = "res://assets/card_matching/back_stripes.png"
 description = ""
 game_tags = Array[String](["card_game"])
 type_tags = Array[String](["back_texture"])
-icon_path = "res://assets/card_matching/back_tiled.png"
+icon_path = "res://assets/card_matching/colored_back_stripes.png"
 is_default = false

@@ -29,7 +29,7 @@ var playdate = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	_load_customization_config(Inventory.customization_config)
+	_load_customization_config()
 	_ready_sound()
 	_ready_signals()
 	playdate = Globals.unix_system_time()
@@ -80,22 +80,30 @@ func _play_bg_music():
 
 func _on_win(extra = ""):
 	if !task.outroduction.is_empty():
-		DisplayServer.tts_speak(task.outroduction.pick_random(),Globals.voice_id,Globals.tts_volume)
+		DisplayServer.tts_speak(
+			task.outroduction.pick_random(),
+			Globals.voice_id,
+			Globals.tts_volume
+		)
+		
 	# Nuevo objeto desbloqueado
 	_play_win_sound()
-	var timer = Timer.new()
-	add_child(timer)
 	if _try_unlock(): return
 	
+	var timer = Timer.new()
+	add_child(timer)
 	timer.wait_time = 3
 	timer.timeout.connect(func():
 		remove_child(timer)
 		_on_win_no_timeout(extra)
 	)
+	timer.start()
 
 func _on_win_no_timeout(extra = ""):
 	var playtime = Globals.unix_system_time() - playdate
 	Database.insert_metric(
+		Globals.user.id, # id
+		difficulty, # difficulty
 		playdate, # playdate
 		world, # world
 		stage, # stage
@@ -140,12 +148,16 @@ func _on_correct_attempt():
 func _set_difficulty(val):
 	difficulty = val
 
-func _load_customization_config(_config_dictionary:Dictionary):
+func _load_customization_config():
 	pass
 
 func _try_unlock():
+	var unlocked_item = Inventory.pull_random_item()
+	if unlocked_item == null: return
+	
+	Inventory.unlock_item(unlocked_item)
 	var ulock_screen = UnlockScreen.instantiate()
-	ulock_screen.backpack_item = Inventory.pull_random_item()
+	ulock_screen.backpack_item = unlocked_item
 	ulock_screen.ok_pressed.connect(_on_win_no_timeout)
 	if ulock_screen.backpack_item == null: return false
 	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b0clrcxwsi1aa"]
+[gd_scene load_steps=14 format=3 uid="uid://b0clrcxwsi1aa"]
 
 [ext_resource type="Script" path="res://scripts/game/maze/maze_stage.gd" id="1_4awjx"]
 [ext_resource type="Resource" uid="uid://dg1q3ke2fk8kw" path="res://resources/tasks/maze_task.tres" id="2_8st5q"]
@@ -6,7 +6,6 @@
 [ext_resource type="Script" path="res://scripts/game/player/mouse_control.gd" id="3_nq0qa"]
 [ext_resource type="Script" path="res://scripts/game/maze/maze_controller.gd" id="3_s75qp"]
 [ext_resource type="Texture2D" uid="uid://cfw12fkyw4fdt" path="res://assets/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="4_8ue7t"]
-[ext_resource type="SpriteFrames" uid="uid://dmjykvjy62jst" path="res://resources/sprite_frames/king_human.tres" id="7_2eqip"]
 [ext_resource type="SpriteFrames" uid="uid://8yfto2fg686i" path="res://resources/diamond_animated_frames.tres" id="8_wbtrj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p402e"]
@@ -563,7 +562,6 @@ debug_color = Color(0.964706, 0, 0.494118, 0.419608)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player"]
 texture_filter = 1
-sprite_frames = ExtResource("7_2eqip")
 animation = &"idle"
 
 [node name="WinArea" type="Area2D" parent="."]

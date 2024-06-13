@@ -1,141 +1,127 @@
-[gd_scene load_steps=7 format=3 uid="uid://cknf1h0vct0uw"]
+[gd_scene load_steps=4 format=3 uid="uid://cknf1h0vct0uw"]
 
 [ext_resource type="Shader" path="res://branches/gui/sidebar.gdshader" id="1_f13s3"]
 [ext_resource type="Script" path="res://scripts/gui/PauseMenu.gd" id="2_fidih"]
-[ext_resource type="Shader" path="res://branches/gui/sidebar_bg.gdshader" id="3_bngxv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_huhex"]
 shader = ExtResource("1_f13s3")
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_6ryb4"]
-shader = ExtResource("3_bngxv")
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_bpxny"]
-shader = ExtResource("1_f13s3")
-
 [node name="PauseMenu" type="Control"]
 z_index = 98
+z_as_relative = false
 texture_filter = 2
 material = SubResource("ShaderMaterial_huhex")
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 576.0
-offset_top = 323.0
-offset_right = -576.0
-offset_bottom = -325.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 6
+anchors_preset = 0
+size_flags_horizontal = 4
 size_flags_vertical = 6
 script = ExtResource("2_fidih")
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_6ryb4")
+[node name="BGDarkening" type="ColorRect" parent="."]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -576.0
-offset_top = -323.0
-offset_right = 576.0
-offset_bottom = 325.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.152941, 0.152941, 0.152941, 0.764706)
+
+[node name="MenuPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.25
+anchor_right = 0.75
+anchor_bottom = 0.75
+offset_right = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="."]
-material = SubResource("ShaderMaterial_bpxny")
+[node name="VBox" type="VBoxContainer" parent="MenuPanel"]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -259.5
-offset_top = -159.5
-offset_right = 259.5
-offset_bottom = 159.5
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = -30.0
+offset_bottom = -30.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HomeBtn" type="Button" parent="."]
-layout_mode = 0
-offset_left = 186.0
-offset_top = -140.0
-offset_right = 241.0
-offset_bottom = -109.0
-text = "Inicio"
+[node name="Buttons" type="HBoxContainer" parent="MenuPanel/VBox"]
+layout_mode = 2
 
-[node name="HelpBtn" type="Button" parent="."]
-layout_mode = 0
-offset_left = -25.0
-offset_top = 98.0
-offset_right = 29.0
-offset_bottom = 129.0
-text = "Ayuda"
-
-[node name="TtsBtn" type="Button" parent="."]
-layout_mode = 0
-offset_left = -241.0
-offset_top = 50.0
-offset_right = -187.0
-offset_bottom = 81.0
-text = "TTS"
-
-[node name="SfxBtn" type="Button" parent="."]
-layout_mode = 0
-offset_left = -242.0
-offset_top = -4.0
-offset_right = -188.0
-offset_bottom = 27.0
-text = "SFX"
-
-[node name="MusicBtn" type="Button" parent="."]
-layout_mode = 0
-offset_left = -243.0
-offset_top = -58.0
-offset_right = -189.0
-offset_bottom = -27.0
-text = "Music"
-
-[node name="ResumeBtn" type="Button" parent="."]
-layout_mode = 0
-offset_left = -239.0
-offset_top = -143.0
-offset_right = -220.0
-offset_bottom = -112.0
+[node name="ResumeBtn" type="Button" parent="MenuPanel/VBox/Buttons"]
+layout_mode = 2
 text = "Resumir"
 
-[node name="TtsSld" type="HSlider" parent="."]
-layout_mode = 0
-offset_left = -162.0
-offset_top = 56.0
-offset_right = 228.0
-offset_bottom = 72.0
+[node name="Control3" type="Control" parent="MenuPanel/VBox/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
-[node name="SfxSld" type="HSlider" parent="."]
-layout_mode = 0
-offset_left = -164.0
-offset_top = 7.0
-offset_right = 222.0
-offset_bottom = 23.0
+[node name="HelpBtn" type="Button" parent="MenuPanel/VBox/Buttons"]
+layout_mode = 2
+text = "Ayuda"
 
-[node name="MusicSld" type="HSlider" parent="."]
-layout_mode = 0
-offset_left = -160.0
-offset_top = -51.0
-offset_right = 221.0
-offset_bottom = -35.0
+[node name="HomeBtn" type="Button" parent="MenuPanel/VBox/Buttons"]
+layout_mode = 2
+text = "Inicio"
 
-[connection signal="pressed" from="HomeBtn" to="." method="_on_home"]
-[connection signal="pressed" from="HelpBtn" to="HelpBtn" method="_on_pressed"]
-[connection signal="pressed" from="TtsBtn" to="." method="_on_tts_toggle"]
-[connection signal="pressed" from="SfxBtn" to="." method="_on_sfx_toggle"]
-[connection signal="pressed" from="MusicBtn" to="." method="_on_music_toggle"]
-[connection signal="pressed" from="ResumeBtn" to="." method="_on_resume"]
-[connection signal="value_changed" from="TtsSld" to="." method="_on_tts_volume_changed"]
-[connection signal="value_changed" from="SfxSld" to="." method="_on_sfx_volume_changed"]
-[connection signal="value_changed" from="MusicSld" to="." method="_on_music_volume_changed"]
+[node name="Padding" type="Control" parent="MenuPanel/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MusicGroup" type="HBoxContainer" parent="MenuPanel/VBox"]
+layout_mode = 2
+
+[node name="MusicBtn" type="Button" parent="MenuPanel/VBox/MusicGroup"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Music"
+
+[node name="MusicSld" type="HSlider" parent="MenuPanel/VBox/MusicGroup"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="SfxGroup" type="HBoxContainer" parent="MenuPanel/VBox"]
+layout_mode = 2
+
+[node name="SfxBtn" type="Button" parent="MenuPanel/VBox/SfxGroup"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "SFX"
+
+[node name="SfxSld" type="HSlider" parent="MenuPanel/VBox/SfxGroup"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="TtsGroup" type="HBoxContainer" parent="MenuPanel/VBox"]
+layout_mode = 2
+
+[node name="TtsBtn" type="Button" parent="MenuPanel/VBox/TtsGroup"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "TTS"
+
+[node name="TtsSld" type="HSlider" parent="MenuPanel/VBox/TtsGroup"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="Padding2" type="Control" parent="MenuPanel/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[connection signal="pressed" from="MenuPanel/VBox/Buttons/ResumeBtn" to="." method="_on_resume"]
+[connection signal="pressed" from="MenuPanel/VBox/Buttons/HelpBtn" to="MenuPanel/VBox/Buttons/HelpBtn" method="_on_pressed"]
+[connection signal="pressed" from="MenuPanel/VBox/Buttons/HomeBtn" to="." method="_on_home"]
+[connection signal="pressed" from="MenuPanel/VBox/MusicGroup/MusicBtn" to="." method="_on_music_toggle"]
+[connection signal="value_changed" from="MenuPanel/VBox/MusicGroup/MusicSld" to="." method="_on_music_volume_changed"]
+[connection signal="pressed" from="MenuPanel/VBox/SfxGroup/SfxBtn" to="." method="_on_sfx_toggle"]
+[connection signal="value_changed" from="MenuPanel/VBox/SfxGroup/SfxSld" to="." method="_on_sfx_volume_changed"]
+[connection signal="pressed" from="MenuPanel/VBox/TtsGroup/TtsBtn" to="." method="_on_tts_toggle"]
+[connection signal="value_changed" from="MenuPanel/VBox/TtsGroup/TtsSld" to="." method="_on_tts_volume_changed"]

@@ -10,22 +10,18 @@ var paused = false
 var desired_size: Vector2 : set = _set_desired_size
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	sprite.play("idle")
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-	
-func _physics_process(delta):
-		# Will probably be useful for touch controls
-		#var pos = get_global_mouse_position()
-		#var deta = (pos - old_pos)
-		## Move the character towards the cursor
-		#move_and_collide(deta,false,0.1)
-		#old_pos = pos
-		pass
+
+
+func set_sprite_frames(sprite_frames:SpriteFrames):
+	sprite.sprite_frames = sprite_frames
+	_resize_sprite()	
+	sprite.play("idle")
 
 func _set_desired_size(size:Vector2):
 	desired_size = size

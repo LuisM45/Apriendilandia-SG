@@ -58,11 +58,10 @@ func _on_win_area_body_entered(body):
 	if body == player:
 		attempt.emit(true)
 
-func _load_customization_config(config_dictionary:Dictionary):
-	super. _load_customization_config(config_dictionary)
-	var maze_tilemap =  config_dictionary.get("maze:maze_tilemap")
-	var background_texture =  config_dictionary.get("maze:background_texture")
-	var diamond_animated_texture =  config_dictionary.get("maze:diamond_animated_texture")
-	player_sprite_frames =  config_dictionary\
-		.get("maze:player_animated_texture")\
+func _load_customization_config():
+	super. _load_customization_config()
+	var maze_tilemap =  Inventory.get_attribute("maze:maze_tilemap")
+	var background_texture =  Inventory.get_attribute("maze:background_texture")
+	var diamond_animated_texture =  Inventory.get_attribute("maze:diamond_animated_texture")
+	player_sprite_frames =  Inventory.get_attribute("maze:player_animated_texture")\
 		.get_rcontent()

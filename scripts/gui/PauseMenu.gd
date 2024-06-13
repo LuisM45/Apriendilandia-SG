@@ -2,12 +2,18 @@ extends Control
 
 signal resume()
 
+
+@onready var music_sld = $MenuPanel/VBox/MusicGroup/MusicSld
+@onready var sfx_sld = $MenuPanel/VBox/SfxGroup/SfxSld
+@onready var tts_sld =$MenuPanel/VBox/TtsGroup/TtsSld
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	get_node("SfxSld").value = Globals.sfx_volume
-	get_node("MusicSld").value = Globals.music_volume
-	get_node("TtsSld").value = Globals.tts_volume
-	position = get_viewport_rect().size/2
+	set_deferred("size",get_viewport_rect().size)
+	music_sld.value = Globals.music_volume
+	sfx_sld.value = Globals.sfx_volume
+	tts_sld.value = Globals.tts_volume
 
 
 func _on_resume():

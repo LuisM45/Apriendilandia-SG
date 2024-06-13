@@ -99,15 +99,13 @@ func compare_cards(card1:Card,card2:Card):
 	if matches_found == cards.size():
 		win.emit("")
 
-func _load_customization_config(config_dictionary:Dictionary):
-	super. _load_customization_config(config_dictionary)
+func _load_customization_config():
+	super. _load_customization_config()
 	
-	card_backface_texture = config_dictionary\
-	.get("card_game:back_texture")\
+	card_backface_texture = Inventory.get_attribute("card_game:back_texture")\
 	.parse_file(Parsers.png_path_to_texture2d)
 	
-	card_backface_color = config_dictionary\
-	.get("card_game:back_color")\
+	card_backface_color = Inventory.get_attribute("card_game:back_color")\
 	.parse_rcontent(Parsers.json_hex_to_color)
 
 

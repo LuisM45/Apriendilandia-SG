@@ -10,6 +10,9 @@ class_name BackpackItem
 @export_file("*.png") var icon_path: String
 @export var is_default: bool = false
 
+static func from_inner_name(inner_name:String)->BackpackItem:
+	return load("res://resources/backpack_items/"+inner_name+".tres")
+
 func is_of_game(game:String):
 	return game_tags.has(game)
 
@@ -29,7 +32,6 @@ func parse_file(parser:Callable):
 	return parser.call(rcontent_path)
 	
 func get_icon()->Texture2D:
-	
 	return load(icon_path)
 
 func get_keys():
@@ -40,4 +42,4 @@ func get_keys():
 	return keys
 
 func enable():
-	Inventory.enable_nsave_item(self)
+	Inventory.enable_item(self)

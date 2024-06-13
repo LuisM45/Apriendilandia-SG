@@ -34,10 +34,10 @@ func _on_solved():
 	attempt.emit(true)
 	win.emit("")
 
-func _load_customization_config(config_dictionary:Dictionary):
-	super. _load_customization_config(config_dictionary)
-	potion_texture_set = config_dictionary\
-		.get("painting_potions:potion_texture_set")\
+func _load_customization_config():
+	super._load_customization_config()
+	potion_texture_set = Inventory\
+		.get_attribute("painting_potions:potion_texture_set")\
 		.get_rcontent()
 	#object_texture_set = config_dictionary.get("painting_potions:object_texture_set")
 

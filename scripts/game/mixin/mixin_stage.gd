@@ -49,10 +49,10 @@ func _on_solved():
 	attempt.emit(true)
 	if remaining<=0: win.emit("")
 
-func _load_customization_config(config_dictionary:Dictionary):
-	super. _load_customization_config(config_dictionary)
-	potion_sprite_set = config_dictionary\
-		.get("potion_mixing:potion_texture_set")\
+func _load_customization_config():
+	super. _load_customization_config()
+	potion_sprite_set = Inventory\
+		.get_attribute("potion_mixing:potion_texture_set")\
 		.get_rcontent()
 		
 	#var cauldron_sprite_set = config_dictionary.get("potion_mixing:potion_sprite_set")

@@ -47,6 +47,6 @@ func _on_failed_attempt():
 func _process(delta):
 	super._process(delta)
 
-func _load_customization_config(config_dictionary:Dictionary):
-	super. _load_customization_config(config_dictionary)
-	var _objects_texture_set = config_dictionary.get(config_context+":objects_texture_set")
+func _load_customization_config():
+	super. _load_customization_config()
+	var _objects_texture_set = Inventory.get_attribute(config_context+":objects_texture_set")
