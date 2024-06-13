@@ -30,7 +30,15 @@ func get_achievement(_name:String,user_id:=0):
 	if row.is_empty(): return null
 	return row[0].get("value")
 
-func get_user(id:=0)->User:
+func get_users()->Array:
+	var row = metrics_db.select_rows(
+		USER_TBL,
+		"",
+		["id","username","avatar_name"]
+	)
+	return row.map(User.from_dict)
+
+func get_user(id:int)->User:
 	var row = metrics_db.select_rows(
 		USER_TBL,
 		"id={0}".format([id]),
@@ -40,13 +48,17 @@ func get_user(id:=0)->User:
 	return User.from_dict(row[0])
 
 func set_user(user:User):
-	var done = metrics_db.insert_row(
-		USER_TBL,
-		{
-			"id":user.id,
+	var data = {
 			"username":user.username,
 			"avatar_name":user.avatar_name,
 		}
+	print(data)
+	if user.id != null and user.id != 0:
+		data["id"]=user.id
+	print(data)
+	var done = metrics_db.insert_row(
+		USER_TBL,
+		data
 	)
 	if done: return done
 	done = metrics_db.update_rows(
@@ -58,6 +70,12 @@ func set_user(user:User):
 		}
 	)
 	return done
+
+func remove_user(user:User):
+	return metrics_db.delete_rows(
+		USER_TBL,
+		"id={0}".format([user.id])
+	)
 
 func get_items(user:User)->Array:
 	var rows = metrics_db.select_rows(

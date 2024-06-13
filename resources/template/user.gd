@@ -13,6 +13,12 @@ static func from_dict(dict:Dictionary):
 	user.avatar_name = dict.get("avatar_name")
 	return user
 
+static func default_user():
+	var user = new()
+	user.id = 0
+	user.username = "default"
+	return user 
+
 func get_avatar()->Texture2D:
 	if avatar_name == null: return
 	return Inventory.all_backpack_items[avatar_name].get_rcontent()

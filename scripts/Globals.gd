@@ -21,9 +21,7 @@ var next_scenes = []
 func _init():
 	if !Database.is_node_ready(): await Database.ready
 	load_volume_from_db()
-	user = User.new()
-	user.id = 0
-	user.username = "default"
+	user = User.default_user()
 	#var utils = load("res://scripts/utils.gd").new()
 	#utils.export_backpack_items()
 	pass
@@ -48,7 +46,13 @@ func load_volume_from_db():
 	if db_is_tts_enabled != null: is_tts_enabled = bool(int(db_is_tts_enabled))
 
 func load_user_from_db():
-	pass
+	var user_id = Database.get_config_value("active_user")
+	if user_id == null: user_id =0
+	user = Database.get_user(user_id)
+
+func set_user(_user:User):
+	user = _user
+	Database.set_config_value("active_user",str(user.id))
 
 func unix_system_time():
 	var sys_time = Time.get_datetime_dict_from_system(true)
