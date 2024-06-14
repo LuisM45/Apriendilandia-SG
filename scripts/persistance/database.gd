@@ -128,23 +128,23 @@ func set_customization_item_for_attribute(user:User,item:BackpackItem,attribute:
 	)
 	return done
 
-func set_config_value(_name:String,value:String):
+func set_config_value(user:User,_name:String,value:String):
 	var done = metrics_db.insert_row(
 		CONFIG_TBL,
-		{"name":_name, "value":value,}
+		{"name":_name, "value":value, "user_id": user.id}
 	)
 	if done: return
 	done = metrics_db.update_rows(
 		CONFIG_TBL,
-		"name='{0}'".format([_name]),
+		"name='{0}' AND user_id={1}".format([_name,user.id]),
 		{"value":value}
 	)
 	return done
 
-func get_config_value(_name:String):
+func get_config_value(user:User,_name:String):
 	var rows = metrics_db.select_rows(
 		CONFIG_TBL,
-		"name='{0}'".format([_name]),
+		"name='{0}' AND user_id={1}".format([_name,user.id]),
 		["value"]	
 	)
 	if rows.is_empty(): return null
@@ -212,7 +212,8 @@ func create_config_table():
 	var q = " CREATE TABLE {0} (
 		name STRING NOT NULL,
 		value STRING,
-		PRIMARY KEY (name)
+		user_id INTEGER,
+		PRIMARY KEY (name,user_id)
 	);".format([CONFIG_TBL])
 	return metrics_db.query(q)
 
@@ -229,7 +230,7 @@ func create_users_table():
 	var q = "CREATE TABLE {0} (
 		id INTEGER NOT NULL,
 		username STRING NOT NULL,
-		avatar_name STRING,
+		avatar_name STRING
 		PRIMARY KEY (id)
 	);".format([USER_TBL])
 	return metrics_db.query(q)

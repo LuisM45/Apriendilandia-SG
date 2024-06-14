@@ -73,6 +73,28 @@ text = "Inicio"
 layout_mode = 2
 size_flags_vertical = 3
 
+[node name="DifficultyGroup" type="HBoxContainer" parent="MenuPanel/VBox"]
+layout_mode = 2
+
+[node name="DifficultyBtn" type="Button" parent="MenuPanel/VBox/DifficultyGroup"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Dificultad"
+
+[node name="DifficultyLbl" type="Label" parent="MenuPanel/VBox/DifficultyGroup"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+horizontal_alignment = 2
+
+[node name="DifficultySld" type="HSlider" parent="MenuPanel/VBox/DifficultyGroup"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = 1.0
+max_value = 10.0
+value = 1.0
+rounded = true
+
 [node name="MusicGroup" type="HBoxContainer" parent="MenuPanel/VBox"]
 layout_mode = 2
 
@@ -80,6 +102,11 @@ layout_mode = 2
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 text = "Music"
+
+[node name="MusicLbl" type="Label" parent="MenuPanel/VBox/MusicGroup"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+horizontal_alignment = 2
 
 [node name="MusicSld" type="HSlider" parent="MenuPanel/VBox/MusicGroup"]
 layout_mode = 2
@@ -94,6 +121,11 @@ custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 text = "SFX"
 
+[node name="SfxLbl" type="Label" parent="MenuPanel/VBox/SfxGroup"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+horizontal_alignment = 2
+
 [node name="SfxSld" type="HSlider" parent="MenuPanel/VBox/SfxGroup"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -107,6 +139,11 @@ custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
 text = "TTS"
 
+[node name="TtsLbl" type="Label" parent="MenuPanel/VBox/TtsGroup"]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+horizontal_alignment = 2
+
 [node name="TtsSld" type="HSlider" parent="MenuPanel/VBox/TtsGroup"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -119,6 +156,7 @@ size_flags_vertical = 3
 [connection signal="pressed" from="MenuPanel/VBox/Buttons/ResumeBtn" to="." method="_on_resume"]
 [connection signal="pressed" from="MenuPanel/VBox/Buttons/HelpBtn" to="MenuPanel/VBox/Buttons/HelpBtn" method="_on_pressed"]
 [connection signal="pressed" from="MenuPanel/VBox/Buttons/HomeBtn" to="." method="_on_home"]
+[connection signal="value_changed" from="MenuPanel/VBox/DifficultyGroup/DifficultySld" to="." method="_on_difficulty_changed"]
 [connection signal="pressed" from="MenuPanel/VBox/MusicGroup/MusicBtn" to="." method="_on_music_toggle"]
 [connection signal="value_changed" from="MenuPanel/VBox/MusicGroup/MusicSld" to="." method="_on_music_volume_changed"]
 [connection signal="pressed" from="MenuPanel/VBox/SfxGroup/SfxBtn" to="." method="_on_sfx_toggle"]

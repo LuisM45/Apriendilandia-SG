@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://djykv8uto15hs"]
+
+[ext_resource type="Script" path="res://scripts/game/match_shadow/shadow_sprite.gd" id="1_ojhpo"]
+[ext_resource type="Shader" path="res://scenes/test/match_shadow.gdshader" id="2_r8pqb"]
+[ext_resource type="Texture2D" uid="uid://cbo1y2t6ytxma" path="res://icon.svg" id="3_1hpbw"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p1sma"]
+shader = ExtResource("2_r8pqb")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0puli"]
+size = Vector2(130, 126)
+
+[node name="shadow_body" type="Area2D"]
+script = ExtResource("1_ojhpo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_p1sma")
+texture = ExtResource("3_1hpbw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0puli")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

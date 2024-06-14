@@ -10,7 +10,7 @@ const StageBackground = preload("res://branches/gui/stage_generic_background.tsc
 
 @export var world: int
 @export var stage: int
-@export var difficulty: float = 5: set = _set_difficulty
+@export var difficulty: int = 5
 @export var task: Task
 
 signal pause()
@@ -32,6 +32,7 @@ func _ready():
 	_load_customization_config()
 	_ready_sound()
 	_ready_signals()
+	difficulty = Globals.difficulty
 	playdate = Globals.unix_system_time()
 	var gui_node = Sidebar.instantiate()
 	gui_node.pause.connect(_on_pause)
@@ -144,9 +145,6 @@ func _on_failed_attempt():
 func _on_correct_attempt():
 	attempts += 1
 	hits += 1
-
-func _set_difficulty(val):
-	difficulty = val
 
 func _load_customization_config():
 	pass

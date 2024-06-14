@@ -18,7 +18,7 @@ var locked = false
 
 var acceptable_delta = 0.05
 var current_weight = 0
-const max_weight = 2
+var max_weight = 2
 
 func _ready():
 	super._ready()

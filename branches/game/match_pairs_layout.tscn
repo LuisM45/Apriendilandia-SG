@@ -1,0 +1,67 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3fpbj4nn8vop"]
+
+[ext_resource type="Script" path="res://scripts/game/match_shadow/sprite_pair.gd" id="1_wru8m"]
+[ext_resource type="PackedScene" uid="uid://dbdmuq2wn5ix5" path="res://branches/game/original_body.tscn" id="2_osv2q"]
+[ext_resource type="PackedScene" uid="uid://djykv8uto15hs" path="res://branches/game/shadow_body.tscn" id="3_jufry"]
+
+[node name="MatchPairs" type="Node2D"]
+
+[node name="Pair" type="Node2D" parent="."]
+visible = false
+script = ExtResource("1_wru8m")
+
+[node name="original_body" parent="Pair" instance=ExtResource("2_osv2q")]
+position = Vector2(128, 128)
+
+[node name="shadow_body" parent="Pair" instance=ExtResource("3_jufry")]
+position = Vector2(1024, 128)
+
+[node name="Pair2" type="Node2D" parent="."]
+visible = false
+script = ExtResource("1_wru8m")
+
+[node name="original_body" parent="Pair2" instance=ExtResource("2_osv2q")]
+position = Vector2(128, 336)
+
+[node name="shadow_body" parent="Pair2" instance=ExtResource("3_jufry")]
+position = Vector2(1024, 336)
+
+[node name="Pair3" type="Node2D" parent="."]
+visible = false
+script = ExtResource("1_wru8m")
+
+[node name="original_body" parent="Pair3" instance=ExtResource("2_osv2q")]
+position = Vector2(128, 544)
+
+[node name="shadow_body" parent="Pair3" instance=ExtResource("3_jufry")]
+position = Vector2(1024, 544)
+
+[node name="Pair4" type="Node2D" parent="."]
+visible = false
+script = ExtResource("1_wru8m")
+
+[node name="original_body" parent="Pair4" instance=ExtResource("2_osv2q")]
+position = Vector2(328, 128)
+
+[node name="shadow_body" parent="Pair4" instance=ExtResource("3_jufry")]
+position = Vector2(816, 128)
+
+[node name="Pair5" type="Node2D" parent="."]
+visible = false
+script = ExtResource("1_wru8m")
+
+[node name="original_body" parent="Pair5" instance=ExtResource("2_osv2q")]
+position = Vector2(328, 336)
+
+[node name="shadow_body" parent="Pair5" instance=ExtResource("3_jufry")]
+position = Vector2(816, 336)
+
+[node name="Pair6" type="Node2D" parent="."]
+visible = false
+script = ExtResource("1_wru8m")
+
+[node name="original_body" parent="Pair6" instance=ExtResource("2_osv2q")]
+position = Vector2(328, 544)
+
+[node name="shadow_body" parent="Pair6" instance=ExtResource("3_jufry")]
+position = Vector2(816, 544)

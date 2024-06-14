@@ -29,7 +29,7 @@ func _ready():
 	
 	for pc in range(_bottles_count()):
 		colors_in_stock.append(COLOR_OPTIONS[pc])
-		potions[pc].current_color = COLOR_OPTIONS[pc]
+		potions[pc].current_color = colors_in_stock[pc]
 		potions[pc].visible = true
 		
 	for p in potions:
@@ -38,6 +38,7 @@ func _ready():
 
 	for cauld in cauldrons:
 		cauld.acceptable_delta = 0.10 - difficulty * 0.01
+		cauld.max_weight = _combinations_count()
 		cauld.target_color = _get_sample_color()
 		cauld.solved.connect(_on_solved)
 		
@@ -58,12 +59,16 @@ func _load_customization_config():
 	#var cauldron_sprite_set = config_dictionary.get("potion_mixing:potion_sprite_set")
 
 func _bottles_count():
-	# A function based on difficulty
+	if difficulty <= 3: return 3
+	if difficulty <= 4: return 4
+	if difficulty <= 5: return 6
+	if difficulty <= 7: return 4
+	if difficulty <= 8: return 5
 	return 6
 
 func _combinations_count():
-	# A function based on difficulty
-	return 2
+	if difficulty<=5: return 2
+	return 3
 
 func _get_sample_color():
 	var chosen_colors:Array[Color] = []

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://b7tj35qh6cr0e"]
+[gd_scene load_steps=16 format=3 uid="uid://b7tj35qh6cr0e"]
 
 [ext_resource type="Script" path="res://scripts/game/match_shadow/match_shadow_stage.gd" id="1_7j26j"]
 [ext_resource type="Texture2D" uid="uid://d1lnph2366q6m" path="res://assets/backgrounds/teleferi_qo/20180125-105156-largejpg.jpg" id="1_55jbt"]
@@ -6,28 +6,15 @@
 [ext_resource type="Texture2D" uid="uid://ew4h3w334ir1" path="res://assets/backgrounds/teleferi_qo/photo1jpg.jpg" id="3_kg8bv"]
 [ext_resource type="Texture2D" uid="uid://fea2w80kefpo" path="res://assets/backgrounds/teleferi_qo/photo2jpg.jpg" id="4_v16la"]
 [ext_resource type="Texture2D" uid="uid://bhn0yxg7xba08" path="res://assets/backgrounds/teleferi_qo/img-20180108-144906-largejpg.jpg" id="5_rtytp"]
-[ext_resource type="Script" path="res://scripts/game/match_shadow/sprite_pair.gd" id="5_xbvkh"]
 [ext_resource type="Resource" uid="uid://cqjilekm06clk" path="res://resources/tagged_objects/amaranto_texture.tres" id="6_t0gdi"]
-[ext_resource type="Script" path="res://scripts/game/match_shadow/light_sprite.gd" id="6_xx1hy"]
-[ext_resource type="Texture2D" uid="uid://cbo1y2t6ytxma" path="res://icon.svg" id="7_govcc"]
 [ext_resource type="Resource" uid="uid://7f1u6w7wi5j6" path="res://resources/tagged_objects/cedron_texture.tres" id="7_rg18t"]
 [ext_resource type="Resource" uid="uid://d1pt3mvhgpfcn" path="res://resources/tagged_objects/chilca_texture.tres" id="8_3of8n"]
-[ext_resource type="Script" path="res://scripts/game/match_shadow/shadow_sprite.gd" id="8_faak5"]
 [ext_resource type="Resource" uid="uid://doxbsb3vibmf3" path="res://resources/tagged_objects/chocho_texture.tres" id="9_epe8k"]
-[ext_resource type="Shader" path="res://scenes/test/match_shadow.gdshader" id="9_kpl8k"]
 [ext_resource type="Resource" uid="uid://wacs4kwcll6o" path="res://resources/tagged_objects/moracastilla_texture.tres" id="10_lnipu"]
 [ext_resource type="Resource" uid="uid://b824dnn1akwdw" path="res://resources/tagged_objects/papaya_texture.tres" id="11_i4182"]
 [ext_resource type="Resource" uid="uid://d13fr83psrqgl" path="res://resources/tagged_objects/quinoa_texture.tres" id="12_f76fu"]
 [ext_resource type="Resource" uid="uid://erlw13qxdsaa" path="res://resources/tasks/match_shadow_task.tres" id="14_ih1m5"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mj53u"]
-size = Vector2(128, 128)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_lk2bo"]
-shader = ExtResource("9_kpl8k")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fxon0"]
-size = Vector2(130, 126)
+[ext_resource type="PackedScene" uid="uid://c3fpbj4nn8vop" path="res://branches/game/match_pairs_layout.tscn" id="15_i5bgi"]
 
 [node name="MatchFlowers" type="Node2D"]
 script = ExtResource("1_7j26j")
@@ -35,103 +22,4 @@ possible_backgrounds = Array[Texture2D]([ExtResource("1_55jbt"), ExtResource("2_
 possible_objects = Array[Resource("res://resources/template/tagged_resource.gd")]([ExtResource("6_t0gdi"), ExtResource("7_rg18t"), ExtResource("8_3of8n"), ExtResource("9_epe8k"), ExtResource("10_lnipu"), ExtResource("11_i4182"), ExtResource("12_f76fu")])
 task = ExtResource("14_ih1m5")
 
-[node name="MatchPairs" type="Node" parent="."]
-
-[node name="Pair3" type="Node" parent="MatchPairs"]
-script = ExtResource("5_xbvkh")
-
-[node name="original_body" type="CharacterBody2D" parent="MatchPairs/Pair3"]
-z_index = 1
-position = Vector2(186, 130)
-input_pickable = true
-script = ExtResource("6_xx1hy")
-
-[node name="Sprite2D" type="Sprite2D" parent="MatchPairs/Pair3/original_body"]
-texture = ExtResource("7_govcc")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MatchPairs/Pair3/original_body"]
-shape = SubResource("RectangleShape2D_mj53u")
-
-[node name="shadow_body" type="Area2D" parent="MatchPairs/Pair3"]
-position = Vector2(934, 127)
-script = ExtResource("8_faak5")
-
-[node name="Sprite2D" type="Sprite2D" parent="MatchPairs/Pair3/shadow_body"]
-material = SubResource("ShaderMaterial_lk2bo")
-texture = ExtResource("7_govcc")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MatchPairs/Pair3/shadow_body"]
-shape = SubResource("RectangleShape2D_fxon0")
-
-[node name="Pair2" type="Node" parent="MatchPairs"]
-script = ExtResource("5_xbvkh")
-
-[node name="original_body" type="CharacterBody2D" parent="MatchPairs/Pair2"]
-z_index = 1
-position = Vector2(181, 298)
-input_pickable = true
-script = ExtResource("6_xx1hy")
-
-[node name="Sprite2D" type="Sprite2D" parent="MatchPairs/Pair2/original_body"]
-texture = ExtResource("7_govcc")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MatchPairs/Pair2/original_body"]
-shape = SubResource("RectangleShape2D_mj53u")
-
-[node name="shadow_body" type="Area2D" parent="MatchPairs/Pair2"]
-position = Vector2(929, 295)
-script = ExtResource("8_faak5")
-
-[node name="Sprite2D" type="Sprite2D" parent="MatchPairs/Pair2/shadow_body"]
-material = SubResource("ShaderMaterial_lk2bo")
-texture = ExtResource("7_govcc")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MatchPairs/Pair2/shadow_body"]
-shape = SubResource("RectangleShape2D_fxon0")
-
-[node name="Pair" type="Node" parent="MatchPairs"]
-script = ExtResource("5_xbvkh")
-
-[node name="original_body" type="CharacterBody2D" parent="MatchPairs/Pair"]
-z_index = 1
-position = Vector2(180, 483)
-input_pickable = true
-script = ExtResource("6_xx1hy")
-
-[node name="Sprite2D" type="Sprite2D" parent="MatchPairs/Pair/original_body"]
-texture = ExtResource("7_govcc")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MatchPairs/Pair/original_body"]
-shape = SubResource("RectangleShape2D_mj53u")
-
-[node name="shadow_body" type="Area2D" parent="MatchPairs/Pair"]
-position = Vector2(928, 480)
-script = ExtResource("8_faak5")
-
-[node name="Sprite2D" type="Sprite2D" parent="MatchPairs/Pair/shadow_body"]
-material = SubResource("ShaderMaterial_lk2bo")
-texture = ExtResource("7_govcc")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MatchPairs/Pair/shadow_body"]
-shape = SubResource("RectangleShape2D_fxon0")
-
-[connection signal="mouse_entered" from="MatchPairs/Pair3/original_body" to="MatchPairs/Pair3/original_body" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="MatchPairs/Pair3/original_body" to="MatchPairs/Pair3/original_body" method="_on_mouse_exited"]
-[connection signal="body_entered" from="MatchPairs/Pair3/shadow_body" to="MatchPairs/Pair3/shadow_body" method="_on_body_entered"]
-[connection signal="mouse_entered" from="MatchPairs/Pair3/shadow_body" to="MatchPairs/Pair3/shadow_body" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="MatchPairs/Pair3/shadow_body" to="MatchPairs/Pair3/shadow_body" method="_on_mouse_exited"]
-[connection signal="object_dropped_within" from="MatchPairs/Pair3/shadow_body" to="MatchPairs/Pair3" method="_attempt_complete"]
-[connection signal="input_event" from="MatchPairs/Pair2/original_body" to="MatchPairs/Pair2/original_body" method="_on_rigid_body_2d_input_event"]
-[connection signal="mouse_entered" from="MatchPairs/Pair2/original_body" to="MatchPairs/Pair2/original_body" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="MatchPairs/Pair2/original_body" to="MatchPairs/Pair2/original_body" method="_on_mouse_exited"]
-[connection signal="body_entered" from="MatchPairs/Pair2/shadow_body" to="MatchPairs/Pair2/shadow_body" method="_on_body_entered"]
-[connection signal="mouse_entered" from="MatchPairs/Pair2/shadow_body" to="MatchPairs/Pair2/shadow_body" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="MatchPairs/Pair2/shadow_body" to="MatchPairs/Pair2/shadow_body" method="_on_mouse_exited"]
-[connection signal="object_dropped_within" from="MatchPairs/Pair2/shadow_body" to="MatchPairs/Pair2" method="_attempt_complete"]
-[connection signal="input_event" from="MatchPairs/Pair/original_body" to="MatchPairs/Pair/original_body" method="_on_rigid_body_2d_input_event"]
-[connection signal="mouse_entered" from="MatchPairs/Pair/original_body" to="MatchPairs/Pair/original_body" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="MatchPairs/Pair/original_body" to="MatchPairs/Pair/original_body" method="_on_mouse_exited"]
-[connection signal="body_entered" from="MatchPairs/Pair/shadow_body" to="MatchPairs/Pair/shadow_body" method="_on_body_entered"]
-[connection signal="mouse_entered" from="MatchPairs/Pair/shadow_body" to="MatchPairs/Pair/shadow_body" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="MatchPairs/Pair/shadow_body" to="MatchPairs/Pair/shadow_body" method="_on_mouse_exited"]
-[connection signal="object_dropped_within" from="MatchPairs/Pair/shadow_body" to="MatchPairs/Pair" method="_attempt_complete"]
+[node name="MatchPairs" parent="." instance=ExtResource("15_i5bgi")]

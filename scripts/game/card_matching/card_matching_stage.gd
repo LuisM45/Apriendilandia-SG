@@ -5,12 +5,12 @@ const CardBranch = preload("res://branches/game/card_control.tscn")
 const peek_timeout = 1
 
 @export var texture_options: Array[TaggedResource]
-@export var card_count = 16
 
 @onready var card_row_container:VBoxContainer = $Cards
 @onready var cards:Array[Card] = []
 @onready var matches_required = cards.size()/2
 
+var card_count: int : get = _get_card_count
 var card_backface_texture:Texture2D
 var card_backface_color:Color
 var matches_found = 0
@@ -119,3 +119,6 @@ func recommended_columns():
 	
 	return ceil(rows)
 
+func _get_card_count():
+	var pairs = 3+int(6*(difficulty-1)/9)
+	return pairs*2

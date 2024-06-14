@@ -5,7 +5,6 @@ extends CharacterBody2D
 @export var dimensions: Vector2i
 
 const speed = 50
-var controller_function = func input(event):pass
 var paused = false
 var desired_size: Vector2 : set = _set_desired_size
 # Called when the node enters the scene tree for the first time.
@@ -52,6 +51,6 @@ func _input_movement(delta):
 	velocity=delta*direction*speed*300
 	move_and_slide()
 
-func _on_win_area_entered(body):
+func _on_win_area_entered(_body):
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	get_parent().win()

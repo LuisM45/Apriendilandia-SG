@@ -3,6 +3,7 @@ class_name  User
 
 var id: int
 var username: String
+var difficulty: int
 var avatar_name: String
 
 
@@ -10,6 +11,7 @@ static func from_dict(dict:Dictionary):
 	var user = new()
 	user.id = dict.get("id")
 	user.username = dict.get("username")
+	user.difficulty = dict.get("difficulty")
 	user.avatar_name = dict.get("avatar_name")
 	return user
 

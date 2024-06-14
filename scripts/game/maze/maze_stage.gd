@@ -11,7 +11,6 @@ var isMouseCaptured = true
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	super._ready()
-	
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	var a: AnimatedSprite2D = $WinArea/AnimatedSprite2D
 	player.sprite.sprite_frames = player_sprite_frames
@@ -20,7 +19,7 @@ func _ready():
 	new_objetive()
 
 func new_objetive():
-	maze.difficulty = difficulty
+	maze.difficulty = int((difficulty-1)/2+3)
 	maze.generate()
 	var new_player_height = maze.adjusted_tile_size
 	player.desired_size = Vector2(new_player_height,new_player_height)
@@ -30,12 +29,9 @@ func reset_player():
 	player.position = playerInitialPos
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("release_capture"):
 		toggleMouse()	
- 
-func _input(ev):
-	pass
 
 func _on_correct_attempt():
 	super._on_correct_attempt()
@@ -60,8 +56,8 @@ func _on_win_area_body_entered(body):
 
 func _load_customization_config():
 	super. _load_customization_config()
-	var maze_tilemap =  Inventory.get_attribute("maze:maze_tilemap")
-	var background_texture =  Inventory.get_attribute("maze:background_texture")
-	var diamond_animated_texture =  Inventory.get_attribute("maze:diamond_animated_texture")
+	var _maze_tilemap =  Inventory.get_attribute("maze:maze_tilemap")
+	var _background_texture =  Inventory.get_attribute("maze:background_texture")
+	var _diamond_animated_texture =  Inventory.get_attribute("maze:diamond_animated_texture")
 	player_sprite_frames =  Inventory.get_attribute("maze:player_animated_texture")\
 		.get_rcontent()

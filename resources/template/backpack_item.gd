@@ -10,8 +10,8 @@ class_name BackpackItem
 @export_file("*.png") var icon_path: String
 @export var is_default: bool = false
 
-static func from_inner_name(inner_name:String)->BackpackItem:
-	return load("res://resources/backpack_items/"+inner_name+".tres")
+static func from_inner_name(_inner_name:String)->BackpackItem:
+	return load("res://resources/backpack_items/"+_inner_name+".tres")
 
 func is_of_game(game:String):
 	return game_tags.has(game)

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbdmuq2wn5ix5"]
+
+[ext_resource type="Script" path="res://scripts/game/match_shadow/light_sprite.gd" id="1_dwuul"]
+[ext_resource type="Texture2D" uid="uid://cbo1y2t6ytxma" path="res://icon.svg" id="2_ls12i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ca2tk"]
+size = Vector2(128, 128)
+
+[node name="original_body" type="CharacterBody2D"]
+z_index = 1
+input_pickable = true
+script = ExtResource("1_dwuul")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_ls12i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ca2tk")
+
+[connection signal="input_event" from="." to="." method="_on_rigid_body_2d_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

@@ -9,11 +9,12 @@ const PictureInfo = preload("res://scripts/game/painting/texture_info.gd")
 
 var potion_texture_set:SourceSpriteSet
 var object_texture_set:Array[Texture2D]
+var active_potions:Array[Source]
 
 func _ready():
 	super._ready()
 	texture_options.shuffle()
-	potions.shuffle()
+	choose_active_potions()
 	
 	cauldron.current_texture = texture_options[0]
 	cauldron.acceptable_delta = 0.10 - difficulty * 0.01
@@ -41,8 +42,20 @@ func _load_customization_config():
 		.get_rcontent()
 	#object_texture_set = config_dictionary.get("painting_potions:object_texture_set")
 
+func choose_active_potions():
+	for i in range(get_potion_count()):
+		active_potions.append(potions[i])
+		potions[i].visible = true
+
 func fill_potions(cauld:Cauldron):
-	for pot:Source in potions:
-		pot.current_color = ColorLib.color_rgb_random_variation(cauld.main_color(),Vector3(0.8,0.8,0.8))
+	var range_vector = Vector3.ONE*get_range_of_randomness()
+	for pot:Source in active_potions:
+		pot.current_color = ColorLib.color_rgb_random_variation(cauld.main_color(),range_vector)
 		
-	potions.pick_random().current_color = cauld.main_color()
+	active_potions.pick_random().current_color = cauld.main_color()
+
+func get_range_of_randomness():
+	return 0.2 + 0.8*(10-difficulty)/9
+	
+func get_potion_count():
+	return int(3+7*(difficulty-1)/9)

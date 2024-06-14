@@ -11,7 +11,6 @@ var dirty_maze = []
 var unused_spaces = []
 
 func _init(width,height):
-	# 1
 	self.dimension = Vector2i(width,height)
 
 

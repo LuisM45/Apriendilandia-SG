@@ -112,21 +112,27 @@ task = ExtResource("2_ga1w2")
 [node name="Sources" type="Node" parent="."]
 
 [node name="source_2" parent="Sources" instance=ExtResource("3_aqei4")]
+visible = false
 position = Vector2(152, 176)
 
 [node name="source_3" parent="Sources" instance=ExtResource("3_aqei4")]
+visible = false
 position = Vector2(152, 336)
 
 [node name="source_4" parent="Sources" instance=ExtResource("3_aqei4")]
+visible = false
 position = Vector2(152, 496)
 
 [node name="source_5" parent="Sources" instance=ExtResource("3_aqei4")]
+visible = false
 position = Vector2(304, 176)
 
 [node name="source_6" parent="Sources" instance=ExtResource("3_aqei4")]
+visible = false
 position = Vector2(304, 336)
 
 [node name="source_7" parent="Sources" instance=ExtResource("3_aqei4")]
+visible = false
 position = Vector2(304, 496)
 
 [node name="Cauldrons" type="Node" parent="."]

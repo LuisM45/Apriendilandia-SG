@@ -8,6 +8,7 @@ signal correct_match(body)
 signal incorrect_match(body)
 
 func _ready():
+	shadow_body.object_dropped_within.connect(_attempt_complete)
 	pass # Replace with function body.
 
 func _process(_delta):
@@ -27,6 +28,7 @@ func _set_sprite(new_val:TaggedResource):
 	shadow_body.sprite.scale /= size_magnitude/200
 	
 func _attempt_complete(body):
+	print("_attempt_complete")
 	if original_body == body:
 		original_body.position = shadow_body.position
 		original_body.is_enabled = false
