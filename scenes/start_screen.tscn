@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dugcwhcrlutw5" path="res://assets/icons/user.png" id="2_gh2b7"]
 [ext_resource type="Texture2D" uid="uid://dap5120ui454p" path="res://assets/Menu Buttons/Large Buttons/Blank Button.png" id="3_cwhdy"]
 [ext_resource type="Texture2D" uid="uid://by8848y3tsnfs" path="res://assets/icons/round-square.png" id="4_c2eip"]
-[ext_resource type="Script" path="res://scripts/gui/generic_texture_button.gd" id="4_ckquf"]
+[ext_resource type="Script" path="res://scripts/gui/button_composite.gd" id="4_ckquf"]
 [ext_resource type="FontFile" uid="uid://dli535heqx8v" path="res://assets/fonts/Kaph_Font_1_20/Kaph-Regular.ttf" id="5_tuhyx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eqb46"]
