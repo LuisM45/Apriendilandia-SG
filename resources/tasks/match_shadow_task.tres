@@ -5,12 +5,10 @@
 [resource]
 script = ExtResource("1_inhld")
 inner_name = "match_shadow_task"
-name = "Empareja las siluetas con su objeto"
-description = ""
-introduction = Array[String](["¿Puedes ayudarme a emparejar los objetos con sus sombras?"])
-instructions = "Arrastra el objeto a la sombra correspondiente para ganar"
-outroduction = Array[String](["Bien hecho!
-", "Todo esta en orden. Muy bien!
-", "Siguie así!
-", "Hecho esplendidamente!"])
+name = "Empareja cada objeto con su sombras"
 guide_scene = "res://scenes/guides/match_shadow_guide.tscn"
+description = "Arrastra cada objeto a la silueta que más se parezca a este. Empareja todos para ganar."
+compliments = Array[String](["Exacto!", "Calza muy bien", "Así se hace", "Cuadra a la perfección"])
+bad_remarks = Array[String](["No parece cuadrar", "No cabe", "Intenta de nuevo", "Quiza es en otro lugar"])
+quick_introductions = Array[String](["Empareja cada objeto y su sombra"])
+quick_out_remarks = Array[String](["Hecho esplendidamente. Sigamos", "Maravilloso. Lo has emparejado todas", "Todas estan emparejadas. Muy bien hecho", "Sigue así. Lo haz hecho muy bien"])

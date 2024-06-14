@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cynqaahscuo2p"]
+[gd_scene load_steps=13 format=3 uid="uid://cynqaahscuo2p"]
 
 [ext_resource type="Script" path="res://scripts/main_menu/main.gd" id="1_i4jsu"]
 [ext_resource type="Texture2D" uid="uid://b3e47vxcemrpd" path="res://assets/icons/medal.png" id="4_6qf2q"]
@@ -7,7 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://kwh33rngsvr7" path="res://assets/Menu Buttons/Square Buttons/album_button.png" id="5_xt8us"]
 [ext_resource type="Texture2D" uid="uid://d2pvqibr34jkd" path="res://assets/Menu Buttons/Square Buttons/backpack_button.png" id="6_nuqi4"]
 [ext_resource type="Texture2D" uid="uid://0ym2h38tc0x" path="res://assets/fantasyhextiles_v3.png" id="7_4yfx5"]
+[ext_resource type="Texture2D" uid="uid://ju1rstgiwnhw" path="res://assets/Menu Buttons/Square Buttons/Square Buttons/Questionmark Square Button.png" id="8_tjg08"]
 [ext_resource type="AudioStream" uid="uid://dju8lnjnwvj7a" path="res://assets/bgm/game-music-loop-7-145285.mp3" id="9_8x6a1"]
+[ext_resource type="Script" path="res://scripts/gui/help_button.gd" id="9_daxc1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eqb46"]
 texture = ExtResource("7_4yfx5")
@@ -220,6 +222,16 @@ texture_normal = ExtResource("6_nuqi4")
 ignore_texture_size = true
 stretch_mode = 5
 script = ExtResource("5_ido4r")
+
+[node name="HelpBtn" type="TextureButton" parent="PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture_normal = ExtResource("8_tjg08")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("9_daxc1")
+description = "Actualmente te encuentras en le menú.
+Desde aquí puedes ingresar a configuración, a tu inventario o alguna de los regiones de juego."
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_8x6a1")

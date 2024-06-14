@@ -1,8 +1,9 @@
 extends Control
 
-var task:Task : get = _get_task, set=_set_task
+var task:Task
 
 @onready var instructionLbl = $Panel/InstructionLbl
+@onready var help_button = $Panel/AspectRatioContainer2/HelpBtn
 signal pause()
 signal help()
 signal hint()
@@ -11,7 +12,11 @@ signal hint()
 func _ready():
 	size.x =get_viewport_rect().size.x
 	position = Vector2(0,0)
-
+	help_button.guide_scene = task.guide_scene
+	help_button.description = task.description
+	help_button.show_dialog = true
+	set_task(task)
+	
 func _on_pause():
 	pause.emit()
 	
@@ -24,7 +29,7 @@ func _on_help():
 func _on_hint():
 	hint.emit()
 
-func _set_task(val:Task):
+func set_task(val:Task):
 	task = val
 	instructionLbl.text = task.name
 	

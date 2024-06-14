@@ -12,8 +12,8 @@ signal finished()
 func _ready():
 	animation_player.play("main")
 	animation_player.animation_finished.connect(_on_finished)
-	if task:
-		DisplayServer.tts_speak(task.description,Globals.voice_id,Globals.tts_volume)
+	#if task:
+		#DisplayServer.tts_speak(task.description,Globals.voice_id,Globals.tts_volume)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass

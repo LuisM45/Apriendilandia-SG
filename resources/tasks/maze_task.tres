@@ -6,8 +6,9 @@
 script = ExtResource("1_aq351")
 inner_name = "maze_task"
 name = "Llega al diamante"
-description = ""
-introduction = Array[String](["Ayuda a nuestro amigo en la izquierda a llegar a el diamante"])
-instructions = "Navega por el laberinto y encuentra tu camino hacia el diamante"
-outroduction = Array[String]([])
 guide_scene = "res://scenes/guides/maze_guide.tscn"
+description = "Navega a través del laberinto para llegar al otro lado y recoger el diamante"
+compliments = Array[String](["Buena capacidad de navegación", "Maravilloso", "Buena capacidad de observación"])
+bad_remarks = Array[String]([" "])
+quick_introductions = Array[String](["Ayuda a nuestro amigo a llegar al diamante"])
+quick_out_remarks = Array[String](["Muy bien hecho."])

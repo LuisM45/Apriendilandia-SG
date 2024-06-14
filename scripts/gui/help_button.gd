@@ -24,7 +24,7 @@ func _on_pressed():
 func play_scene():
 	if guide_scene == null: return
 	var guide_node = load(guide_scene).instantiate()
-	add_child(guide_node)
+	get_tree().root.add_child(guide_node)
 	
 func tts_read():
 	DisplayServer.tts_speak(description,Globals.voice_id,Globals.tts_volume)

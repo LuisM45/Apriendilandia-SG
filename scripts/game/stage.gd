@@ -2,8 +2,12 @@ extends Node
 const UnlockScreen = preload("res://branches/gui/unlock_screen.tscn")
 const Sidebar = preload("res://branches/gui/sidebar.tscn")
 const StageBackground = preload("res://branches/gui/stage_generic_background.tscn")
+const UNCOMPLIMENT_CHANCE = 0.3
+const COMPLIMENT_CHANCE = 0.6
+
 @export var next_scenes: Array[String] = [] # Wish i knew how to export variables to a packed resouce
 
+@export var unsuccess_sound: AudioStream = load("res://assets/sfx/sadwhisle-91469.mp3")
 @export var success_sound: AudioStream = load("res://assets/sfx/90s-game-ui-7-185100.mp3")
 @export var win_sound: AudioStream = load("res://assets/sfx/game-bonus-144751.mp3")
 @export var bg_music: AudioStream = load("res://assets/bgm/game-music-loop-3-144252.mp3")
@@ -16,6 +20,8 @@ const StageBackground = preload("res://branches/gui/stage_generic_background.tsc
 signal pause()
 signal resume()
 signal attempt(was_succesful:bool)
+signal succesful_attempt()
+signal unsuccesful_attempt()
 signal win(extra:String)
 
 
@@ -37,13 +43,18 @@ func _ready():
 	var gui_node = Sidebar.instantiate()
 	gui_node.pause.connect(_on_pause)
 	gui_node.help.connect(_on_help)
-	get_tree().root.add_child(gui_node)
+	gui_node.task = task
+	get_tree().root.add_child.call_deferred(gui_node)
+	
 	var background = StageBackground.instantiate()
 	add_child(background)
 	move_child(background,0)
-	gui_node.task = task
-	if !task.introduction.is_empty():
-		DisplayServer.tts_speak(task.introduction.pick_random(),Globals.voice_id,Globals.tts_volume)
+	if !task.quick_introductions.is_empty():
+		DisplayServer.tts_speak(
+			task.quick_introductions.pick_random(),
+			Globals.voice_id,
+			Globals.tts_volume
+		)
 
 func _process(_delta):
 	pass
@@ -51,7 +62,8 @@ func _process(_delta):
 func _ready_signals():
 	Globals.volume_changed.connect(_set_sound_volume)
 	attempt.connect(_on_attempt)
-	attempt.connect(func(x):if x: _play_success_sound())
+	succesful_attempt.connect(_on_succesful_attempt)
+	unsuccesful_attempt.connect(_on_unsuccesful_attempt)
 	win.connect(_on_win)
 	win.connect(func(_e):_play_win_sound())
 
@@ -68,6 +80,10 @@ func _set_sound_volume():
 	bgm_node.volume_db = Globals.music_volume_db()
 	sfx_node.volume_db = Globals.sfx_volume_db()
 
+func _play_unsuccess_sound():
+	sfx_node.stream = unsuccess_sound
+	sfx_node.play()
+
 func _play_success_sound():
 	sfx_node.stream = success_sound
 	sfx_node.play()
@@ -81,9 +97,9 @@ func _play_bg_music():
 	bgm_node.play()
 
 func _on_win(extra = ""):
-	if !task.outroduction.is_empty():
+	if !task.quick_out_remarks.is_empty():
 		DisplayServer.tts_speak(
-			task.outroduction.pick_random(),
+			task.quick_out_remarks.pick_random(),
 			Globals.voice_id,
 			Globals.tts_volume
 		)
@@ -137,15 +153,31 @@ func _on_help():
 	
 
 func _on_attempt(was_succesful: bool):
-	if was_succesful: _on_correct_attempt()
-	else: _on_failed_attempt()
+	if was_succesful:
+		succesful_attempt.emit()
+	else:
+		unsuccesful_attempt.emit()
 
-func _on_failed_attempt():
+func _on_unsuccesful_attempt():
 	mistakes += 1
+	_play_unsuccess_sound()
+	if randf() < UNCOMPLIMENT_CHANCE:
+		DisplayServer.tts_speak(
+			task.bad_remarks.pick_random(),
+			Globals.voice_id,
+			Globals.tts_volume
+		)
 	
-func _on_correct_attempt():
+func _on_succesful_attempt():
 	attempts += 1
 	hits += 1
+	_play_success_sound()
+	if randf() < COMPLIMENT_CHANCE:
+		DisplayServer.tts_speak(
+			task.compliments.pick_random(),
+			Globals.voice_id,
+			Globals.tts_volume
+		)
 
 func _load_customization_config():
 	pass

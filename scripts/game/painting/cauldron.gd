@@ -3,6 +3,7 @@ const Source = preload("res://scripts/game/mixin/source.gd")
 const TextureInfo = preload("res://scripts/game/painting/texture_info.gd")
 const CauldronShader = preload("res://resources/unpainted_texture.gdshader")
 signal solved()
+signal failed_attempt()
 
 @export var current_color = Color(.5,.5,.5)
 @export var current_texture: TaggedResource: set = _set_current_texture
@@ -47,6 +48,8 @@ func try_solve():
 	if current_delta<=acceptable_delta:
 		solve_lock = true
 		solved.emit()
+	else: 
+		failed_attempt.emit()
 
 func _pour_source():
 	if current_source and current_source.can_pour():

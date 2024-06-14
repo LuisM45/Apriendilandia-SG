@@ -16,8 +16,8 @@ func _ready():
 		enabled_pairs.append(pairs[i])
 	for pair in enabled_pairs:
 		pair.visible = true
-		pair.correct_match.connect(func x(_b):attempt.emit(true))
-		pair.incorrect_match.connect(func x(_b):attempt.emit(false))
+		pair.correct_match.connect(func(_b):_on_correct_attempt())
+		pair.incorrect_match.connect(func x(_b):_on_failed_attempt())
 	
 	var positions = []
 	for pair in enabled_pairs:
@@ -35,13 +35,13 @@ func resize_background():
 	pass
 
 func _on_correct_attempt():
-	super._on_correct_attempt()
+	succesful_attempt.emit()
 	remaining-=1
 	if remaining <= 0:
 		win.emit("")
 	
 func _on_failed_attempt():
-	super._on_failed_attempt()
+	unsuccesful_attempt.emit()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

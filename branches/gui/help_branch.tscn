@@ -43,7 +43,6 @@ grow_vertical = 2
 
 [node name="Label" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -78,4 +77,6 @@ layout_mode = 2
 size_flags_horizontal = 4
 text = "Ok"
 
+[connection signal="pressed" from="Panel/VBoxContainer/HBoxContainer/TtsButton" to="." method="_on_tts_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/HBoxContainer/ClackerButton" to="." method="_on_clacker_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/Button" to="." method="_on_ok_pressed"]

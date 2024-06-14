@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://c061ri6pfa1ck"]
+[gd_scene load_steps=7 format=3 uid="uid://c061ri6pfa1ck"]
 
 [ext_resource type="StyleBox" uid="uid://br1h32sevkmii" path="res://resources/style_box.tres" id="1_v6rx8"]
 [ext_resource type="Texture2D" uid="uid://dsgu1wvifwpx2" path="res://assets/Menu Buttons/Square Buttons/Square Buttons/Settings Square Button.png" id="2_2sml6"]
 [ext_resource type="Script" path="res://scripts/gui/Sidebar.gd" id="2_thul7"]
 [ext_resource type="Script" path="res://scripts/gui/generic_texture_button.gd" id="3_xv46u"]
 [ext_resource type="Texture2D" uid="uid://ju1rstgiwnhw" path="res://assets/Menu Buttons/Square Buttons/Square Buttons/Questionmark Square Button.png" id="4_w28v8"]
+[ext_resource type="Script" path="res://scripts/gui/help_button.gd" id="6_gdprp"]
 
 [node name="Panel" type="Panel"]
 offset_bottom = 40.0
@@ -58,12 +59,11 @@ stretch_mode = 1
 alignment_horizontal = 2
 alignment_vertical = 0
 
-[node name="TextureButton2" type="TextureButton" parent="Panel/AspectRatioContainer2"]
+[node name="HelpBtn" type="TextureButton" parent="Panel/AspectRatioContainer2"]
 layout_mode = 2
 texture_normal = ExtResource("4_w28v8")
 ignore_texture_size = true
 stretch_mode = 4
-script = ExtResource("3_xv46u")
+script = ExtResource("6_gdprp")
 
 [connection signal="pressed" from="Panel/AspectRatioContainer/TextureButton" to="." method="_on_pause"]
-[connection signal="pressed" from="Panel/AspectRatioContainer2/TextureButton2" to="." method="_on_help"]

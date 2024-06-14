@@ -1,6 +1,7 @@
 extends "res://scripts/game/base/drop_area.gd"
 const Source = preload("res://scripts/game/mixin/source.gd")
 signal solved()
+signal got_reset()
 
 @export var current_color = Color.GRAY: set = _set_current_color
 @export var target_color = Color(250,100,100): set = _set_target_color
@@ -66,6 +67,7 @@ func try_solve():
 		reset_cauldron()	
 
 func reset_cauldron():
+	got_reset.emit()
 	locked = true
 	var t = Timer.new()
 	t.wait_time = 1

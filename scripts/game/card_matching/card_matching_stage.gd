@@ -88,6 +88,7 @@ func compare_cards(card1:Card,card2:Card):
 		card2.unreveal()
 		card1.locked -= 1
 		card2.locked -= 1
+		unsuccesful_attempt.emit()
 		return
 	
 	attempt.emit(true)

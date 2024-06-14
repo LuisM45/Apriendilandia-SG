@@ -34,7 +34,7 @@ func _process(_delta):
 		toggleMouse()	
 
 func _on_correct_attempt():
-	super._on_correct_attempt()
+	succesful_attempt.emit()
 	rounds -= 1
 	if rounds <= 0:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -52,7 +52,7 @@ func toggleMouse():
 
 func _on_win_area_body_entered(body):
 	if body == player:
-		attempt.emit(true)
+		_on_correct_attempt()
 
 func _load_customization_config():
 	super. _load_customization_config()

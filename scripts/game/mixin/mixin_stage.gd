@@ -41,6 +41,7 @@ func _ready():
 		cauld.max_weight = _combinations_count()
 		cauld.target_color = _get_sample_color()
 		cauld.solved.connect(_on_solved)
+		cauld.got_reset.connect(_on_error)
 		
 func _process(delta):
 	super._process(delta)
@@ -49,6 +50,9 @@ func _on_solved():
 	remaining -= 1
 	attempt.emit(true)
 	if remaining<=0: win.emit("")
+
+func _on_error():
+	unsuccesful_attempt.emit()
 
 func _load_customization_config():
 	super. _load_customization_config()

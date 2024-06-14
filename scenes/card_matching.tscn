@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dvpw3pa6vtgrb"]
+[gd_scene load_steps=14 format=3 uid="uid://dvpw3pa6vtgrb"]
 
 [ext_resource type="Script" path="res://scripts/game/card_matching/card_matching_stage.gd" id="1_s7k4o"]
 [ext_resource type="Resource" uid="uid://cqjilekm06clk" path="res://resources/tagged_objects/amaranto_texture.tres" id="2_mo6np"]
@@ -12,17 +12,7 @@
 [ext_resource type="Resource" uid="uid://d0mehdvy4ho7d" path="res://resources/tagged_objects/conejoandino_texture.tres" id="10_s2gx0"]
 [ext_resource type="Resource" uid="uid://b824dnn1akwdw" path="res://resources/tagged_objects/papaya_texture.tres" id="11_brs6g"]
 [ext_resource type="Resource" uid="uid://cf8n782k0oenj" path="res://resources/tagged_objects/pecaricollar_texture.tres" id="12_4reqa"]
-[ext_resource type="Script" path="res://resources/template/task.gd" id="13_syvlp"]
-
-[sub_resource type="Resource" id="Resource_vgfsk"]
-script = ExtResource("13_syvlp")
-inner_name = "match_cards"
-name = "Empareja las cartas identicas"
-description = ""
-introduction = Array[String](["Elige entre las cartas para encontrar dos idénticas y emparejarlas"])
-instructions = ""
-outroduction = Array[String](["Que buena memoria. Sigue así.", "Muy bien hecho. Cada vez eres más inteligente", "Bien echo. Eres un verdadero campeón"])
-guide_scene = ""
+[ext_resource type="Resource" uid="uid://csmudtg1i0iat" path="res://resources/tasks/card_matching_task.tres" id="13_ch8ek"]
 
 [node name="Workspace" type="Control"]
 layout_mode = 3
@@ -35,7 +25,7 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_s7k4o")
 texture_options = Array[Resource("res://resources/template/tagged_resource.gd")]([ExtResource("2_mo6np"), ExtResource("3_pdp3w"), ExtResource("4_ff07b"), ExtResource("5_d3pf3"), ExtResource("6_2xkxf"), ExtResource("7_aaw85"), ExtResource("8_rxcas"), ExtResource("9_vsghi"), ExtResource("10_s2gx0"), ExtResource("11_brs6g"), ExtResource("12_4reqa")])
-task = SubResource("Resource_vgfsk")
+task = ExtResource("13_ch8ek")
 
 [node name="Cards" type="VBoxContainer" parent="."]
 layout_mode = 1

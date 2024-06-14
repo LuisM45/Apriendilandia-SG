@@ -19,6 +19,7 @@ func _ready():
 	cauldron.current_texture = texture_options[0]
 	cauldron.acceptable_delta = 0.10 - difficulty * 0.01
 	cauldron.solved.connect(_on_solved)
+	cauldron.failed_attempt.connect(_on_error)
 	fill_potions(cauldron)
 	pass # Replace with function body.
 	
@@ -34,6 +35,9 @@ func _process(delta):
 func _on_solved():
 	attempt.emit(true)
 	win.emit("")
+
+func _on_error():
+	unsuccesful_attempt.emit()
 
 func _load_customization_config():
 	super._load_customization_config()
