@@ -22,7 +22,7 @@ func _ready():
 func new_objetive():
 	maze.difficulty = difficulty
 	maze.generate()
-	var new_player_height = maze.adjusted_tile_size*0.6
+	var new_player_height = maze.adjusted_tile_size
 	player.desired_size = Vector2(new_player_height,new_player_height)
 	pass
 	

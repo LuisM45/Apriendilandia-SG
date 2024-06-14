@@ -4,7 +4,7 @@ extends CharacterBody2D
 @onready var collision_shape:CollisionShape2D = $CollisionShape2D
 @export var dimensions: Vector2i
 
-const speed = 1
+const speed = 50
 var controller_function = func input(event):pass
 var paused = false
 var desired_size: Vector2 : set = _set_desired_size
@@ -15,6 +15,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	_input_movement(delta)	
 	pass
 
 
@@ -33,7 +34,7 @@ func _resize_collision():
 	collision_shape.shape.size = sprite\
 		.sprite_frames\
 		.get_frame_texture("idle",0)\
-		.get_size()*sprite.scale
+		.get_size()*sprite.scale*0.6
 
 func _resize_sprite():
 	var texture2d_sample:Texture2D = sprite.sprite_frames.get_frame_texture("idle",0)
@@ -43,7 +44,13 @@ func _resize_sprite():
 func _input(event):
 	if paused: return
 	if event is InputEventMouseMotion:
-		move_and_collide(event.relative*speed,false,0.1)
+		velocity = event.relative*speed
+		move_and_slide()
+
+func _input_movement(delta):
+	var direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	velocity=delta*direction*speed*300
+	move_and_slide()
 
 func _on_win_area_entered(body):
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
