@@ -21,7 +21,7 @@ func _ready():
 	tts_sld.value = Globals.tts_volume
 	diff_sld.value = Globals.difficulty
 	tts_lbl.text = str(Globals.tts_volume)
-	sfx_lbl.text = str(Globals.sfx_volume)
+	sfx_lbl.text = str (Globals.sfx_volume)
 	music_lbl.text = str(Globals.music_volume)
 	diff_lbl.text = str(Globals.difficulty)
 

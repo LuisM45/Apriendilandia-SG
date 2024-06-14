@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://cbo1y2t6ytxma" path="res://icon.svg" id="2_l71se"]
 
 [node name="UnlockScreen" type="Control"]
-z_index = 99
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_sueco")

@@ -1,4 +1,9 @@
-[gd_scene format=3 uid="uid://b138htx3nwtxh"]
+[gd_scene load_steps=5 format=3 uid="uid://b138htx3nwtxh"]
+
+[ext_resource type="Script" path="res://scripts/gui/help_branch.gd" id="1_tam3v"]
+[ext_resource type="Texture2D" uid="uid://7yva2qd6xfvm" path="res://assets/Menu Buttons/Square Buttons/tts_button.png" id="2_5oiq2"]
+[ext_resource type="StyleBox" uid="uid://br1h32sevkmii" path="res://resources/style_box.tres" id="2_76mon"]
+[ext_resource type="Texture2D" uid="uid://byrntpnbkk3vw" path="res://assets/Menu Buttons/Square Buttons/clacker_button.png" id="3_5nmut"]
 
 [node name="HelpBranch" type="Control"]
 layout_mode = 3
@@ -7,3 +12,70 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_tam3v")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("2_76mon")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 40.0
+offset_right = -10.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Control" type="Control" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+alignment = 1
+
+[node name="TtsButton" type="TextureButton" parent="Panel/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture_normal = ExtResource("2_5oiq2")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="ClackerButton" type="TextureButton" parent="Panel/VBoxContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture_normal = ExtResource("3_5nmut")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Button" type="Button" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Ok"
+
+[connection signal="pressed" from="Panel/VBoxContainer/Button" to="." method="_on_ok_pressed"]

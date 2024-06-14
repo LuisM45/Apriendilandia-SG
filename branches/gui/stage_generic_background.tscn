@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://scripts/gui/stage_background.gd" id="1_nv3i2"]
 
 [node name="StageBackground" type="Control"]
-z_index = -99
 texture_filter = 1
 layout_mode = 3
 anchors_preset = 0

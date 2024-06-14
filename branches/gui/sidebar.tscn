@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://c061ri6pfa1ck"]
+[gd_scene load_steps=6 format=3 uid="uid://c061ri6pfa1ck"]
 
+[ext_resource type="StyleBox" uid="uid://br1h32sevkmii" path="res://resources/style_box.tres" id="1_v6rx8"]
 [ext_resource type="Texture2D" uid="uid://dsgu1wvifwpx2" path="res://assets/Menu Buttons/Square Buttons/Square Buttons/Settings Square Button.png" id="2_2sml6"]
 [ext_resource type="Script" path="res://scripts/gui/Sidebar.gd" id="2_thul7"]
 [ext_resource type="Script" path="res://scripts/gui/generic_texture_button.gd" id="3_xv46u"]
@@ -7,6 +8,7 @@
 
 [node name="Panel" type="Panel"]
 offset_bottom = 40.0
+theme_override_styles/panel = ExtResource("1_v6rx8")
 script = ExtResource("2_thul7")
 
 [node name="Panel" type="HBoxContainer" parent="."]

@@ -14,4 +14,3 @@ script = ExtResource("1_hly65")
 
 [node name="Sidebar" parent="." instance=ExtResource("1_i332e")]
 layout_mode = 2
-size_flags_vertical = 1

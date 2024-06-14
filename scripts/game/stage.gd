@@ -37,9 +37,10 @@ func _ready():
 	var gui_node = Sidebar.instantiate()
 	gui_node.pause.connect(_on_pause)
 	gui_node.help.connect(_on_help)
-	add_child(gui_node)
+	get_tree().root.add_child(gui_node)
 	var background = StageBackground.instantiate()
 	add_child(background)
+	move_child(background,0)
 	gui_node.task = task
 	if !task.introduction.is_empty():
 		DisplayServer.tts_speak(task.introduction.pick_random(),Globals.voice_id,Globals.tts_volume)
@@ -123,7 +124,7 @@ func _on_win_no_timeout(extra = ""):
 func _on_pause():
 	var pause_screen = Globals.pause_scene.instantiate()
 	pause_screen.resume.connect(_on_resume)
-	add_child(pause_screen)
+	get_tree().root.add_child(pause_screen)
 
 func _on_resume():
 	resume.emit()
@@ -159,5 +160,5 @@ func _try_unlock():
 	ulock_screen.ok_pressed.connect(_on_win_no_timeout)
 	if ulock_screen.backpack_item == null: return false
 	
-	add_child(ulock_screen)
+	get_tree().root.add_child(ulock_screen)
 	return true
