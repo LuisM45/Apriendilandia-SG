@@ -1,7 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://cknf1h0vct0uw"]
+[gd_scene load_steps=12 format=3 uid="uid://cknf1h0vct0uw"]
 
 [ext_resource type="Shader" path="res://branches/gui/sidebar.gdshader" id="1_f13s3"]
 [ext_resource type="Script" path="res://scripts/gui/PauseMenu.gd" id="2_fidih"]
+[ext_resource type="Texture2D" uid="uid://bnk1bm52nmihw" path="res://assets/Menu Buttons/Square Buttons/Square Buttons/Play Square Button.png" id="3_f2kch"]
+[ext_resource type="Texture2D" uid="uid://ju1rstgiwnhw" path="res://assets/Menu Buttons/Square Buttons/Square Buttons/Questionmark Square Button.png" id="4_5yf4q"]
+[ext_resource type="Script" path="res://scripts/gui/generic_texture_button.gd" id="4_twa4s"]
+[ext_resource type="Texture2D" uid="uid://bx6wjq15mm1oh" path="res://assets/Menu Buttons/Square Buttons/Square Buttons/Home Square Button.png" id="5_1xhd8"]
+[ext_resource type="Texture2D" uid="uid://coa8hhtjjalb0" path="res://assets/icons/speaker.png" id="6_mgyxf"]
+[ext_resource type="Texture2D" uid="uid://ehgmly8bu8p" path="res://assets/Menu Buttons/Square Buttons/Square Buttons/Audio Square Button.png" id="7_ls3mu"]
+[ext_resource type="Texture2D" uid="uid://bn2163g1jijxf" path="res://assets/Menu Buttons/Square Buttons/sfx_button.png" id="8_j1y2c"]
+[ext_resource type="Texture2D" uid="uid://7yva2qd6xfvm" path="res://assets/Menu Buttons/Square Buttons/tts_button.png" id="9_2jlsu"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_huhex"]
 shader = ExtResource("1_f13s3")
@@ -12,7 +20,11 @@ z_as_relative = false
 texture_filter = 2
 material = SubResource("ShaderMaterial_huhex")
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 script = ExtResource("2_fidih")
@@ -30,9 +42,9 @@ color = Color(0.152941, 0.152941, 0.152941, 0.764706)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.25
-anchor_top = 0.25
+anchor_top = 0.2
 anchor_right = 0.75
-anchor_bottom = 0.75
+anchor_bottom = 0.8
 offset_right = 20.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -52,22 +64,34 @@ grow_vertical = 2
 [node name="Buttons" type="HBoxContainer" parent="MenuPanel/VBox"]
 layout_mode = 2
 
-[node name="ResumeBtn" type="Button" parent="MenuPanel/VBox/Buttons"]
+[node name="ResumeBtn" type="TextureButton" parent="MenuPanel/VBox/Buttons"]
+custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
-text = "Resumir"
+texture_normal = ExtResource("3_f2kch")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("4_twa4s")
 
 [node name="Control3" type="Control" parent="MenuPanel/VBox/Buttons"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="HelpBtn" type="Button" parent="MenuPanel/VBox/Buttons"]
+[node name="HelpBtn" type="TextureButton" parent="MenuPanel/VBox/Buttons"]
+custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
-text = "Ayuda"
+texture_normal = ExtResource("4_5yf4q")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("4_twa4s")
 
-[node name="HomeBtn" type="Button" parent="MenuPanel/VBox/Buttons"]
+[node name="HomeBtn" type="TextureButton" parent="MenuPanel/VBox/Buttons"]
+custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
-text = "Inicio"
+texture_normal = ExtResource("5_1xhd8")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("4_twa4s")
 
 [node name="Padding" type="Control" parent="MenuPanel/VBox"]
 layout_mode = 2
@@ -95,13 +119,27 @@ max_value = 10.0
 value = 1.0
 rounded = true
 
+[node name="Padding3" type="Control" parent="MenuPanel/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="MenuPanel/VBox"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+texture = ExtResource("6_mgyxf")
+expand_mode = 1
+stretch_mode = 5
+
 [node name="MusicGroup" type="HBoxContainer" parent="MenuPanel/VBox"]
 layout_mode = 2
 
-[node name="MusicBtn" type="Button" parent="MenuPanel/VBox/MusicGroup"]
-custom_minimum_size = Vector2(100, 0)
+[node name="MusicBtn" type="TextureButton" parent="MenuPanel/VBox/MusicGroup"]
+custom_minimum_size = Vector2(25, 25)
 layout_mode = 2
-text = "Music"
+texture_normal = ExtResource("7_ls3mu")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("4_twa4s")
 
 [node name="MusicLbl" type="Label" parent="MenuPanel/VBox/MusicGroup"]
 custom_minimum_size = Vector2(32, 0)
@@ -116,10 +154,13 @@ size_flags_vertical = 4
 [node name="SfxGroup" type="HBoxContainer" parent="MenuPanel/VBox"]
 layout_mode = 2
 
-[node name="SfxBtn" type="Button" parent="MenuPanel/VBox/SfxGroup"]
-custom_minimum_size = Vector2(100, 0)
+[node name="SfxBtn" type="TextureButton" parent="MenuPanel/VBox/SfxGroup"]
+custom_minimum_size = Vector2(25, 25)
 layout_mode = 2
-text = "SFX"
+texture_normal = ExtResource("8_j1y2c")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("4_twa4s")
 
 [node name="SfxLbl" type="Label" parent="MenuPanel/VBox/SfxGroup"]
 custom_minimum_size = Vector2(32, 0)
@@ -134,10 +175,13 @@ size_flags_vertical = 4
 [node name="TtsGroup" type="HBoxContainer" parent="MenuPanel/VBox"]
 layout_mode = 2
 
-[node name="TtsBtn" type="Button" parent="MenuPanel/VBox/TtsGroup"]
-custom_minimum_size = Vector2(100, 0)
+[node name="TtsBtn" type="TextureButton" parent="MenuPanel/VBox/TtsGroup"]
+custom_minimum_size = Vector2(25, 25)
 layout_mode = 2
-text = "TTS"
+texture_normal = ExtResource("9_2jlsu")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("4_twa4s")
 
 [node name="TtsLbl" type="Label" parent="MenuPanel/VBox/TtsGroup"]
 custom_minimum_size = Vector2(32, 0)
@@ -154,7 +198,6 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [connection signal="pressed" from="MenuPanel/VBox/Buttons/ResumeBtn" to="." method="_on_resume"]
-[connection signal="pressed" from="MenuPanel/VBox/Buttons/HelpBtn" to="MenuPanel/VBox/Buttons/HelpBtn" method="_on_pressed"]
 [connection signal="pressed" from="MenuPanel/VBox/Buttons/HomeBtn" to="." method="_on_home"]
 [connection signal="value_changed" from="MenuPanel/VBox/DifficultyGroup/DifficultySld" to="." method="_on_difficulty_changed"]
 [connection signal="pressed" from="MenuPanel/VBox/MusicGroup/MusicBtn" to="." method="_on_music_toggle"]

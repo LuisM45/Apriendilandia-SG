@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://cnbw4wukplemd"]
+[gd_scene load_steps=12 format=3 uid="uid://cnbw4wukplemd"]
 
 [ext_resource type="Texture2D" uid="uid://0ym2h38tc0x" path="res://assets/fantasyhextiles_v3.png" id="1_6iur3"]
 [ext_resource type="Script" path="res://scripts/gui/start_screen.gd" id="1_iv8y7"]
 [ext_resource type="Texture2D" uid="uid://dugcwhcrlutw5" path="res://assets/icons/user.png" id="2_gh2b7"]
 [ext_resource type="Texture2D" uid="uid://dap5120ui454p" path="res://assets/Menu Buttons/Large Buttons/Blank Button.png" id="3_cwhdy"]
 [ext_resource type="Texture2D" uid="uid://by8848y3tsnfs" path="res://assets/icons/round-square.png" id="4_c2eip"]
+[ext_resource type="Script" path="res://scripts/gui/generic_texture_button.gd" id="4_ckquf"]
 [ext_resource type="FontFile" uid="uid://dli535heqx8v" path="res://assets/fonts/Kaph_Font_1_20/Kaph-Regular.ttf" id="5_tuhyx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eqb46"]
@@ -138,6 +139,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("3_cwhdy")
+script = ExtResource("4_ckquf")
 
 [node name="Label" type="Label" parent="PlayButton"]
 layout_mode = 1
@@ -182,6 +184,7 @@ grow_vertical = 2
 texture_normal = ExtResource("4_c2eip")
 ignore_texture_size = true
 stretch_mode = 0
+script = ExtResource("4_ckquf")
 
 [node name="TextureButton" type="TextureRect" parent="ProfileButton"]
 layout_mode = 1

@@ -1,7 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://cynqaahscuo2p"]
+[gd_scene load_steps=11 format=3 uid="uid://cynqaahscuo2p"]
 
 [ext_resource type="Script" path="res://scripts/main_menu/main.gd" id="1_i4jsu"]
 [ext_resource type="Texture2D" uid="uid://b3e47vxcemrpd" path="res://assets/icons/medal.png" id="4_6qf2q"]
+[ext_resource type="Texture2D" uid="uid://dsgu1wvifwpx2" path="res://assets/Menu Buttons/Square Buttons/Square Buttons/Settings Square Button.png" id="4_nx8vv"]
+[ext_resource type="Script" path="res://scripts/gui/generic_texture_button.gd" id="5_ido4r"]
+[ext_resource type="Texture2D" uid="uid://kwh33rngsvr7" path="res://assets/Menu Buttons/Square Buttons/album_button.png" id="5_xt8us"]
+[ext_resource type="Texture2D" uid="uid://d2pvqibr34jkd" path="res://assets/Menu Buttons/Square Buttons/backpack_button.png" id="6_nuqi4"]
 [ext_resource type="Texture2D" uid="uid://0ym2h38tc0x" path="res://assets/fantasyhextiles_v3.png" id="7_4yfx5"]
 [ext_resource type="AudioStream" uid="uid://dju8lnjnwvj7a" path="res://assets/bgm/game-music-loop-7-145285.mp3" id="9_8x6a1"]
 
@@ -193,18 +197,29 @@ grow_horizontal = 2
 grow_vertical = 0
 alignment = 1
 
-[node name="ButtonConfiguration" type="Button" parent="PanelContainer/HBoxContainer"]
+[node name="ConfigBtn" type="TextureButton" parent="PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
-text = "Config"
+texture_normal = ExtResource("4_nx8vv")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("5_ido4r")
 
-[node name="Button" type="Button" parent="PanelContainer/HBoxContainer"]
+[node name="AlbumBtn" type="TextureButton" parent="PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
-text = "Album"
+texture_normal = ExtResource("5_xt8us")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("5_ido4r")
 
-[node name="Button2" type="Button" parent="PanelContainer/HBoxContainer"]
+[node name="InventoryBtn" type="TextureButton" parent="PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
-text = "Inventario
-"
+texture_normal = ExtResource("6_nuqi4")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("5_ido4r")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_8x6a1")
@@ -212,5 +227,5 @@ stream = ExtResource("9_8x6a1")
 [connection signal="pressed" from="ButtonCity" to="." method="_on_button_city_pressed"]
 [connection signal="pressed" from="ButtonBeach" to="." method="_on_button_beach_pressed"]
 [connection signal="pressed" from="ButtonForest" to="." method="_on_button_forest_pressed"]
-[connection signal="pressed" from="PanelContainer/HBoxContainer/ButtonConfiguration" to="." method="_on_button_config_pressed"]
-[connection signal="pressed" from="PanelContainer/HBoxContainer/Button2" to="." method="_on_inventory_pressed"]
+[connection signal="pressed" from="PanelContainer/HBoxContainer/ConfigBtn" to="." method="_on_button_config_pressed"]
+[connection signal="pressed" from="PanelContainer/HBoxContainer/InventoryBtn" to="." method="_on_inventory_pressed"]

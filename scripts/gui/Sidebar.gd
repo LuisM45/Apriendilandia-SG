@@ -2,14 +2,14 @@ extends Control
 
 var task:Task : get = _get_task, set=_set_task
 
-@onready var instructionLbl = $VBoxContainer/Panel/InstructionLbl
+@onready var instructionLbl = $Panel/InstructionLbl
 signal pause()
 signal help()
 signal hint()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#size.x =get_viewport().size.x
+	size.x =get_viewport_rect().size.x
 	position = Vector2(0,0)
 
 func _on_pause():

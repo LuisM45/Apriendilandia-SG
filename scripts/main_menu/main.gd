@@ -59,3 +59,5 @@ func _on_button_config_pressed():
 
 func _on_inventory_pressed():
 	add_child(Inventory.instantiate())
+
+
