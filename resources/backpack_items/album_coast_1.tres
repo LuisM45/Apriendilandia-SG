@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_g8gbh"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_bb57b"]
 
 [resource]
-script = ExtResource("1_g8gbh")
+script = ExtResource("1_bb57b")
 inner_name = "album_coast_1"
 name = "Bosque Protector Cerro Blanco"
 rcontent_path = "res://assets/journal/bosque_protector_cerro_blanco.jpg"

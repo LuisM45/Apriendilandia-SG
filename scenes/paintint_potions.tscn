@@ -29,48 +29,58 @@ script = ExtResource("1_42c17")
 texture_options = Array[Resource("res://resources/template/tagged_resource.gd")]([ExtResource("2_pdjo4"), ExtResource("3_8vc5j"), ExtResource("4_y1qe8"), ExtResource("5_f35vf"), ExtResource("6_34fac"), ExtResource("7_5ccj5"), ExtResource("8_66a45"), ExtResource("9_gxcmw"), ExtResource("10_tf5jg"), ExtResource("11_ua5vo"), ExtResource("12_6g4qd"), ExtResource("13_pvqpn"), ExtResource("14_7o2dh"), ExtResource("15_med3i"), ExtResource("16_5hf7a"), ExtResource("17_1tof4"), ExtResource("18_r470v"), ExtResource("19_ac8tm"), ExtResource("20_ylvva")])
 task = ExtResource("4_61ohd")
 
+[node name="cauldron_1" parent="." instance=ExtResource("24_2kmox")]
+position = Vector2(592, 321)
+scale = Vector2(2, 2)
+
 [node name="Sources" type="Node" parent="."]
 
 [node name="source_dl" parent="Sources" instance=ExtResource("6_hdvuf")]
 visible = false
+z_index = 0
 position = Vector2(449, 537)
 
 [node name="source_dm" parent="Sources" instance=ExtResource("6_hdvuf")]
 visible = false
+z_index = 0
 position = Vector2(601, 537)
 
 [node name="source_dr" parent="Sources" instance=ExtResource("6_hdvuf")]
 visible = false
+z_index = 0
 position = Vector2(753, 537)
 
 [node name="source_ul" parent="Sources" instance=ExtResource("6_hdvuf")]
 visible = false
+z_index = 0
 position = Vector2(441, 105)
 
 [node name="source_um" parent="Sources" instance=ExtResource("6_hdvuf")]
 visible = false
+z_index = 0
 position = Vector2(593, 105)
 
 [node name="source_ur" parent="Sources" instance=ExtResource("6_hdvuf")]
 visible = false
+z_index = 0
 position = Vector2(753, 105)
 
 [node name="source_lu" parent="Sources" instance=ExtResource("6_hdvuf")]
 visible = false
+z_index = 0
 position = Vector2(321, 249)
 
 [node name="source_ru" parent="Sources" instance=ExtResource("6_hdvuf")]
 visible = false
+z_index = 0
 position = Vector2(865, 249)
 
 [node name="source_ld" parent="Sources" instance=ExtResource("6_hdvuf")]
 visible = false
+z_index = 0
 position = Vector2(321, 393)
 
 [node name="source_rd" parent="Sources" instance=ExtResource("6_hdvuf")]
 visible = false
+z_index = 0
 position = Vector2(865, 393)
-
-[node name="cauldron_1" parent="." instance=ExtResource("24_2kmox")]
-position = Vector2(592, 321)
-scale = Vector2(2, 2)

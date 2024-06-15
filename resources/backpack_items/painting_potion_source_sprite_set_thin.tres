@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_hc4hw"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_yfokh"]
 
 [resource]
-script = ExtResource("1_hc4hw")
+script = ExtResource("1_yfokh")
 inner_name = "painting_potion_source_sprite_set_thin"
 name = "Botella delgada para pintar"
 rcontent_path = "res://resources/potion_sprite_sets/thin_sprite_set.tres"

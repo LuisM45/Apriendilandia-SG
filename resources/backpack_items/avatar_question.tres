@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_8oi38"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_4b0uo"]
 
 [resource]
-script = ExtResource("1_8oi38")
+script = ExtResource("1_4b0uo")
 inner_name = "avatar_question"
 name = "Foto de perfil interrogación"
 rcontent_path = "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_09.png"

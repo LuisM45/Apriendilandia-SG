@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_l0w75"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_attyw"]
 
 [resource]
-script = ExtResource("1_l0w75")
+script = ExtResource("1_attyw")
 inner_name = "album_highlands_1"
 name = "Monumento a la Mitad del Mundo"
 rcontent_path = "res://assets/journal/monumento_mitad_del_mundo.jpg"

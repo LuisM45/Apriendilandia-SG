@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_jw4l6"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_hjs0f"]
 
 [resource]
-script = ExtResource("1_jw4l6")
+script = ExtResource("1_hjs0f")
 inner_name = "album_coast_2"
 name = "Parque Nacional Machalilla"
 rcontent_path = "res://assets/journal/parque_nacional_machalilla.jpg"
