@@ -1,14 +1,14 @@
-[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3 uid="uid://bo31ae4l2jv2g"]
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_8tja3"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_is6vc"]
 
 [resource]
-script = ExtResource("1_8tja3")
+script = ExtResource("1_is6vc")
 inner_name = "painting_potion_source_sprite_set_default"
 name = "Botellas de pociones para pintar por defecto"
 rcontent_path = "res://resources/potion_sprite_sets/source_sprite_set_default.tres"
 description = ""
-game_tags = Array[String](["painting_potions", "potion_mixing"])
-type_tags = Array[String](["potion_texture_set"])
-icon_path = "potion_texture_set"
+game_tags = ["painting_potions", "potion_mixing"]
+type_tags = ["potion_texture_set"]
+icon_path = "res://assets/mixin_game/bottle.png"
 is_default = false

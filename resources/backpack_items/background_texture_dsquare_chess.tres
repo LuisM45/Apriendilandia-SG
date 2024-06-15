@@ -1,14 +1,14 @@
-[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3 uid="uid://c18sb0cf6oe4d"]
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_drnqs"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_hjgtq"]
 
 [resource]
-script = ExtResource("1_drnqs")
+script = ExtResource("1_hjgtq")
 inner_name = "background_texture_dsquare_chess"
 name = "Patrón cuadricula especial"
 rcontent_path = "res://assets/backgrounds/patterns/dsquare_chess.png"
 description = ""
-game_tags = Array[String](["background"])
-type_tags = Array[String](["texture"])
+game_tags = ["background"]
+type_tags = ["texture"]
 icon_path = "res://assets/Pixel Adventure 1/Background/Blue.png"
 is_default = false

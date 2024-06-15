@@ -169,6 +169,7 @@ offset_bottom = 633.0
 text = "Reportes"
 
 [node name="ProfileButton" type="TextureButton" parent="."]
+self_modulate = Color(0.121569, 0.121569, 0.121569, 1)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -187,6 +188,7 @@ stretch_mode = 0
 script = ExtResource("4_m2ks1")
 
 [node name="TextureButton" type="TextureRect" parent="ProfileButton"]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.1

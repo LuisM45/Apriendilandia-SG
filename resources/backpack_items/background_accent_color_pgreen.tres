@@ -1,14 +1,14 @@
-[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3 uid="uid://xlyejllgrwiw"]
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_dbroj"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_n3e34"]
 
 [resource]
-script = ExtResource("1_dbroj")
+script = ExtResource("1_n3e34")
 inner_name = "background_accent_color_pgreen"
 name = "Color de acento verde pastel"
 rcontent_path = "res://resources/colors/pgreen_accent.tres"
 description = ""
-game_tags = Array[String](["background"])
-type_tags = Array[String](["accent_color"])
+game_tags = ["background"]
+type_tags = ["accent_color"]
 icon_path = "res://assets/colors/pgreen_accent.png"
 is_default = true

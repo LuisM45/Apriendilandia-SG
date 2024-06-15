@@ -551,7 +551,6 @@ layer_0/name = "Maze"
 script = ExtResource("3_s75qp")
 
 [node name="Player" type="CharacterBody2D" parent="."]
-z_index = 1
 position = Vector2(100, 300)
 script = ExtResource("3_nq0qa")
 

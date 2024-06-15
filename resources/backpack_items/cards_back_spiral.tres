@@ -1,14 +1,14 @@
-[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3 uid="uid://c20q1tjuevuo3"]
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_65v3f"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_rl68f"]
 
 [resource]
-script = ExtResource("1_65v3f")
+script = ExtResource("1_rl68f")
 inner_name = "cards_back_spiral"
 name = "Patrón para cartas de espiral"
 rcontent_path = "res://assets/card_matching/back_spiral.png"
 description = ""
-game_tags = Array[String](["card_game"])
-type_tags = Array[String](["back_texture"])
+game_tags = ["card_game"]
+type_tags = ["back_texture"]
 icon_path = "res://assets/card_matching/colored_back_spiral.png"
 is_default = false

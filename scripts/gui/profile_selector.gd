@@ -16,7 +16,11 @@ func update_list():
 	user_array.append_array(Database.get_users())
 	user_item_list.clear()
 	for user:User in user_array:
-		user_item_list.add_item(user.username)
+		var avatar = null
+		var avatar_res = Database.get_customization_item(user,"avatar:icon")
+		if avatar_res != null:
+			avatar = avatar_res.get_rcontent()
+		user_item_list.add_item(user.username,avatar)
 
 func get_selected_user():
 	var selected:Array = user_item_list.get_selected_items()
@@ -27,7 +31,7 @@ func get_selected_user():
 func _on_select_pressed():
 	var user:User = get_selected_user()
 	if user==null: return
-	Globals.user = user
+	user.make_global()
 	done.emit()
 	queue_free()
 

@@ -1,14 +1,14 @@
-[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3 uid="uid://bn23g6vt6bggs"]
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_jppiu"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_hlng3"]
 
 [resource]
-script = ExtResource("1_jppiu")
+script = ExtResource("1_hlng3")
 inner_name = "maze_player_kingh"
 name = "Avatar de rey para laberinto"
 rcontent_path = "res://resources/sprite_frames/king_human.tres"
 description = ""
-game_tags = Array[String](["maze"])
-type_tags = Array[String](["player_animated_texture"])
+game_tags = ["maze"]
+type_tags = ["player_animated_texture"]
 icon_path = "res://assets/Kings and Pigs/Sprites/01-King Human/idle_0.png"
 is_default = true

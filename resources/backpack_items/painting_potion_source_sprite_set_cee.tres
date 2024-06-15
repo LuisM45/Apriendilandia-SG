@@ -1,14 +1,14 @@
-[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3 uid="uid://d07ugiycftmhp"]
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_rpyb5"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_kfsdl"]
 
 [resource]
-script = ExtResource("1_rpyb5")
+script = ExtResource("1_kfsdl")
 inner_name = "painting_potion_source_sprite_set_cee"
 name = "Botella curva para pintar"
 rcontent_path = "res://resources/potion_sprite_sets/cee_sprite_set.tres"
 description = ""
-game_tags = Array[String](["painting_potions", "potion_mixing"])
-type_tags = Array[String](["potion_texture_set"])
+game_tags = ["painting_potions", "potion_mixing"]
+type_tags = ["potion_texture_set"]
 icon_path = "res://assets/alchemy set/all png/Alchemy1_51.png"
 is_default = false

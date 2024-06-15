@@ -34,7 +34,7 @@ func get_users()->Array:
 	var row = metrics_db.select_rows(
 		USER_TBL,
 		"",
-		["id","username","avatar_name"]
+		["id","username"]
 	)
 	return row.map(User.from_dict)
 
@@ -42,15 +42,14 @@ func get_user(id:int)->User:
 	var row = metrics_db.select_rows(
 		USER_TBL,
 		"id={0}".format([id]),
-		["id","username","avatar_name"]
+		["id","username"]
 	)
 	if row.is_empty(): return null
 	return User.from_dict(row[0])
 
 func set_user(user:User):
 	var data = {
-			"username":user.username,
-			"avatar_name":user.avatar_name,
+			"username":user.username
 		}
 	print(data)
 	if user.id != null and user.id != 0:
@@ -65,8 +64,7 @@ func set_user(user:User):
 		USER_TBL,
 		"id={0}".format([user.id]),
 		{
-			"username":user.username,
-			"avatar_name":user.avatar_name,
+			"username":user.username
 		}
 	)
 	return done
@@ -106,6 +104,15 @@ func get_customization_items(user:User)->Array:
 		["item_name"]
 	)
 	return rows.map(func(x):return BackpackItem.from_inner_name(x.get("item_name")))
+	
+func get_customization_item(user:User,attribute:String):
+	var row = metrics_db.select_rows(
+		CUSTOMIZATION_TBL,
+		"user_id={0} AND attribute='{1}'".format([user.id,attribute]),
+		["item_name"]
+	)
+	if row.is_empty(): return null
+	return BackpackItem.from_inner_name(row[0]["item_name"])
 	
 func append_customization_item(user:User,item:BackpackItem):
 	for attribute in item.get_keys():
@@ -230,7 +237,6 @@ func create_users_table():
 	var q = "CREATE TABLE {0} (
 		id INTEGER NOT NULL,
 		username STRING NOT NULL,
-		avatar_name STRING
 		PRIMARY KEY (id)
 	);".format([USER_TBL])
 	return metrics_db.query(q)

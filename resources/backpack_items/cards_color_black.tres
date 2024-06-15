@@ -1,14 +1,14 @@
-[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3 uid="uid://b5jucr0ihf56u"]
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_n6tu2"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_7qrdk"]
 
 [resource]
-script = ExtResource("1_n6tu2")
-inner_name = "cards_color_intense_red"
+script = ExtResource("1_7qrdk")
+inner_name = "cards_color_black"
 name = "Color negro para cartas"
 rcontent_path = "res://resources/colors/black.tres"
 description = ""
-game_tags = Array[String](["card_game"])
-type_tags = Array[String](["back_color"])
+game_tags = ["card_game"]
+type_tags = ["back_color"]
 icon_path = "res://assets/colors/card_black.png"
 is_default = true

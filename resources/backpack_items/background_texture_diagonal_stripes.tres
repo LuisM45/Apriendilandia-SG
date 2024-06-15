@@ -1,14 +1,14 @@
-[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3 uid="uid://0wiwr5gplb0"]
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_gm2a6"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_dmjnh"]
 
 [resource]
-script = ExtResource("1_gm2a6")
+script = ExtResource("1_dmjnh")
 inner_name = "background_texture_diagonal_stripes"
 name = "Patrón lineas diagonales"
 rcontent_path = "res://assets/backgrounds/patterns/diagonal_stripes.png"
 description = ""
-game_tags = Array[String](["background"])
-type_tags = Array[String](["texture"])
+game_tags = ["background"]
+type_tags = ["texture"]
 icon_path = "res://assets/Pixel Adventure 1/Background/Pink.png"
 is_default = false

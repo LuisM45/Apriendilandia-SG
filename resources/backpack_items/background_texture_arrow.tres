@@ -1,14 +1,14 @@
-[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3 uid="uid://be4c4wdq0xmmd"]
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_2rja0"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_yima5"]
 
 [resource]
-script = ExtResource("1_2rja0")
+script = ExtResource("1_yima5")
 inner_name = "background_texture_arrow"
 name = "Patrón zig-zag"
 rcontent_path = "res://assets/backgrounds/patterns/arrow.png"
 description = ""
-game_tags = Array[String](["background"])
-type_tags = Array[String](["texture"])
+game_tags = ["background"]
+type_tags = ["texture"]
 icon_path = "res://assets/Pixel Adventure 1/Background/Brown.png"
 is_default = false

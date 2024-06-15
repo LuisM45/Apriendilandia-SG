@@ -1,14 +1,14 @@
-[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3 uid="uid://cs1fe8sc0foo2"]
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_thija"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_8jufg"]
 
 [resource]
-script = ExtResource("1_thija")
+script = ExtResource("1_8jufg")
 inner_name = "background_accent_color_pyellow"
 name = "Color de acento amarillo pastel"
 rcontent_path = "res://resources/colors/pyellow_accent.tres"
 description = ""
-game_tags = Array[String](["background"])
-type_tags = Array[String](["accent_color"])
+game_tags = ["background"]
+type_tags = ["accent_color"]
 icon_path = "res://assets/colors/pyellow_accent.png"
 is_default = false

@@ -1,14 +1,14 @@
-[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3 uid="uid://d1l4ij664h31t"]
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_i08dv"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_oo4a5"]
 
 [resource]
-script = ExtResource("1_i08dv")
+script = ExtResource("1_oo4a5")
 inner_name = "painting_potion_source_sprite_set_ring"
 name = "Botella en anillo para pintar"
 rcontent_path = "res://resources/potion_sprite_sets/ring_sprite_set.tres"
 description = ""
-game_tags = Array[String](["painting_potions", "potion_mixing"])
-type_tags = Array[String](["potion_texture_set"])
+game_tags = ["painting_potions", "potion_mixing"]
+type_tags = ["potion_texture_set"]
 icon_path = "res://assets/alchemy set/all png/Alchemy1_69.png"
 is_default = true

@@ -1,14 +1,14 @@
-[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3 uid="uid://trng7tu4ltrc"]
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_xbr0n"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_5t72j"]
 
 [resource]
-script = ExtResource("1_xbr0n")
+script = ExtResource("1_5t72j")
 inner_name = "maze_player_pig"
 name = "Avatar de cerdo para laberinto"
 rcontent_path = "res://resources/sprite_frames/pig.tres"
 description = ""
-game_tags = Array[String](["maze"])
-type_tags = Array[String](["player_animated_texture"])
+game_tags = ["maze"]
+type_tags = ["player_animated_texture"]
 icon_path = "res://assets/Kings and Pigs/Sprites/03-Pig/idle_0.png"
 is_default = false

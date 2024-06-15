@@ -58,3 +58,4 @@ func _on_difficulty_changed(new_diff):
 
 func _on_home():
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+	queue_free()

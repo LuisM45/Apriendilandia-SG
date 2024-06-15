@@ -1,0 +1,615 @@
+[
+	{
+		"description": "",
+		"game_tags": [
+			"card_game"
+		],
+		"icon_path": "res://assets/colors/intense_blue.png",
+		"inner_name": "cards_color_intense_blue",
+		"is_default": true,
+		"name": "Color azul para cartas",
+		"rcontent_path": "res://resources/colors/intense_blue.tres",
+		"type_tags": [
+			"back_color"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"painting_potions",
+			"potion_mixing"
+		],
+		"icon_path": "res://assets/alchemy set/all png/Alchemy1_28.png",
+		"inner_name": "painting_potion_source_sprite_set_pyramid",
+		"is_default": false,
+		"name": "Botella química para pintar",
+		"rcontent_path": "res://resources/potion_sprite_sets/pyramid_sprite_set.tres",
+		"type_tags": [
+			"potion_texture_set"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"card_game"
+		],
+		"icon_path": "res://assets/card_matching/colored_back_stripes.png",
+		"inner_name": "cards_back_stripes",
+		"is_default": false,
+		"name": "Patrón para cartas de líneas",
+		"rcontent_path": "res://assets/card_matching/back_stripes.png",
+		"type_tags": [
+			"back_texture"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"painting_potions",
+			"potion_mixing"
+		],
+		"icon_path": "res://assets/alchemy set/all png/Alchemy1_69.png",
+		"inner_name": "painting_potion_source_sprite_set_ring",
+		"is_default": true,
+		"name": "Botella en anillo para pintar",
+		"rcontent_path": "res://resources/potion_sprite_sets/ring_sprite_set.tres",
+		"type_tags": [
+			"potion_texture_set"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"background"
+		],
+		"icon_path": "res://assets/colors/pyellow_accent.png",
+		"inner_name": "background_accent_color_pyellow",
+		"is_default": false,
+		"name": "Color de acento amarillo pastel",
+		"rcontent_path": "res://resources/colors/pyellow_accent.tres",
+		"type_tags": [
+			"accent_color"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"background"
+		],
+		"icon_path": "res://assets/Pixel Adventure 1/Background/Gray.png",
+		"inner_name": "background_texture_diamond",
+		"is_default": false,
+		"name": "Patrón de rombo",
+		"rcontent_path": "res://assets/backgrounds/patterns/diamond.png",
+		"type_tags": [
+			"texture"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"card_game"
+		],
+		"icon_path": "res://assets/colors/card_black.png",
+		"inner_name": "cards_color_black",
+		"is_default": true,
+		"name": "Color negro para cartas",
+		"rcontent_path": "res://resources/colors/black.tres",
+		"type_tags": [
+			"back_color"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"painting_potions",
+			"potion_mixing"
+		],
+		"icon_path": "res://assets/alchemy set/all png/Alchemy1_2.png",
+		"inner_name": "painting_potion_source_sprite_set_circular",
+		"is_default": false,
+		"name": "Botella redonda para pintar",
+		"rcontent_path": "res://resources/potion_sprite_sets/circular_sprite_set.tres",
+		"type_tags": [
+			"potion_texture_set"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"background"
+		],
+		"icon_path": "res://assets/colors/pblue_accent.png",
+		"inner_name": "background_accent_color_pblue",
+		"is_default": true,
+		"name": "Color de acento azul pastel",
+		"rcontent_path": "res://resources/colors/pblue_accent.tres",
+		"type_tags": [
+			"accent_color"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"card_game"
+		],
+		"icon_path": "res://assets/card_matching/back_tiled.png",
+		"inner_name": "cards_back_tiled",
+		"is_default": false,
+		"name": "Patrón para cartas de mosaico",
+		"rcontent_path": "res://assets/card_matching/back_tiled.png",
+		"type_tags": [
+			"back_texture"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"card_game"
+		],
+		"icon_path": "res://assets/colors/intense_red.png",
+		"inner_name": "cards_color_intense_red",
+		"is_default": true,
+		"name": "Color rojo para cartas",
+		"rcontent_path": "res://resources/colors/intense_red.tres",
+		"type_tags": [
+			"back_color"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"background"
+		],
+		"icon_path": "res://assets/Pixel Adventure 1/Background/Pink.png",
+		"inner_name": "background_texture_diagonal_stripes",
+		"is_default": false,
+		"name": "Patrón lineas diagonales",
+		"rcontent_path": "res://assets/backgrounds/patterns/diagonal_stripes.png",
+		"type_tags": [
+			"texture"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"painting_potions",
+			"potion_mixing"
+		],
+		"icon_path": "res://assets/mixin_game/bottle.png",
+		"inner_name": "painting_potion_source_sprite_set_default",
+		"is_default": false,
+		"name": "Botellas de pociones para pintar por defecto",
+		"rcontent_path": "res://resources/potion_sprite_sets/source_sprite_set_default.tres",
+		"type_tags": [
+			"potion_texture_set"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"maze"
+		],
+		"icon_path": "res://assets/Kings and Pigs/Sprites/02-King Pig/idle_0.png",
+		"inner_name": "maze_player_kingp",
+		"is_default": false,
+		"name": "Avatar de rey cerdo para laberinto",
+		"rcontent_path": "res://resources/sprite_frames/king_human.tres",
+		"type_tags": [
+			"player_animated_texture"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"painting_potions",
+			"potion_mixing"
+		],
+		"icon_path": "res://assets/alchemy set/all png/Alchemy1_33.png",
+		"inner_name": "painting_potion_source_sprite_set_hammer",
+		"is_default": false,
+		"name": "Botella cuadrada para pintar",
+		"rcontent_path": "res://resources/potion_sprite_sets/hammer_sprite_set.tres",
+		"type_tags": [
+			"potion_texture_set"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"maze"
+		],
+		"icon_path": "res://assets/Kings and Pigs/Sprites/01-King Human/idle_0.png",
+		"inner_name": "maze_player_kingh",
+		"is_default": true,
+		"name": "Avatar de rey para laberinto",
+		"rcontent_path": "res://resources/sprite_frames/king_human.tres",
+		"type_tags": [
+			"player_animated_texture"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"background"
+		],
+		"icon_path": "res://assets/Pixel Adventure 1/Background/Brown.png",
+		"inner_name": "background_texture_arrow",
+		"is_default": false,
+		"name": "Patrón zig-zag",
+		"rcontent_path": "res://assets/backgrounds/patterns/arrow.png",
+		"type_tags": [
+			"texture"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"background"
+		],
+		"icon_path": "res://assets/colors/pred_accent.png",
+		"inner_name": "background_accent_color_pred",
+		"is_default": false,
+		"name": "Color de acento rojo pastel",
+		"rcontent_path": "res://resources/colors/pred_accent.tres",
+		"type_tags": [
+			"accent_color"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"painting_potions",
+			"potion_mixing"
+		],
+		"icon_path": "res://assets/alchemy set/all png/Alchemy1_74.png",
+		"inner_name": "painting_potion_source_sprite_set_heart",
+		"is_default": false,
+		"name": "Botella de corazón para pintar",
+		"rcontent_path": "res://resources/potion_sprite_sets/heart_sprite_set.tres",
+		"type_tags": [
+			"potion_texture_set"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"background"
+		],
+		"icon_path": "res://assets/backgrounds/wood copy.png",
+		"inner_name": "background_texture_wood",
+		"is_default": false,
+		"name": "Patrón de madera",
+		"rcontent_path": "res://assets/backgrounds/patterns/wood.png",
+		"type_tags": [
+			"texture"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"background"
+		],
+		"icon_path": "res://assets/Pixel Adventure 1/Background/Pink.png",
+		"inner_name": "background_texture_alt_stripes",
+		"is_default": false,
+		"name": "Patrón diagonal (alternativo)",
+		"rcontent_path": "res://assets/backgrounds/patterns/alt_stripes.png",
+		"type_tags": [
+			"texture"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"background"
+		],
+		"icon_path": "res://assets/Pixel Adventure 1/Background/Green.png",
+		"inner_name": "background_texture_big_diamond",
+		"is_default": false,
+		"name": "Patrón rombos grandes",
+		"rcontent_path": "res://assets/backgrounds/patterns/big_diamond.png",
+		"type_tags": [
+			"texture"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"background"
+		],
+		"icon_path": "res://assets/colors/pblue_background.png",
+		"inner_name": "background_background_color_pblue",
+		"is_default": false,
+		"name": "Color de fondo azul pastel",
+		"rcontent_path": "res://resources/colors/pblue_background.tres",
+		"type_tags": [
+			"background_color"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"background"
+		],
+		"icon_path": "res://assets/Pixel Adventure 1/Background/Blue.png",
+		"inner_name": "background_texture_dsquare_chess",
+		"is_default": false,
+		"name": "Patrón cuadricula especial",
+		"rcontent_path": "res://assets/backgrounds/patterns/dsquare_chess.png",
+		"type_tags": [
+			"texture"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"background"
+		],
+		"icon_path": "res://assets/colors/pgreen_background.png",
+		"inner_name": "background_background_color_pgreen",
+		"is_default": true,
+		"name": "Color de fondo verde pastel",
+		"rcontent_path": "res://resources/colors/pgreen_background.tres",
+		"type_tags": [
+			"background_color"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"card_game"
+		],
+		"icon_path": "res://assets/card_matching/colored_back_spiral.png",
+		"inner_name": "cards_back_spiral",
+		"is_default": false,
+		"name": "Patrón para cartas de espiral",
+		"rcontent_path": "res://assets/card_matching/back_spiral.png",
+		"type_tags": [
+			"back_texture"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"background"
+		],
+		"icon_path": "res://assets/colors/pgreen_accent.png",
+		"inner_name": "background_accent_color_pgreen",
+		"is_default": true,
+		"name": "Color de acento verde pastel",
+		"rcontent_path": "res://resources/colors/pgreen_accent.tres",
+		"type_tags": [
+			"accent_color"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"painting_potions",
+			"potion_mixing"
+		],
+		"icon_path": "res://assets/alchemy set/all png/Alchemy1_51.png",
+		"inner_name": "painting_potion_source_sprite_set_cee",
+		"is_default": false,
+		"name": "Botella curva para pintar",
+		"rcontent_path": "res://resources/potion_sprite_sets/cee_sprite_set.tres",
+		"type_tags": [
+			"potion_texture_set"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"card_game"
+		],
+		"icon_path": "res://assets/card_matching/colored_back_diamond.png",
+		"inner_name": "cards_back_diamond",
+		"is_default": true,
+		"name": "Patrón para cartas de diamantes",
+		"rcontent_path": "res://assets/card_matching/back_diamond.png",
+		"type_tags": [
+			"back_texture"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"painting_potions",
+			"potion_mixing"
+		],
+		"icon_path": "res://assets/alchemy set/all png/Alchemy1_20.png",
+		"inner_name": "painting_potion_source_sprite_set_thin",
+		"is_default": false,
+		"name": "Botella delgada para pintar",
+		"rcontent_path": "res://resources/potion_sprite_sets/thin_sprite_set.tres",
+		"type_tags": [
+			"potion_texture_set"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"background"
+		],
+		"icon_path": "res://assets/Pixel Adventure 1/Background/Purple.png",
+		"inner_name": "background_texture_chess",
+		"is_default": true,
+		"name": "Patrón de cuadrícula",
+		"rcontent_path": "res://assets/backgrounds/patterns/chess.png",
+		"type_tags": [
+			"texture"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"card_game"
+		],
+		"icon_path": "res://assets/card_matching/colored_back_real.png",
+		"inner_name": "cards_back_royal",
+		"is_default": false,
+		"name": "Patrón para cartas real",
+		"rcontent_path": "res://assets/card_matching/back_royal.png",
+		"type_tags": [
+			"back_texture"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"background"
+		],
+		"icon_path": "res://assets/colors/pyellow_background.png",
+		"inner_name": "background_background_color_pyellow",
+		"is_default": false,
+		"name": "Color de fondo amarillo pastel",
+		"rcontent_path": "res://resources/colors/pyellow_background.tres",
+		"type_tags": [
+			"background_color"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"background"
+		],
+		"icon_path": "res://assets/colors/pred_background.png",
+		"inner_name": "background_background_color_pred",
+		"is_default": false,
+		"name": "Color de fondo rojo pastel",
+		"rcontent_path": "res://resources/colors/pred_background.tres",
+		"type_tags": [
+			"background_color"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"painting_potions",
+			"potion_mixing"
+		],
+		"icon_path": "res://assets/alchemy set/all png/Alchemy1_45.png",
+		"inner_name": "painting_potion_source_sprite_set_low_diamond",
+		"is_default": false,
+		"name": "Botella angular para pintar",
+		"rcontent_path": "res://resources/potion_sprite_sets/low_diamond_sprite_set.tres",
+		"type_tags": [
+			"potion_texture_set"
+		]
+	},
+	{
+		"description": "",
+		"game_tags": [
+			"maze"
+		],
+		"icon_path": "res://assets/Kings and Pigs/Sprites/03-Pig/idle_0.png",
+		"inner_name": "maze_player_pig",
+		"is_default": false,
+		"name": "Avatar de cerdo para laberinto",
+		"rcontent_path": "res://resources/sprite_frames/pig.tres",
+		"type_tags": [
+			"player_animated_texture"
+		]
+	},
+	{
+		"description": "",
+		"inner_name": "avatar_question",
+		"name": "Foto de perfil interrogación",
+		"rcontent_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_09.png",
+		"icon_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_09.png",
+		"game_tags": ["avatar"],
+		"type_tags": ["icon"],
+		"is_default": false
+	},
+	{
+		"inner_name": "avatar_exclamation",
+		"name": "Foto de perfil exclamación",
+		"description": "",
+		"rcontent_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_10.png",
+		"icon_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_10.png",
+		"game_tags": ["avatar"],
+		"type_tags": ["icon"],
+		"is_default": false
+	},
+	{
+		"inner_name": "avatar_bullseye",
+		"name": "Foto de perfil diana",
+		"description": "",
+		"rcontent_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_34.png",
+		"icon_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_34.png",
+		"game_tags": ["avatar"],
+		"type_tags": ["icon"],
+		"is_default": false
+	},
+	{
+		"inner_name": "avatar_health",
+		"name": "Foto de perfil corazón",
+		"description": "",
+		"rcontent_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_16.png",
+		"icon_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_16.png",
+		"game_tags": ["avatar"],
+		"type_tags": ["icon"],
+		"is_default": false
+	},
+	{
+		"inner_name": "avatar_brain",
+		"name": "Foto de perfil inteligencia",
+		"description": "",
+		"rcontent_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_31.png",
+		"icon_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_31.png",
+		"game_tags": ["avatar"],
+		"type_tags": ["icon"],
+		"is_default": false
+	},
+	{
+		"inner_name": "avatar_defense",
+		"name": "Foto de perfil escudo",
+		"description": "",
+		"rcontent_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_18.png",
+		"icon_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_18.png",
+		"game_tags": ["avatar"],
+		"type_tags": ["icon"],
+		"is_default": false
+	},
+	{
+		"inner_name": "avatar_cog",
+		"name": "Foto de perfil máquina",
+		"description": "",
+		"rcontent_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_32.png",
+		"icon_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_32.png",
+		"game_tags": ["avatar"],
+		"type_tags": ["icon"],
+		"is_default": false
+	},
+	{
+		"inner_name": "avatar_ampup",
+		"name": "Foto de perfil SUPERIOR",
+		"description": "",
+		"rcontent_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_14.png",
+		"icon_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_14.png",
+		"game_tags": ["avatar"],
+		"type_tags": ["icon"],
+		"is_default": false
+	},
+	{
+		"inner_name": "avatar_aim",
+		"name": "Foto de perfil mirilla",
+		"description": "",
+		"rcontent_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_23.png",
+		"icon_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_23.png",
+		"game_tags": ["avatar"],
+		"type_tags": ["icon"],
+		"is_default": false
+	},
+	{
+		"inner_name": "avatar_strenght",
+		"name": "Foto de perfil fuerza",
+		"description": "",
+		"rcontent_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/",
+		"icon_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/",
+		"game_tags": ["avatar"],
+		"type_tags": ["icon"],
+		"is_default": false
+	}
+]

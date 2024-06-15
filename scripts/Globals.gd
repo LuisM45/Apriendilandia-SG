@@ -1,7 +1,7 @@
 extends Node
 
 signal volume_changed()
-
+signal user_changed()
 
 var music_volume: int : set = _set_music_volume, get = _get_music_volume
 var _music_volume = 50
@@ -29,8 +29,9 @@ func _init():
 	user = User.default_user()
 	load_user_from_db()
 	load_config_from_db()
-	#var utils = load("res://scripts/utils.gd").new()
-	#utils.export_backpack_items()
+	var utils = load("res://scripts/utils.gd").new()
+	utils.backpack_json_dump_to_dir()
+	utils.backpack_dir_dump_to_rcol()
 	pass
 
 func load_config_from_db():
@@ -63,6 +64,7 @@ func load_user_from_db():
 func set_user(_user:User):
 	user = _user
 	Database.set_config_value(User.default_user(),"active_user",str(user.id))
+	user_changed.emit()
 
 func unix_system_time():
 	var sys_time = Time.get_datetime_dict_from_system(true)

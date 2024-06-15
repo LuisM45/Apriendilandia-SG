@@ -1,14 +1,14 @@
-[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3 uid="uid://clc02uabxnvcf"]
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_or7gc"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_ircsi"]
 
 [resource]
-script = ExtResource("1_or7gc")
+script = ExtResource("1_ircsi")
 inner_name = "background_texture_diamond"
 name = "Patrón de rombo"
 rcontent_path = "res://assets/backgrounds/patterns/diamond.png"
 description = ""
-game_tags = Array[String](["background"])
-type_tags = Array[String](["texture"])
+game_tags = ["background"]
+type_tags = ["texture"]
 icon_path = "res://assets/Pixel Adventure 1/Background/Gray.png"
 is_default = false

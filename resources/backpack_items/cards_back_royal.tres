@@ -1,14 +1,14 @@
-[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3 uid="uid://cfqc3matp6es4"]
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_5tvuq"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_q788s"]
 
 [resource]
-script = ExtResource("1_5tvuq")
+script = ExtResource("1_q788s")
 inner_name = "cards_back_royal"
 name = "Patrón para cartas real"
 rcontent_path = "res://assets/card_matching/back_royal.png"
 description = ""
-game_tags = Array[String](["card_game"])
-type_tags = Array[String](["back_texture"])
-icon_path = "res://assets/card_matching/colored_back_royal.png"
+game_tags = ["card_game"]
+type_tags = ["back_texture"]
+icon_path = "res://assets/card_matching/colored_back_real.png"
 is_default = false

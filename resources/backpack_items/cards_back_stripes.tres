@@ -1,14 +1,14 @@
-[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3 uid="uid://d1ruc382tl1bj"]
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_vw6ae"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_c1vqj"]
 
 [resource]
-script = ExtResource("1_vw6ae")
+script = ExtResource("1_c1vqj")
 inner_name = "cards_back_stripes"
 name = "Patrón para cartas de líneas"
 rcontent_path = "res://assets/card_matching/back_stripes.png"
 description = ""
-game_tags = Array[String](["card_game"])
-type_tags = Array[String](["back_texture"])
+game_tags = ["card_game"]
+type_tags = ["back_texture"]
 icon_path = "res://assets/card_matching/colored_back_stripes.png"
 is_default = false

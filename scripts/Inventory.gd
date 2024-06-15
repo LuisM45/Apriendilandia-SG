@@ -10,6 +10,7 @@ func _init():
 	if ! Globals.is_node_ready(): await Globals.ready
 	load_backpack_items()
 	load_customization()
+	Globals.user_changed.connect(load_customization)
 	pass
 
 func pull_random_item():
@@ -36,6 +37,7 @@ func get_backpack_items():
 	return Database.get_items(Globals.user)
 
 func load_customization():
+	customization_config = {}
 	for item:BackpackItem in all_backpack_items.values():
 		if !item.is_default: continue
 		_enable_item_no_db(item)
