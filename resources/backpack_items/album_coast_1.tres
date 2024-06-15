@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_kmepx"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_04xp5"]
 
 [resource]
-script = ExtResource("1_kmepx")
+script = ExtResource("1_04xp5")
 inner_name = "album_coast_1"
 name = "Bosque Protector Cerro Blanco"
 rcontent_path = "res://assets/journal/bosque_protector_cerro_blanco.jpg"
-description = ""
+description = "El Bosque Protector Cerro Blanco, ubicado en las afueras de Guayaquil, Ecuador, es una reserva ecológica vital para la conservación del bosque seco tropical. Administra por la Fundación Pro-Bosque, alberga una rica biodiversidad, incluyendo especies de flora como ceibos y guayacanes, y fauna como jaguares y pumas. Además de proteger hábitats críticos, el bosque ofrece programas de reforestación, investigación científica, y actividades de ecoturismo y educación ambiental, siendo esencial para la preservación de este ecosistema amenazado."
 game_tags = [""]
 type_tags = ["coast"]
 icon_path = "res://assets/journal/bosque_protector_cerro_blanco.jpg"

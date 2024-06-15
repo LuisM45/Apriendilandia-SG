@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_gsck0"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_5d4k1"]
 
 [resource]
-script = ExtResource("1_gsck0")
+script = ExtResource("1_5d4k1")
 inner_name = "album_highlands_3"
 name = "Plaza Foch"
 rcontent_path = "res://assets/journal/plaza_foch.png"
-description = ""
+description = "La Plaza Foch, ubicada en el barrio La Mariscal de Quito, Ecuador, es un vibrante centro de vida nocturna y entretenimiento. Conocida como el corazón de la \"Zona Rosa\" de la ciudad, la plaza y sus alrededores están llenos de bares, restaurantes, discotecas y cafés que atraen tanto a locales como a turistas. Este animado punto de encuentro es famoso por su ambiente festivo, especialmente durante las noches y los fines de semana. Además, la Plaza Foch es un lugar popular para eventos culturales y actividades al aire libre, convirtiéndola en un epicentro de socialización y ocio en la capital ecuatoriana."
 game_tags = [""]
 type_tags = ["highlands"]
 icon_path = "res://assets/journal/plaza_foch.png"

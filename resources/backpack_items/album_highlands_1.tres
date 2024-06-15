@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_2o652"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_gu72u"]
 
 [resource]
-script = ExtResource("1_2o652")
+script = ExtResource("1_gu72u")
 inner_name = "album_highlands_1"
 name = "Monumento a la Mitad del Mundo"
 rcontent_path = "res://assets/journal/monumento_mitad_del_mundo.jpg"
-description = ""
+description = "El Monumento a la Mitad del Mundo es un destacado punto turístico ubicado cerca de Quito, Ecuador, que marca la línea ecuatorial, donde se encuentra la latitud 0°0'0\". Este monumento conmemora la misión geodésica francesa del siglo XVIII que determinó la ubicación de la línea ecuatorial. La estructura central es una torre de 30 metros de altura coronada por un globo terráqueo, rodeada por un parque temático que ofrece exhibiciones sobre la geografía, la historia y la cultura ecuatoriana. Visitantes de todo el mundo acuden aquí para experimentar la curiosidad de estar en ambos hemisferios simultáneamente"
 game_tags = [""]
 type_tags = ["highlands"]
 icon_path = "res://assets/journal/monumento_mitad_del_mundo.jpg"

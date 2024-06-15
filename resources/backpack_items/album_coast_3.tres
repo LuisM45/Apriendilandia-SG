@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_ee2qr"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_cbol2"]
 
 [resource]
-script = ExtResource("1_ee2qr")
+script = ExtResource("1_cbol2")
 inner_name = "album_coast_3"
 name = "Puerto Cayo"
 rcontent_path = "res://assets/journal/puerto_cayo.jpg"
-description = ""
+description = "es una pequeña localidad costera ubicada en la provincia de Manabí, Ecuador. Conocida por sus hermosas playas de arena dorada y aguas tranquilas, es un destino popular para turistas que buscan disfrutar de la tranquilidad, la pesca y los deportes acuáticos. Puerto Cayo también es famoso por su avistamiento de ballenas jorobadas durante su temporada de migración, que va de junio a septiembre. La zona combina un ambiente relajado con oportunidades de ecoturismo, ofreciendo acceso a áreas naturales protegidas como el Parque Nacional Machalilla, cercano al pueblo."
 game_tags = [""]
 type_tags = ["coast"]
 icon_path = "res://assets/journal/puerto_cayo.jpg"

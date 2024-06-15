@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_hbm54"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_hub04"]
 
 [resource]
-script = ExtResource("1_hbm54")
+script = ExtResource("1_hub04")
 inner_name = "album_coast_2"
 name = "Parque Nacional Machalilla"
 rcontent_path = "res://assets/journal/parque_nacional_machalilla.jpg"
-description = ""
+description = "El Parque Nacional Machalilla, situado en la provincia de Manabí, Ecuador, es una área protegida que abarca diversos ecosistemas como bosques secos, manglares y zonas marinas. Este parque es conocido por su rica biodiversidad, incluyendo fauna como piqueros de patas azules y tortugas marinas, y flora típica del bosque seco tropical. Zonas destacadas incluyen la Isla de la Plata, ideal para el avistamiento de aves, y la Playa de Los Frailes, famosa por su belleza. Además de ser un refugio para especies amenazadas, el parque ofrece actividades de ecoturismo y alberga sitios arqueológicos de la cultura Machalilla, combinando conservación natural y patrimonio cultural."
 game_tags = [""]
 type_tags = ["coast"]
 icon_path = "res://assets/journal/parque_nacional_machalilla.jpg"

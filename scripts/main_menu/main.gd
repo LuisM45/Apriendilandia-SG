@@ -2,7 +2,9 @@ extends Control
 
 const PauseMenu = preload("res://branches/gui/pause_menu.tscn")
 const InventoryScn = preload("res://branches/gui/inventory.tscn")
+const BasePhoto = preload("res://branches/journal/base_photo.tscn")
 
+@onready var image_container = $PanelContainer/ScrollContainer/ImageContainer
 @onready var audio_player:AudioStreamPlayer = $AudioStreamPlayer
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,6 +12,13 @@ func _ready():
 	audio_player.finished.connect(audio_player.play)
 	audio_player.volume_db = Globals.music_volume_db()
 	audio_player.play()
+	for photo in Inventory.get_backpack_photos():
+		var photo_node = BasePhoto.instantiate()
+		photo_node.photo = photo
+		photo_node.custom_minimum_size = Vector2(200,130)
+		photo_node.update_minimum_size()
+		image_container.add_child(photo_node)
+		
 	if !Globals.win_callbacks.is_empty():
 		Globals.win_callbacks.pop_front().call()
 		

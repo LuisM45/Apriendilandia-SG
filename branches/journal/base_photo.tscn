@@ -1,9 +1,33 @@
-[gd_scene load_steps=2 format=3 uid="uid://cy3ws2muy3wh1"]
+[gd_scene load_steps=3 format=3 uid="uid://cy3ws2muy3wh1"]
 
 [ext_resource type="Texture2D" uid="uid://cbo1y2t6ytxma" path="res://icon.svg" id="1_hgmeq"]
+[ext_resource type="Script" path="res://scripts/journal/base_photo.gd" id="2_33dcp"]
 
 [node name="TextureButton" type="TextureButton"]
 custom_minimum_size = Vector2(500, 300)
-texture_normal = ExtResource("1_hgmeq")
-ignore_texture_size = true
+script = ExtResource("2_33dcp")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_hgmeq")
+expand_mode = 1
 stretch_mode = 6
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+horizontal_alignment = 1
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

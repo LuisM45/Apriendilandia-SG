@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_ghjbt"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_4sidf"]
 
 [resource]
-script = ExtResource("1_ghjbt")
+script = ExtResource("1_4sidf")
 inner_name = "album_jungle_2"
 name = "Las cavernas Jumandi"
 rcontent_path = "res://assets/journal/cavernas_de_jumandy.jpg"
-description = ""
+description = "Las cavernas Jumandi, ubicadas en la región amazónica de Ecuador cerca de la ciudad de Tena, son un complejo de cuevas naturales fascinantes que atraen a exploradores y aficionados al ecoturismo. Estas cavernas ofrecen un laberinto subterráneo de formaciones rocosas, estalactitas y estalagmitas, algunas de las cuales se extienden por varios kilómetros dentro de la tierra. Además de su belleza natural, las cavernas Jumandi son importantes culturalmente para las comunidades locales, que las consideran sagradas y las utilizan en ceremonias tradicionales. El sitio también ofrece oportunidades para la observación de la fauna silvestre en los alrededores de la selva amazónica, haciendo de las cavernas Jumandi un destino único para explorar la riqueza natural y cultural de Ecuador."
 game_tags = [""]
 type_tags = ["jungle"]
 icon_path = "res://assets/journal/cavernas_de_jumandy.jpg"

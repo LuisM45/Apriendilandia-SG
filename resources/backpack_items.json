@@ -661,7 +661,7 @@
 	{
 		"inner_name": "album_coast_1",
 		"name": "Bosque Protector Cerro Blanco",
-		"description": "",
+		"description": "El Bosque Protector Cerro Blanco, ubicado en las afueras de Guayaquil, Ecuador, es una reserva ecológica vital para la conservación del bosque seco tropical. Administra por la Fundación Pro-Bosque, alberga una rica biodiversidad, incluyendo especies de flora como ceibos y guayacanes, y fauna como jaguares y pumas. Además de proteger hábitats críticos, el bosque ofrece programas de reforestación, investigación científica, y actividades de ecoturismo y educación ambiental, siendo esencial para la preservación de este ecosistema amenazado.",
 		"rcontent_path": "res://assets/journal/bosque_protector_cerro_blanco.jpg",
 		"icon_path": "res://assets/journal/bosque_protector_cerro_blanco.jpg",
 		"game_tags": [""],
@@ -672,7 +672,7 @@
 		{
 		"inner_name": "album_coast_2",
 		"name": "Parque Nacional Machalilla",
-		"description": "",
+		"description": "El Parque Nacional Machalilla, situado en la provincia de Manabí, Ecuador, es una área protegida que abarca diversos ecosistemas como bosques secos, manglares y zonas marinas. Este parque es conocido por su rica biodiversidad, incluyendo fauna como piqueros de patas azules y tortugas marinas, y flora típica del bosque seco tropical. Zonas destacadas incluyen la Isla de la Plata, ideal para el avistamiento de aves, y la Playa de Los Frailes, famosa por su belleza. Además de ser un refugio para especies amenazadas, el parque ofrece actividades de ecoturismo y alberga sitios arqueológicos de la cultura Machalilla, combinando conservación natural y patrimonio cultural.",
 		"rcontent_path": "res://assets/journal/parque_nacional_machalilla.jpg",
 		"icon_path": "res://assets/journal/parque_nacional_machalilla.jpg",
 		"game_tags": [""],
@@ -683,7 +683,7 @@
 		{
 		"inner_name": "album_coast_3",
 		"name": "Puerto Cayo",
-		"description": "",
+		"description": "es una pequeña localidad costera ubicada en la provincia de Manabí, Ecuador. Conocida por sus hermosas playas de arena dorada y aguas tranquilas, es un destino popular para turistas que buscan disfrutar de la tranquilidad, la pesca y los deportes acuáticos. Puerto Cayo también es famoso por su avistamiento de ballenas jorobadas durante su temporada de migración, que va de junio a septiembre. La zona combina un ambiente relajado con oportunidades de ecoturismo, ofreciendo acceso a áreas naturales protegidas como el Parque Nacional Machalilla, cercano al pueblo.",
 		"rcontent_path": "res://assets/journal/puerto_cayo.jpg",
 		"icon_path": "res://assets/journal/puerto_cayo.jpg",
 		"game_tags": [""],
@@ -694,7 +694,7 @@
 		{
 		"inner_name": "album_coast_4",
 		"name": "Bosque Petrificado de Puyango",
-		"description": "",
+		"description": "El Bosque Petrificado de Puyango, ubicado en la frontera entre las provincias de Loja y El Oro en Ecuador, es una de las reservas de fósiles más importantes del país y una de las más grandes del mundo. Este sitio destaca por sus árboles petrificados, algunos con más de 100 millones de años, que ofrecen una visión única de la vida prehistórica. Además de los fósiles de árboles, el bosque alberga una rica biodiversidad actual, incluyendo diversas especies de flora y fauna. Es un destino fascinante tanto para turistas como para científicos, combinando la maravilla geológica con la belleza natural y la historia paleontológica.",
 		"rcontent_path": "res://assets/journal/bosque_petrificado_de_puyango.jpg",
 		"icon_path": "res://assets/journal/bosque_petrificado_de_puyango.jpg",
 		"game_tags": [""],
@@ -705,7 +705,7 @@
 	{
 		"inner_name": "album_highlands_1",
 		"name": "Monumento a la Mitad del Mundo",
-		"description": "",
+		"description": "El Monumento a la Mitad del Mundo es un destacado punto turístico ubicado cerca de Quito, Ecuador, que marca la línea ecuatorial, donde se encuentra la latitud 0°0'0\". Este monumento conmemora la misión geodésica francesa del siglo XVIII que determinó la ubicación de la línea ecuatorial. La estructura central es una torre de 30 metros de altura coronada por un globo terráqueo, rodeada por un parque temático que ofrece exhibiciones sobre la geografía, la historia y la cultura ecuatoriana. Visitantes de todo el mundo acuden aquí para experimentar la curiosidad de estar en ambos hemisferios simultáneamente",
 		"rcontent_path": "res://assets/journal/monumento_mitad_del_mundo.jpg",
 		"icon_path": "res://assets/journal/monumento_mitad_del_mundo.jpg",
 		"game_tags": [""],
@@ -716,7 +716,7 @@
 		{
 		"inner_name": "album_highlands_2",
 		"name": "Bosque de niebla en Mindo",
-		"description": "",
+		"description": "El Bosque de Niebla en Mindo, Ecuador, es una región biodiversa y húmeda situada en la vertiente occidental de los Andes. Caracterizado por su clima nublado y alta humedad, este ecosistema alberga una rica variedad de flora y fauna, incluyendo numerosas especies de aves, mariposas, y plantas endémicas. Mindo es especialmente popular entre los observadores de aves y los amantes de la naturaleza por su impresionante avifauna y paisajes exuberantes. Además de la biodiversidad, el área ofrece actividades de ecoturismo como senderismo, canopy, y exploración de cascadas, haciendo de Mindo un destino ideal para el turismo ecológico y la conservación.",
 		"rcontent_path": "res://assets/journal/bosque_nuboso_de_mindo.jpg",
 		"icon_path": "res://assets/journal/bosque_nuboso_de_mindo.jpg",
 		"game_tags": [""],
@@ -727,7 +727,7 @@
 		{
 		"inner_name": "album_highlands_3",
 		"name": "Plaza Foch",
-		"description": "",
+		"description": "La Plaza Foch, ubicada en el barrio La Mariscal de Quito, Ecuador, es un vibrante centro de vida nocturna y entretenimiento. Conocida como el corazón de la \"Zona Rosa\" de la ciudad, la plaza y sus alrededores están llenos de bares, restaurantes, discotecas y cafés que atraen tanto a locales como a turistas. Este animado punto de encuentro es famoso por su ambiente festivo, especialmente durante las noches y los fines de semana. Además, la Plaza Foch es un lugar popular para eventos culturales y actividades al aire libre, convirtiéndola en un epicentro de socialización y ocio en la capital ecuatoriana.",
 		"rcontent_path": "res://assets/journal/plaza_foch.png",
 		"icon_path": "res://assets/journal/plaza_foch.png",
 		"game_tags": [""],
@@ -738,7 +738,7 @@
 		{
 		"inner_name": "album_highlands_4",
 		"name": "Basílica del Voto Nacional",
-		"description": "",
+		"description": "La Basílica del Voto Nacional, ubicada en Quito, Ecuador, es la iglesia neogótica más grande de América Latina y una de las estructuras religiosas más imponentes del país. Construida a partir de finales del siglo XIX y situada en el centro histórico de la ciudad, la basílica se destaca por sus majestuosas torres y detalladas gárgolas que representan animales autóctonos del Ecuador, como iguanas y tortugas. Además de su impresionante arquitectura, ofrece a los visitantes la posibilidad de subir a sus torres para disfrutar de panorámicas espectaculares de Quito. La Basílica del Voto Nacional es tanto un importante sitio de culto como una atracción turística emblemática.",
 		"rcontent_path": "res://assets/journal/basilica_del_voto_nacional.jpg",
 		"icon_path": "res://assets/journal/basilica_del_voto_nacional.jpg",
 		"game_tags": [""],
@@ -760,7 +760,7 @@
 		{
 		"inner_name": "album_jungle_2",
 		"name": "Las cavernas Jumandi",
-		"description": "",
+		"description": "Las cavernas Jumandi, ubicadas en la región amazónica de Ecuador cerca de la ciudad de Tena, son un complejo de cuevas naturales fascinantes que atraen a exploradores y aficionados al ecoturismo. Estas cavernas ofrecen un laberinto subterráneo de formaciones rocosas, estalactitas y estalagmitas, algunas de las cuales se extienden por varios kilómetros dentro de la tierra. Además de su belleza natural, las cavernas Jumandi son importantes culturalmente para las comunidades locales, que las consideran sagradas y las utilizan en ceremonias tradicionales. El sitio también ofrece oportunidades para la observación de la fauna silvestre en los alrededores de la selva amazónica, haciendo de las cavernas Jumandi un destino único para explorar la riqueza natural y cultural de Ecuador.",
 		"rcontent_path": "res://assets/journal/cavernas_de_jumandy.jpg",
 		"icon_path": "res://assets/journal/cavernas_de_jumandy.jpg",
 		"game_tags": [""],
@@ -771,7 +771,7 @@
 		{
 		"inner_name": "album_jungle_3",
 		"name": "Las cascadas de Yanayaku",
-		"description": "",
+		"description": "Las cascadas de Yanayaku, ubicadas en la región de Mindo en Ecuador, son un conjunto impresionante de cascadas que se encuentran en medio de exuberantes paisajes de selva tropical. Estas cascadas destacan por su belleza escénica y la pureza de sus aguas cristalinas, que ofrecen a los visitantes la oportunidad de nadar, hacer senderismo y disfrutar de la naturaleza en su estado más prístino. Además de ser un destino popular para el ecoturismo y la aventura, las cascadas de Yanayaku son parte de la rica biodiversidad de la región de Mindo, conocida por su abundante flora y fauna.",
 		"rcontent_path": "res://assets/journal/cascada_de_yanayacu.jpg",
 		"icon_path": "res://assets/journal/cascada_de_yanayacu.jpg",
 		"game_tags": [""],
@@ -782,7 +782,7 @@
 		{
 		"inner_name": "album_jungle_4",
 		"name": "Las Cavernas Lagarto",
-		"description": "",
+		"description": "Las Cavernas Lagarto, situadas en la provincia de Santo Domingo de los Tsáchilas, Ecuador, son un complejo de cuevas naturales que destacan por su imponente tamaño y formaciones rocosas únicas. Estas cavernas son conocidas por albergar una variedad de salas y pasajes que se extienden a lo largo de varios kilómetros bajo tierra, ofreciendo a los exploradores y espeleólogos la oportunidad de descubrir sus misterios y maravillas geológicas. Además de su importancia como atracción turística y científica, las Cavernas Lagarto son valoradas por las comunidades locales y son parte del patrimonio natural y cultural de Ecuador.",
 		"rcontent_path": "res://assets/journal/cavernas_lagarto.jpg",
 		"icon_path": "res://assets/journal/cavernas_lagarto.jpg",
 		"game_tags": [""],

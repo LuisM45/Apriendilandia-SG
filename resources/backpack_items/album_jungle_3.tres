@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_d1st1"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_xdihi"]
 
 [resource]
-script = ExtResource("1_d1st1")
+script = ExtResource("1_xdihi")
 inner_name = "album_jungle_3"
 name = "Las cascadas de Yanayaku"
 rcontent_path = "res://assets/journal/cascada_de_yanayacu.jpg"
-description = ""
+description = "Las cascadas de Yanayaku, ubicadas en la región de Mindo en Ecuador, son un conjunto impresionante de cascadas que se encuentran en medio de exuberantes paisajes de selva tropical. Estas cascadas destacan por su belleza escénica y la pureza de sus aguas cristalinas, que ofrecen a los visitantes la oportunidad de nadar, hacer senderismo y disfrutar de la naturaleza en su estado más prístino. Además de ser un destino popular para el ecoturismo y la aventura, las cascadas de Yanayaku son parte de la rica biodiversidad de la región de Mindo, conocida por su abundante flora y fauna."
 game_tags = [""]
 type_tags = ["jungle"]
 icon_path = "res://assets/journal/cascada_de_yanayacu.jpg"

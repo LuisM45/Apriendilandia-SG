@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_42hcw"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_vl2ds"]
 
 [resource]
-script = ExtResource("1_42hcw")
+script = ExtResource("1_vl2ds")
 inner_name = "album_jungle_1"
 name = "El Gran Cañón de Ñachiyaku"
 rcontent_path = "res://assets/journal/canon_de_nanchiyaku.png"

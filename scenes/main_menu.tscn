@@ -1,7 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://cynqaahscuo2p"]
+[gd_scene load_steps=12 format=3 uid="uid://cynqaahscuo2p"]
 
 [ext_resource type="Script" path="res://scripts/main_menu/main.gd" id="1_i4jsu"]
-[ext_resource type="Texture2D" uid="uid://b3e47vxcemrpd" path="res://assets/icons/medal.png" id="4_6qf2q"]
 [ext_resource type="Texture2D" uid="uid://dsgu1wvifwpx2" path="res://assets/Menu Buttons/Square Buttons/Square Buttons/Settings Square Button.png" id="4_nx8vv"]
 [ext_resource type="Script" path="res://scripts/gui/generic_texture_button.gd" id="5_ido4r"]
 [ext_resource type="Texture2D" uid="uid://kwh33rngsvr7" path="res://assets/Menu Buttons/Square Buttons/album_button.png" id="5_xt8us"]
@@ -154,38 +153,6 @@ offset_right = 0.191986
 grow_vertical = 2
 size_flags_horizontal = 0
 
-[node name="MedalBeach" type="TextureRect" parent="PanelContainer"]
-layout_mode = 2
-offset_right = 400.0
-offset_bottom = 400.0
-texture = ExtResource("4_6qf2q")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="MedalCity" type="TextureRect" parent="PanelContainer"]
-layout_mode = 2
-offset_right = 400.0
-offset_bottom = 400.0
-texture = ExtResource("4_6qf2q")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="MedalAll" type="TextureRect" parent="PanelContainer"]
-layout_mode = 2
-offset_right = 400.0
-offset_bottom = 400.0
-texture = ExtResource("4_6qf2q")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="MedalForest" type="TextureRect" parent="PanelContainer"]
-layout_mode = 2
-offset_right = 400.0
-offset_bottom = 400.0
-texture = ExtResource("4_6qf2q")
-expand_mode = 1
-stretch_mode = 5
-
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
 layout_mode = 1
 anchors_preset = -1
@@ -232,6 +199,24 @@ stretch_mode = 5
 script = ExtResource("9_daxc1")
 description = "Actualmente te encuentras en le menú.
 Desde aquí puedes ingresar a configuración, a tu inventario o alguna de los regiones de juego."
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 32.0
+offset_right = -32.0
+offset_bottom = -134.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ImageContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_8x6a1")

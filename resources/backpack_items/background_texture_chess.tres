@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_mptck"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_fo4i0"]
 
 [resource]
-script = ExtResource("1_mptck")
+script = ExtResource("1_fo4i0")
 inner_name = "background_texture_chess"
 name = "Patrón de cuadrícula"
 rcontent_path = "res://assets/backgrounds/patterns/chess.png"

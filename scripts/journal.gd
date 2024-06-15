@@ -1,5 +1,6 @@
 extends Control
 
+const CompositeButton = preload("res://scripts/gui/button_composite.gd")
 const BasePhoto = preload("res://branches/journal/base_photo.tscn")
 @onready var photo_container = $VBoxContainer/Panel/HFlowContainer
 
@@ -7,7 +8,8 @@ func _ready():
 	var photos = Inventory.get_backpack_photos()
 	for photo:BackpackItem in photos:
 		var base_photo = BasePhoto.instantiate()
-		base_photo.texture_normal = photo.get_rcontent()
+		CompositeButton.apply(base_photo)
+		base_photo.photo = photo
 		photo_container.add_child(base_photo)
 
 func _on_back_press():

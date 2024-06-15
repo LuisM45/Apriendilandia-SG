@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_r4wmg"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_xdffx"]
 
 [resource]
-script = ExtResource("1_r4wmg")
+script = ExtResource("1_xdffx")
 inner_name = "painting_potion_source_sprite_set_circular"
 name = "Botella redonda para pintar"
 rcontent_path = "res://resources/potion_sprite_sets/circular_sprite_set.tres"

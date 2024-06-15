@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_pd2ip"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_4ehn7"]
 
 [resource]
-script = ExtResource("1_pd2ip")
+script = ExtResource("1_4ehn7")
 inner_name = "album_highlands_4"
 name = "Basílica del Voto Nacional"
 rcontent_path = "res://assets/journal/basilica_del_voto_nacional.jpg"
-description = ""
+description = "La Basílica del Voto Nacional, ubicada en Quito, Ecuador, es la iglesia neogótica más grande de América Latina y una de las estructuras religiosas más imponentes del país. Construida a partir de finales del siglo XIX y situada en el centro histórico de la ciudad, la basílica se destaca por sus majestuosas torres y detalladas gárgolas que representan animales autóctonos del Ecuador, como iguanas y tortugas. Además de su impresionante arquitectura, ofrece a los visitantes la posibilidad de subir a sus torres para disfrutar de panorámicas espectaculares de Quito. La Basílica del Voto Nacional es tanto un importante sitio de culto como una atracción turística emblemática."
 game_tags = [""]
 type_tags = ["highlands"]
 icon_path = "res://assets/journal/basilica_del_voto_nacional.jpg"

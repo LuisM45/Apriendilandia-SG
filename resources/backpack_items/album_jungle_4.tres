@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_pwpep"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_8abg0"]
 
 [resource]
-script = ExtResource("1_pwpep")
+script = ExtResource("1_8abg0")
 inner_name = "album_jungle_4"
 name = "Las Cavernas Lagarto"
 rcontent_path = "res://assets/journal/cavernas_lagarto.jpg"
-description = ""
+description = "Las Cavernas Lagarto, situadas en la provincia de Santo Domingo de los Tsáchilas, Ecuador, son un complejo de cuevas naturales que destacan por su imponente tamaño y formaciones rocosas únicas. Estas cavernas son conocidas por albergar una variedad de salas y pasajes que se extienden a lo largo de varios kilómetros bajo tierra, ofreciendo a los exploradores y espeleólogos la oportunidad de descubrir sus misterios y maravillas geológicas. Además de su importancia como atracción turística y científica, las Cavernas Lagarto son valoradas por las comunidades locales y son parte del patrimonio natural y cultural de Ecuador."
 game_tags = [""]
 type_tags = ["jungle"]
 icon_path = "res://assets/journal/cavernas_lagarto.jpg"

@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_5xog5"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_of8gm"]
 
 [resource]
-script = ExtResource("1_5xog5")
+script = ExtResource("1_of8gm")
 inner_name = "painting_potion_source_sprite_set_default"
 name = "Botellas de pociones para pintar por defecto"
 rcontent_path = "res://resources/potion_sprite_sets/source_sprite_set_default.tres"

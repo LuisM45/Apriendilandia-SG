@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_nrx2d"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_4ygkg"]
 
 [resource]
-script = ExtResource("1_nrx2d")
+script = ExtResource("1_4ygkg")
 inner_name = "album_highlands_2"
 name = "Bosque de niebla en Mindo"
 rcontent_path = "res://assets/journal/bosque_nuboso_de_mindo.jpg"
-description = ""
+description = "El Bosque de Niebla en Mindo, Ecuador, es una región biodiversa y húmeda situada en la vertiente occidental de los Andes. Caracterizado por su clima nublado y alta humedad, este ecosistema alberga una rica variedad de flora y fauna, incluyendo numerosas especies de aves, mariposas, y plantas endémicas. Mindo es especialmente popular entre los observadores de aves y los amantes de la naturaleza por su impresionante avifauna y paisajes exuberantes. Además de la biodiversidad, el área ofrece actividades de ecoturismo como senderismo, canopy, y exploración de cascadas, haciendo de Mindo un destino ideal para el turismo ecológico y la conservación."
 game_tags = [""]
 type_tags = ["highlands"]
 icon_path = "res://assets/journal/bosque_nuboso_de_mindo.jpg"

@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_lc2p6"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_d37gy"]
 
 [resource]
-script = ExtResource("1_lc2p6")
+script = ExtResource("1_d37gy")
 inner_name = "album_coast_4"
 name = "Bosque Petrificado de Puyango"
 rcontent_path = "res://assets/journal/bosque_petrificado_de_puyango.jpg"
-description = ""
+description = "El Bosque Petrificado de Puyango, ubicado en la frontera entre las provincias de Loja y El Oro en Ecuador, es una de las reservas de fósiles más importantes del país y una de las más grandes del mundo. Este sitio destaca por sus árboles petrificados, algunos con más de 100 millones de años, que ofrecen una visión única de la vida prehistórica. Además de los fósiles de árboles, el bosque alberga una rica biodiversidad actual, incluyendo diversas especies de flora y fauna. Es un destino fascinante tanto para turistas como para científicos, combinando la maravilla geológica con la belleza natural y la historia paleontológica."
 game_tags = [""]
 type_tags = ["coast"]
 icon_path = "res://assets/journal/bosque_petrificado_de_puyango.jpg"
