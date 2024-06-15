@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_secqy"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_owchc"]
 
 [resource]
-script = ExtResource("1_secqy")
+script = ExtResource("1_owchc")
 inner_name = "background_texture_alt_stripes"
 name = "Patrón diagonal (alternativo)"
 rcontent_path = "res://assets/backgrounds/patterns/alt_stripes.png"

@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_ae1s2"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_xd556"]
 
 [resource]
-script = ExtResource("1_ae1s2")
+script = ExtResource("1_xd556")
 inner_name = "background_texture_diamond"
 name = "Patrón de rombo"
 rcontent_path = "res://assets/backgrounds/patterns/diamond.png"

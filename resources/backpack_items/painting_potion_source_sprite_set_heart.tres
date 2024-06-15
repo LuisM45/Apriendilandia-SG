@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_rtj5j"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_8bikw"]
 
 [resource]
-script = ExtResource("1_rtj5j")
+script = ExtResource("1_8bikw")
 inner_name = "painting_potion_source_sprite_set_heart"
 name = "Botella de corazón para pintar"
 rcontent_path = "res://resources/potion_sprite_sets/heart_sprite_set.tres"

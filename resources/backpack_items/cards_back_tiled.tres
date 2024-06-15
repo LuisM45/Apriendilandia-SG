@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_57d1k"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_mv5gm"]
 
 [resource]
-script = ExtResource("1_57d1k")
+script = ExtResource("1_mv5gm")
 inner_name = "cards_back_tiled"
 name = "Patrón para cartas de mosaico"
 rcontent_path = "res://assets/card_matching/back_tiled.png"

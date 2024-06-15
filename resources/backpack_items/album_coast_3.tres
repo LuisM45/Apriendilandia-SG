@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_cbol2"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_bi5f0"]
 
 [resource]
-script = ExtResource("1_cbol2")
+script = ExtResource("1_bi5f0")
 inner_name = "album_coast_3"
 name = "Puerto Cayo"
 rcontent_path = "res://assets/journal/puerto_cayo.jpg"

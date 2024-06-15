@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_avyyk"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_vq7u8"]
 
 [resource]
-script = ExtResource("1_avyyk")
+script = ExtResource("1_vq7u8")
 inner_name = "background_texture_arrow"
 name = "Patrón zig-zag"
 rcontent_path = "res://assets/backgrounds/patterns/arrow.png"

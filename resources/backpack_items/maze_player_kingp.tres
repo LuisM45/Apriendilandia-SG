@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_mgn8v"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_i548f"]
 
 [resource]
-script = ExtResource("1_mgn8v")
+script = ExtResource("1_i548f")
 inner_name = "maze_player_kingp"
 name = "Avatar de rey cerdo para laberinto"
 rcontent_path = "res://resources/sprite_frames/king_human.tres"

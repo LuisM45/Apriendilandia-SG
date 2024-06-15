@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_uxq4j"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_ap0n7"]
 
 [resource]
-script = ExtResource("1_uxq4j")
+script = ExtResource("1_ap0n7")
 inner_name = "cards_back_spiral"
 name = "Patrón para cartas de espiral"
 rcontent_path = "res://assets/card_matching/back_spiral.png"

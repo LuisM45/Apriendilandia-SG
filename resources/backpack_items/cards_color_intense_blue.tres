@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_nvyu0"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_d12fq"]
 
 [resource]
-script = ExtResource("1_nvyu0")
+script = ExtResource("1_d12fq")
 inner_name = "cards_color_intense_blue"
 name = "Color azul para cartas"
 rcontent_path = "res://resources/colors/intense_blue.tres"

@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_hnyxg"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_n4jmh"]
 
 [resource]
-script = ExtResource("1_hnyxg")
+script = ExtResource("1_n4jmh")
 inner_name = "background_accent_color_pyellow"
 name = "Color de acento amarillo pastel"
 rcontent_path = "res://resources/colors/pyellow_accent.tres"

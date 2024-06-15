@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_ctp3k"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_4lwas"]
 
 [resource]
-script = ExtResource("1_ctp3k")
+script = ExtResource("1_4lwas")
 inner_name = "background_background_color_pred"
 name = "Color de fondo rojo pastel"
 rcontent_path = "res://resources/colors/pred_background.tres"

@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_vl2ds"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_lj4p2"]
 
 [resource]
-script = ExtResource("1_vl2ds")
+script = ExtResource("1_lj4p2")
 inner_name = "album_jungle_1"
 name = "El Gran Cañón de Ñachiyaku"
 rcontent_path = "res://assets/journal/canon_de_nanchiyaku.png"
-description = ""
+description = "El Gran Cañón de Ñachiyaku, ubicado en la provincia de Morona Santiago en la región amazónica de Ecuador, es una impresionante formación geológica conocida por sus imponentes acantilados y profundidades. Este cañón se destaca por su paisaje escarpado y las espectaculares vistas que ofrece a quienes lo visitan, además de ser un sitio de importancia cultural para las comunidades indígenas locales, quienes lo consideran sagrado. El Gran Cañón de Ñachiyaku no solo es un destino para la aventura y el ecoturismo, sino también un lugar donde se puede apreciar la biodiversidad única de la selva amazónica ecuatoriana."
 game_tags = [""]
 type_tags = ["jungle"]
 icon_path = "res://assets/journal/canon_de_nanchiyaku.png"

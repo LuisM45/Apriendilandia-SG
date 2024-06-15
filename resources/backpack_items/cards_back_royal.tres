@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_x57kb"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_jkjx3"]
 
 [resource]
-script = ExtResource("1_x57kb")
+script = ExtResource("1_jkjx3")
 inner_name = "cards_back_royal"
 name = "Patrón para cartas real"
 rcontent_path = "res://assets/card_matching/back_royal.png"

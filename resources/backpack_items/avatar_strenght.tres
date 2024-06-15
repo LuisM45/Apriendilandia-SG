@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_6dqrr"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_yrib2"]
 
 [resource]
-script = ExtResource("1_6dqrr")
+script = ExtResource("1_yrib2")
 inner_name = "avatar_strenght"
 name = "Foto de perfil fuerza"
 rcontent_path = "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/"

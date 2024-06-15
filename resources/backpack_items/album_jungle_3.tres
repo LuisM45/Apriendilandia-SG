@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_xdihi"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_o3rln"]
 
 [resource]
-script = ExtResource("1_xdihi")
+script = ExtResource("1_o3rln")
 inner_name = "album_jungle_3"
 name = "Las cascadas de Yanayaku"
 rcontent_path = "res://assets/journal/cascada_de_yanayacu.jpg"
