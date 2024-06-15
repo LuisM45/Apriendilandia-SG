@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_h0ahs"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_gsck0"]
 
 [resource]
-script = ExtResource("1_h0ahs")
+script = ExtResource("1_gsck0")
 inner_name = "album_highlands_3"
 name = "Plaza Foch"
 rcontent_path = "res://assets/journal/plaza_foch.png"

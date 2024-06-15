@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_2ca4q"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_pd2ip"]
 
 [resource]
-script = ExtResource("1_2ca4q")
+script = ExtResource("1_pd2ip")
 inner_name = "album_highlands_4"
 name = "Basílica del Voto Nacional"
 rcontent_path = "res://assets/journal/basilica_del_voto_nacional.jpg"

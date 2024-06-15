@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_q5v6g"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_t128i"]
 
 [resource]
-script = ExtResource("1_q5v6g")
+script = ExtResource("1_t128i")
 inner_name = "background_texture_big_diamond"
 name = "Patrón rombos grandes"
 rcontent_path = "res://assets/backgrounds/patterns/big_diamond.png"

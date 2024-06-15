@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_wwfhv"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_lc2p6"]
 
 [resource]
-script = ExtResource("1_wwfhv")
+script = ExtResource("1_lc2p6")
 inner_name = "album_coast_4"
 name = "Bosque Petrificado de Puyango"
 rcontent_path = "res://assets/journal/bosque_petrificado_de_puyango.jpg"

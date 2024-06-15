@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_7najp"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_2ak10"]
 
 [resource]
-script = ExtResource("1_7najp")
+script = ExtResource("1_2ak10")
 inner_name = "maze_player_pig"
 name = "Avatar de cerdo para laberinto"
 rcontent_path = "res://resources/sprite_frames/pig.tres"

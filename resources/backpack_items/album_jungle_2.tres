@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_xh8jk"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_ghjbt"]
 
 [resource]
-script = ExtResource("1_xh8jk")
+script = ExtResource("1_ghjbt")
 inner_name = "album_jungle_2"
 name = "Las cavernas Jumandi"
 rcontent_path = "res://assets/journal/cavernas_de_jumandy.jpg"

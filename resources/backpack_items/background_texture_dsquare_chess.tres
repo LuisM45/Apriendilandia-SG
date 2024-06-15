@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_o6a3h"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_rngup"]
 
 [resource]
-script = ExtResource("1_o6a3h")
+script = ExtResource("1_rngup")
 inner_name = "background_texture_dsquare_chess"
 name = "Patrón cuadricula especial"
 rcontent_path = "res://assets/backgrounds/patterns/dsquare_chess.png"

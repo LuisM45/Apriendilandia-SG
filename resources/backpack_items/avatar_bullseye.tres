@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_impdm"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_10msk"]
 
 [resource]
-script = ExtResource("1_impdm")
+script = ExtResource("1_10msk")
 inner_name = "avatar_bullseye"
 name = "Foto de perfil diana"
 rcontent_path = "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_34.png"
