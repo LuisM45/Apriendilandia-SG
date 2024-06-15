@@ -30,9 +30,9 @@ func _init():
 	user = User.default_user()
 	load_user_from_db()
 	load_config_from_db()
-	var utils = load("res://scripts/utils.gd").new()
-	utils.backpack_json_dump_to_dir()
-	utils.backpack_dir_dump_to_rcol()
+	#var utils = load("res://scripts/utils.gd").new()
+	#utils.backpack_json_dump_to_dir()
+	#utils.backpack_dir_dump_to_rcol()
 	pass
 
 func load_config_from_db():
