@@ -73,7 +73,6 @@ func hsv_rectVec3_to_color(hsv:Vector3)->Color:
 	var s = hs_vector.length()
 	var v = hsv.z
 	
-	print(h,",",s,",",v)
 	return Color.from_hsv(h,s,v)
 
 func _sum(array):

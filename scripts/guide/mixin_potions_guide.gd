@@ -49,7 +49,6 @@ func _set_mouse_content(new_node_path):
 func reposition_sticky_nodes():
 	for n in $StickyNodes.get_children():
 		for n_child in n.get_children():
-			print(n_child.position,n.position)
 			n_child.position = n.position
 
 const RObserver = preload("res://scripts/test/RedstoneObserver.gd")
@@ -58,6 +57,5 @@ var ax = Vector2(0,0)
 func _mouse_sticky():
 	if _mouse_content == null: return
 	_mouse_content.position = $MouseObj.position
-	#print(mouse_content.position,$MouseObj.position)
 
 

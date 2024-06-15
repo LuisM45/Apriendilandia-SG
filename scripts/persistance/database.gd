@@ -51,10 +51,8 @@ func set_user(user:User):
 	var data = {
 			"username":user.username
 		}
-	print(data)
 	if user.id != null and user.id != 0:
 		data["id"]=user.id
-	print(data)
 	var done = metrics_db.insert_row(
 		USER_TBL,
 		data

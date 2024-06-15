@@ -27,8 +27,6 @@ static func from_dictionary(dictionary:Dictionary)->BackpackItem:
 	item.icon_path = dictionary.get("icon_path")
 	item.is_default = dictionary.get("is_default")
 	item.types = dictionary.get("types")
-	print(dictionary.get("types"))
-	print(item.types)
 	return item
 
 func is_of_game(game:String):

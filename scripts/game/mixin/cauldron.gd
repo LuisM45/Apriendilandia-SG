@@ -51,7 +51,6 @@ func _set_current_color(color:Color):
 	mask_sprite.modulate =color
 
 func _set_target_color(color:Color):
-	print(target_color)
 	target_color = color
 	target_mask_sprite.modulate = target_color
 

@@ -61,5 +61,4 @@ func lower(distance=100):
 
 func _on_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.is_pressed():
-		print(content.visible)
 		on_click.emit(self)

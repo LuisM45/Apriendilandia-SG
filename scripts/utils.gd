@@ -7,7 +7,6 @@ func export_backpack_items():
 	const basepath = "res://resources/backpack_items/"
 	var dir = DirAccess.open(basepath)
 	if !(dir):
-		print("resources/backpack_items does not exists")
 		return
 		
 	dir.list_dir_begin()

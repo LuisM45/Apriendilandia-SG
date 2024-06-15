@@ -8,11 +8,9 @@ func _ready():
 	Globals.user_changed.connect(update_profile_texture)
 	
 func update_profile_texture():
-	print("achoo")
 	var texture = load("res://assets/icons/user.png")
 	var texture_res = Inventory.get_attribute("avatar:icon")
 	if texture_res != null:
-		print("texture_res != null")
 		texture = texture_res.get_rcontent()
 	profile_texture.texture = texture
 
