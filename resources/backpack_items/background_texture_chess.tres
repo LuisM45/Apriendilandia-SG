@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_u2mv4"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_gtd1c"]
 
 [resource]
-script = ExtResource("1_u2mv4")
+script = ExtResource("1_gtd1c")
 inner_name = "background_texture_chess"
 name = "Patrón de cuadrícula"
 rcontent_path = "res://assets/backgrounds/patterns/chess.png"
@@ -12,3 +12,4 @@ game_tags = ["background"]
 type_tags = ["texture"]
 icon_path = "res://assets/Pixel Adventure 1/Background/Purple.png"
 is_default = true
+types = 1

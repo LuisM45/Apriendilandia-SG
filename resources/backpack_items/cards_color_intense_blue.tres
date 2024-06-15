@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_fnivo"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_t1hof"]
 
 [resource]
-script = ExtResource("1_fnivo")
+script = ExtResource("1_t1hof")
 inner_name = "cards_color_intense_blue"
 name = "Color azul para cartas"
 rcontent_path = "res://resources/colors/intense_blue.tres"
@@ -12,3 +12,4 @@ game_tags = ["card_game"]
 type_tags = ["back_color"]
 icon_path = "res://assets/colors/intense_blue.png"
 is_default = true
+types = 1

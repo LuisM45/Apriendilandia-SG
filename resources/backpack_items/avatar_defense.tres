@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_jow3u"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_njhqf"]
 
 [resource]
-script = ExtResource("1_jow3u")
+script = ExtResource("1_njhqf")
 inner_name = "avatar_defense"
 name = "Foto de perfil escudo"
 rcontent_path = "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_18.png"
@@ -12,3 +12,4 @@ game_tags = ["avatar"]
 type_tags = ["icon"]
 icon_path = "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_18.png"
 is_default = false
+types = 1

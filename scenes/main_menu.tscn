@@ -240,4 +240,5 @@ stream = ExtResource("9_8x6a1")
 [connection signal="pressed" from="ButtonBeach" to="." method="_on_button_beach_pressed"]
 [connection signal="pressed" from="ButtonForest" to="." method="_on_button_forest_pressed"]
 [connection signal="pressed" from="PanelContainer/HBoxContainer/ConfigBtn" to="." method="_on_button_config_pressed"]
+[connection signal="pressed" from="PanelContainer/HBoxContainer/AlbumBtn" to="." method="_on_journal_pressed"]
 [connection signal="pressed" from="PanelContainer/HBoxContainer/InventoryBtn" to="." method="_on_inventory_pressed"]

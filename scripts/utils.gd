@@ -3,7 +3,6 @@
 extends Node
 	
 func export_backpack_items():
-	print("export_backpack_items()")
 	var backpackCol = RCollection.new()
 	const basepath = "res://resources/backpack_items/"
 	var dir = DirAccess.open(basepath)
@@ -66,15 +65,7 @@ func backpack_json_dump_to_dir():
 	var dump_file = FileAccess.open("res://resources/backpack_items.json",FileAccess.READ)
 	var items = JSON.parse_string(dump_file.get_as_text())
 	for item in items:
-		var backpack_item = BackpackItem.new()
-		backpack_item.inner_name = item.get("inner_name")
-		backpack_item.name = item.get("name")
-		backpack_item.rcontent_path = item.get("rcontent_path")
-		backpack_item.description = item.get("description")
-		backpack_item.game_tags = item.get("game_tags")
-		backpack_item.type_tags = item.get("type_tags")
-		backpack_item.icon_path = item.get("icon_path")
-		backpack_item.is_default = item.get("is_default")
+		var backpack_item = BackpackItem.from_dictionary(item)
 		
 		ResourceSaver.save(
 			backpack_item,

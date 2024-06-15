@@ -24,6 +24,7 @@ var user:User
 
 var pause_scene = preload("res://branches/gui/pause_menu.tscn")
 var next_scenes = []
+var win_callbacks = []
 func _init():
 	if !Database.is_node_ready(): await Database.ready
 	user = User.default_user()
@@ -111,4 +112,5 @@ func _get_sfx_volume():
 func _get_tts_volume():
 	return _tts_volume
 	
-	
+func no_fun():
+	pass

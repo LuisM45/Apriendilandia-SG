@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_s6squ"]
+
+[resource]
+script = ExtResource("1_s6squ")
+inner_name = "album_highlands_4"
+name = "Basílica del Voto Nacional"
+rcontent_path = "res://assets/journal/basilica_del_voto_nacional.jpg"
+description = ""
+game_tags = [""]
+type_tags = ["highlands"]
+icon_path = "res://assets/journal/basilica_del_voto_nacional.jpg"
+is_default = false
+types = 2

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_kx25l"]
+
+[resource]
+script = ExtResource("1_kx25l")
+inner_name = "album_coast_4"
+name = "Bosque Petrificado de Puyango"
+rcontent_path = "res://assets/journal/bosque_petrificado_de_puyango.jpg"
+description = ""
+game_tags = [""]
+type_tags = ["coast"]
+icon_path = "res://assets/journal/bosque_petrificado_de_puyango.jpg"
+is_default = false
+types = 2

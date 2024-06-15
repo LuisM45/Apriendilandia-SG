@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_03kla"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_u3t3j"]
 
 [resource]
-script = ExtResource("1_03kla")
+script = ExtResource("1_u3t3j")
 inner_name = "cards_color_intense_red"
 name = "Color rojo para cartas"
 rcontent_path = "res://resources/colors/intense_red.tres"
@@ -12,3 +12,4 @@ game_tags = ["card_game"]
 type_tags = ["back_color"]
 icon_path = "res://assets/colors/intense_red.png"
 is_default = true
+types = 1

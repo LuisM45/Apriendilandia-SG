@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_l0w75"]
+
+[resource]
+script = ExtResource("1_l0w75")
+inner_name = "album_highlands_1"
+name = "Monumento a la Mitad del Mundo"
+rcontent_path = "res://assets/journal/monumento_mitad_del_mundo.jpg"
+description = ""
+game_tags = [""]
+type_tags = ["highlands"]
+icon_path = "res://assets/journal/monumento_mitad_del_mundo.jpg"
+is_default = false
+types = 2

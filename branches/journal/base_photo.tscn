@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cy3ws2muy3wh1"]
+
+[ext_resource type="Texture2D" uid="uid://cbo1y2t6ytxma" path="res://icon.svg" id="1_hgmeq"]
+
+[node name="TextureButton" type="TextureButton"]
+custom_minimum_size = Vector2(500, 300)
+texture_normal = ExtResource("1_hgmeq")
+ignore_texture_size = true
+stretch_mode = 6

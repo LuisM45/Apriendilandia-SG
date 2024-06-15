@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_7yt44"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_pnahl"]
 
 [resource]
-script = ExtResource("1_7yt44")
+script = ExtResource("1_pnahl")
 inner_name = "background_texture_big_diamond"
 name = "Patrón rombos grandes"
 rcontent_path = "res://assets/backgrounds/patterns/big_diamond.png"
@@ -12,3 +12,4 @@ game_tags = ["background"]
 type_tags = ["texture"]
 icon_path = "res://assets/Pixel Adventure 1/Background/Green.png"
 is_default = false
+types = 1

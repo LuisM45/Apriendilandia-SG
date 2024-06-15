@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_o1x5n"]
+
+[resource]
+script = ExtResource("1_o1x5n")
+inner_name = "album_highlands_2"
+name = "Bosque de niebla en Mindo"
+rcontent_path = "res://assets/journal/bosque_nuboso_de_mindo.jpg"
+description = ""
+game_tags = [""]
+type_tags = ["highlands"]
+icon_path = "res://assets/journal/bosque_nuboso_de_mindo.jpg"
+is_default = false
+types = 2

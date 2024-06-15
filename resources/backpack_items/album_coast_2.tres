@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_jw4l6"]
+
+[resource]
+script = ExtResource("1_jw4l6")
+inner_name = "album_coast_2"
+name = "Parque Nacional Machalilla"
+rcontent_path = "res://assets/journal/parque_nacional_machalilla.jpg"
+description = ""
+game_tags = [""]
+type_tags = ["coast"]
+icon_path = "res://assets/journal/parque_nacional_machalilla.jpg"
+is_default = false
+types = 2

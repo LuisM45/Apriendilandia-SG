@@ -1,6 +1,8 @@
 extends Resource
 class_name BackpackItem
 
+enum TYPES {APPEARANCE=1, PHOTO=2}
+
 @export var inner_name: String
 @export var name: String
 @export_file var rcontent_path: String
@@ -9,6 +11,7 @@ class_name BackpackItem
 @export var type_tags: Array
 @export_file("*.png") var icon_path: String
 @export var is_default: bool = false
+@export var types: TYPES
 
 static func from_inner_name(_inner_name:String)->BackpackItem:
 	return load("res://resources/backpack_items/"+_inner_name+".tres")
@@ -23,6 +26,9 @@ static func from_dictionary(dictionary:Dictionary)->BackpackItem:
 	item.type_tags = dictionary.get("type_tags")
 	item.icon_path = dictionary.get("icon_path")
 	item.is_default = dictionary.get("is_default")
+	item.types = dictionary.get("types")
+	print(dictionary.get("types"))
+	print(item.types)
 	return item
 
 func is_of_game(game:String):
@@ -63,6 +69,7 @@ func to_dictionary()->Dictionary:
 		"type_tags": type_tags,
 		"icon_path": icon_path,
 		"is_default": is_default,
+		"types": types,
 	}
 
 func enable():

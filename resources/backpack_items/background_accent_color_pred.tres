@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_ax2rc"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_os104"]
 
 [resource]
-script = ExtResource("1_ax2rc")
+script = ExtResource("1_os104")
 inner_name = "background_accent_color_pred"
 name = "Color de acento rojo pastel"
 rcontent_path = "res://resources/colors/pred_accent.tres"
@@ -12,3 +12,4 @@ game_tags = ["background"]
 type_tags = ["accent_color"]
 icon_path = "res://assets/colors/pred_accent.png"
 is_default = false
+types = 1

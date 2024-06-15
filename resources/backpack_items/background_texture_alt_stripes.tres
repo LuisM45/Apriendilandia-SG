@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_ht2vw"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_sgrch"]
 
 [resource]
-script = ExtResource("1_ht2vw")
+script = ExtResource("1_sgrch")
 inner_name = "background_texture_alt_stripes"
 name = "Patrón diagonal (alternativo)"
 rcontent_path = "res://assets/backgrounds/patterns/alt_stripes.png"
@@ -12,3 +12,4 @@ game_tags = ["background"]
 type_tags = ["texture"]
 icon_path = "res://assets/Pixel Adventure 1/Background/Pink.png"
 is_default = false
+types = 1

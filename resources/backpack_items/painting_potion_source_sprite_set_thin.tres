@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_g4pts"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_hc4hw"]
 
 [resource]
-script = ExtResource("1_g4pts")
+script = ExtResource("1_hc4hw")
 inner_name = "painting_potion_source_sprite_set_thin"
 name = "Botella delgada para pintar"
 rcontent_path = "res://resources/potion_sprite_sets/thin_sprite_set.tres"
@@ -12,3 +12,4 @@ game_tags = ["painting_potions", "potion_mixing"]
 type_tags = ["potion_texture_set"]
 icon_path = "res://assets/alchemy set/all png/Alchemy1_20.png"
 is_default = false
+types = 1

@@ -1,5 +1,4 @@
 extends Node
-const UnlockScreen = preload("res://branches/gui/unlock_screen.tscn")
 const Sidebar = preload("res://branches/gui/sidebar.tscn")
 const StageBackground = preload("res://branches/gui/stage_generic_background.tscn")
 const UNCOMPLIMENT_CHANCE = 0.3
@@ -44,7 +43,7 @@ func _ready():
 	gui_node.pause.connect(_on_pause)
 	gui_node.help.connect(_on_help)
 	gui_node.task = task
-	get_tree().root.add_child.call_deferred(gui_node)
+	add_child.call_deferred(gui_node)
 	
 	var background = StageBackground.instantiate()
 	add_child(background)
@@ -106,7 +105,10 @@ func _on_win(extra = ""):
 		
 	# Nuevo objeto desbloqueado
 	_play_win_sound()
-	if _try_unlock(): return
+	var unlock_screen = Inventory.try_show_unlock_item()
+	if unlock_screen!= null:
+		unlock_screen.ok_pressed.connect(_on_win_no_timeout)
+		return
 	
 	var timer = Timer.new()
 	add_child(timer)
@@ -119,6 +121,8 @@ func _on_win(extra = ""):
 
 func _on_win_no_timeout(extra = ""):
 	var playtime = Globals.unix_system_time() - playdate
+	if !Globals.win_callbacks.is_empty():
+		Globals.win_callbacks.pop_front().call()
 	Database.insert_metric(
 		Globals.user.id, # id
 		difficulty, # difficulty
@@ -181,16 +185,3 @@ func _on_succesful_attempt():
 
 func _load_customization_config():
 	pass
-
-func _try_unlock():
-	var unlocked_item = Inventory.pull_random_item()
-	if unlocked_item == null: return
-	
-	Inventory.unlock_item(unlocked_item)
-	var ulock_screen = UnlockScreen.instantiate()
-	ulock_screen.backpack_item = unlocked_item
-	ulock_screen.ok_pressed.connect(_on_win_no_timeout)
-	if ulock_screen.backpack_item == null: return false
-	
-	get_tree().root.add_child(ulock_screen)
-	return true

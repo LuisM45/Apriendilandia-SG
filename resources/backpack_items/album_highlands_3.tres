@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_vvqim"]
+
+[resource]
+script = ExtResource("1_vvqim")
+inner_name = "album_highlands_3"
+name = "Plaza Foch"
+rcontent_path = "res://assets/journal/plaza_foch.png"
+description = ""
+game_tags = [""]
+type_tags = ["highlands"]
+icon_path = "res://assets/journal/plaza_foch.png"
+is_default = false
+types = 2

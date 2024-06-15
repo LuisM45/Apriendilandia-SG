@@ -1,4 +1,5 @@
 extends Node
+const UnlockScreen = preload("res://branches/gui/unlock_screen.tscn")
 
 var achievements = {}
 var user_data = {}
@@ -14,8 +15,22 @@ func _init():
 	pass
 
 func pull_random_item():
-	var owned_items = Database.get_customization_items(Globals.user).map(func(x):return x.inner_name)
-	var all_items = all_backpack_items.keys()
+	var owned_items = Database.get_items(Globals.user,BackpackItem.TYPES.APPEARANCE).map(func(x):return x.inner_name)
+	var all_items = all_backpack_items.values()\
+		.filter(func(x):return x.types&BackpackItem.TYPES.APPEARANCE>0)\
+		.map(func(x): return x.inner_name)
+	var not_owned_items = all_items.filter(func(x):return x not in owned_items)
+	if not_owned_items.is_empty(): return null
+	
+	var picked_name = not_owned_items.pick_random()
+	return all_backpack_items[picked_name]
+
+func pull_random_photo(photo_type:String):
+	var owned_items = Database.get_items(Globals.user,BackpackItem.TYPES.PHOTO).map(func(x):return x.inner_name)
+	var all_items = all_backpack_items.values()\
+		.filter(func(x:BackpackItem):return x.types==BackpackItem.TYPES.PHOTO)\
+		.filter(func(x:BackpackItem):return photo_type in x.type_tags)\
+		.map(func(x): return x.inner_name)
 	var not_owned_items = all_items.filter(func(x):return x not in owned_items)
 	if not_owned_items.is_empty(): return null
 	
@@ -34,7 +49,28 @@ func unlock_item(item:BackpackItem):
 	Database.append_item(Globals.user,item)
 
 func get_backpack_items():
-	return Database.get_items(Globals.user)
+	return Database.get_items(Globals.user,BackpackItem.TYPES.APPEARANCE)
+
+func get_backpack_photos():
+	return Database.get_items(Globals.user,BackpackItem.TYPES.PHOTO)
+
+func try_show_unlock_item():
+	var item = pull_random_item()
+	if item == null: return null
+	unlock_item(item)
+	var unlock_screen = UnlockScreen.instantiate()
+	unlock_screen.backpack_item = item
+	get_tree().root.add_child(unlock_screen)
+	return unlock_screen
+
+func try_show_unlock_photo(photo_type:String):
+	var photo = pull_random_photo(photo_type)
+	if photo == null: return null
+	unlock_item(photo)
+	var unlock_screen = UnlockScreen.instantiate()
+	unlock_screen.backpack_item = photo
+	get_tree().root.add_child(unlock_screen)
+	return unlock_screen
 
 func load_customization():
 	customization_config = {}

@@ -19,14 +19,14 @@ func _ready():
 	create_metrics_table()
 	create_users_table()
 
-func set_achievement(value:int,_name:String,user_id:=0):
-	if get_achievement(_name,user_id) == null:
-		return _insert_achievement(value,_name,user_id)
+func set_achievement(user:User,value:int,_name:String):
+	if get_achievement(user,name) == null:
+		return _insert_achievement(user,value,_name)
 	else:
-		return _update_achievement(value,_name,user_id)
+		return _update_achievement(user,value,_name)
 
-func get_achievement(_name:String,user_id:=0):
-	var row = _select_achievement(_name,user_id)
+func get_achievement(user:User,_name:String):
+	var row = _select_achievement(_name,user.id)
 	if row.is_empty(): return null
 	return row[0].get("value")
 
@@ -75,10 +75,10 @@ func remove_user(user:User):
 		"id={0}".format([user.id])
 	)
 
-func get_items(user:User)->Array:
+func get_items(user:User,types)->Array:
 	var rows = metrics_db.select_rows(
 		INVENTORY_TBL,
-		"user_id={0}".format([user.id]),
+		"user_id={0} AND (types&{1})>0".format([user.id,types]),
 		["item_name"])
 	return rows.map(func(x):return BackpackItem.from_inner_name(x.get("item_name")))
 
@@ -87,7 +87,8 @@ func append_item(user:User,backpack_item:BackpackItem):
 		INVENTORY_TBL,
 		{
 			"user_id":user.id,
-			"item_name":backpack_item.inner_name
+			"item_name":backpack_item.inner_name,
+			"types":backpack_item.types,
 		}
 	)
 	
@@ -164,19 +165,19 @@ func _select_achievement(_name:String,user_id:=0):
 		["value"]
 	)
 
-func _insert_achievement(value:int,_name:String,user_id:=0):
+func _insert_achievement(user:User,value:int,_name:String):
 	return metrics_db.insert_row(
 		ACHIEVEMENT_TBL,{
 			"name":_name,
-			"user_id":user_id,
+			"user_id":user.id,
 			"value":value,
 		}
 	)
 
-func _update_achievement(value:int,_name:String,user_id:=0):
+func _update_achievement(user:User,value:int,_name:String):
 	return metrics_db.update_rows(
 		ACHIEVEMENT_TBL,
-		"name='{0}' AND user_id={1}".format([_name,user_id]),
+		"name='{0}' AND user_id={1}".format([_name,user.id]),
 		{"value":value}
 	)
 
@@ -211,6 +212,7 @@ func create_inventory_table():
 	var q = "CREATE TABLE {0} (
 		item_name STRING NOT NULL,
 		user_id INTEGER NOT NULL,
+		types INTEGER NOT NULL,
 		PRIMARY KEY (item_name,user_id)
 	);".format([INVENTORY_TBL])
 	return metrics_db.query(q)

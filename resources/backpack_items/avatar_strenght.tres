@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_qx4bd"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_panja"]
 
 [resource]
-script = ExtResource("1_qx4bd")
+script = ExtResource("1_panja")
 inner_name = "avatar_strenght"
 name = "Foto de perfil fuerza"
 rcontent_path = "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/"
@@ -12,3 +12,4 @@ game_tags = ["avatar"]
 type_tags = ["icon"]
 icon_path = "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/"
 is_default = false
+types = 1

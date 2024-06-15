@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_6v8xi"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_wwiyr"]
 
 [resource]
-script = ExtResource("1_6v8xi")
+script = ExtResource("1_wwiyr")
 inner_name = "background_texture_wood"
 name = "Patrón de madera"
 rcontent_path = "res://assets/backgrounds/patterns/wood.png"
@@ -12,3 +12,4 @@ game_tags = ["background"]
 type_tags = ["texture"]
 icon_path = "res://assets/backgrounds/wood copy.png"
 is_default = false
+types = 1

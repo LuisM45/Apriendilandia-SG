@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_8yy66"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_pu0fm"]
 
 [resource]
-script = ExtResource("1_8yy66")
+script = ExtResource("1_pu0fm")
 inner_name = "background_background_color_pgreen"
 name = "Color de fondo verde pastel"
 rcontent_path = "res://resources/colors/pgreen_background.tres"
@@ -12,3 +12,4 @@ game_tags = ["background"]
 type_tags = ["background_color"]
 icon_path = "res://assets/colors/pgreen_background.png"
 is_default = true
+types = 1

@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="BackpackItem" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_hxici"]
+[ext_resource type="Script" path="res://resources/template/backpack_item.gd" id="1_2xumh"]
 
 [resource]
-script = ExtResource("1_hxici")
+script = ExtResource("1_2xumh")
 inner_name = "cards_back_diamond"
 name = "Patrón para cartas de diamantes"
 rcontent_path = "res://assets/card_matching/back_diamond.png"
@@ -12,3 +12,4 @@ game_tags = ["card_game"]
 type_tags = ["back_texture"]
 icon_path = "res://assets/card_matching/colored_back_diamond.png"
 is_default = true
+types = 1

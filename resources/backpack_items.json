@@ -11,7 +11,8 @@
 		"rcontent_path": "res://resources/colors/intense_blue.tres",
 		"type_tags": [
 			"back_color"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -26,7 +27,8 @@
 		"rcontent_path": "res://resources/potion_sprite_sets/pyramid_sprite_set.tres",
 		"type_tags": [
 			"potion_texture_set"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -40,7 +42,8 @@
 		"rcontent_path": "res://assets/card_matching/back_stripes.png",
 		"type_tags": [
 			"back_texture"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -55,7 +58,8 @@
 		"rcontent_path": "res://resources/potion_sprite_sets/ring_sprite_set.tres",
 		"type_tags": [
 			"potion_texture_set"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -69,7 +73,8 @@
 		"rcontent_path": "res://resources/colors/pyellow_accent.tres",
 		"type_tags": [
 			"accent_color"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -83,7 +88,8 @@
 		"rcontent_path": "res://assets/backgrounds/patterns/diamond.png",
 		"type_tags": [
 			"texture"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -97,7 +103,8 @@
 		"rcontent_path": "res://resources/colors/black.tres",
 		"type_tags": [
 			"back_color"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -112,7 +119,8 @@
 		"rcontent_path": "res://resources/potion_sprite_sets/circular_sprite_set.tres",
 		"type_tags": [
 			"potion_texture_set"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -126,7 +134,8 @@
 		"rcontent_path": "res://resources/colors/pblue_accent.tres",
 		"type_tags": [
 			"accent_color"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -140,7 +149,8 @@
 		"rcontent_path": "res://assets/card_matching/back_tiled.png",
 		"type_tags": [
 			"back_texture"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -154,7 +164,8 @@
 		"rcontent_path": "res://resources/colors/intense_red.tres",
 		"type_tags": [
 			"back_color"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -168,7 +179,8 @@
 		"rcontent_path": "res://assets/backgrounds/patterns/diagonal_stripes.png",
 		"type_tags": [
 			"texture"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -183,7 +195,8 @@
 		"rcontent_path": "res://resources/potion_sprite_sets/source_sprite_set_default.tres",
 		"type_tags": [
 			"potion_texture_set"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -197,7 +210,8 @@
 		"rcontent_path": "res://resources/sprite_frames/king_human.tres",
 		"type_tags": [
 			"player_animated_texture"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -212,7 +226,8 @@
 		"rcontent_path": "res://resources/potion_sprite_sets/hammer_sprite_set.tres",
 		"type_tags": [
 			"potion_texture_set"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -226,7 +241,8 @@
 		"rcontent_path": "res://resources/sprite_frames/king_human.tres",
 		"type_tags": [
 			"player_animated_texture"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -240,7 +256,8 @@
 		"rcontent_path": "res://assets/backgrounds/patterns/arrow.png",
 		"type_tags": [
 			"texture"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -254,7 +271,8 @@
 		"rcontent_path": "res://resources/colors/pred_accent.tres",
 		"type_tags": [
 			"accent_color"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -269,7 +287,8 @@
 		"rcontent_path": "res://resources/potion_sprite_sets/heart_sprite_set.tres",
 		"type_tags": [
 			"potion_texture_set"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -283,7 +302,8 @@
 		"rcontent_path": "res://assets/backgrounds/patterns/wood.png",
 		"type_tags": [
 			"texture"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -297,7 +317,8 @@
 		"rcontent_path": "res://assets/backgrounds/patterns/alt_stripes.png",
 		"type_tags": [
 			"texture"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -311,7 +332,8 @@
 		"rcontent_path": "res://assets/backgrounds/patterns/big_diamond.png",
 		"type_tags": [
 			"texture"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -325,7 +347,8 @@
 		"rcontent_path": "res://resources/colors/pblue_background.tres",
 		"type_tags": [
 			"background_color"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -339,7 +362,8 @@
 		"rcontent_path": "res://assets/backgrounds/patterns/dsquare_chess.png",
 		"type_tags": [
 			"texture"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -353,7 +377,8 @@
 		"rcontent_path": "res://resources/colors/pgreen_background.tres",
 		"type_tags": [
 			"background_color"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -367,7 +392,8 @@
 		"rcontent_path": "res://assets/card_matching/back_spiral.png",
 		"type_tags": [
 			"back_texture"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -381,7 +407,8 @@
 		"rcontent_path": "res://resources/colors/pgreen_accent.tres",
 		"type_tags": [
 			"accent_color"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -396,7 +423,8 @@
 		"rcontent_path": "res://resources/potion_sprite_sets/cee_sprite_set.tres",
 		"type_tags": [
 			"potion_texture_set"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -410,7 +438,8 @@
 		"rcontent_path": "res://assets/card_matching/back_diamond.png",
 		"type_tags": [
 			"back_texture"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -425,7 +454,8 @@
 		"rcontent_path": "res://resources/potion_sprite_sets/thin_sprite_set.tres",
 		"type_tags": [
 			"potion_texture_set"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -439,7 +469,8 @@
 		"rcontent_path": "res://assets/backgrounds/patterns/chess.png",
 		"type_tags": [
 			"texture"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -453,7 +484,8 @@
 		"rcontent_path": "res://assets/card_matching/back_royal.png",
 		"type_tags": [
 			"back_texture"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -467,7 +499,8 @@
 		"rcontent_path": "res://resources/colors/pyellow_background.tres",
 		"type_tags": [
 			"background_color"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -481,7 +514,8 @@
 		"rcontent_path": "res://resources/colors/pred_background.tres",
 		"type_tags": [
 			"background_color"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -496,7 +530,8 @@
 		"rcontent_path": "res://resources/potion_sprite_sets/low_diamond_sprite_set.tres",
 		"type_tags": [
 			"potion_texture_set"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -510,7 +545,8 @@
 		"rcontent_path": "res://resources/sprite_frames/pig.tres",
 		"type_tags": [
 			"player_animated_texture"
-		]
+		],
+		"types":1
 	},
 	{
 		"description": "",
@@ -520,7 +556,8 @@
 		"icon_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_09.png",
 		"game_tags": ["avatar"],
 		"type_tags": ["icon"],
-		"is_default": false
+		"is_default": false,
+		"types":1
 	},
 	{
 		"inner_name": "avatar_exclamation",
@@ -530,7 +567,8 @@
 		"icon_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_10.png",
 		"game_tags": ["avatar"],
 		"type_tags": ["icon"],
-		"is_default": false
+		"is_default": false,
+		"types":1
 	},
 	{
 		"inner_name": "avatar_bullseye",
@@ -540,7 +578,8 @@
 		"icon_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_34.png",
 		"game_tags": ["avatar"],
 		"type_tags": ["icon"],
-		"is_default": false
+		"is_default": false,
+		"types":1
 	},
 	{
 		"inner_name": "avatar_health",
@@ -550,7 +589,8 @@
 		"icon_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_16.png",
 		"game_tags": ["avatar"],
 		"type_tags": ["icon"],
-		"is_default": false
+		"is_default": false,
+		"types":1
 	},
 	{
 		"inner_name": "avatar_brain",
@@ -560,7 +600,8 @@
 		"icon_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_31.png",
 		"game_tags": ["avatar"],
 		"type_tags": ["icon"],
-		"is_default": false
+		"is_default": false,
+		"types":1
 	},
 	{
 		"inner_name": "avatar_defense",
@@ -570,7 +611,8 @@
 		"icon_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_18.png",
 		"game_tags": ["avatar"],
 		"type_tags": ["icon"],
-		"is_default": false
+		"is_default": false,
+		"types":1
 	},
 	{
 		"inner_name": "avatar_cog",
@@ -580,7 +622,8 @@
 		"icon_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_32.png",
 		"game_tags": ["avatar"],
 		"type_tags": ["icon"],
-		"is_default": false
+		"is_default": false,
+		"types":1
 	},
 	{
 		"inner_name": "avatar_ampup",
@@ -590,7 +633,8 @@
 		"icon_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_14.png",
 		"game_tags": ["avatar"],
 		"type_tags": ["icon"],
-		"is_default": false
+		"is_default": false,
+		"types":1
 	},
 	{
 		"inner_name": "avatar_aim",
@@ -600,7 +644,8 @@
 		"icon_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/Skillicon7_23.png",
 		"game_tags": ["avatar"],
 		"type_tags": ["icon"],
-		"is_default": false
+		"is_default": false,
+		"types":1
 	},
 	{
 		"inner_name": "avatar_strenght",
@@ -610,6 +655,139 @@
 		"icon_path": "res://assets/Free-Skill-32x32-Icons-for-Cyberpunk-Game/1 Icons/7/",
 		"game_tags": ["avatar"],
 		"type_tags": ["icon"],
-		"is_default": false
-	}
+		"is_default": false,
+		"types":1
+	},
+	{
+		"inner_name": "album_coast_1",
+		"name": "Bosque Protector Cerro Blanco",
+		"description": "",
+		"rcontent_path": "res://assets/journal/bosque_protector_cerro_blanco.jpg",
+		"icon_path": "res://assets/journal/bosque_protector_cerro_blanco.jpg",
+		"game_tags": [""],
+		"type_tags": ["coast"],
+		"is_default": false,
+		"types":2
+	},
+		{
+		"inner_name": "album_coast_2",
+		"name": "Parque Nacional Machalilla",
+		"description": "",
+		"rcontent_path": "res://assets/journal/parque_nacional_machalilla.jpg",
+		"icon_path": "res://assets/journal/parque_nacional_machalilla.jpg",
+		"game_tags": [""],
+		"type_tags": ["coast"],
+		"is_default": false,
+		"types":2
+	},
+		{
+		"inner_name": "album_coast_3",
+		"name": "Puerto Cayo",
+		"description": "",
+		"rcontent_path": "res://assets/journal/puerto_cayo.jpg",
+		"icon_path": "res://assets/journal/puerto_cayo.jpg",
+		"game_tags": [""],
+		"type_tags": ["coast"],
+		"is_default": false,
+		"types":2
+	},
+		{
+		"inner_name": "album_coast_4",
+		"name": "Bosque Petrificado de Puyango",
+		"description": "",
+		"rcontent_path": "res://assets/journal/bosque_petrificado_de_puyango.jpg",
+		"icon_path": "res://assets/journal/bosque_petrificado_de_puyango.jpg",
+		"game_tags": [""],
+		"type_tags": ["coast"],
+		"is_default": false,
+		"types":2
+	},
+	{
+		"inner_name": "album_highlands_1",
+		"name": "Monumento a la Mitad del Mundo",
+		"description": "",
+		"rcontent_path": "res://assets/journal/monumento_mitad_del_mundo.jpg",
+		"icon_path": "res://assets/journal/monumento_mitad_del_mundo.jpg",
+		"game_tags": [""],
+		"type_tags": ["highlands"],
+		"is_default": false,
+		"types":2
+	},
+		{
+		"inner_name": "album_highlands_2",
+		"name": "Bosque de niebla en Mindo",
+		"description": "",
+		"rcontent_path": "res://assets/journal/bosque_nuboso_de_mindo.jpg",
+		"icon_path": "res://assets/journal/bosque_nuboso_de_mindo.jpg",
+		"game_tags": [""],
+		"type_tags": ["highlands"],
+		"is_default": false,
+		"types":2
+	},
+		{
+		"inner_name": "album_highlands_3",
+		"name": "Plaza Foch",
+		"description": "",
+		"rcontent_path": "res://assets/journal/plaza_foch.png",
+		"icon_path": "res://assets/journal/plaza_foch.png",
+		"game_tags": [""],
+		"type_tags": ["highlands"],
+		"is_default": false,
+		"types":2
+	},
+		{
+		"inner_name": "album_highlands_4",
+		"name": "Basílica del Voto Nacional",
+		"description": "",
+		"rcontent_path": "res://assets/journal/basilica_del_voto_nacional.jpg",
+		"icon_path": "res://assets/journal/basilica_del_voto_nacional.jpg",
+		"game_tags": [""],
+		"type_tags": ["highlands"],
+		"is_default": false,
+		"types":2
+	},
+	{
+		"inner_name": "album_jungle_1",
+		"name": "El Gran Cañón de Ñachiyaku",
+		"description": "",
+		"rcontent_path": "res://assets/journal/canon_de_nanchiyaku.png",
+		"icon_path": "res://assets/journal/canon_de_nanchiyaku.png",
+		"game_tags": [""],
+		"type_tags": ["jungle"],
+		"is_default": false,
+		"types":2
+	},
+		{
+		"inner_name": "album_jungle_2",
+		"name": "Las cavernas Jumandi",
+		"description": "",
+		"rcontent_path": "res://assets/journal/cavernas_de_jumandy.jpg",
+		"icon_path": "res://assets/journal/cavernas_de_jumandy.jpg",
+		"game_tags": [""],
+		"type_tags": ["jungle"],
+		"is_default": false,
+		"types":2
+	},
+		{
+		"inner_name": "album_jungle_3",
+		"name": "Las cascadas de Yanayaku",
+		"description": "",
+		"rcontent_path": "res://assets/journal/cascada_de_yanayacu.jpg",
+		"icon_path": "res://assets/journal/cascada_de_yanayacu.jpg",
+		"game_tags": [""],
+		"type_tags": ["jungle"],
+		"is_default": false,
+		"types":2
+	},
+		{
+		"inner_name": "album_jungle_4",
+		"name": "Las Cavernas Lagarto",
+		"description": "",
+		"rcontent_path": "res://assets/journal/cavernas_lagarto.jpg",
+		"icon_path": "res://assets/journal/cavernas_lagarto.jpg",
+		"game_tags": [""],
+		"type_tags": ["jungle"],
+		"is_default": false,
+		"types":2
+	},
 ]

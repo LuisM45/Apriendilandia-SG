@@ -8,6 +8,7 @@
 
 [node name="Pair" type="Node2D" parent="."]
 visible = false
+z_index = -10
 script = ExtResource("1_wru8m")
 
 [node name="shadow_body" parent="Pair" instance=ExtResource("3_jufry")]
@@ -19,6 +20,7 @@ position = Vector2(128, 128)
 
 [node name="Pair2" type="Node2D" parent="."]
 visible = false
+z_index = -10
 script = ExtResource("1_wru8m")
 
 [node name="shadow_body" parent="Pair2" instance=ExtResource("3_jufry")]
@@ -30,6 +32,7 @@ position = Vector2(128, 336)
 
 [node name="Pair3" type="Node2D" parent="."]
 visible = false
+z_index = -10
 script = ExtResource("1_wru8m")
 
 [node name="shadow_body" parent="Pair3" instance=ExtResource("3_jufry")]
@@ -41,6 +44,7 @@ position = Vector2(128, 544)
 
 [node name="Pair4" type="Node2D" parent="."]
 visible = false
+z_index = -10
 script = ExtResource("1_wru8m")
 
 [node name="shadow_body" parent="Pair4" instance=ExtResource("3_jufry")]
@@ -53,6 +57,7 @@ position = Vector2(328, 128)
 
 [node name="Pair5" type="Node2D" parent="."]
 visible = false
+z_index = -10
 script = ExtResource("1_wru8m")
 
 [node name="shadow_body" parent="Pair5" instance=ExtResource("3_jufry")]
@@ -64,6 +69,7 @@ position = Vector2(328, 336)
 
 [node name="Pair6" type="Node2D" parent="."]
 visible = false
+z_index = -10
 script = ExtResource("1_wru8m")
 
 [node name="shadow_body" parent="Pair6" instance=ExtResource("3_jufry")]
