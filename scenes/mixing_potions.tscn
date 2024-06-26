@@ -109,7 +109,14 @@ animations = [{
 script = ExtResource("1_03kll")
 task = ExtResource("2_ga1w2")
 
-[node name="Cauldrons" type="Node" parent="."]
+[node name="Dialog" type="Sprite2D" parent="."]
+z_index = -10
+texture_filter = 1
+position = Vector2(825, 206)
+scale = Vector2(4.3913, 4.3913)
+texture = ExtResource("9_e1j1a")
+
+[node name="Cauldrons" type="Node2D" parent="."]
 
 [node name="cauldron_1" type="Area2D" parent="Cauldrons"]
 z_index = -10
@@ -127,7 +134,7 @@ texture = ExtResource("10_6k3fp")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cauldrons/cauldron_1"]
 shape = SubResource("RectangleShape2D_syieg")
 
-[node name="Sources" type="Node" parent="."]
+[node name="Sources" type="Node2D" parent="."]
 
 [node name="source_2" parent="Sources" instance=ExtResource("3_aqei4")]
 visible = false
@@ -164,12 +171,6 @@ texture_filter = 1
 position = Vector2(996, 361)
 scale = Vector2(6.61111, 6.61111)
 sprite_frames = SubResource("SpriteFrames_i8qwl")
-
-[node name="Dialog" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(825, 206)
-scale = Vector2(4.3913, 4.3913)
-texture = ExtResource("9_e1j1a")
 
 [connection signal="body_exited" from="Cauldrons/cauldron_1" to="Cauldrons/cauldron_1" method="_on_source_removed"]
 [connection signal="object_dropped_over" from="Cauldrons/cauldron_1" to="Cauldrons/cauldron_1" method="_on_source_removed"]

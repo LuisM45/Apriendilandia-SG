@@ -10,7 +10,7 @@ guide_scene = ""
 description = "Escoge cartas de dos en dos. Recuerda aquellas que ya hayas visto.
 Cuando encuentras dos cartas idénticas seleccionalas para emparejarlas.
 Empareja todas para ganar"
-compliments = Array[String](["Bien", "Esplendido", "Buena memoria", "Vas haciendo progreso"])
+compliments = Array[String](["Bien", "Esplendido", "Buena memoria"])
 bad_remarks = Array[String](["Sigue buscando", "No es un par", "Oh, no son iguales"])
 quick_introductions = Array[String](["Busca y empareja las cartas iguales"])
 quick_out_remarks = Array[String](["Muy buena memoria. Sigue así", "Hecho esplendidamente.", "Maravillosa partida"])
