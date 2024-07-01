@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://ddrgcu22y8okd"]
+
+[ext_resource type="SpriteFrames" uid="uid://d3fdtytlvr5qs" path="res://resources/sprite_frames/apple.tres" id="1_08sqc"]
+[ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="2_0x7dg"]
+
+[resource]
+script = ExtResource("2_0x7dg")
+content = ExtResource("1_08sqc")
+tags = {
+"alt_text": "manzana",
+"lang_is_male": false
+}

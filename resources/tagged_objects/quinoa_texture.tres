@@ -8,5 +8,6 @@ script = ExtResource("2_qdi7d")
 content = ExtResource("1_fq12v")
 tags = {
 "alt_text": "quinoa",
+"lang_is_male": false,
 "main_color": Color(0.43917, 0.082063, 0.00781262, 1)
 }

@@ -30,24 +30,31 @@ grow_vertical = 2
 theme_override_styles/panel = ExtResource("2_76mon")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 10.0
-offset_top = 40.0
-offset_right = -10.0
-offset_bottom = -40.0
+layout_mode = 2
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 398.0
+offset_bottom = 298.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+[node name="Control" type="Control" parent="Panel/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
-[node name="Control" type="Control" parent="Panel/VBoxContainer"]
+[node name="Control3" type="Control" parent="Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
@@ -76,6 +83,10 @@ custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Ok"
+
+[node name="Control2" type="Control" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
 
 [connection signal="pressed" from="Panel/VBoxContainer/HBoxContainer/TtsButton" to="." method="_on_tts_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/HBoxContainer/ClackerButton" to="." method="_on_clacker_pressed"]

@@ -8,5 +8,6 @@ script = ExtResource("1_ks0w2")
 content = ExtResource("1_qub01")
 tags = {
 "alt_text": "conejo andino",
+"lang_is_male": true,
 "main_color": Color(0.384451, 0.337072, 0.282353, 1)
 }

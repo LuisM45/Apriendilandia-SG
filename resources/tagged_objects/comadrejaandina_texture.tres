@@ -8,5 +8,6 @@ script = ExtResource("2_abf2j")
 content = ExtResource("1_dy0gr")
 tags = {
 "alt_text": "Comadreja andina",
+"lang_is_male": false,
 "main_color": Color(0.329259, 0.219333, 0.195895, 1)
 }

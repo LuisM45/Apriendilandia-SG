@@ -8,5 +8,6 @@ script = ExtResource("2_0c765")
 content = ExtResource("1_els14")
 tags = {
 "alt_text": "chilca",
+"lang_is_male": false,
 "main_color": Color(0.914015, 0.870527, 0.800183, 1)
 }

@@ -4,6 +4,7 @@ extends TileMap
 @export var difficulty = 6
 
 const maze_gen_class = preload("res://scripts/game/maze/maze_generator.gd")
+const cell_thickness = 2
 var maze_gen = null
 var tile_cells = {}
 var adjusted_tile_size = 0
@@ -21,14 +22,14 @@ func generate():
 	place_holes()
 	paint_cells()
 	
-	var base_size = (maze_gen.dimension*2+Vector2i.ONE)*tile_set.tile_size
+	var base_size = (maze_gen.dimension*2+Vector2i.ONE)*tile_set.tile_size*cell_thickness
 	var y_factor = get_viewport_rect().size.y / base_size.y
 	scale = Vector2(y_factor,y_factor)
 	var tilemap_size = Vector2(base_size)*scale
 	adjusted_tile_size = tile_set.tile_size.y*y_factor
 	
-	position = get_viewport_rect().size /2
-	position -= tilemap_size/2
+	position.x = get_viewport_rect().size.x /2
+	position.x -= tilemap_size.x/2
 
 func fill_base_maze():
 	for j in range(maze_gen.dimension.y):
@@ -55,7 +56,12 @@ func remove_cell(cell:Vector2i):
 	tile_cells.erase(cell)
 
 func paint_cells():
-	set_cells_terrain_connect(0,tile_cells.keys(),0,0)
+	var new_tc = []
+	for c in tile_cells.keys():
+		for w in range(cell_thickness):
+			for h in range(cell_thickness):
+				new_tc.append(c*cell_thickness+Vector2i(w,h))
+	set_cells_terrain_connect(0,new_tc,0,1)
 
 func place_holes():
 	var hole_height = maze_gen.dimension.y*2+1
@@ -66,7 +72,7 @@ func place_holes():
 func empty_maze():
 	for cell in tile_cells.keys():
 		set_cell(0,cell)
-	tile_cells.clear()
+	clear()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):

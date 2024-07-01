@@ -11,3 +11,18 @@ func array_to_color(a:Array):
 
 func png_path_to_texture2d(s):
 	return ResourceLoader.load(s,"ImageTexture")
+
+func gender_to_lang_items(is_male:bool,key_prefix:=""):
+	if is_male:
+		return {
+			key_prefix+"singular_pronoun":"el",
+			key_prefix+"plural_pronoun":"los",
+			key_prefix+"word_modifier":"o",
+		}
+	else:
+		return {
+			key_prefix+"singular_pronoun":"la",
+			key_prefix+"plural_pronoun":"las",
+			key_prefix+"word_modifier":"a"
+		}
+	

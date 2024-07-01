@@ -1,5 +1,6 @@
 extends Node
 const UnlockScreen = preload("res://branches/gui/unlock_screen.tscn")
+const PhotoScreen = preload("res://branches/journal/detail_photo.tscn")
 
 var achievements = {}
 var user_data = {}
@@ -67,10 +68,10 @@ func try_show_unlock_photo(photo_type:String):
 	var photo = pull_random_photo(photo_type)
 	if photo == null: return null
 	unlock_item(photo)
-	var unlock_screen = UnlockScreen.instantiate()
-	unlock_screen.backpack_item = photo
-	get_tree().root.add_child(unlock_screen)
-	return unlock_screen
+	var photo_screen = PhotoScreen.instantiate()
+	photo_screen.photo = photo
+	get_tree().root.add_child(photo_screen)
+	return photo_screen
 
 func load_customization():
 	customization_config = {}

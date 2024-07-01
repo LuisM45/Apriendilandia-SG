@@ -7,5 +7,6 @@
 script = ExtResource("2_lpfut")
 content = ExtResource("1_ml6aq")
 tags = {
-"alt_text": "papaya"
+"alt_text": "papaya",
+"lang_is_male": false
 }

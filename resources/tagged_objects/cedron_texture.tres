@@ -8,5 +8,6 @@ script = ExtResource("2_kmap2")
 content = ExtResource("1_cf1gi")
 tags = {
 "alt_text": "cedron",
+"lang_is_male": true,
 "main_color": Color(0.294087, 0.466529, 0.046891, 1)
 }

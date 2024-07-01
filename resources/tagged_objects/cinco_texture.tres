@@ -7,5 +7,6 @@
 script = ExtResource("2_tirjr")
 content = ExtResource("1_yssib")
 tags = {
-"alt_text": "cinco"
+"alt_text": "cinco",
+"lang_is_male": true
 }

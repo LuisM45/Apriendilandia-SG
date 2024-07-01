@@ -10,13 +10,15 @@ const PictureInfo = preload("res://scripts/game/painting/texture_info.gd")
 var potion_texture_set:SourceSpriteSet
 var object_texture_set:Array[Texture2D]
 var active_potions:Array[Source]
+var chosen_texture: TaggedResource
 
 func _ready():
-	super._ready()
 	texture_options.shuffle()
+	chosen_texture = texture_options[0]
+	super._ready()
 	choose_active_potions()
 	
-	cauldron.current_texture = texture_options[0]
+	cauldron.current_texture = chosen_texture
 	cauldron.acceptable_delta = 0.10 - difficulty * 0.01
 	cauldron.solved.connect(_on_solved)
 	cauldron.failed_attempt.connect(_on_error)
@@ -63,3 +65,10 @@ func get_range_of_randomness():
 	
 func get_potion_count():
 	return int(3+7*(difficulty-1)/9)
+
+func get_format_params()->Dictionary:
+	var dict = {
+		"object_name": chosen_texture.tags["alt_text"]
+	}
+	dict.merge(Parsers.gender_to_lang_items(chosen_texture.tags["lang_is_male"],"object_"))
+	return dict

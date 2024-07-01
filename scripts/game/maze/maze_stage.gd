@@ -1,5 +1,6 @@
 extends "res://scripts/game/stage.gd"
 @export var rounds = 3
+@export var possible_sprites:Array[TaggedResource]
 @onready var player = $Player
 @onready var maze = $MazeStructure
 @onready var playerInitialPos = player.position
@@ -8,20 +9,23 @@ const time_baseline = 20
 var isMouseCaptured = true
 
 @export var player_sprite_frames: SpriteFrames
+var sprite_frame_collectible: TaggedResource
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	sprite_frame_collectible = possible_sprites.pick_random()
 	super._ready()
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	var a: AnimatedSprite2D = $WinArea/AnimatedSprite2D
+	var collectibe: AnimatedSprite2D = $WinArea/AnimatedSprite2D
+	collectibe.sprite_frames = sprite_frame_collectible.content
 	player.sprite.sprite_frames = player_sprite_frames
 	player.sprite.play("idle")
-	a.play("idle")
+	collectibe.play("idle")
 	new_objetive()
 
 func new_objetive():
 	maze.difficulty = int((difficulty-1)/2+3)
 	maze.generate()
-	var new_player_height = maze.adjusted_tile_size
+	var new_player_height = maze.adjusted_tile_size*maze.cell_thickness
 	player.desired_size = Vector2(new_player_height,new_player_height)
 	pass
 	
@@ -61,3 +65,10 @@ func _load_customization_config():
 	var _diamond_animated_texture =  Inventory.get_attribute("maze:diamond_animated_texture")
 	player_sprite_frames =  Inventory.get_attribute("maze:player_animated_texture")\
 		.get_rcontent()
+
+func get_format_params()->Dictionary:
+	var d = {
+		"object_name":sprite_frame_collectible.tags["alt_text"],
+	}
+	d.merge(Parsers.gender_to_lang_items(sprite_frame_collectible.tags["lang_is_male"],"object_"))
+	return d

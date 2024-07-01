@@ -1,5 +1,9 @@
 extends Node
 
+func lerp(color1:Color,color2:Color,weight:float):
+	var _weight = clamp(weight,0.0,1.0)
+	return color1*(1-_weight)+color2*_weight
+
 func color_hsv_random_variation(color:Color,hsv_variation:Vector3):
 	var h = color.h + randf_range(-hsv_variation.x,hsv_variation.x)
 	var s = color.s + randf_range(-hsv_variation.y,hsv_variation.y)

@@ -43,6 +43,7 @@ func _ready():
 	gui_node.pause.connect(_on_pause)
 	gui_node.help.connect(_on_help)
 	gui_node.task = task
+	gui_node.task_format_parm = get_format_params()
 	add_child.call_deferred(gui_node)
 	
 	var background = StageBackground.instantiate()
@@ -50,7 +51,7 @@ func _ready():
 	move_child(background,0)
 	if !task.quick_introductions.is_empty():
 		DisplayServer.tts_speak(
-			task.quick_introductions.pick_random(),
+			task.quick_introductions.pick_random().format(get_format_params()),
 			Globals.voice_id,
 			Globals.tts_volume
 		)
@@ -98,7 +99,7 @@ func _play_bg_music():
 func _on_win(extra = ""):
 	if !task.quick_out_remarks.is_empty():
 		DisplayServer.tts_speak(
-			task.quick_out_remarks.pick_random(),
+			task.quick_out_remarks.pick_random().format(get_format_params()),
 			Globals.voice_id,
 			Globals.tts_volume
 		)
@@ -167,7 +168,7 @@ func _on_unsuccesful_attempt():
 	_play_unsuccess_sound()
 	if randf() < UNCOMPLIMENT_CHANCE:
 		DisplayServer.tts_speak(
-			task.bad_remarks.pick_random(),
+			task.bad_remarks.pick_random().format(get_format_params()),
 			Globals.voice_id,
 			Globals.tts_volume
 		)
@@ -178,10 +179,13 @@ func _on_succesful_attempt():
 	_play_success_sound()
 	if randf() < COMPLIMENT_CHANCE:
 		DisplayServer.tts_speak(
-			task.compliments.pick_random(),
+			task.compliments.pick_random().format(get_format_params()),
 			Globals.voice_id,
 			Globals.tts_volume
 		)
 
 func _load_customization_config():
 	pass
+
+func get_format_params()->Dictionary:
+	return {}

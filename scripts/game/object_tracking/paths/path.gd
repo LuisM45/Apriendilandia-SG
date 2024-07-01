@@ -1,8 +1,10 @@
+extends Node
 
 var current_step = 0.0: set = _set_current_step
 var initial_position: Vector2
 var final_position: Vector2
 var step_size: float
+var on_process: Callable
 
 signal edge_reached(is_upper:bool)
 signal upper_edge_reached()
@@ -11,14 +13,24 @@ signal edge_start(is_upper:bool)
 signal upper_edge_start()
 signal lower_edge_start()
 
+static func make_autorewind(path):
+	path.edge_reached.connect(
+		func(_x):path.step_size *= -1
+	)
+	
 
-func _init(initial_position: Vector2,final_position: Vector2,step_size=1.0):
+func _init(initial_position: Vector2,final_position: Vector2,step_size=1.0,):
 	self.initial_position = initial_position
 	self.final_position = final_position
 	self.step_size = step_size
+	self.on_process = func(pos):pass
 	edge_reached.connect(_on_edge_reached)
 	edge_start.connect(_on_edge_start)
-	
+
+func _process(delta):
+	advance_step(delta)
+	on_process.call(current_pos())
+
 func current_pos()->Vector2:
 	return absolute_pos(current_step)
 

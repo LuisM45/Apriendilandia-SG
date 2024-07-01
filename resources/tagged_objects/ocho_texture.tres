@@ -7,5 +7,6 @@
 script = ExtResource("2_ovjst")
 content = ExtResource("1_1x3e5")
 tags = {
-"alt_text": "ocho"
+"alt_text": "ocho",
+"lang_is_male": true
 }

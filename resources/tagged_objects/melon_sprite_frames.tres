@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://ck4rwk6qson5q"]
+
+[ext_resource type="SpriteFrames" uid="uid://dtmpbvhpjftnb" path="res://resources/sprite_frames/pineapple.tres" id="1_r14ft"]
+[ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="2_ps6ln"]
+
+[resource]
+script = ExtResource("2_ps6ln")
+content = ExtResource("1_r14ft")
+tags = {
+"alt_text": "piña",
+"lang_is_male": false
+}

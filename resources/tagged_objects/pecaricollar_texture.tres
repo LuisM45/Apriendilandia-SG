@@ -8,5 +8,6 @@ script = ExtResource("1_3qgsc")
 content = ExtResource("1_6pwpm")
 tags = {
 "alt_text": "pecári de collar",
+"lang_is_male": true,
 "main_color": Color(0.23888, 0.215427, 0.191974, 1)
 }

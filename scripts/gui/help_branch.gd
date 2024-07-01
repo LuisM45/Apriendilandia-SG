@@ -1,6 +1,6 @@
 extends Control
 
-@onready var description_label = $Panel/VBoxContainer/Label
+@onready var description_label = $Panel/VBoxContainer/ScrollContainer/Label
 @onready var tts_button = $Panel/VBoxContainer/HBoxContainer/TtsButton
 @onready var clacker_button = $Panel/VBoxContainer/HBoxContainer/ClackerButton
 

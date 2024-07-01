@@ -19,16 +19,27 @@ func _ready():
 	create_metrics_table()
 	create_users_table()
 
-func set_achievement(user:User,value:int,_name:String):
-	if get_achievement(user,name) == null:
-		return _insert_achievement(user,value,_name)
-	else:
-		return _update_achievement(user,value,_name)
+func set_achievement(user:User,_name:String,value:int):
+	var done = metrics_db.insert_row(
+		ACHIEVEMENT_TBL,
+		{"name":_name,"user_id":user.id,"value":value}
+	)
+	if done: return true
+	done = metrics_db.update_rows(
+		ACHIEVEMENT_TBL,
+		"name='{0}' AND user_id={1}".format([_name,user.id]),
+		{"value":value}
+	)
+	return done
 
 func get_achievement(user:User,_name:String):
-	var row = _select_achievement(_name,user.id)
-	if row.is_empty(): return null
-	return row[0].get("value")
+	var row = metrics_db.select_rows(
+		ACHIEVEMENT_TBL,
+		"name='{0}' AND user_id={1}".format([_name,user.id]),
+		["value"]
+	)
+	if row.is_empty(): return 0
+	return row[0].get("value",0)
 
 func get_users()->Array:
 	var row = metrics_db.select_rows(
@@ -156,28 +167,6 @@ func get_config_value(user:User,_name:String):
 	if rows.is_empty(): return null
 	return rows[0].get("value")
 
-func _select_achievement(_name:String,user_id:=0):
-	return metrics_db.select_rows(
-		ACHIEVEMENT_TBL,
-		"name='{0}' AND user_id={1}".format([_name,user_id]),
-		["value"]
-	)
-
-func _insert_achievement(user:User,value:int,_name:String):
-	return metrics_db.insert_row(
-		ACHIEVEMENT_TBL,{
-			"name":_name,
-			"user_id":user.id,
-			"value":value,
-		}
-	)
-
-func _update_achievement(user:User,value:int,_name:String):
-	return metrics_db.update_rows(
-		ACHIEVEMENT_TBL,
-		"name='{0}' AND user_id={1}".format([_name,user.id]),
-		{"value":value}
-	)
 
 
 

@@ -5,11 +5,11 @@
 [resource]
 script = ExtResource("1_kkxjm")
 inner_name = "paint_object_task"
-name = "Pinta el objeto del color correcto"
+name = "Pinta {object_singular_pronoun} {object_name} del color correcto"
 guide_scene = "res://scenes/guides/painting_potions_guid.tscn"
-description = "Arrastra el bote pintura para colorear el objeto con el color seleccionado.
+description = "Arrastra el bote pintura para colorear {object_singular_pronoun} {object_name} con el color seleccionado.
 Pintalo del color correcto para ganar."
 compliments = Array[String]([" "])
 bad_remarks = Array[String](["No se ve como debería", "Se le ve un poco distinto", "Prueba con otro color"])
-quick_introductions = Array[String](["Ayuda a nuestro amigo a tener color una vez más"])
-quick_out_remarks = Array[String](["Muy bien hecho. Nuestro amigo tiene color una vez más."])
+quick_introductions = Array[String](["Ayuda a nuestro amig{object_word_modifier} {object_name} a tener color una vez más"])
+quick_out_remarks = Array[String](["Muy bien hecho. Nuestro amig{object_word_modifier}  {object_name} tiene color una vez más."])

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://dig3sf2hspcc3"]
+
+[ext_resource type="SpriteFrames" uid="uid://hh3l0vd77nfc" path="res://resources/sprite_frames/orange.tres" id="1_1pyg3"]
+[ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="2_vnaf2"]
+
+[resource]
+script = ExtResource("2_vnaf2")
+content = ExtResource("1_1pyg3")
+tags = {
+"alt_text": "naranja",
+"lang_is_male": false
+}

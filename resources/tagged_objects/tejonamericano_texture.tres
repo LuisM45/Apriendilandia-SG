@@ -8,5 +8,6 @@ script = ExtResource("1_xh6ul")
 content = ExtResource("1_wskxp")
 tags = {
 "alt_text": "tejón americano",
+"lang_is_male": true,
 "main_color": Color(0.662913, 0.627741, 0.580346, 1)
 }

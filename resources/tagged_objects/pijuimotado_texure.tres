@@ -8,5 +8,6 @@ script = ExtResource("2_sl2mf")
 content = ExtResource("1_3bjh8")
 tags = {
 "alt_text": "pijui motado",
+"lang_is_male": true,
 "main_color": Color(0.941375, 0.662913, 0.199802, 1)
 }
