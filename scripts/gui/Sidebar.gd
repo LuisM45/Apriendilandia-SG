@@ -4,7 +4,7 @@ var task:Task
 var task_format_parm: Dictionary
 
 @onready var instructionLbl = $Panel/InstructionLbl
-@onready var help_button = $Panel/AspectRatioContainer2/HelpBtn
+@onready var help_button = $Panel/VBoxContainer/HelpBtn
 signal pause()
 signal help()
 signal hint()

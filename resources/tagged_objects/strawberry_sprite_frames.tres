@@ -1,7 +1,11 @@
-[gd_resource type="Resource" script_class="TaggedResource" load_steps=2 format=3 uid="uid://dfddnmeme8ip4"]
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://dfddnmeme8ip4"]
 
+[ext_resource type="SpriteFrames" uid="uid://ogiod73rawoj" path="res://resources/sprite_frames/strawberry.tres" id="1_3upls"]
 [ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="1_gddy2"]
 
 [resource]
 script = ExtResource("1_gddy2")
-tags = {}
+content = ExtResource("1_3upls")
+tags = {
+"alt_text": "fresa"
+}

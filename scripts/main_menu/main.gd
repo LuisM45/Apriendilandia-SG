@@ -11,6 +11,7 @@ const Path = preload("res://scripts/game/object_tracking/paths/export.gd")
 @onready var ecuador_tilemap:EcuadorTilemap = $Control/TileMap
 @onready var ecuador_tilemap_btn:Button = $Control/Button
 @onready var avatar:TextureRect = $Avatar
+@onready var avatar_animated:AnimatedSprite2D = $Avatar/AnimatedSprite2D
 @onready var city_btn = $ButtonCity
 @onready var beach_btn = $ButtonBeach
 @onready var forest_btn = $ButtonForest
@@ -37,6 +38,7 @@ func _ready():
 	var avatar_y = Database.get_config_value(Globals.user,"map_avatar_y")
 	if avatar_x != null: avatar.position.x=float(avatar_x)
 	if avatar_y != null: avatar.position.y=float(avatar_y)
+	avatar_animated.play("idle")
 	
 	if Database.get_achievement(Globals.user,"intro_done") <= 0:
 		play_intro()
@@ -71,6 +73,7 @@ func play_intro():
 	Database.set_achievement(Globals.user,"intro_done",1)
 
 func _on_map_pressed(idx):
+	avatar_animated.play("run")
 	match idx:
 		1:
 			_on_button_beach_pressed()

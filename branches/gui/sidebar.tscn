@@ -26,18 +26,23 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="Panel"]
+[node name="VBoxContainer2" type="HBoxContainer" parent="Panel"]
 layout_mode = 2
-stretch_mode = 1
-alignment_horizontal = 0
-alignment_vertical = 0
 
-[node name="TextureButton" type="TextureButton" parent="Panel/AspectRatioContainer"]
+[node name="TextureButton" type="TextureButton" parent="Panel/VBoxContainer2"]
+custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 texture_normal = ExtResource("2_2sml6")
 ignore_texture_size = true
 stretch_mode = 6
 script = ExtResource("3_xv46u")
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Menú
+"
+vertical_alignment = 1
 
 [node name="Control" type="Control" parent="Panel"]
 layout_mode = 2
@@ -53,17 +58,21 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
 
-[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="Panel"]
+[node name="VBoxContainer" type="HBoxContainer" parent="Panel"]
 layout_mode = 2
-stretch_mode = 1
-alignment_horizontal = 2
-alignment_vertical = 0
 
-[node name="HelpBtn" type="TextureButton" parent="Panel/AspectRatioContainer2"]
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Ayuda"
+vertical_alignment = 1
+
+[node name="HelpBtn" type="TextureButton" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 texture_normal = ExtResource("4_w28v8")
 ignore_texture_size = true
 stretch_mode = 4
 script = ExtResource("6_gdprp")
 
-[connection signal="pressed" from="Panel/AspectRatioContainer/TextureButton" to="." method="_on_pause"]
+[connection signal="pressed" from="Panel/VBoxContainer2/TextureButton" to="." method="_on_pause"]
