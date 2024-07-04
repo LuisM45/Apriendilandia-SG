@@ -69,7 +69,7 @@ func config_map():
 	ecuador_tilemap.layer_blink[last_region_ulckd] = true
 	
 func play_intro():
-	$HelpBtn2.pressed.emit()
+	$VBoxContainer/HelpBtn2.pressed.emit()
 	Database.set_achievement(Globals.user,"intro_done",1)
 
 func _on_map_pressed(idx):

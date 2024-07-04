@@ -1,0 +1,12 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dblv1e8u7wvwt"]
+
+[ext_resource type="FontFile" uid="uid://dli535heqx8v" path="res://assets/fonts/Kaph_Font_1_20/Kaph-Regular.ttf" id="1_wsdpi"]
+
+[resource]
+default_font = ExtResource("1_wsdpi")
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0.164706, 0.164706, 0.164706, 1)
+Button/colors/font_hover_color = Color(0.815824, 0.815824, 0.815824, 1)
+Button/fonts/font = ExtResource("1_wsdpi")
+Label/colors/font_color = Color(0.219608, 0.219608, 0.219608, 1)
+Label/colors/font_outline_color = Color(0.364706, 0.364706, 0.364706, 1)

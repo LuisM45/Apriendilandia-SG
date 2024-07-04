@@ -10,7 +10,7 @@ var metrics_db:SQLite = null
 
 func _ready():
 	metrics_db = SQLite.new()
-	metrics_db.path = "metrics_db.sqlite"
+	metrics_db.path = "user://metrics_db.sqlite"
 	metrics_db.open_db()
 	create_achievements_table()
 	create_config_table()
