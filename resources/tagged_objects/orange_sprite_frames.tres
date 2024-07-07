@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://3f3ahw4eg6pq"]
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://becq0xydc5mld"]
 
-[ext_resource type="SpriteFrames" uid="uid://b688ffvljsmfk" path="res://resources/sprite_frames/orange.tres" id="1_j1324"]
+[ext_resource type="SpriteFrames" uid="uid://dnhcbgybug576" path="res://resources/sprite_frames/orange.tres" id="1_j1324"]
 [ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="2_vixep"]
 
 [resource]

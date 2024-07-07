@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://dig4wvol4jcj7"]
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://bw3p7n3ddn57w"]
 
-[ext_resource type="SpriteFrames" uid="uid://c033n6xn54mhw" path="res://resources/sprite_frames/kiwi.tres" id="1_rn1po"]
+[ext_resource type="SpriteFrames" uid="uid://8aqsfq2yy8m2" path="res://resources/sprite_frames/kiwi.tres" id="1_rn1po"]
 [ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="2_u4iuw"]
 
 [resource]

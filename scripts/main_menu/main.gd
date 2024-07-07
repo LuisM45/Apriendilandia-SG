@@ -94,6 +94,7 @@ func _on_button_city_pressed():
 	Globals.win_callbacks = [
 		Globals.no_fun,
 		Globals.no_fun,
+		Globals.no_fun,
 		func():
 			Inventory.try_show_unlock_photo("highlands")
 			Database.set_achievement(Globals.user,"region_beaten",2)
@@ -104,6 +105,7 @@ func _on_button_city_pressed():
 		get_tree().change_scene_to_packed(
 			_load_and_prepare_scenes([
 				"res://scenes/card_matching.tscn",
+				"res://scenes/paintint_potions.tscn",
 				"res://scenes/match_numbers.tscn",
 				"res://scenes/main_menu.tscn",
 			])
@@ -123,6 +125,7 @@ func _on_button_beach_pressed():
 	Globals.win_callbacks = [
 		Globals.no_fun,
 		Globals.no_fun,
+		Globals.no_fun,
 		func():
 			Inventory.try_show_unlock_photo("coast")
 			Database.set_achievement(Globals.user,"region_beaten",1)
@@ -134,6 +137,7 @@ func _on_button_beach_pressed():
 		get_tree().change_scene_to_packed(
 		_load_and_prepare_scenes([
 			"res://scenes/match_flowers.tscn",
+			"res://scenes/mixing_potions.tscn",
 			"res://scenes/paintint_potions.tscn",
 			"res://scenes/main_menu.tscn",
 		])

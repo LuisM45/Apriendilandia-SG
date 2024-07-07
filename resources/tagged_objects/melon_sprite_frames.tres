@@ -1,6 +1,6 @@
-[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://ck4rwk6qson5q"]
+[gd_resource type="Resource" script_class="TaggedResource" load_steps=3 format=3 uid="uid://y4bhkmglhtka"]
 
-[ext_resource type="SpriteFrames" uid="uid://dtmpbvhpjftnb" path="res://resources/sprite_frames/pineapple.tres" id="1_r14ft"]
+[ext_resource type="SpriteFrames" uid="uid://d341stu40fn0f" path="res://resources/sprite_frames/pineapple.tres" id="1_r14ft"]
 [ext_resource type="Script" path="res://resources/template/tagged_resource.gd" id="2_ps6ln"]
 
 [resource]
