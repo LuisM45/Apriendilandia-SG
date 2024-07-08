@@ -14,7 +14,7 @@
 [ext_resource type="Resource" uid="uid://b824dnn1akwdw" path="res://resources/tagged_objects/papaya_texture.tres" id="11_i4182"]
 [ext_resource type="Resource" uid="uid://d13fr83psrqgl" path="res://resources/tagged_objects/quinoa_texture.tres" id="12_f76fu"]
 [ext_resource type="Resource" uid="uid://erlw13qxdsaa" path="res://resources/tasks/match_shadow_task.tres" id="14_ih1m5"]
-[ext_resource type="PackedScene" uid="uid://c3fpbj4nn8vop" path="res://branches/game/match_pairs_layout.tscn" id="15_i5bgi"]
+[ext_resource type="PackedScene" path="res://branches/game/match_pairs_layout.tscn" id="15_i5bgi"]
 
 [node name="MatchFlowers" type="Node2D"]
 script = ExtResource("1_7j26j")
