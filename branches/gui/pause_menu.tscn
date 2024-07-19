@@ -2,7 +2,7 @@
 
 [ext_resource type="Shader" path="res://branches/gui/sidebar.gdshader" id="1_f13s3"]
 [ext_resource type="Script" path="res://scripts/gui/PauseMenu.gd" id="2_fidih"]
-[ext_resource type="StyleBox" path="res://resources/style_box.tres" id="3_0sy2g"]
+[ext_resource type="StyleBox" uid="uid://br1h32sevkmii" path="res://resources/style_box.tres" id="3_0sy2g"]
 [ext_resource type="Texture2D" uid="uid://bnk1bm52nmihw" path="res://assets/Menu Buttons/Square Buttons/Square Buttons/Play Square Button.png" id="3_f2kch"]
 [ext_resource type="Texture2D" uid="uid://ju1rstgiwnhw" path="res://assets/Menu Buttons/Square Buttons/Square Buttons/Questionmark Square Button.png" id="4_5yf4q"]
 [ext_resource type="Script" path="res://scripts/gui/generic_texture_button.gd" id="4_twa4s"]

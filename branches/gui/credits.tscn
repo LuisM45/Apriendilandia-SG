@@ -1,0 +1,270 @@
+[gd_scene load_steps=10 format=3 uid="uid://dcbnk4los4qiy"]
+
+[ext_resource type="Script" path="res://scripts/gui/credits.gd" id="1_cxcq0"]
+[ext_resource type="Theme" uid="uid://bucy2outy71h2" path="res://resources/white_theme.tres" id="2_sijpq"]
+[ext_resource type="Texture2D" uid="uid://bqd15b507v37p" path="res://assets/Menu Buttons/Square Buttons/Square Buttons/X Square Button.png" id="3_46vwy"]
+[ext_resource type="Script" path="res://scripts/gui/generic_texture_button.gd" id="4_k3uxy"]
+[ext_resource type="Texture2D" uid="uid://ddylf2ks4rky5" path="res://resources/logo-epn-vertical.png" id="5_1n8pv"]
+[ext_resource type="Texture2D" uid="uid://dsi2gswac5hbu" path="res://resources/logo-FIS-sin-fondo.png" id="6_ihm23"]
+[ext_resource type="Texture2D" uid="uid://cnex5ikjj6v06" path="res://resources/341490742_249203317466195_3411845593117836291_n-removebg-preview.png" id="7_6672s"]
+[ext_resource type="Texture2D" uid="uid://mf2a5s7xx5da" path="res://assets/License_icon-mit-88x31.svg.png" id="8_uup3s"]
+[ext_resource type="Texture2D" uid="uid://d4kv3ymfklhwo" path="res://assets/20673.png" id="9_2kcej"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cxcq0")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2
+anchor_top = 0.1
+anchor_right = 0.8
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_sijpq")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 93.2
+offset_bottom = 132.2
+grow_horizontal = 2
+theme = ExtResource("2_sijpq")
+theme_override_colors/font_color = Color(0, 0.337255, 0.584314, 1)
+theme_override_font_sizes/font_size = 28
+text = "Créditos"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = -109.2
+offset_right = -16.2
+offset_bottom = 55.8
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_sijpq")
+theme_override_font_sizes/font_size = 13
+text = "El presente proyecto tiene como objetivo desarrollar un juego serio educativo y gamificado destinado a entrenar la coordinación mano-ojo durante el desarrollo. Este juego esta diseñado para incluir ejercicios que ejerciten esta capacidad mientras se retiene la atencion e interés. El desarrollo de este proyecto ha sido posible gracias a la colaboración del laboratorio LudoLab.
+
+LUDOLAB es un laboratorio de Sistemas de Información e Inclusión social cuyos enfoques son la creatividad, investigación y responsabilidad. Su misión es contribuir al desarrollo mediante Sistemas de Información centrados en el usuario."
+horizontal_alignment = 3
+vertical_alignment = 3
+autowrap_mode = 3
+
+[node name="GridContainer" type="GridContainer" parent="Panel"]
+layout_mode = 2
+offset_left = 345.0
+offset_top = 377.0
+offset_right = 346.0
+offset_bottom = 377.0
+columns = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 16.0
+offset_right = -0.200012
+offset_bottom = 86.0
+grow_horizontal = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("5_1n8pv")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="Panel/HBoxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("6_ihm23")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="Panel/HBoxContainer"]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("7_6672s")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="GridContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -195.4
+offset_right = -0.200012
+offset_bottom = -0.400024
+grow_horizontal = 2
+grow_vertical = 0
+columns = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.337072, 0.584268, 1)
+text = "Tutora"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_sijpq")
+theme_override_font_sizes/font_size = 13
+text = "Ph.D Mayra Carrión Toro"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.337072, 0.584268, 1)
+text = "Autor"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel/VBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("2_sijpq")
+theme_override_font_sizes/font_size = 13
+text = "Luis Mateo Arguero"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.337072, 0.584268, 1)
+text = "Colaboradores"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel/VBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme = ExtResource("2_sijpq")
+theme_override_font_sizes/font_size = 13
+text = "Psi. Veronica Maldonado
+Jimmy Quingatuña
+Danny Cabrera"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Control" type="Control" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/VBoxContainer4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.337072, 0.584268, 1)
+text = "Directora LudoLab"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Panel/VBoxContainer/VBoxContainer4"]
+layout_mode = 2
+theme = ExtResource("2_sijpq")
+theme_override_font_sizes/font_size = 13
+text = "Ph.D Mayra Carrión Toro"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Control2" type="Control" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -8.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer2"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+texture = ExtResource("8_uup3s")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Control3" type="Control" parent="Panel/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureButton" type="TextureButton" parent="Panel/HBoxContainer2"]
+layout_mode = 2
+
+[node name="TextureButton2" type="TextureButton" parent="Panel/HBoxContainer2"]
+layout_mode = 2
+
+[node name="TextureButton3" type="TextureButton" parent="Panel/HBoxContainer2"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("9_2kcej")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Control4" type="Control" parent="Panel/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label2" type="Label" parent="Panel/HBoxContainer2"]
+layout_mode = 2
+text = "ludolab@epn.edu.ec"
+
+[node name="Button" type="TextureButton" parent="Panel"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -61.0
+offset_top = 16.0
+offset_right = -16.0
+offset_bottom = 61.0
+grow_horizontal = 0
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_46vwy")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("4_k3uxy")
+
+[connection signal="pressed" from="Panel/HBoxContainer2/TextureButton3" to="." method="_on_facebook_pressed"]
+[connection signal="pressed" from="Panel/Button" to="." method="_on_exit_pressed"]

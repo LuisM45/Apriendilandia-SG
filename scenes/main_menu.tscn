@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cynqaahscuo2p"]
+[gd_scene load_steps=18 format=3 uid="uid://cynqaahscuo2p"]
 
 [ext_resource type="Script" path="res://scripts/main_menu/main.gd" id="1_i4jsu"]
 [ext_resource type="Script" path="res://scripts/main_menu/ecuador_tilemap.gd" id="3_d8ypj"]
@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://dju8lnjnwvj7a" path="res://assets/bgm/game-music-loop-7-145285.mp3" id="9_8x6a1"]
 [ext_resource type="Script" path="res://scripts/gui/help_button.gd" id="9_daxc1"]
 [ext_resource type="Texture2D" uid="uid://7yva2qd6xfvm" path="res://assets/Menu Buttons/Square Buttons/tts_button.png" id="12_0v2lb"]
+[ext_resource type="Texture2D" uid="uid://228kdxcbdqr3" path="res://assets/Menu Buttons/Square Buttons/Square Buttons/Info Square Button.png" id="13_bofpa"]
 [ext_resource type="SpriteFrames" uid="uid://dmjykvjy62jst" path="res://resources/sprite_frames/king_human.tres" id="14_luro3"]
 [ext_resource type="Texture2D" uid="uid://dugcwhcrlutw5" path="res://assets/icons/user.png" id="14_vjqeq"]
 
@@ -303,7 +304,7 @@ offset_right = 460.0
 offset_bottom = 56.0
 
 [node name="HelpBtn2" type="TextureButton" parent="VBoxContainer"]
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(40, 40)
 layout_mode = 2
 texture_normal = ExtResource("12_0v2lb")
 ignore_texture_size = true
@@ -319,6 +320,20 @@ Adentraté en las regiones para resolver varios desafíos y conocer más sobre l
 layout_mode = 2
 theme_override_font_sizes/font_size = 11
 text = "Introducción"
+horizontal_alignment = 1
+
+[node name="CreditsBtn" type="TextureButton" parent="VBoxContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture_normal = ExtResource("13_bofpa")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("5_ido4r")
+
+[node name="Label6" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Créditos"
 horizontal_alignment = 1
 
 [node name="Avatar" type="TextureRect" parent="."]
@@ -356,3 +371,4 @@ stretch_mode = 5
 [connection signal="pressed" from="PanelContainer/HBoxContainer/VBoxContainer/ConfigBtn" to="." method="_on_button_config_pressed"]
 [connection signal="pressed" from="PanelContainer/HBoxContainer/VBoxContainer2/AlbumBtn" to="." method="_on_journal_pressed"]
 [connection signal="pressed" from="PanelContainer/HBoxContainer/VBoxContainer3/InventoryBtn" to="." method="_on_inventory_pressed"]
+[connection signal="pressed" from="VBoxContainer/CreditsBtn" to="." method="_on_credits_pressed"]

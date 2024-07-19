@@ -1,5 +1,6 @@
 extends Control
 
+const CreditsScn = preload("res://branches/gui/credits.tscn")
 const PauseMenu = preload("res://branches/gui/pause_menu.tscn")
 const InventoryScn = preload("res://branches/gui/inventory.tscn")
 const BasePhoto = preload("res://branches/journal/base_photo.tscn")
@@ -198,3 +199,8 @@ func _on_inventory_pressed():
 
 func _on_journal_pressed():
 	get_tree().change_scene_to_file("res://scenes/journal.tscn")
+
+
+func _on_credits_pressed():
+	var node = CreditsScn.instantiate()
+	get_tree().root.add_child(node)
