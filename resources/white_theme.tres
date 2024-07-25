@@ -1,7 +1,25 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bucy2outy71h2"]
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://bucy2outy71h2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rn7uc"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4tilw"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.51)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dn0ci"]
-bg_color = Color(0.803922, 0.803922, 0.803922, 1)
+bg_color = Color(1, 1, 1, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
@@ -13,6 +31,10 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [resource]
+FlatButton/styles/disabled = SubResource("StyleBoxEmpty_rn7uc")
+FlatButton/styles/hover = SubResource("StyleBoxEmpty_rn7uc")
+FlatButton/styles/normal = SubResource("StyleBoxEmpty_rn7uc")
+FlatButton/styles/pressed = SubResource("StyleBoxFlat_4tilw")
 Label/colors/font_color = Color(0, 0, 0, 1)
 Label/colors/font_outline_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
 Panel/styles/panel = SubResource("StyleBoxFlat_dn0ci")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsi2gswac5hbu"
-path="res://.godot/imported/logo-FIS-sin-fondo.png-f88c383e10b98c1051e6ec72f0bb51c3.ctex"
+uid="uid://d1xps6q5po4fw"
+path="res://.godot/imported/Globe_icon_2.svg.png-15661e949ab68f262721d2042f7c0de7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/logo-FIS-sin-fondo.png"
-dest_files=["res://.godot/imported/logo-FIS-sin-fondo.png-f88c383e10b98c1051e6ec72f0bb51c3.ctex"]
+source_file="res://assets/Globe_icon_2.svg.png"
+dest_files=["res://.godot/imported/Globe_icon_2.svg.png-15661e949ab68f262721d2042f7c0de7.ctex"]
 
 [params]
 

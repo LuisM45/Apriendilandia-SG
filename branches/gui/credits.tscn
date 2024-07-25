@@ -1,14 +1,18 @@
-[gd_scene load_steps=10 format=3 uid="uid://dcbnk4los4qiy"]
+[gd_scene load_steps=13 format=3 uid="uid://dcbnk4los4qiy"]
 
 [ext_resource type="Script" path="res://scripts/gui/credits.gd" id="1_cxcq0"]
 [ext_resource type="Theme" uid="uid://bucy2outy71h2" path="res://resources/white_theme.tres" id="2_sijpq"]
 [ext_resource type="Texture2D" uid="uid://bqd15b507v37p" path="res://assets/Menu Buttons/Square Buttons/Square Buttons/X Square Button.png" id="3_46vwy"]
+[ext_resource type="Texture2D" uid="uid://dsi2gswac5hbu" path="res://assets/logo-FIS-sin-fondo.png" id="3_k1jhy"]
 [ext_resource type="Script" path="res://scripts/gui/generic_texture_button.gd" id="4_k3uxy"]
-[ext_resource type="Texture2D" uid="uid://ddylf2ks4rky5" path="res://resources/logo-epn-vertical.png" id="5_1n8pv"]
-[ext_resource type="Texture2D" uid="uid://dsi2gswac5hbu" path="res://resources/logo-FIS-sin-fondo.png" id="6_ihm23"]
-[ext_resource type="Texture2D" uid="uid://cnex5ikjj6v06" path="res://resources/341490742_249203317466195_3411845593117836291_n-removebg-preview.png" id="7_6672s"]
+[ext_resource type="Texture2D" uid="uid://ddylf2ks4rky5" path="res://assets/logo-epn-vertical.png" id="4_vhrfp"]
+[ext_resource type="Texture2D" uid="uid://cnex5ikjj6v06" path="res://assets/341490742_249203317466195_3411845593117836291_n-removebg-preview.png" id="5_sshbf"]
+[ext_resource type="Texture2D" uid="uid://7qc44va4mu4w" path="res://assets/X_logo_2023.svg.png" id="7_jfbqp"]
+[ext_resource type="Texture2D" uid="uid://d1xps6q5po4fw" path="res://assets/Globe_icon_2.svg.png" id="8_5jm4w"]
 [ext_resource type="Texture2D" uid="uid://mf2a5s7xx5da" path="res://assets/License_icon-mit-88x31.svg.png" id="8_uup3s"]
 [ext_resource type="Texture2D" uid="uid://d4kv3ymfklhwo" path="res://assets/20673.png" id="9_2kcej"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iyewd"]
 
 [node name="Credits" type="Control"]
 layout_mode = 3
@@ -82,28 +86,28 @@ offset_bottom = 86.0
 grow_horizontal = 2
 alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer"]
-custom_minimum_size = Vector2(70, 70)
+[node name="TextureButton" type="TextureButton" parent="Panel/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("5_1n8pv")
-expand_mode = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_k1jhy")
+ignore_texture_size = true
 stretch_mode = 5
 
-[node name="TextureRect2" type="TextureRect" parent="Panel/HBoxContainer"]
-custom_minimum_size = Vector2(70, 70)
+[node name="TextureButton2" type="TextureButton" parent="Panel/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("6_ihm23")
-expand_mode = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("4_vhrfp")
+ignore_texture_size = true
 stretch_mode = 5
 
-[node name="TextureRect3" type="TextureRect" parent="Panel/HBoxContainer"]
-custom_minimum_size = Vector2(70, 70)
+[node name="TextureButton3" type="TextureButton" parent="Panel/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-texture = ExtResource("7_6672s")
-expand_mode = 1
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("5_sshbf")
+ignore_texture_size = true
 stretch_mode = 5
 
 [node name="VBoxContainer" type="GridContainer" parent="Panel"]
@@ -201,38 +205,62 @@ autowrap_mode = 3
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Panel"]
+[node name="HBoxContainer2" type="Panel" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 8.0
-offset_top = -8.0
-offset_right = -8.0
-offset_bottom = -8.0
+offset_top = -39.4
+offset_right = -8.20001
+offset_bottom = -8.40002
 grow_horizontal = 2
 grow_vertical = 0
-alignment = 1
+theme_override_styles/panel = SubResource("StyleBoxEmpty_iyewd")
 
 [node name="TextureRect" type="TextureRect" parent="Panel/HBoxContainer2"]
 custom_minimum_size = Vector2(100, 0)
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -15.5
+offset_right = 100.0
+offset_bottom = 15.5
+grow_vertical = 2
 texture = ExtResource("8_uup3s")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Control3" type="Control" parent="Panel/HBoxContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/HBoxContainer2"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_right = 64.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="TextureButton" type="TextureButton" parent="Panel/HBoxContainer2"]
+[node name="TextureButton" type="TextureButton" parent="Panel/HBoxContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("7_jfbqp")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="TextureButton2" type="TextureButton" parent="Panel/HBoxContainer2"]
+[node name="TextureButton2" type="TextureButton" parent="Panel/HBoxContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("8_5jm4w")
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="TextureButton3" type="TextureButton" parent="Panel/HBoxContainer2"]
+[node name="TextureButton3" type="TextureButton" parent="Panel/HBoxContainer2/HBoxContainer"]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 mouse_default_cursor_shape = 2
@@ -240,13 +268,16 @@ texture_normal = ExtResource("9_2kcej")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="Control4" type="Control" parent="Panel/HBoxContainer2"]
+[node name="Button" type="Button" parent="Panel/HBoxContainer2"]
 layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Label2" type="Label" parent="Panel/HBoxContainer2"]
-layout_mode = 2
+offset_left = 509.0
+offset_right = 675.0
+offset_bottom = 31.0
+mouse_default_cursor_shape = 2
+theme = ExtResource("2_sijpq")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "ludolab@epn.edu.ec"
+flat = true
 
 [node name="Button" type="TextureButton" parent="Panel"]
 custom_minimum_size = Vector2(30, 30)
@@ -266,5 +297,11 @@ ignore_texture_size = true
 stretch_mode = 5
 script = ExtResource("4_k3uxy")
 
-[connection signal="pressed" from="Panel/HBoxContainer2/TextureButton3" to="." method="_on_facebook_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/TextureButton" to="." method="_on_fis_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/TextureButton2" to="." method="_on_epn_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer/TextureButton3" to="." method="_on_www_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer2/HBoxContainer/TextureButton" to="." method="_on_twitter_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer2/HBoxContainer/TextureButton2" to="." method="_on_www_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer2/HBoxContainer/TextureButton3" to="." method="_on_facebook_pressed"]
+[connection signal="pressed" from="Panel/HBoxContainer2/Button" to="." method="_on_email_pressed"]
 [connection signal="pressed" from="Panel/Button" to="." method="_on_exit_pressed"]
